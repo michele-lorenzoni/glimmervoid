@@ -260,6 +260,7 @@ hostnames:
 #     '(.*\.)?redd\.it$': 'teddit.example.com'
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
+    - '(.*\.)?z-library.godaddysites.com$'
     - '(.*\.)?z-library.life$'
     - '(.*\.)?zlibrary.st$'
     - '(.*\.)?z-library.bz$'
