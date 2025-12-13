@@ -260,6 +260,7 @@ hostnames:
 #     '(.*\.)?redd\.it$': 'teddit.example.com'
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
+    - '(.*\.)?z-lib.ai$'
     - '(.*\.)?tripadvisor.co.nz$'
     - '(.*\.)?rdu.com$'
     - '(.*\.)?tripadvisor.com$'
