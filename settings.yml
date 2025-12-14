@@ -260,6 +260,7 @@ hostnames:
 #     '(.*\.)?redd\.it$': 'teddit.example.com'
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
+    - '(.*\.)?pardus.org.tr$'
     - '(.*\.)?epigra.com$'
     - '(.*\.)?teknotel.com$'
     - '(.*\.)?turhost.com$'
