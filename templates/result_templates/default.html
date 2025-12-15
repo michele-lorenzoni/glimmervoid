@@ -1,5 +1,17 @@
 {% from 'simple/macros.html' import result_header, result_sub_header, result_sub_footer, result_footer with context %}
 
+{% set highlight_urls = settings.ui.highlight_urls or [] %}
+
+<!-- DEBUG per questo risultato -->
+<div style="font-size: 10px; color: gray; border: 1px solid red; padding: 5px; margin: 5px;">
+  <strong>DEBUG:</strong><br>
+  URL: {{ result.url }}<br>
+  Highlight URLs: {{ highlight_urls }}<br>
+  Match: {{ result.url in highlight_urls }}
+</div>
+
+<div class="{% if result.url in highlight_urls %}highlight-url{% endif %}">
+
 {{ result_header(result, favicons, image_proxify) -}}
 {{- result_sub_header(result) -}}
 {% if result.iframe_src -%}
@@ -15,34 +27,6 @@
   </p>
 {% endif -%}
 
-
-
-{% set highlight_urls = settings.ui.highlight_urls or [] %}
-
-<!-- DEBUG -->
-<div style="background: yellow; padding: 10px; margin: 10px;">
-  <strong>DEBUG INFO:</strong><br>
-  Highlight URLs configurati: {{ highlight_urls }}<br>
-  Numero di risultati: {{ results|length }}
-</div>
-
-<ul class="results">
-  {% for result in results %}
-    <!-- DEBUG per ogni risultato -->
-    <div style="font-size: 10px; color: gray;">
-      URL risultato: {{ result.url }}<br>
-      Match trovato: {{ result.url in highlight_urls }}
-    </div>
-    
-    <li class="{% if result.url in highlight_urls %}highlight-url{% endif %}">
-      <a href="{{ result.url }}">{{ result.title }}</a>
-      <span class="url">{{ result.url }}</span>
-    </li>
-  {% endfor %}
-</ul>
-
-
-
 {{- result_sub_footer(result) -}}
 {% if result.iframe_src -%}
 <div id="result-media-{{ index }}" class="embedded-content invisible">
@@ -55,3 +39,5 @@
 </div>
 {%- endif %}
 {{- result_footer(result) }}
+
+</div>
