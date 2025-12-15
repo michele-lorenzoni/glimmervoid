@@ -2,7 +2,7 @@ FROM searxng/searxng:latest
 
 COPY settings.yml /etc/searxng/settings.yml
 COPY templates/simple/results.html /usr/local/searxng/searx/templates/simple/results.html
-COPY static/themes/simple/custom.css /usr/local/searxng/searx/static/themes/simple/custom.css
+COPY templates/static/themes/simple/custom.css /usr/local/searxng/searx/static/themes/simple/custom.css
 COPY webapp_patch.py /tmp/webapp_patch.py
 
 USER root
