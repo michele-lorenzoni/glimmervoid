@@ -135,9 +135,7 @@ window.addEventListener('load', function() {
         
         if (url.indexOf('openrailwaymap.org') !== -1) {
           console.log('    ✅ MATCH! Applying styles...');
-          child.style.backgroundColor = 'yellow';
-          child.style.border = '5px solid red';
-          child.style.padding = '20px';
+          child.classList.add('highlight-url');
         }
       });
     });
