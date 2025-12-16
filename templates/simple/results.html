@@ -23,6 +23,16 @@
   {% set highlight_urls = config.ui.highlight_urls %}
 {% endif %}
 
+<!-- DEBUG BOX -->
+<div style="background: yellow; color: black; padding: 15px; margin: 10px; border: 3px solid red; font-size: 14px;">
+  <strong>🔍 DEBUG INFO:</strong><br>
+  <strong>Highlight URLs:</strong> {{ highlight_urls }}<br>
+  <strong>Tipo:</strong> {{ highlight_urls.__class__.__name__ }}<br>
+  <strong>Lunghezza:</strong> {{ highlight_urls|length }}<br>
+  <strong>Config disponibile:</strong> {{ 'ui' in config }}<br>
+  <strong>Numero risultati:</strong> {{ results|length }}
+</div>
+
 <div id="results" class="{{ only_template }}">
 
   {%- if answers -%}
@@ -127,13 +137,29 @@ window.addEventListener('load', function() {
           console.log('    ✅ MATCH! Applying styles...');
           child.classList.add('highlight-url');
           
-          // Stili inline (funziona sempre)
-          child.style.borderLeft = '4px solid #ff6b35';
-          child.style.background = 'rgba(255, 107, 53, 0.08)';
-          child.style.paddingLeft = '12px';
-          child.style.marginLeft = '-4px';
-          child.style.marginTop = '8px';
-          child.style.marginBottom = '8px';
+          // Funzione per applicare gli stili
+          const applyStyles = function() {
+            child.style.cssText = 'border-left: 4px solid #ff6b35 !important; background: rgba(255, 107, 53, 0.08) !important; padding-left: 12px !important; margin-left: -4px !important; margin-top: 8px !important; margin-bottom: 8px !important;';
+          };
+          
+          // Applica subito
+          applyStyles();
+          
+          // Riapplica quando clicchi o focalizzi
+          child.addEventListener('click', applyStyles);
+          child.addEventListener('focus', applyStyles, true);
+          
+          // Rimuovi sottolineatura blu dai link visitati
+          const allLinks = child.querySelectorAll('a');
+          allLinks.forEach(function(a) {
+            a.style.textDecoration = 'none';
+            a.style.color = 'inherit';
+            a.style.outline = 'none';
+            a.addEventListener('focus', function() {
+              this.style.outline = 'none';
+              applyStyles(); // Riapplica gli stili al parent
+            });
+          });
         }
       });
     });
@@ -211,4 +237,59 @@ window.addEventListener('load', function() {
     </nav>
     {% endif %}
 </div>
+
+<script>
+console.log('🚀 Script start');
+
+setTimeout(function() {
+  console.log('⏰ Running after delay');
+  
+  const highlightUrls = ['openrailwaymap.org'];
+  
+  // Prova diversi selettori
+  const selectors = [
+    '#urls > div',
+    '#urls div',
+    'article.result',
+    '.result'
+  ];
+  
+  selectors.forEach(function(selector) {
+    const elements = document.querySelectorAll(selector);
+    console.log('Selector "' + selector + '" found:', elements.length, 'elements');
+  });
+  
+  // Usa il selettore che funziona
+  const results = document.querySelectorAll('#urls article, #urls > div');
+  console.log('🔍 Total results found:', results.length);
+  
+  let matchCount = 0;
+  
+  results.forEach(function(resultDiv, index) {
+    const links = resultDiv.querySelectorAll('a[href]');
+    console.log('Result', index, 'has', links.length, 'links');
+    
+    links.forEach(function(link) {
+      const url = link.getAttribute('href');
+      console.log('  → URL:', url);
+      
+      highlightUrls.forEach(function(highlightUrl) {
+        if (url && url.indexOf(highlightUrl) !== -1) {
+          matchCount++;
+          console.log('  ✅ MATCH #' + matchCount + '! Highlighting:', url);
+          
+          // Applica stili al div del risultato
+          resultDiv.classList.add('highlight-url');
+          resultDiv.style.backgroundColor = '#fff3cd';
+          resultDiv.style.border = '3px solid red';
+          resultDiv.style.padding = '15px';
+          resultDiv.style.margin = '10px 0';
+        }
+      });
+    });
+  });
+  
+  console.log('✅ Total matches found:', matchCount);
+}, 500);
+</script>
 {% endblock %}
