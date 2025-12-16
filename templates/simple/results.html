@@ -136,6 +136,14 @@ window.addEventListener('load', function() {
         if (url.indexOf('openrailwaymap.org') !== -1) {
           console.log('    ✅ MATCH! Applying styles...');
           child.classList.add('highlight-url');
+          
+          // Stili inline (funziona sempre)
+          child.style.borderLeft = '4px solid #ff6b35';
+          child.style.background = 'rgba(255, 107, 53, 0.08)';
+          child.style.paddingLeft = '12px';
+          child.style.marginLeft = '-4px';
+          child.style.marginTop = '8px';
+          child.style.marginBottom = '8px';
         }
       });
     });
