@@ -1,0 +1,214 @@
+{% extends "simple/base.html" %}
+{% from 'simple/icons.html' import icon, icon_big, icon_small %}
+{% macro engine_data_form(engine_data) -%}
+    {% for engine_name, kv_data in engine_data.items() %}
+        {% for k, v in kv_data.items() %}
+            <input type="hidden" name="engine_data-{{ engine_name }}-{{ k|e }}" value="{{ v|e }}">
+        {% endfor %}
+    {% endfor %}
+{%- endmacro %}
+{% block title %}{% if query_in_title %}{{- q|e }} - {% endif %}{% endblock %}
+{% block meta %}<link rel="alternate" type="application/rss+xml" title="Searx search: {{ q|e }}" href="{{ url_for('search', _external=True) }}?q={{ q|urlencode }}&amp;categories={{ selected_categories|join(",") | replace(' ','+') }}&amp;pageno={{ pageno }}&amp;time_range={{ time_range }}&amp;language={{ current_language }}&amp;safesearch={{ safesearch }}&amp;format=rss">{% endblock %}
+{% block content %}
+{% include 'simple/search.html' %}
+
+{% if results and results|map(attribute='template')|unique|list|count == 1 %}
+  {% set only_template = 'only_template_' + results[0]['template']|default('default')|replace('.html', '') %}
+{% else %}
+  {% set only_template = '' %}
+{% endif %}
+
+{% set highlight_urls = [] %}
+{% if 'ui' in config and 'highlight_urls' in config.ui %}
+  {% set highlight_urls = config.ui.highlight_urls %}
+{% endif %}
+
+<div id="results" class="{{ only_template }}">
+
+  {%- if answers -%}
+    {%- include 'simple/elements/answers.html' -%}
+  {%- endif %}
+
+    <div id="sidebar">
+
+        {%- if number_of_results != '0' -%}
+        <p id="result_count"><small>{{ _('Number of results') }}: {{ number_of_results }}</small></p>
+        {%- endif -%}
+
+        {%- if infoboxes -%}
+          <div id="infoboxes">
+            <details open class="sidebar-collapsible">
+              <summary class="title">{{ _('Info') }}</summary>
+              {%- for infobox in infoboxes -%}
+                {%- include 'simple/elements/infobox.html' -%}
+              {%- endfor -%}
+            </details>
+          </div>
+        {%- endif -%}
+
+        {%- if suggestions -%}
+          {%- include 'simple/elements/suggestions.html' -%}
+        {%- endif -%}
+
+        {%- include 'simple/elements/engines_msg.html' -%}
+
+        {%- if method == 'POST' -%}
+          {%- include 'simple/elements/search_url.html' -%}
+        {%- endif -%}
+
+        {%- if search_formats -%}
+          {%- include 'simple/elements/apis.html' -%}
+        {%- endif -%}
+
+        <div id="sidebar-end-collapsible"></div>
+    </div>
+
+    {%- if corrections -%}
+      {%- include 'simple/elements/corrections.html' -%}
+    {%- endif -%}
+
+    <div id="urls" role="main">
+    {% for result in results -%}
+        {%- set is_highlighted = False -%}
+        {%- set result_url_clean = result.url|replace('https://', '')|replace('http://', '')|replace('www.', '') -%}
+        {%- for h_url in highlight_urls -%}
+          {%- set h_url_clean = h_url|replace('https://', '')|replace('http://', '')|replace('www.', '') -%}
+          {%- if h_url_clean in result_url_clean -%}
+            {%- set is_highlighted = True -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        <div class="{% if is_highlighted %}highlight-url{% endif %}">
+        {%- if result.open_group and not only_template -%}<div class="template_group_{{ result['template']|replace('.html', '') }}">{%- endif -%}
+        {%- set index = loop.index -%}
+        {%- include get_result_template('simple', result['template']) -%}
+        {%- if result.close_group and not only_template -%}</div>{%- endif -%}
+        </div>
+    {%- endfor %}
+    {% if not results and not answers %}
+        {% include 'simple/messages/no_results.html' %}
+    {% endif %}
+    </div>
+    <div id="backToTop">
+      <a href="#" aria-label="{{ _('Back to top') }}">{{ icon_small('navigate-up') }}</a>
+    </div>
+    
+<script>
+console.log('🚀 SCRIPT LOADED!');
+
+window.addEventListener('load', function() {
+  console.log('⏰ Page fully loaded, running highlight script');
+  
+  const highlightUrls = ['openrailwaymap.org'];
+  
+  // Trova TUTTI i div nella pagina
+  const allDivs = document.querySelectorAll('div');
+  console.log('Total divs in page:', allDivs.length);
+  
+  // Trova specificamente #urls
+  const urlsContainer = document.getElementById('urls');
+  console.log('Found #urls container:', urlsContainer ? 'YES' : 'NO');
+  
+  if (urlsContainer) {
+    const children = urlsContainer.children;
+    console.log('#urls has', children.length, 'children');
+    
+    Array.from(children).forEach(function(child, index) {
+      console.log('Child', index, ':', child.tagName, child.className);
+      
+      const links = child.querySelectorAll('a[href]');
+      console.log('  Links found:', links.length);
+      
+      Array.from(links).forEach(function(link) {
+        const url = link.href;
+        console.log('    URL:', url);
+        
+        if (url.indexOf('openrailwaymap.org') !== -1) {
+          console.log('    ✅ MATCH! Applying styles...');
+          child.classList.add('highlight-url');
+          
+          // Stili inline (funziona sempre)
+          child.style.borderLeft = '4px solid #ff6b35';
+          child.style.background = 'rgba(255, 107, 53, 0.08)';
+          child.style.paddingLeft = '12px';
+          child.style.marginLeft = '-4px';
+          child.style.marginTop = '8px';
+          child.style.marginBottom = '8px';
+        }
+      });
+    });
+  }
+});
+</script>
+
+    {% if paging %}
+    <nav id="pagination" role="navigation">
+        {% if pageno > 1 %}
+            <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="previous_page">
+                <div class="{% if rtl %}right{% else %}left{% endif %}">
+                  <input type="hidden" name="q" value="{{ q|e }}" >
+                  {% for category in selected_categories %}
+                  <input type="hidden" name="category_{{ category }}" value="1" >
+                  {% endfor %}
+                  <input type="hidden" name="pageno" value="{{ pageno-1 }}" >
+                  <input type="hidden" name="language" value="{{ current_language }}" >
+                  <input type="hidden" name="time_range" value="{{ time_range }}" >
+                  <input type="hidden" name="safesearch" value="{{ safesearch }}" >
+                  <input type="hidden" name="theme" value="{{ theme }}" >
+                  {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" >{% endif %}
+                  {{- engine_data_form(engine_data) -}}
+                  <button role="link" type="submit">{{ icon_small('navigate-left') }} {{ _('Previous page') }}</button>
+                </div>
+            </form>
+        {% endif %}
+        {%- if results | count > 0 -%}
+          <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="next_page">
+              <div class="{% if rtl %}left{% else %}right{% endif %}">
+                <input type="hidden" name="q" value="{{ q|e }}" >
+                {% for category in selected_categories %}
+                <input type="hidden" name="category_{{ category }}" value="1" >
+                {% endfor %}
+                <input type="hidden" name="pageno" value="{{ pageno+1 }}" >
+                <input type="hidden" name="language" value="{{ current_language }}" >
+                <input type="hidden" name="time_range" value="{{ time_range }}" >
+                <input type="hidden" name="safesearch" value="{{ safesearch }}" >
+                <input type="hidden" name="theme" value="{{ theme }}" >
+                {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" >{% endif %}
+                {{- engine_data_form(engine_data) -}}
+                <button role="link"  type="submit">{{ _('Next page') }} {{ icon_small('navigate-right') }}</button>
+              </div>
+          </form>
+        {%- endif -%}
+        {% set pstart = 1 %}
+        {% set pend = 11 %}
+        {% if pageno > 5 %}
+            {% set pstart = pageno - 4 %}
+            {% set pend = pageno + 6 %}
+        {% endif %}
+
+        <div class="numbered_pagination">
+        {% for x in range(pstart, pend) %}
+            <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="page_number">
+                <input type="hidden" name="q" value="{{ q|e }}" >
+                {% for category in selected_categories %}
+                <input type="hidden" name="category_{{ category }}" value="1" >
+                {% endfor %}
+                <input type="hidden" name="pageno" value="{{ x }}" >
+                <input type="hidden" name="language" value="{{ current_language }}" >
+                <input type="hidden" name="time_range" value="{{ time_range }}" >
+                <input type="hidden" name="safesearch" value="{{ safesearch }}" >
+                <input type="hidden" name="theme" value="{{ theme }}" >
+                {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" >{% endif %}
+                {{- engine_data_form(engine_data) -}}
+                {% if pageno == x %}
+                <input role="link" class="page_number_current" type="button" value="{{ x }}">
+                {% else %}
+                <input role="link" class="page_number" type="submit" value="{{ x }}">
+                {% endif %}
+            </form>
+        {% endfor %}
+        </div>
+    </nav>
+    {% endif %}
+</div>
+{% endblock %}
