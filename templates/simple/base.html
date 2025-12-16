@@ -17,7 +17,6 @@
   {% else %}
   <link rel="stylesheet" href="{{ url_for('static', filename='sxng-ltr.min.css') }}" type="text/css" media="screen">
   {% endif %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='themes/simple/custom.css') }}" type="text/css" media="screen">
   {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
   <link rel="stylesheet" href="{{ url_for('client_token', token=link_token) }}" type="text/css">
   {% endif %}
@@ -27,6 +26,7 @@
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="any">
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='themes/simple/custom.css') }}" type="text/css" media="screen">
   <script src="{{ url_for('static', filename='themes/simple/highlight-urls.js') }}"></script>
 </head>
 <body class="{{ endpoint }}_endpoint" >
