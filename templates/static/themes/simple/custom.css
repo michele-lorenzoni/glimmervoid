@@ -1,26 +1,6 @@
-.highlight-url {
+#urls > div.highlight-url {
   border-left: 4px solid #ff6b35 !important;
-  background: linear-gradient(90deg, rgba(255,107,53,0.08) 0%, rgba(255,107,53,0) 100%) !important;
+  background: rgba(255, 107, 53, 0.1) !important;
   padding-left: 12px !important;
-  margin-left: -4px !important;
-  transition: all 0.2s ease !important;
-}
-
-.highlight-url:hover {
-  background: linear-gradient(90deg, rgba(255,107,53,0.12) 0%, rgba(255,107,53,0) 100%) !important;
-  border-left-width: 6px !important;
-}
-
-/* Badge opzionale */
-.highlight-url::before {
-  content: "✓ Visited";
-  display: inline-block;
-  background: #ff6b35;
-  color: white;
-  font-size: 10px;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-right: 8px;
-  font-weight: bold;
-  vertical-align: middle;
+  margin: 8px 0 !important;
 }
