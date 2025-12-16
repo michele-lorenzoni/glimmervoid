@@ -174,35 +174,57 @@
 </div>
 
 <script>
-(function() {
-  // Lista URL da evidenziare
-  const highlightUrls = [
-    'openrailwaymap.org'
+console.log('🚀 Script start');
+
+setTimeout(function() {
+  console.log('⏰ Running after delay');
+  
+  const highlightUrls = ['openrailwaymap.org'];
+  
+  // Prova diversi selettori
+  const selectors = [
+    '#urls > div',
+    '#urls div',
+    'article.result',
+    '.result'
   ];
   
-  // Trova tutti i div che contengono i risultati
-  const results = document.querySelectorAll('#urls > div');
+  selectors.forEach(function(selector) {
+    const elements = document.querySelectorAll(selector);
+    console.log('Selector "' + selector + '" found:', elements.length, 'elements');
+  });
   
-  console.log('🔍 Highlight script loaded, found ' + results.length + ' results');
+  // Usa il selettore che funziona
+  const results = document.querySelectorAll('#urls article, #urls > div');
+  console.log('🔍 Total results found:', results.length);
   
-  results.forEach(function(resultDiv) {
-    const link = resultDiv.querySelector('a[href]');
+  let matchCount = 0;
+  
+  results.forEach(function(resultDiv, index) {
+    const links = resultDiv.querySelectorAll('a[href]');
+    console.log('Result', index, 'has', links.length, 'links');
     
-    if (link) {
+    links.forEach(function(link) {
       const url = link.getAttribute('href');
-      console.log('Checking URL:', url);
+      console.log('  → URL:', url);
       
       highlightUrls.forEach(function(highlightUrl) {
-        if (url.indexOf(highlightUrl) !== -1) {
-          console.log('✅ MATCH! Adding highlight-url class to:', url);
+        if (url && url.indexOf(highlightUrl) !== -1) {
+          matchCount++;
+          console.log('  ✅ MATCH #' + matchCount + '! Highlighting:', url);
+          
+          // Applica stili al div del risultato
           resultDiv.classList.add('highlight-url');
           resultDiv.style.backgroundColor = '#fff3cd';
-          resultDiv.style.borderLeft = '4px solid #d22';
-          resultDiv.style.paddingLeft = '10px';
+          resultDiv.style.border = '3px solid red';
+          resultDiv.style.padding = '15px';
+          resultDiv.style.margin = '10px 0';
         }
       });
-    }
+    });
   });
-})();
+  
+  console.log('✅ Total matches found:', matchCount);
+}, 500);
 </script>
 {% endblock %}
