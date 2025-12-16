@@ -172,4 +172,37 @@
     </nav>
     {% endif %}
 </div>
+
+<script>
+(function() {
+  // Lista URL da evidenziare
+  const highlightUrls = [
+    'openrailwaymap.org'
+  ];
+  
+  // Trova tutti i div che contengono i risultati
+  const results = document.querySelectorAll('#urls > div');
+  
+  console.log('🔍 Highlight script loaded, found ' + results.length + ' results');
+  
+  results.forEach(function(resultDiv) {
+    const link = resultDiv.querySelector('a[href]');
+    
+    if (link) {
+      const url = link.getAttribute('href');
+      console.log('Checking URL:', url);
+      
+      highlightUrls.forEach(function(highlightUrl) {
+        if (url.indexOf(highlightUrl) !== -1) {
+          console.log('✅ MATCH! Adding highlight-url class to:', url);
+          resultDiv.classList.add('highlight-url');
+          resultDiv.style.backgroundColor = '#fff3cd';
+          resultDiv.style.borderLeft = '4px solid #d22';
+          resultDiv.style.paddingLeft = '10px';
+        }
+      });
+    }
+  });
+})();
+</script>
 {% endblock %}
