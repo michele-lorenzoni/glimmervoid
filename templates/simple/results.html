@@ -127,13 +127,16 @@ window.addEventListener('load', function() {
             const width = window.innerWidth;
             let styles = '';
             
-            // Trova tutti i .result e article dentro questo elemento e rendi il background trasparente
+            // Trova tutti i .result e article dentro questo elemento e rendi il background e i bordi trasparenti
             const resultElements = child.querySelectorAll('.result, article');
             resultElements.forEach(function(res) {
-              res.style.background = 'transparent';
-              res.style.backgroundColor = 'transparent';
               res.style.setProperty('background', 'transparent', 'important');
               res.style.setProperty('background-color', 'transparent', 'important');
+              res.style.setProperty('border', 'none', 'important');
+              res.style.setProperty('border-top', 'none', 'important');
+              res.style.setProperty('border-right', 'none', 'important');
+              res.style.setProperty('border-bottom', 'none', 'important');
+              res.style.setProperty('border-left', 'none', 'important');
             });
             
             if (width <= 360) {
