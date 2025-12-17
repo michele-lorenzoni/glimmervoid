@@ -1,0 +1,53 @@
+/* Stili per URL evidenziati - Desktop */
+#urls > div.highlight-url {
+  border-left: 4px solid #ff6b35 !important;
+  background: rgba(255, 107, 53, 0.1) !important;
+  padding-left: 12px !important;
+  margin: 8px 0 !important;
+  margin-left: -4px !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+}
+
+/* Rimuovi background e bordi dagli elementi interni */
+#urls > div.highlight-url .result,
+#urls > div.highlight-url article {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Rimuovi sottolineatura link */
+#urls > div.highlight-url a {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* Tablet (max 800px) */
+@media screen and (max-width: 800px) {
+  #urls > div.highlight-url {
+    border-left-width: 3px !important;
+    padding-left: 10px !important;
+    margin: 6px 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Mobile (max 480px) */
+@media screen and (max-width: 480px) {
+  #urls > div.highlight-url {
+    border-left-width: 2px !important;
+    padding-left: 8px !important;
+    margin: 4px 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Mobile piccolo (max 360px) */
+@media screen and (max-width: 360px) {
+  #urls > div.highlight-url {
+    padding-left: 6px !important;
+    margin: 3px 0 !important;
+  }
+}
