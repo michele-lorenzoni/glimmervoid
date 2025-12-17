@@ -127,6 +127,13 @@ window.addEventListener('load', function() {
             const width = window.innerWidth;
             let styles = '';
             
+            // Trova tutti i .result dentro questo elemento e rendi il background trasparente
+            const resultElements = child.querySelectorAll('.result');
+            resultElements.forEach(function(res) {
+              res.style.background = 'transparent !important';
+              res.style.backgroundColor = 'transparent !important';
+            });
+            
             if (width <= 360) {
               // Mobile piccolo
               styles = 'border-left: 2px solid #ff6b35 !important; background: rgba(255, 107, 53, 0.1) !important; padding-left: 6px !important; margin: 3px 0 !important; margin-left: 0 !important; border-top: none !important; border-right: none !important; border-bottom: none !important;';
