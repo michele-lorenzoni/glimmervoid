@@ -101,11 +101,6 @@ window.addEventListener('load', function() {
   
   const highlightUrls = ['openrailwaymap.org'];
   
-  // Trova TUTTI i div nella pagina
-  const allDivs = document.querySelectorAll('div');
-  console.log('Total divs in page:', allDivs.length);
-  
-  // Trova specificamente #urls
   const urlsContainer = document.getElementById('urls');
   console.log('Found #urls container:', urlsContainer ? 'YES' : 'NO');
   
@@ -127,13 +122,49 @@ window.addEventListener('load', function() {
           console.log('    ✅ MATCH! Applying styles...');
           child.classList.add('highlight-url');
           
-          // Stili inline (funziona sempre)
-          child.style.borderLeft = '4px solid #ff6b35';
-          child.style.background = 'rgba(255, 107, 53, 0.08)';
-          child.style.paddingLeft = '12px';
-          child.style.marginLeft = '-4px';
-          child.style.marginTop = '8px';
-          child.style.marginBottom = '8px';
+          // Funzione per applicare gli stili responsive
+          const applyStyles = function() {
+            const width = window.innerWidth;
+            let styles = '';
+            
+            if (width <= 360) {
+              // Mobile piccolo
+              styles = 'border-left: 2px solid #ff6b35 !important; background: rgba(255, 107, 53, 0.1) !important; padding-left: 6px !important; margin: 3px 0 !important; margin-left: 0 !important;';
+            } else if (width <= 480) {
+              // Mobile
+              styles = 'border-left: 2px solid #ff6b35 !important; background: rgba(255, 107, 53, 0.1) !important; padding-left: 8px !important; margin: 4px 0 !important; margin-left: 0 !important;';
+            } else if (width <= 800) {
+              // Tablet
+              styles = 'border-left: 3px solid #ff6b35 !important; background: rgba(255, 107, 53, 0.1) !important; padding-left: 10px !important; margin: 6px 0 !important; margin-left: 0 !important;';
+            } else {
+              // Desktop
+              styles = 'border-left: 4px solid #ff6b35 !important; background: rgba(255, 107, 53, 0.1) !important; padding-left: 12px !important; margin: 8px 0 !important; margin-left: -4px !important;';
+            }
+            
+            child.style.cssText = styles;
+          };
+          
+          // Applica subito
+          applyStyles();
+          
+          // Riapplica quando ridimensioni la finestra
+          window.addEventListener('resize', applyStyles);
+          
+          // Riapplica quando clicchi o focalizzi
+          child.addEventListener('click', applyStyles);
+          child.addEventListener('focus', applyStyles, true);
+          
+          // Rimuovi sottolineatura blu dai link visitati
+          const allLinks = child.querySelectorAll('a');
+          allLinks.forEach(function(a) {
+            a.style.textDecoration = 'none';
+            a.style.color = 'inherit';
+            a.style.outline = 'none';
+            a.addEventListener('focus', function() {
+              this.style.outline = 'none';
+              applyStyles();
+            });
+          });
         }
       });
     });
