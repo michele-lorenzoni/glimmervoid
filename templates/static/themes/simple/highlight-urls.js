@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Lista degli URL da evidenziare - MODIFICA QUI
   const highlightUrls = [
-    'openrailwaymap.org',
+    'claude.ai',
     // aggiungi altri URL qui
   ];
   
