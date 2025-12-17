@@ -4,3 +4,31 @@
   padding-left: 12px !important;
   margin: 8px 0 !important;
 }
+
+/* Tablet (max 768px) */
+@media (max-width: 768px) {
+  #urls > div.highlight-url {
+    border-left-width: 3px !important;
+    padding-left: 10px !important;
+    margin: 6px 0 !important;
+  }
+}
+
+/* Mobile (max 480px) */
+@media (max-width: 480px) {
+  #urls > div.highlight-url {
+    border-left-width: 2px !important;
+    padding-left: 8px !important;
+    margin: 4px 0 !important;
+    margin-left: -2px !important;
+  }
+}
+
+/* Mobile piccolo (max 360px) */
+@media (max-width: 360px) {
+  #urls > div.highlight-url {
+    border-left-width: 2px !important;
+    padding-left: 6px !important;
+    margin: 3px 0 !important;
+  }
+}
