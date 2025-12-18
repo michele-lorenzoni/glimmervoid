@@ -109,7 +109,7 @@ console.log('🚀 SCRIPT LOADED!');
 window.addEventListener('load', function() {
   console.log('⏰ Page fully loaded, running highlight script');
   
-  const highlightUrls = ['claude.ai'];
+  const highlightUrls = ['openrailwaymap.org'];
   
   const urlsContainer = document.getElementById('urls');
   console.log('Found #urls container:', urlsContainer ? 'YES' : 'NO');
@@ -128,7 +128,7 @@ window.addEventListener('load', function() {
         const url = link.href;
         console.log('    URL:', url);
         
-        if (url.indexOf('claude.ai') !== -1) {
+        if (url.indexOf('openrailwaymap.org') !== -1) {
           console.log('    ✅ MATCH! Adding highlight-url class');
           child.classList.add('highlight-url');
         }
