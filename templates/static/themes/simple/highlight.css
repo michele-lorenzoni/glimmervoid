@@ -121,6 +121,10 @@
 footer {
   visibility: hidden;
 }
+
+input[type=submit], #results button[type=submit], .button {
+  border-radius: 0 !important;
+}
   
 .dialog-error-block {
   border-radius: 0 !important;
