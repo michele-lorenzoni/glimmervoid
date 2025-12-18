@@ -100,28 +100,28 @@
     padding-left: 6px !important;
     margin: 3px 0 !important;
   }
+}
 
-  /* Rimuovi bordi arrotondati dall'input di ricerca nella home */
-  #q {
-    border-radius: 0 !important;
-  }
+/* Rimuovi bordi arrotondati dall'input di ricerca nella home */
+#q {
+  border-radius: 0 !important;
+}
   
-  /* Rimuovi bordi arrotondati dal bottone di ricerca nella home */
-  #send_search {
-    border-radius: 0 !important;
-  }
+/* Rimuovi bordi arrotondati dal bottone di ricerca nella home */
+#send_search {
+  border-radius: 0 !important;
+}
   
-  /* Rimuovi bordi arrotondati dai risultati in evidenza */
-  #sidebar .infobox {
-    border-radius: 0 !important;
-  }
+/* Rimuovi bordi arrotondati dai risultati in evidenza */
+#sidebar .infobox {
+  border-radius: 0 !important;
+}
   
-  /* Rimuovi footer */
-  footer {
-    visibility: hidden;
-  }
+/* Rimuovi footer */
+footer {
+  visibility: hidden;
+}
   
-  .dialog-error-block {
-  	border-radius: 0 !important;
-  }
+.dialog-error-block {
+  border-radius: 0 !important;
 }
