@@ -70,6 +70,10 @@
   outline: none !important;
 }
 
+#backToTop {
+	border-radius: 0 !important;
+}
+
 /* Media query: stessa cosa, togli il '>' */
 @media screen and (max-width: 800px) {
   #urls div.highlight-url,
