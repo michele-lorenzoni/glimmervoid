@@ -116,14 +116,14 @@ valkey:
   # url: valkey://localhost:6379/0
   url: false
 
-# ui:
-#   highlight_urls:
-#     - "claude.ai"
-#   unwanted_urls:
-#     - "railway.com"
-#   favorite_urls:
-#     - "github.com"
-#     - "stackoverflow.com"
+ui:
+  highlight_urls:
+    - "claude.ai"
+  unwanted_urls:
+    - "railway.com"
+  favorite_urls:
+    - "github.com"
+    - "stackoverflow.com"
     
   static_path: ""
   # Custom templates path - leave it blank if you didn't change
