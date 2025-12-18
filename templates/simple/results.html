@@ -18,21 +18,6 @@
   {% set only_template = '' %}
 {% endif %}
 
-{% set highlight_urls = [] %}
-{% set unwanted_urls = [] %}
-{% set favorite_urls = [] %}
-{% if 'ui' in config %}
-  {% if 'highlight_urls' in config.ui %}
-    {% set highlight_urls = config.ui.highlight_urls %}
-  {% endif %}
-  {% if 'unwanted_urls' in config.ui %}
-    {% set unwanted_urls = config.ui.unwanted_urls %}
-  {% endif %}
-  {% if 'favorite_urls' in config.ui %}
-    {% set favorite_urls = config.ui.favorite_urls %}
-  {% endif %}
-{% endif %}
-
 <div id="results" class="{{ only_template }}">
 
   {%- if answers -%}
@@ -79,16 +64,7 @@
 
     <div id="urls" role="main">
     {% for result in results -%}
-        {%- set is_highlighted = False -%}
-        {%- set result_url_clean = result.url|replace('https://', '')|replace('http://', '')|replace('www.', '') -%}
-        {%- for h_url in highlight_urls -%}
-          {%- set h_url_clean = h_url|replace('https://', '')|replace('http://', '')|replace('www.', '') -%}
-          {%- if h_url_clean in result_url_clean -%}
-            {%- set is_highlighted = True -%}
-          {%- endif -%}
-        {%- endfor -%}
-        
-        <div class="{% if is_highlighted %}highlight-url{% endif %}">
+        <div>
         {%- if result.open_group and not only_template -%}<div class="template_group_{{ result['template']|replace('.html', '') }}">{%- endif -%}
         {%- set index = loop.index -%}
         {%- include get_result_template('simple', result['template']) -%}
@@ -104,34 +80,63 @@
     </div>
     
 <script>
-console.log('🚀 SCRIPT LOADED!');
-
 window.addEventListener('load', function() {
-  console.log('⏰ Page fully loaded, running highlight script');
+  // 🟠 ARANCIONE - URL già visitati (AGGIUNGI I TUOI URL QUI)
+  const highlightUrls = [
+    'openrailwaymap.org',
+    'claude.ai'
+  ];
   
-  const highlightUrls = ['openrailwaymap.org'];
+  // 🔴 ROSSO - URL indesiderati (AGGIUNGI I TUOI URL QUI)
+  const unwantedUrls = [
+    'reddit.com',
+    'pinterest.com'
+  ];
+  
+  // 🟢 VERDE - URL preferiti (AGGIUNGI I TUOI URL QUI)
+  const favoriteUrls = [
+    'github.com',
+    'stackoverflow.com'
+  ];
   
   const urlsContainer = document.getElementById('urls');
-  console.log('Found #urls container:', urlsContainer ? 'YES' : 'NO');
   
   if (urlsContainer) {
     const children = urlsContainer.children;
-    console.log('#urls has', children.length, 'children');
     
-    Array.from(children).forEach(function(child, index) {
-      console.log('Child', index, ':', child.tagName, child.className);
-      
+    Array.from(children).forEach(function(child) {
       const links = child.querySelectorAll('a[href]');
-      console.log('  Links found:', links.length);
+      let matched = false;
       
       Array.from(links).forEach(function(link) {
+        if (matched) return;
         const url = link.href;
-        console.log('    URL:', url);
         
-        if (url.indexOf('openrailwaymap.org') !== -1) {
-          console.log('    ✅ MATCH! Adding highlight-url class');
-          child.classList.add('highlight-url');
-        }
+        // Check UNWANTED (rosso - priorità più alta)
+        unwantedUrls.forEach(function(unwantedUrl) {
+          if (url.indexOf(unwantedUrl) !== -1) {
+            child.classList.add('unwanted-url');
+            matched = true;
+          }
+        });
+        if (matched) return;
+        
+        // Check FAVORITE (verde)
+        favoriteUrls.forEach(function(favoriteUrl) {
+          if (url.indexOf(favoriteUrl) !== -1) {
+            child.classList.add('favorite-url');
+            matched = true;
+          }
+        });
+        if (matched) return;
+        
+        // Check HIGHLIGHT (arancione)
+        highlightUrls.forEach(function(highlightUrl) {
+          if (url.indexOf(highlightUrl) !== -1) {
+            child.classList.add('highlight-url');
+            matched = true;
+          }
+        });
       });
     });
   }
