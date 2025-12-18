@@ -102,6 +102,10 @@
   }
 }
 
+#pagination {
+    margin: 1rem 2% !important;
+}
+
 /* Rimuovi bordi arrotondati dall'input di ricerca nella home */
 #q {
   border-radius: 0 !important;
