@@ -129,3 +129,7 @@ input[type=submit], #results button[type=submit], .button {
 .dialog-error-block {
   border-radius: 0 !important;
 }
+
+.result {
+  border-radius: 0 !important;
+}
