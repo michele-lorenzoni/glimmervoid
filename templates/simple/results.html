@@ -84,10 +84,7 @@ window.addEventListener('load', function() {
   // 🟠 ARANCIONE - URL ESATTI già visitati
   const highlightUrls = [
     'https://claude.com/resources/use-cases',
-    'https://aws.amazon.com/it/bedrock/anthropic/',
-    'https://www.linkedin.com/showcase/claude/',
-    'https://www.anthropic.com/news/claude-code-on-the-web',
-    'https://www.anthropic.com/news/claude-haiku-4-5'
+    'https://aws.amazon.com/it/bedrock/anthropic/'
   ];
   
   // 🔴 ROSSO - URL ESATTI indesiderati
@@ -99,11 +96,7 @@ window.addEventListener('load', function() {
   const favoriteUrls = [
     'https://www.anthropic.com/',
     'https://github.com/',
-    'https://www.reddit.com/',
-    'https://claude.ai/',
-    'https://www.anthropic.com/product',
-    'https://play.google.com/store/apps/details?id=com.anthropic.claude&hl=it',
-    'https://github.com/anthropics/claude-code'
+    'https://claude.ai/'
   ];
   
   const urlsContainer = document.getElementById('urls');
@@ -113,9 +106,9 @@ window.addEventListener('load', function() {
     const articles = urlsContainer.querySelectorAll('article');
     
     articles.forEach(function(article) {
-      // Trova il div parent dell'article
-      const resultDiv = article.closest('#urls > div');
-      if (!resultDiv) return;
+      // Da article sali al primo div padre
+      const parentDiv = article.closest('div');
+      if (!parentDiv) return;
       
       const links = article.querySelectorAll('a[href]');
       let matched = false;
@@ -127,7 +120,7 @@ window.addEventListener('load', function() {
         // Check UNWANTED (rosso)
         unwantedUrls.forEach(function(unwantedUrl) {
           if (url === unwantedUrl) {
-            resultDiv.classList.add('unwanted-url');
+            parentDiv.classList.add('unwanted-url');
             matched = true;
           }
         });
@@ -136,7 +129,7 @@ window.addEventListener('load', function() {
         // Check FAVORITE (verde)
         favoriteUrls.forEach(function(favoriteUrl) {
           if (url === favoriteUrl) {
-            resultDiv.classList.add('favorite-url');
+            parentDiv.classList.add('favorite-url');
             matched = true;
           }
         });
@@ -145,7 +138,7 @@ window.addEventListener('load', function() {
         // Check HIGHLIGHT (arancione)
         highlightUrls.forEach(function(highlightUrl) {
           if (url === highlightUrl) {
-            resultDiv.classList.add('highlight-url');
+            parentDiv.classList.add('highlight-url');
             matched = true;
           }
         });
