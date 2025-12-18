@@ -1,5 +1,5 @@
 /* URL evidenziati (già visitati) - Arancione */
-#urls > div.highlight-url {
+#urls div.highlight-url {
   border-left: 4px solid #ff6b35 !important;
   background: rgba(255, 107, 53, 0.1) !important;
   padding-left: 12px !important;
@@ -10,20 +10,20 @@
   border-bottom: none !important;
 }
 
-#urls > div.highlight-url .result,
-#urls > div.highlight-url article {
+#urls div.highlight-url .result,
+#urls div.highlight-url article {
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
 }
 
-#urls > div.highlight-url a {
+#urls div.highlight-url a {
   text-decoration: none !important;
   outline: none !important;
 }
 
 /* URL indesiderati - Rosso */
-#urls > div.unwanted-url {
+#urls div.unwanted-url {
   border-left: 4px solid #dc3545 !important;
   background: rgba(220, 53, 69, 0.1) !important;
   padding-left: 12px !important;
@@ -34,20 +34,20 @@
   border-bottom: none !important;
 }
 
-#urls > div.unwanted-url .result,
-#urls > div.unwanted-url article {
+#urls div.unwanted-url .result,
+#urls div.unwanted-url article {
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
 }
 
-#urls > div.unwanted-url a {
+#urls div.unwanted-url a {
   text-decoration: none !important;
   outline: none !important;
 }
 
 /* URL preferiti - Verde */
-#urls > div.favorite-url {
+#urls div.favorite-url {
   border-left: 4px solid #28a745 !important;
   background: rgba(40, 167, 69, 0.1) !important;
   padding-left: 12px !important;
@@ -58,43 +58,23 @@
   border-bottom: none !important;
 }
 
-#urls > div.favorite-url .result,
-#urls > div.favorite-url article {
+#urls div.favorite-url .result,
+#urls div.favorite-url article {
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
 }
 
-#urls > div.favorite-url a {
+#urls div.favorite-url a {
   text-decoration: none !important;
   outline: none !important;
 }
 
-/* Rimuovi bordi arrotondati dall'input di ricerca nella home */
-#q {
-  border-radius: 0 !important;
-}
-
-/* Rimuovi bordi arrotondati dal bottone di ricerca nella home */
-#send_search {
-  border-radius: 0 !important;
-}
-
-/* Rimuovi bordi arrotondati dai risultati in evidenza */
-#sidebar .infobox {
-  border-radius: 0 !important;
-}
-
-/* Rimuovi footer */
-footer {
-  visibility: hidden;
-}
-
-/* Tablet (max 800px) */
+/* Media query: stessa cosa, togli il '>' */
 @media screen and (max-width: 800px) {
-  #urls > div.highlight-url,
-  #urls > div.unwanted-url,
-  #urls > div.favorite-url {
+  #urls div.highlight-url,
+  #urls div.unwanted-url,
+  #urls div.favorite-url {
     border-left-width: 3px !important;
     padding-left: 10px !important;
     margin: 6px 0 !important;
@@ -102,11 +82,10 @@ footer {
   }
 }
 
-/* Mobile (max 480px) */
 @media screen and (max-width: 480px) {
-  #urls > div.highlight-url,
-  #urls > div.unwanted-url,
-  #urls > div.favorite-url {
+  #urls div.highlight-url,
+  #urls div.unwanted-url,
+  #urls div.favorite-url {
     border-left-width: 2px !important;
     padding-left: 8px !important;
     margin: 4px 0 !important;
@@ -114,11 +93,10 @@ footer {
   }
 }
 
-/* Mobile piccolo (max 360px) */
 @media screen and (max-width: 360px) {
-  #urls > div.highlight-url,
-  #urls > div.unwanted-url,
-  #urls > div.favorite-url {
+  #urls div.highlight-url,
+  #urls div.unwanted-url,
+  #urls div.favorite-url {
     padding-left: 6px !important;
     margin: 3px 0 !important;
   }
