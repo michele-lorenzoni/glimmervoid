@@ -267,6 +267,7 @@ hostnames:
 #     '(.*\.)?redd\.it$': 'teddit.example.com'
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
+    - '(.*\.)?copywriterai.it$'
     - '(.*\.)?claudemusic.com$'
     - '(.*\.)?claudemilano.com$'
     - '(.*\.)?claude.talkai.info$'
