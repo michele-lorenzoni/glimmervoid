@@ -275,6 +275,7 @@ hostnames:
     - '(.*\.)?totalplumbingfl.com$'
     - '(.*\.)?pamsteele.org$'
     - '(.*\.)?aranzulla.it$'
+    - '(.*\.)?graphicsprings.com$'
     - '(.*\.)?ninja.it$'
     - '(.*\.)?seozoom.it$'
     - '(.*\.)?creativemotions.it$'
