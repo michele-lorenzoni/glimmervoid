@@ -278,6 +278,7 @@ hostnames:
     - '(.*\.)?digitalcolorwheel.com$'
     - '(.*\.)?muncievoice.com$'
     - '(.*\.)?ritdye.com$'
+    - '(.*\.)?flatfee.io$'
     - '(.*\.)?thedandyliar.com$'
     - '(.*\.)?podbase.com$'
     - '(.*\.)?orangetitles.com$'
