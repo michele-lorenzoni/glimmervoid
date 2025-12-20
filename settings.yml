@@ -290,6 +290,7 @@ hostnames:
     - '(.*\.)?artincontext.org$'
     - '(.*\.)?eesforjobs.com$'
     - '(.*\.)?classpop.com$'
+    - '(.*\.)?akulakreative.com$'
     - '(.*\.)?vectr.com$'
     - '(.*\.)?drawsvg.org$'
     - '(.*\.)?edit.svgomg.net$'
