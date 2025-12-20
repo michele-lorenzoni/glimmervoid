@@ -271,6 +271,7 @@ hostnames:
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
     - '(.*\.)?vectr.com$'
+    - '(.*\.)?drawsvg.org$'
     - '(.*\.)?edit.svgomg.net$'
     - '(.*\.)?freellustrations.com$'
     - '(.*\.)?clipsafari.com$'
