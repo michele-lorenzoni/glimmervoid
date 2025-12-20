@@ -289,6 +289,7 @@ hostnames:
     - '(.*\.)?standardwool.uk$'
     - '(.*\.)?schemecolor.com$'
     - '(.*\.)?artincontext.org$'
+    - '(.*\.)?brittanyavenue.com$'
     - '(.*\.)?eesforjobs.com$'
     - '(.*\.)?classpop.com$'
     - '(.*\.)?akulakreative.com$'
