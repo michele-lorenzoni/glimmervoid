@@ -285,6 +285,7 @@ hostnames:
     - '(.*\.)?thecolorpalettestudio.com$'
     - '(.*\.)?jswpaints.in$'
     - '(.*\.)?standardwool.uk$'
+    - '(.*\.)?schemecolor.com$'
     - '(.*\.)?artincontext.org$'
     - '(.*\.)?eesforjobs.com$'
     - '(.*\.)?classpop.com$'
