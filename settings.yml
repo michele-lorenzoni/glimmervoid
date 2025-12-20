@@ -283,6 +283,7 @@ hostnames:
     - '(.*\.)?oasisneonsigns.co.uk$'
     - '(.*\.)?colorxs.com$'
     - '(.*\.)?bhg.com$'
+    - '(.*\.)?oakcitycoatings.com$'
     - '(.*\.)?designworklife.com$'
     - '(.*\.)?customneon.co.uk$'
     - '(.*\.)?customneon.com$'
