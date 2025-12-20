@@ -280,6 +280,7 @@ hostnames:
     - '(.*\.)?thedandyliar.com$'
     - '(.*\.)?podbase.com$'
     - '(.*\.)?orangetitles.com$'
+    - '(.*\.)?houzz.com$'
     - '(.*\.)?ettavee.com$'
     - '(.*\.)?houzz.com$'
     - '(.*\.)?eterstock.com$'
