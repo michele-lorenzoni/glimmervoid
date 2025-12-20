@@ -274,6 +274,7 @@ hostnames:
     - '(.*\.)?ritdye.com$'
     - '(.*\.)?thedandyliar.com$'
     - '(.*\.)?podbase.com$'
+    - '(.*\.)?orangetitles.com$'
     - '(.*\.)?ettavee.com$'
     - '(.*\.)?houzz.com$'
     - '(.*\.)?eterstock.com$'
