@@ -272,6 +272,7 @@ hostnames:
   remove:
     - '(.*\.)?houzz.com$'
     - '(.*\.)?blog.chickabug.com$'
+    - '(.*\.)?zanvis.com$'
     - '(.*\.)?oasisneonsigns.co.uk$'
     - '(.*\.)?colorxs.com$'
     - '(.*\.)?designworklife.com$'
