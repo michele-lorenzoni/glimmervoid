@@ -316,6 +316,7 @@ hostnames:
     - '(.*\.)?clipsafari.com$'
     - '(.*\.)?carlaaston.com$'
     - '(.*\.)?crewelghoul.com$'
+    - '(.*\.)?keystonecustomdecks.com$'
     - '(.*\.)?illustration.so$'
     - '(.*\.)?color-meanings.com$'
     - '(.*\.)?fashiontrendsetter.com$'
