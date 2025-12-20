@@ -310,6 +310,7 @@ hostnames:
     - '(.*\.)?freellustrations.com$'
     - '(.*\.)?clipsafari.com$'
     - '(.*\.)?carlaaston.com$'
+    - '(.*\.)?crewelghoul.com$'
     - '(.*\.)?illustration.so$'
     - '(.*\.)?color-meanings.com$'
     - '(.*\.)?fashiontrendsetter.com$'
