@@ -330,6 +330,7 @@ hostnames:
     - '(.*\.)?marcomondelli.net$'
     - '(.*\.)?logopony.com$'
     - '(.*\.)?mysocialweb.it$'
+    - '(.*\.)?colorpalettes.net$'
     - '(.*\.)?totalplumbingfl.com$'
     - '(.*\.)?pamsteele.org$'
     - '(.*\.)?aranzulla.it$'
