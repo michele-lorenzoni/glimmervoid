@@ -301,6 +301,7 @@ hostnames:
     - '(.*\.)?kettlewellcolours.co.uk$'
     - '(.*\.)?freellustrations.com$'
     - '(.*\.)?clipsafari.com$'
+    - '(.*\.)?carlaaston.com$'
     - '(.*\.)?illustration.so$'
     - '(.*\.)?color-meanings.com$'
     - '(.*\.)?fashiontrendsetter.com$'
