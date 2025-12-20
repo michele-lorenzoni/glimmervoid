@@ -274,6 +274,7 @@ hostnames:
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?colors.codes$'
     - '(.*\.)?digitalcolorwheel.com$'
+    - '(.*\.)?muncievoice.com$'
     - '(.*\.)?ritdye.com$'
     - '(.*\.)?thedandyliar.com$'
     - '(.*\.)?podbase.com$'
