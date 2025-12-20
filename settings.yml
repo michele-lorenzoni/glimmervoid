@@ -286,6 +286,7 @@ hostnames:
     - '(.*\.)?houzz.com$'
     - '(.*\.)?eterstock.com$'
     - '(.*\.)?blog.chickabug.com$'
+    - '(.*\.)?thespruce.com$'
     - '(.*\.)?forums.warframe.com$'
     - '(.*\.)?zanvis.com$'
     - '(.*\.)?oasisneonsigns.co.uk$'
