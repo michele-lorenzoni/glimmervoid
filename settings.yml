@@ -321,6 +321,7 @@ hostnames:
     - '(.*\.)?zeusnews.it$'
     - '(.*\.)?flamingtext.com$'
     - '(.*\.)?openculture.com$'
+    - '(.*\.)?colorswall.com$'
     - '(.*\.)?bentopdf.bpsnttapp.com$'
     - '(.*\.)?pdf.kraisak.com$'
     - '(.*\.)?pdf.fachschaft.cl.uni-heidelberg.de$'
