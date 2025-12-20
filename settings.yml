@@ -298,6 +298,7 @@ hostnames:
     - '(.*\.)?thecolorpalettestudio.com$'
     - '(.*\.)?jswpaints.in$'
     - '(.*\.)?standardwool.uk$'
+    - '(.*\.)?colorspire.com$'
     - '(.*\.)?ilovehue.co$'
     - '(.*\.)?schemecolor.com$'
     - '(.*\.)?artincontext.org$'
