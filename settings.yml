@@ -333,6 +333,7 @@ hostnames:
     - '(.*\.)?svg-to-png.net$'
     - '(.*\.)?ezgif.com$'
     - '(.*\.)?svgtrace.com$'
+    - '(.*\.)?artsmart.ai$'
     - '(.*\.)?convertsvgtopng.net$'
     - '(.*\.)?svgtopng.com$'
     - '(.*\.)?ristorantequinoa.it$'
