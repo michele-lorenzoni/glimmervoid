@@ -296,6 +296,7 @@ hostnames:
     - '(.*\.)?clipsafari.com$'
     - '(.*\.)?illustration.so$'
     - '(.*\.)?color-meanings.com$'
+    - '(.*\.)?fashiontrendsetter.com$'
     - '(.*\.)?gettyimages.it$'
     - '(.*\.)?illustrae.co$'
     - '(.*\.)?culturahistorica.org$'
