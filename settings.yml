@@ -313,6 +313,7 @@ hostnames:
     - '(.*\.)?vectr.com$'
     - '(.*\.)?drawsvg.org$'
     - '(.*\.)?edit.svgomg.net$'
+    - '(.*\.)?colorany.com$'
     - '(.*\.)?kettlewellcolours.co.uk$'
     - '(.*\.)?freellustrations.com$'
     - '(.*\.)?clipsafari.com$'
