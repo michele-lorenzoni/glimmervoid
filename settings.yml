@@ -305,6 +305,7 @@ hostnames:
     - '(.*\.)?schemecolor.com$'
     - '(.*\.)?artincontext.org$'
     - '(.*\.)?brittanyavenue.com$'
+    - '(.*\.)?venngage.com$'
     - '(.*\.)?lushome.com$'
     - '(.*\.)?eesforjobs.com$'
     - '(.*\.)?classpop.com$'
