@@ -303,6 +303,7 @@ hostnames:
     - '(.*\.)?customneon.com$'
     - '(.*\.)?mediamodifier.com$'
     - '(.*\.)?azconversion.com$'
+    - '(.*\.)?resizepng.com$'
     - '(.*\.)?thecolorpalettestudio.com$'
     - '(.*\.)?svgeditor.com$'
     - '(.*\.)?jswpaints.in$'
