@@ -304,6 +304,7 @@ hostnames:
     - '(.*\.)?picsvg.com$'
     - '(.*\.)?thespruce.com$'
     - '(.*\.)?svgomg.net$'
+    - '(.*\.)?photoeditor.ai$'
     - '(.*\.)?editsvgcode.com$'
     - '(.*\.)?forums.warframe.com$'
     - '(.*\.)?photopos.com$'
