@@ -300,6 +300,7 @@ hostnames:
     - '(.*\.)?picnik.com$'
     - '(.*\.)?pixelcut.ai$'
     - '(.*\.)?ritdye.com$'
+    - '(.*\.)?clipdrop.co$'
     - '(.*\.)?pixteller.com$'
     - '(.*\.)?pokecut.com$'
     - '(.*\.)?flatfee.io$'
