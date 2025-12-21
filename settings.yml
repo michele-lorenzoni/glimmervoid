@@ -325,6 +325,7 @@ hostnames:
     - '(.*\.)?resizepng.com$'
     - '(.*\.)?thecolorpalettestudio.com$'
     - '(.*\.)?svgeditor.com$'
+    - '(.*\.)?picwand.ai$'
     - '(.*\.)?jswpaints.in$'
     - '(.*\.)?standardwool.uk$'
     - '(.*\.)?colorspire.com$'
