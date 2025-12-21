@@ -295,6 +295,7 @@ hostnames:
     - '(.*\.)?pixelmator.com$'
     - '(.*\.)?digitalcolorwheel.com$'
     - '(.*\.)?imggen.ai$'
+    - '(.*\.)?pixoate.com$'
     - '(.*\.)?imageresizer.uk$'
     - '(.*\.)?photoleapapp.com$'
     - '(.*\.)?icedit.net$'
