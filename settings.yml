@@ -282,6 +282,7 @@ hostnames:
     - '(.*\.)?pincel.app$'
     - '(.*\.)?anthropics.com$'
     - '(.*\.)?snappa.com$'
+    - '(.*\.)?onlinepngtools.com$'
     - '(.*\.)?colors.codes$'
     - '(.*\.)?pixelmator.com$'
     - '(.*\.)?digitalcolorwheel.com$'
