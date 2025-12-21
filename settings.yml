@@ -300,6 +300,7 @@ hostnames:
     - '(.*\.)?eterstock.com$'
     - '(.*\.)?picsman.ai$'
     - '(.*\.)?blog.chickabug.com$'
+    - '(.*\.)?lightroom.adobe.com$'
     - '(.*\.)?aienhancer.ai$'
     - '(.*\.)?monicaheilmanart.com$'
     - '(.*\.)?sellercircle.co.uk$'
