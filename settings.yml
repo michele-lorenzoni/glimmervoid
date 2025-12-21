@@ -276,6 +276,7 @@ hostnames:
     - '(.*\.)?broncosports.com$'
     - '(.*\.)?clairejefford.com$'
     - '(.*\.)?artisttilldeath.com$'
+    - '(.*\.)?pincel.app$'
     - '(.*\.)?colors.codes$'
     - '(.*\.)?digitalcolorwheel.com$'
     - '(.*\.)?imageresizer.uk$'
