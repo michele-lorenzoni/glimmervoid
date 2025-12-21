@@ -304,6 +304,7 @@ hostnames:
     - '(.*\.)?phot.ai$'
     - '(.*\.)?podbase.com$'
     - '(.*\.)?photopt.com$'
+    - '(.*\.)?fontmeme.com$'
     - '(.*\.)?orangetitles.com$'
     - '(.*\.)?houzz.com$'
     - '(.*\.)?ettavee.com$'
