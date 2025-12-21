@@ -289,6 +289,7 @@ hostnames:
     - '(.*\.)?retouchinglabs.com$'
     - '(.*\.)?mockofun.com$'
     - '(.*\.)?snappa.com$'
+    - '(.*\.)?piktochart.com$'
     - '(.*\.)?aiarty.com$'
     - '(.*\.)?expertclipping.com$'
     - '(.*\.)?onlinepngtools.com$'
