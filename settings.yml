@@ -325,6 +325,7 @@ hostnames:
     - '(.*\.)?bitstudio.ai$'
     - '(.*\.)?svgeditoronline.com$'
     - '(.*\.)?flatai.org$'
+    - '(.*\.)?colormatters.com$'
     - '(.*\.)?clippingoutsourcing.com$'
     - '(.*\.)?imageresizer.work$'
     - '(.*\.)?insmind.com$'
