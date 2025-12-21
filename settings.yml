@@ -347,6 +347,7 @@ hostnames:
     - '(.*\.)?illustrae.co$'
     - '(.*\.)?ford-trucks.com$'
     - '(.*\.)?farrow-ball.com$'
+    - '(.*\.)?calculateaspectratio.com$'
     - '(.*\.)?culturahistorica.org$'
     - '(.*\.)?freeillustrations.xyz$'
     - '(.*\.)?promeai.pro$'
