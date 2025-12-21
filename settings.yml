@@ -360,6 +360,7 @@ hostnames:
     - '(.*\.)?carlaaston.com$'
     - '(.*\.)?crewelghoul.com$'
     - '(.*\.)?keystonecustomdecks.com$'
+    - '(.*\.)?iloveimg.com$'
     - '(.*\.)?illustration.so$'
     - '(.*\.)?color-meanings.com$'
     - '(.*\.)?fashiontrendsetter.com$'
