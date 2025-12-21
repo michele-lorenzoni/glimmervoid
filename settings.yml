@@ -297,6 +297,7 @@ hostnames:
     - '(.*\.)?ettavee.com$'
     - '(.*\.)?houzz.com$'
     - '(.*\.)?eterstock.com$'
+    - '(.*\.)?picsman.ai$'
     - '(.*\.)?blog.chickabug.com$'
     - '(.*\.)?monicaheilmanart.com$'
     - '(.*\.)?sellercircle.co.uk$'
