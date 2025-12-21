@@ -276,6 +276,7 @@ hostnames:
     - '(.*\.)?the-image-editor.com$'
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?metaclippingpath.com$'
+    - '(.*\.)?yourcolorguru.com$'
     - '(.*\.)?flyingmeat.com$'
     - '(.*\.)?editpictureonline.com$'
     - '(.*\.)?hypic.app$'
