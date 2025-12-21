@@ -283,6 +283,7 @@ hostnames:
     - '(.*\.)?facetuneapp.com$'
     - '(.*\.)?evoto.ai$'
     - '(.*\.)?colorfactory.co$'
+    - '(.*\.)?colorwise.me$'
     - '(.*\.)?annporter.wordpress.com$'
     - '(.*\.)?pcmag.com$'
     - '(.*\.)?broncosports.com$'
