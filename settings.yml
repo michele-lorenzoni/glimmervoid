@@ -283,6 +283,7 @@ hostnames:
     - '(.*\.)?annporter.wordpress.com$'
     - '(.*\.)?broncosports.com$'
     - '(.*\.)?clairejefford.com$'
+    - '(.*\.)?gilisoft.com$'
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?pincel.app$'
     - '(.*\.)?anthropics.com$'
