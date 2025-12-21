@@ -318,6 +318,7 @@ hostnames:
     - '(.*\.)?akulakreative.com$'
     - '(.*\.)?vectr.com$'
     - '(.*\.)?drawsvg.org$'
+    - '(.*\.)?thebrief.ai$'
     - '(.*\.)?edit.svgomg.net$'
     - '(.*\.)?colorany.com$'
     - '(.*\.)?svgvisualize.com$'
