@@ -315,6 +315,7 @@ hostnames:
     - '(.*\.)?standardwool.uk$'
     - '(.*\.)?colorspire.com$'
     - '(.*\.)?ilovehue.co$'
+    - '(.*\.)?emojiterra.com$'
     - '(.*\.)?shrink.media$'
     - '(.*\.)?schemecolor.com$'
     - '(.*\.)?mindgems.com$'
