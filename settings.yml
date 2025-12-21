@@ -343,6 +343,7 @@ hostnames:
     - '(.*\.)?lightroom.adobe.com$'
     - '(.*\.)?aienhancer.ai$'
     - '(.*\.)?photoaid.com$'
+    - '(.*\.)?retouchme.com$'
     - '(.*\.)?monicaheilmanart.com$'
     - '(.*\.)?sellercircle.co.uk$'
     - '(.*\.)?picsvg.com$'
