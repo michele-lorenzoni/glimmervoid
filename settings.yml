@@ -280,6 +280,7 @@ hostnames:
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?pincel.app$'
     - '(.*\.)?anthropics.com$'
+    - '(.*\.)?snappa.com$'
     - '(.*\.)?colors.codes$'
     - '(.*\.)?pixelmator.com$'
     - '(.*\.)?digitalcolorwheel.com$'
