@@ -380,6 +380,7 @@ hostnames:
     - '(.*\.)?designify.com$'
     - '(.*\.)?photoeditor.ai$'
     - '(.*\.)?editsvgcode.com$'
+    - '(.*\.)?colormebeautiful.com$'
     - '(.*\.)?forums.warframe.com$'
     - '(.*\.)?photopos.com$'
     - '(.*\.)?zanvis.com$'
