@@ -300,6 +300,7 @@ hostnames:
     - '(.*\.)?houzz.com$'
     - '(.*\.)?ettavee.com$'
     - '(.*\.)?houzz.com$'
+    - '(.*\.)?visualgpt.io$'
     - '(.*\.)?eterstock.com$'
     - '(.*\.)?picsman.ai$'
     - '(.*\.)?blog.chickabug.com$'
