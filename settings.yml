@@ -329,6 +329,7 @@ hostnames:
     - '(.*\.)?piceditor.io$'
     - '(.*\.)?phot.ai$'
     - '(.*\.)?podbase.com$'
+    - '(.*\.)?clippingcreationsindia.com$'
     - '(.*\.)?photopt.com$'
     - '(.*\.)?fontmeme.com$'
     - '(.*\.)?orangetitles.com$'
