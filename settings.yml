@@ -299,6 +299,7 @@ hostnames:
     - '(.*\.)?onlinepngtools.com$'
     - '(.*\.)?colors.codes$'
     - '(.*\.)?pixelmator.com$'
+    - '(.*\.)?graphicdesignresource.com$'
     - '(.*\.)?digitalcolorwheel.com$'
     - '(.*\.)?imggen.ai$'
     - '(.*\.)?pixoate.com$'
