@@ -315,6 +315,7 @@ hostnames:
     - '(.*\.)?photoeditor.com$'
     - '(.*\.)?bitstudio.ai$'
     - '(.*\.)?svgeditoronline.com$'
+    - '(.*\.)?flatai.org$'
     - '(.*\.)?clippingoutsourcing.com$'
     - '(.*\.)?imageresizer.work$'
     - '(.*\.)?insmind.com$'
