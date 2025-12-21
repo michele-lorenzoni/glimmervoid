@@ -326,6 +326,7 @@ hostnames:
     - '(.*\.)?pokecut.com$'
     - '(.*\.)?flatfee.io$'
     - '(.*\.)?thedandyliar.com$'
+    - '(.*\.)?imgmodify.com$'
     - '(.*\.)?piceditor.io$'
     - '(.*\.)?phot.ai$'
     - '(.*\.)?podbase.com$'
