@@ -308,6 +308,7 @@ hostnames:
     - '(.*\.)?colorxs.com$'
     - '(.*\.)?bhg.com$'
     - '(.*\.)?pixelbin.io$'
+    - '(.*\.)?snapedit.app$'
     - '(.*\.)?codewithmosh.com$'
     - '(.*\.)?resizehood.com$'
     - '(.*\.)?fastcompany.com$'
