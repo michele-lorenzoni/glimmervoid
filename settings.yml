@@ -279,6 +279,7 @@ hostnames:
     - '(.*\.)?yourcolorguru.com$'
     - '(.*\.)?flyingmeat.com$'
     - '(.*\.)?editpictureonline.com$'
+    - '(.*\.)?coolfont.org$'
     - '(.*\.)?hypic.app$'
     - '(.*\.)?facetuneapp.com$'
     - '(.*\.)?evoto.ai$'
