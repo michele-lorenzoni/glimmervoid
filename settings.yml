@@ -296,6 +296,7 @@ hostnames:
     - '(.*\.)?mockofun.com$'
     - '(.*\.)?snappa.com$'
     - '(.*\.)?photofunia.com$'
+    - '(.*\.)?colorwowhair.com$'
     - '(.*\.)?piktochart.com$'
     - '(.*\.)?aiarty.com$'
     - '(.*\.)?expertclipping.com$'
