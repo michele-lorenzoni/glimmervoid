@@ -343,6 +343,7 @@ hostnames:
     - '(.*\.)?colorany.com$'
     - '(.*\.)?imresizer.com$'
     - '(.*\.)?resizepanda.com$'
+    - '(.*\.)?simplified.com$'
     - '(.*\.)?svgvisualize.com$'
     - '(.*\.)?kettlewellcolours.co.uk$'
     - '(.*\.)?batchtools.pro$'
