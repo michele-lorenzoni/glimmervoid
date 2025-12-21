@@ -274,6 +274,7 @@ hostnames:
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?flyingmeat.com$'
     - '(.*\.)?hypic.app$'
+    - '(.*\.)?facetuneapp.com$'
     - '(.*\.)?evoto.ai$'
     - '(.*\.)?annporter.wordpress.com$'
     - '(.*\.)?broncosports.com$'
