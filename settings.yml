@@ -299,6 +299,7 @@ hostnames:
     - '(.*\.)?designworklife.com$'
     - '(.*\.)?customneon.co.uk$'
     - '(.*\.)?customneon.com$'
+    - '(.*\.)?mediamodifier.com$'
     - '(.*\.)?thecolorpalettestudio.com$'
     - '(.*\.)?jswpaints.in$'
     - '(.*\.)?standardwool.uk$'
