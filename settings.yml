@@ -293,6 +293,7 @@ hostnames:
     - '(.*\.)?blog.chickabug.com$'
     - '(.*\.)?monicaheilmanart.com$'
     - '(.*\.)?sellercircle.co.uk$'
+    - '(.*\.)?picsvg.com$'
     - '(.*\.)?thespruce.com$'
     - '(.*\.)?svgomg.net$'
     - '(.*\.)?editsvgcode.com$'
