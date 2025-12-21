@@ -285,6 +285,7 @@ hostnames:
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?pincel.app$'
     - '(.*\.)?anthropics.com$'
+    - '(.*\.)?adeptclippingpath.com$'
     - '(.*\.)?retouchinglabs.com$'
     - '(.*\.)?mockofun.com$'
     - '(.*\.)?snappa.com$'
