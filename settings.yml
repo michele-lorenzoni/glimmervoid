@@ -336,6 +336,7 @@ hostnames:
     - '(.*\.)?yce.perfectcorp.com$'
     - '(.*\.)?lushome.com$'
     - '(.*\.)?yaytext.com$'
+    - '(.*\.)?aiimageeditor.ai$'
     - '(.*\.)?amazingalgorithms.com$'
     - '(.*\.)?cuttle.xyz$'
     - '(.*\.)?inpixio.com$'
