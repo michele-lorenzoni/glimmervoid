@@ -292,6 +292,7 @@ hostnames:
     - '(.*\.)?imageresizer.uk$'
     - '(.*\.)?photoleapapp.com$'
     - '(.*\.)?icedit.net$'
+    - '(.*\.)?goinnobuds.com$'
     - '(.*\.)?online.visual-paradigm.com$'
     - '(.*\.)?picwish.com$'
     - '(.*\.)?photoeditor.com$'
