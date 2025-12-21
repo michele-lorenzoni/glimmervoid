@@ -330,6 +330,7 @@ hostnames:
     - '(.*\.)?lushome.com$'
     - '(.*\.)?yaytext.com$'
     - '(.*\.)?amazingalgorithms.com$'
+    - '(.*\.)?cuttle.xyz$'
     - '(.*\.)?moshlife.com$'
     - '(.*\.)?moshplanner.com$'
     - '(.*\.)?anytools.pro$'
