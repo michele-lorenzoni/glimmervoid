@@ -280,6 +280,7 @@ hostnames:
     - '(.*\.)?digitalcolorwheel.com$'
     - '(.*\.)?imageresizer.uk$'
     - '(.*\.)?photoleapapp.com$'
+    - '(.*\.)?icedit.net$'
     - '(.*\.)?svgeditoronline.com$'
     - '(.*\.)?imageresizer.work$'
     - '(.*\.)?muncievoice.com$'
