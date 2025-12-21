@@ -334,6 +334,7 @@ hostnames:
     - '(.*\.)?colorxs.com$'
     - '(.*\.)?bhg.com$'
     - '(.*\.)?pixelbin.io$'
+    - '(.*\.)?poindeo.com$'
     - '(.*\.)?instasize.com$'
     - '(.*\.)?snapedit.app$'
     - '(.*\.)?codewithmosh.com$'
