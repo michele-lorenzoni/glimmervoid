@@ -302,6 +302,7 @@ hostnames:
     - '(.*\.)?customneon.com$'
     - '(.*\.)?mediamodifier.com$'
     - '(.*\.)?thecolorpalettestudio.com$'
+    - '(.*\.)?svgeditor.com$'
     - '(.*\.)?jswpaints.in$'
     - '(.*\.)?standardwool.uk$'
     - '(.*\.)?colorspire.com$'
