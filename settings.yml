@@ -301,6 +301,7 @@ hostnames:
     - '(.*\.)?pixelcut.ai$'
     - '(.*\.)?ritdye.com$'
     - '(.*\.)?pixteller.com$'
+    - '(.*\.)?pokecut.com$'
     - '(.*\.)?flatfee.io$'
     - '(.*\.)?thedandyliar.com$'
     - '(.*\.)?phot.ai$'
