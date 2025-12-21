@@ -316,6 +316,7 @@ hostnames:
     - '(.*\.)?emojipedia.org$'
     - '(.*\.)?dzine.ai$'
     - '(.*\.)?customneon.co.uk$'
+    - '(.*\.)?pizap.com$'
     - '(.*\.)?customneon.com$'
     - '(.*\.)?mediamodifier.com$'
     - '(.*\.)?imagen-ai.com$'
