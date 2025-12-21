@@ -352,6 +352,7 @@ hostnames:
     - '(.*\.)?aienhancer.ai$'
     - '(.*\.)?photoaid.com$'
     - '(.*\.)?retouchme.com$'
+    - '(.*\.)?icecreamapps.com$'
     - '(.*\.)?monicaheilmanart.com$'
     - '(.*\.)?sellercircle.co.uk$'
     - '(.*\.)?picsvg.com$'
