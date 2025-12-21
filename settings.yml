@@ -281,6 +281,7 @@ hostnames:
     - '(.*\.)?svgeditoronline.com$'
     - '(.*\.)?imageresizer.work$'
     - '(.*\.)?muncievoice.com$'
+    - '(.*\.)?pixelcut.ai$'
     - '(.*\.)?ritdye.com$'
     - '(.*\.)?flatfee.io$'
     - '(.*\.)?thedandyliar.com$'
