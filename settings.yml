@@ -374,6 +374,7 @@ hostnames:
     - '(.*\.)?albertovalerio.com$'
     - '(.*\.)?marcomondelli.net$'
     - '(.*\.)?logopony.com$'
+    - '(.*\.)?fotoflexer.com$'
     - '(.*\.)?mysocialweb.it$'
     - '(.*\.)?colorpalettes.net$'
     - '(.*\.)?totalplumbingfl.com$'
