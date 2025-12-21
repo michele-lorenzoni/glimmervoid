@@ -271,6 +271,7 @@ hostnames:
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
     - '(.*\.)?emojidb.org$'
+    - '(.*\.)?flyingmeat.com$'
     - '(.*\.)?hypic.app$'
     - '(.*\.)?evoto.ai$'
     - '(.*\.)?annporter.wordpress.com$'
