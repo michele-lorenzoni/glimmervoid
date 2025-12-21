@@ -286,6 +286,7 @@ hostnames:
     - '(.*\.)?pincel.app$'
     - '(.*\.)?anthropics.com$'
     - '(.*\.)?retouchinglabs.com$'
+    - '(.*\.)?mockofun.com$'
     - '(.*\.)?snappa.com$'
     - '(.*\.)?aiarty.com$'
     - '(.*\.)?onlinepngtools.com$'
