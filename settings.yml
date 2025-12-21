@@ -284,6 +284,7 @@ hostnames:
     - '(.*\.)?colors.codes$'
     - '(.*\.)?pixelmator.com$'
     - '(.*\.)?digitalcolorwheel.com$'
+    - '(.*\.)?imggen.ai$'
     - '(.*\.)?imageresizer.uk$'
     - '(.*\.)?photoleapapp.com$'
     - '(.*\.)?icedit.net$'
