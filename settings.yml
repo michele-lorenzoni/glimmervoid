@@ -303,6 +303,7 @@ hostnames:
     - '(.*\.)?editsvg.online$'
     - '(.*\.)?colorxs.com$'
     - '(.*\.)?bhg.com$'
+    - '(.*\.)?pixelbin.io$'
     - '(.*\.)?codewithmosh.com$'
     - '(.*\.)?resizehood.com$'
     - '(.*\.)?fastcompany.com$'
