@@ -324,6 +324,7 @@ hostnames:
     - '(.*\.)?venngage.com$'
     - '(.*\.)?svg-editor.com$'
     - '(.*\.)?lushome.com$'
+    - '(.*\.)?yaytext.com$'
     - '(.*\.)?amazingalgorithms.com$'
     - '(.*\.)?moshlife.com$'
     - '(.*\.)?moshplanner.com$'
