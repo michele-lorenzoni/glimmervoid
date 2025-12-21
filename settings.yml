@@ -322,6 +322,7 @@ hostnames:
     - '(.*\.)?svg-editor.com$'
     - '(.*\.)?lushome.com$'
     - '(.*\.)?amazingalgorithms.com$'
+    - '(.*\.)?moshlife.com$'
     - '(.*\.)?anytools.pro$'
     - '(.*\.)?eesforjobs.com$'
     - '(.*\.)?classpop.com$'
