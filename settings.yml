@@ -289,6 +289,7 @@ hostnames:
     - '(.*\.)?mockofun.com$'
     - '(.*\.)?snappa.com$'
     - '(.*\.)?aiarty.com$'
+    - '(.*\.)?expertclipping.com$'
     - '(.*\.)?onlinepngtools.com$'
     - '(.*\.)?colors.codes$'
     - '(.*\.)?pixelmator.com$'
