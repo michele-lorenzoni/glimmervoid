@@ -309,6 +309,7 @@ hostnames:
     - '(.*\.)?colorxs.com$'
     - '(.*\.)?bhg.com$'
     - '(.*\.)?pixelbin.io$'
+    - '(.*\.)?instasize.com$'
     - '(.*\.)?snapedit.app$'
     - '(.*\.)?codewithmosh.com$'
     - '(.*\.)?resizehood.com$'
