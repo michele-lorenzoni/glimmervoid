@@ -295,6 +295,7 @@ hostnames:
     - '(.*\.)?retouchinglabs.com$'
     - '(.*\.)?colorline.com$'
     - '(.*\.)?mockofun.com$'
+    - '(.*\.)?colorsafe.co$'
     - '(.*\.)?snappa.com$'
     - '(.*\.)?photofunia.com$'
     - '(.*\.)?colorwowhair.com$'
