@@ -272,6 +272,7 @@ hostnames:
   remove:
     - '(.*\.)?hubdigitalcontent.com$'
     - '(.*\.)?newwaveart.com$'
+    - '(.*\.)?iconduck.com$'
     - '(.*\.)?fontshop.com$'
     - '(.*\.)?educba.com$'
     - '(.*\.)?fontstand.com$'
