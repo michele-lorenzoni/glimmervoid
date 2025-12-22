@@ -306,6 +306,7 @@ hostnames:
     - '(.*\.)?fontdownload.org$'
     - '(.*\.)?pincel.app$'
     - '(.*\.)?fbcd.co$'
+    - '(.*\.)?fontbolt.com$'
     - '(.*\.)?ifonts.xyz$'
     - '(.*\.)?iconian.com$'
     - '(.*\.)?colorabout.com$'
