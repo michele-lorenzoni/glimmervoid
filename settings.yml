@@ -298,6 +298,7 @@ hostnames:
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?fontdownload.org$'
     - '(.*\.)?pincel.app$'
+    - '(.*\.)?fbcd.co$'
     - '(.*\.)?ifonts.xyz$'
     - '(.*\.)?colorabout.com$'
     - '(.*\.)?anthropics.com$'
