@@ -303,6 +303,7 @@ hostnames:
     - '(.*\.)?imagecolorpicker.com$'
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?fontsonic.com$'
+    - '(.*\.)?afontgenerator.com$'
     - '(.*\.)?fontdownload.org$'
     - '(.*\.)?pincel.app$'
     - '(.*\.)?fbcd.co$'
