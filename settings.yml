@@ -301,6 +301,7 @@ hostnames:
     - '(.*\.)?gilisoft.com$'
     - '(.*\.)?legianbeachbali.com$'
     - '(.*\.)?imagecolorpicker.com$'
+    - '(.*\.)?kimberlygeswein.com$'
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?fontsonic.com$'
     - '(.*\.)?afontgenerator.com$'
