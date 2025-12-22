@@ -278,7 +278,7 @@ hostnames:
     - '(.*\.)?the-image-editor.com$'
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?metaclippingpath.com$'
-    . '(.*\.)?urbanfonts.com$'
+    - '(.*\.)?urbanfonts.com$'
     - '(.*\.)?yourcolorguru.com$'
     - '(.*\.)?1000fonts.com$'
     - '(.*\.)?flyingmeat.com$'
