@@ -288,6 +288,7 @@ hostnames:
     - '(.*\.)?colorfactory.co$'
     - '(.*\.)?colorwise.me$'
     - '(.*\.)?annporter.wordpress.com$'
+    - '(.*\.)?movie.linksind.net$'
     - '(.*\.)?pcmag.com$'
     - '(.*\.)?broncosports.com$'
     - '(.*\.)?dafont.de$'
