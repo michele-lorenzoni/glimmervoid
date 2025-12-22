@@ -285,6 +285,7 @@ hostnames:
     - '(.*\.)?1000fonts.com$'
     - '(.*\.)?flyingmeat.com$'
     - '(.*\.)?editpictureonline.com$'
+    - '(.*\.)?leftfootforward.org$'
     - '(.*\.)?dafontvn.com$'
     - '(.*\.)?coolfont.org$'
     - '(.*\.)?font-generator.com$'
