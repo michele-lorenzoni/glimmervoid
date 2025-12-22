@@ -314,6 +314,7 @@ hostnames:
     - '(.*\.)?colors.codes$'
     - '(.*\.)?pixelmator.com$'
     - '(.*\.)?wikihow.tech$'
+    - '(.*\.)?dafont.vn$'
     - '(.*\.)?myperfectcolor.com$'
     - '(.*\.)?graphicdesignresource.com$'
     - '(.*\.)?digitalcolorwheel.com$'
