@@ -312,6 +312,7 @@ hostnames:
     - '(.*\.)?anthropics.com$'
     - '(.*\.)?adeptclippingpath.com$'
     - '(.*\.)?retouchinglabs.com$'
+    - '(.*\.)?fontchanger.cool$'
     - '(.*\.)?legionfonts.com$'
     - '(.*\.)?colorline.com$'
     - '(.*\.)?mockofun.com$'
