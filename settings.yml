@@ -303,6 +303,7 @@ hostnames:
     - '(.*\.)?anthropics.com$'
     - '(.*\.)?adeptclippingpath.com$'
     - '(.*\.)?retouchinglabs.com$'
+    - '(.*\.)?legionfonts.com$'
     - '(.*\.)?colorline.com$'
     - '(.*\.)?mockofun.com$'
     - '(.*\.)?colorsafe.co$'
