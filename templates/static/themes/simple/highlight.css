@@ -141,3 +141,7 @@ input[type=submit], #results button[type=submit], .button {
 .result {
   border-radius: 0 !important;
 }
+
+a.link_on_top_about {
+	visibility: hidden !important;
+}
