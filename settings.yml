@@ -295,6 +295,7 @@ hostnames:
     - '(.*\.)?coolfont.org$'
     - '(.*\.)?font-generator.com$'
     - '(.*\.)?gravit.io$'
+    - '(.*\.)?karboncard.com$'
     - '(.*\.)?fontgenerator.name$'
     - '(.*\.)?hypic.app$'
     - '(.*\.)?legian.ee$'
