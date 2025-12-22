@@ -275,6 +275,7 @@ hostnames:
     - '(.*\.)?fontstand.com$'
     - '(.*\.)?legian.nl$'
     - '(.*\.)?24gen.ai$'
+    - '(.*\.)?fontchanger.net$'
     - '(.*\.)?the-image-editor.com$'
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?metaclippingpath.com$'
