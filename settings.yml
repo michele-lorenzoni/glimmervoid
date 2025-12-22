@@ -277,6 +277,7 @@ hostnames:
     - '(.*\.)?legian.nl$'
     - '(.*\.)?24gen.ai$'
     - '(.*\.)?fontchanger.net$'
+    - '(.*\.)?mockitt.com$'
     - '(.*\.)?notebookandpenguin.com$'
     - '(.*\.)?the-image-editor.com$'
     - '(.*\.)?emojidb.org$'
