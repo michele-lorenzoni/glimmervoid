@@ -296,6 +296,7 @@ hostnames:
     - '(.*\.)?imagecolorpicker.com$'
     - '(.*\.)?artisttilldeath.com$'
     - '(.*\.)?pincel.app$'
+    - '(.*\.)?ifonts.xyz$'
     - '(.*\.)?colorabout.com$'
     - '(.*\.)?anthropics.com$'
     - '(.*\.)?adeptclippingpath.com$'
