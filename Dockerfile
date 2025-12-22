@@ -5,7 +5,7 @@ COPY templates/simple/base.html /usr/local/searxng/searx/templates/simple/base.h
 COPY templates/simple/results.html /usr/local/searxng/searx/templates/simple/results.html
 COPY templates/static/themes/simple/highlight.css /usr/local/searxng/searx/static/themes/simple/highlight.css
 # COPY searx/templates/simple/page_with_header.html /usr/local/searxng/searx/templates/simple/page_with_header.html
-COPY maddog.png /usr/local/searxng/searx/static/themes/simple/img/searxng.png
+COPY underdog.png /usr/local/searxng/searx/static/themes/simple/img/searxng.png
 
 USER root
 RUN chown -R searxng:searxng /etc/searxng/settings.yml
