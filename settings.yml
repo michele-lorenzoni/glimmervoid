@@ -284,6 +284,7 @@ hostnames:
     - '(.*\.)?editpictureonline.com$'
     - '(.*\.)?dafontvn.com$'
     - '(.*\.)?coolfont.org$'
+    - '(.*\.)?font-generator.com$'
     - '(.*\.)?hypic.app$'
     - '(.*\.)?legian.ee$'
     - '(.*\.)?facetuneapp.com$'
