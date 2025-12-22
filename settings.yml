@@ -293,6 +293,7 @@ hostnames:
     - '(.*\.)?broncosports.com$'
     - '(.*\.)?dafont.de$'
     - '(.*\.)?clairejefford.com$'
+    - '(.*\.)?legian.com$'
     - '(.*\.)?gilisoft.com$'
     - '(.*\.)?imagecolorpicker.com$'
     - '(.*\.)?artisttilldeath.com$'
