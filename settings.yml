@@ -320,6 +320,7 @@ hostnames:
     - '(.*\.)?afontgenerator.com$'
     - '(.*\.)?fontsgoogle.com$'
     - '(.*\.)?fontdownload.org$'
+    - '(.*\.)?thefatpaintcompany.com$'
     - '(.*\.)?pincel.app$'
     - '(.*\.)?fbcd.co$'
     - '(.*\.)?fontbundles.net$'
