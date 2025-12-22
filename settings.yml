@@ -279,6 +279,7 @@ hostnames:
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?metaclippingpath.com$'
     - '(.*\.)?yourcolorguru.com$'
+    - '(.*\.)?1000fonts.com$'
     - '(.*\.)?flyingmeat.com$'
     - '(.*\.)?editpictureonline.com$'
     - '(.*\.)?dafontvn.com$'
