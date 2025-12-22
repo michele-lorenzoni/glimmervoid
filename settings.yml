@@ -330,6 +330,7 @@ hostnames:
     - '(.*\.)?clippingphotoexperts.com$'
     - '(.*\.)?goinnobuds.com$'
     - '(.*\.)?aiease.ai$'
+    - '(.*\.)?befonts.com$'
     - '(.*\.)?online.visual-paradigm.com$'
     - '(.*\.)?picwish.com$'
     - '(.*\.)?pixcores.com$'
