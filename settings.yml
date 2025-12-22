@@ -316,6 +316,7 @@ hostnames:
     - '(.*\.)?legian.com$'
     - '(.*\.)?gilisoft.com$'
     - '(.*\.)?legianbeachbali.com$'
+    - '(.*\.)?karbon.com$'
     - '(.*\.)?imagecolorpicker.com$'
     - '(.*\.)?kimberlygeswein.com$'
     - '(.*\.)?artisttilldeath.com$'
