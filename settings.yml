@@ -302,6 +302,7 @@ hostnames:
     - '(.*\.)?karboncard.com$'
     - '(.*\.)?fontgenerator.name$'
     - '(.*\.)?hypic.app$'
+    - '(.*\.)?masterbundles.com$'
     - '(.*\.)?legian.ee$'
     - '(.*\.)?karbonbikes.com$'
     - '(.*\.)?facetuneapp.com$'
