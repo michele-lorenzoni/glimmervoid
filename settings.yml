@@ -290,6 +290,7 @@ hostnames:
     - '(.*\.)?annporter.wordpress.com$'
     - '(.*\.)?movie.linksind.net$'
     - '(.*\.)?pcmag.com$'
+    - '(.*\.)?fontsempire.com$'
     - '(.*\.)?broncosports.com$'
     - '(.*\.)?dafont.de$'
     - '(.*\.)?clairejefford.com$'
