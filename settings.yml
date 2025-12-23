@@ -306,6 +306,7 @@ hostnames:
     - '(.*\.)?coolfont.org$'
     - '(.*\.)?shadowboxes.com$'
     - '(.*\.)?interlacekit.com$'
+    - '(.*\.)?kitemetric.com$'
     - '(.*\.)?font-generator.com$'
     - '(.*\.)?gravit.io$'
     - '(.*\.)?karboncard.com$'
