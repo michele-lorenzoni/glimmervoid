@@ -150,8 +150,6 @@ a.link_on_top_about {
 	display: none !important;
 }
 
-/*
-#main_index {
-	margin-top: 0 !important;
+#links_on_top {
+	top: 1rem !important;
 }
-*/
