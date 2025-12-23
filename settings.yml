@@ -277,6 +277,7 @@ hostnames:
     - '(.*\.)?educba.com$'
     - '(.*\.)?fontstand.com$'
     - '(.*\.)?legian.nl$'
+    - '(.*\.)?boxshadows.com$'
     - '(.*\.)?24gen.ai$'
     - '(.*\.)?iconsflow.com$'
     - '(.*\.)?fontchanger.net$'
