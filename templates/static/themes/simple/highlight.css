@@ -175,3 +175,9 @@ a.link_on_top_about {
 #send_search {
 	transition: background 0.25s, color 0.25s;
 }
+
+body {
+	background-size: cover !important;
+	background-color: #212121 !important;
+	background-image: url('http://www.transparenttextures.com/patterns/triangles.png') !important;
+}
