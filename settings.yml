@@ -273,6 +273,7 @@ hostnames:
     - '(.*\.)?hubdigitalcontent.com$'
     - '(.*\.)?codewithrandom.com$'
     - '(.*\.)?newwaveart.com$'
+    - '(.*\.)?steelcitycollectibles.com$'
     - '(.*\.)?iconduck.com$'
     - '(.*\.)?fontshop.com$'
     - '(.*\.)?educba.com$'
