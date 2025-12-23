@@ -290,6 +290,7 @@ hostnames:
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?frontporchmercantile.com$'
     - '(.*\.)?refine.dev$'
+    - '(.*\.)?dictionary.com$'
     - '(.*\.)?drupaljedimaster.co.uk$'
     - '(.*\.)?metaclippingpath.com$'
     - '(.*\.)?cssgenerator.pl$'
