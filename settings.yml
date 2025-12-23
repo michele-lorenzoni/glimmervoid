@@ -317,6 +317,7 @@ hostnames:
     - '(.*\.)?masterbundles.com$'
     - '(.*\.)?legian.ee$'
     - '(.*\.)?karbonbikes.com$'
+    - '(.*\.)?pagedart.com$'
     - '(.*\.)?facetuneapp.com$'
     - '(.*\.)?fontadvice.com$'
     - '(.*\.)?evoto.ai$'
