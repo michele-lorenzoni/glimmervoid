@@ -275,6 +275,7 @@ hostnames:
     - '(.*\.)?newwaveart.com$'
     - '(.*\.)?steelcitycollectibles.com$'
     - '(.*\.)?iconduck.com$'
+    - '(.*\.)?worldofcoca-cola.com$'
     - '(.*\.)?fontshop.com$'
     - '(.*\.)?educba.com$'
     - '(.*\.)?frontendhack.com$'
