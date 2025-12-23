@@ -311,6 +311,7 @@ hostnames:
     - '(.*\.)?gizmodo.com$'
     - '(.*\.)?dafontvn.com$'
     - '(.*\.)?pocket-lint.com$'
+    - '(.*\.)?flaticons.net$'
     - '(.*\.)?coolfont.org$'
     - '(.*\.)?shadowboxes.com$'
     - '(.*\.)?interlacekit.com$'
