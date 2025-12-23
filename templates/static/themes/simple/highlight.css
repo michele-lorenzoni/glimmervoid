@@ -159,3 +159,7 @@ a.link_on_top_about {
 	--color-base-background: #212121 !important;
 	--color-base-background-mobile: #212121 !important;
 }
+
+.search_box {
+	border: 1px solid #616161;
+}
