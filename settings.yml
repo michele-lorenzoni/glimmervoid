@@ -278,6 +278,7 @@ hostnames:
     - '(.*\.)?frontendhack.com$'
     - '(.*\.)?fontstand.com$'
     - '(.*\.)?legian.nl$'
+    - '(.*\.)?mockplus.com$'
     - '(.*\.)?boxshadows.com$'
     - '(.*\.)?24gen.ai$'
     - '(.*\.)?iconsflow.com$'
