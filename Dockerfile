@@ -5,6 +5,7 @@ COPY templates/simple/base.html /usr/local/searxng/searx/templates/simple/base.h
 COPY templates/simple/results.html /usr/local/searxng/searx/templates/simple/results.html
 COPY templates/static/themes/simple/highlight.css /usr/local/searxng/searx/static/themes/simple/highlight.css
 COPY searx/templates/simple/icons.html /usr/local/searxng/searx/templates/simple/icons.html
+COPY searx/templates/simple/base.html /usr/local/searxng/searx/templates/simple/base.html
 COPY logo.png /usr/local/searxng/searx/static/themes/simple/img/searxng.png
 
 USER root
