@@ -294,6 +294,7 @@ hostnames:
     - '(.*\.)?urbanfonts.com$'
     - '(.*\.)?yourcolorguru.com$'
     - '(.*\.)?1000fonts.com$'
+    - '(.*\.)?box-shadows.co$'
     - '(.*\.)?karbonhq.com$'
     - '(.*\.)?onassar.github.io$'
     - '(.*\.)?flyingmeat.com$'
