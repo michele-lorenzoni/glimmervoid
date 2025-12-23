@@ -286,6 +286,7 @@ hostnames:
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?frontporchmercantile.com$'
     - '(.*\.)?metaclippingpath.com$'
+    - '(.*\.)?cssgenerator.pl$'
     - '(.*\.)?urbanfonts.com$'
     - '(.*\.)?yourcolorguru.com$'
     - '(.*\.)?1000fonts.com$'
