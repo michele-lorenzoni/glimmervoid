@@ -315,6 +315,7 @@ hostnames:
     - '(.*\.)?haikei.app$'
     - '(.*\.)?leftfootforward.org$'
     - '(.*\.)?gizmodo.com$'
+    - '(.*\.)?alphabetizer.flap.tv$'
     - '(.*\.)?dafontvn.com$'
     - '(.*\.)?pocket-lint.com$'
     - '(.*\.)?flaticons.net$'
