@@ -294,6 +294,7 @@ hostnames:
     - '(.*\.)?the-image-editor.com$'
     - '(.*\.)?emojidb.org$'
     - '(.*\.)?frontporchmercantile.com$'
+    - '(.*\.)?brusheezy.com$'
     - '(.*\.)?refine.dev$'
     - '(.*\.)?dictionary.com$'
     - '(.*\.)?drupaljedimaster.co.uk$'
