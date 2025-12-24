@@ -311,6 +311,7 @@ hostnames:
     - '(.*\.)?onassar.github.io$'
     - '(.*\.)?flyingmeat.com$'
     - '(.*\.)?editpictureonline.com$'
+    - '(.*\.)?haikei.app$'
     - '(.*\.)?leftfootforward.org$'
     - '(.*\.)?gizmodo.com$'
     - '(.*\.)?dafontvn.com$'
