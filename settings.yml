@@ -316,6 +316,7 @@ hostnames:
     - '(.*\.)?pocket-lint.com$'
     - '(.*\.)?flaticons.net$'
     - '(.*\.)?coolfont.org$'
+    - '(.*\.)?eggnored.tumblr.com$'
     - '(.*\.)?shadowboxes.com$'
     - '(.*\.)?interlacekit.com$'
     - '(.*\.)?kitemetric.com$'
