@@ -278,6 +278,7 @@ hostnames:
     - '(.*\.)?thiings.co$'
     - '(.*\.)?uniteforliteracy.com$'
     - '(.*\.)?365webresources.com$'
+    - '(.*\.)?coolcatlovesyou.com$'
     - '(.*\.)?speckyboy.com$'
     - '(.*\.)?freeebooks.com$'
     - '(.*\.)?mybard.com$'
