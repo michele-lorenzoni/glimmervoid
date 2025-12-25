@@ -294,6 +294,7 @@ hostnames:
     - '(.*\.)?bookchoice.com$'
     - '(.*\.)?svgbackgrounds.com$'
     - '(.*\.)?textures.world$'
+    - '(.*\.)?booksamillion.com$'
     - '(.*\.)?superdesigner.co$'
     - '(.*\.)?vellum.pub$'
     - '(.*\.)?01net.it$'
