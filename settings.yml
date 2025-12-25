@@ -291,6 +291,7 @@ hostnames:
     - '(.*\.)?01net.it$'
     - '(.*\.)?1onlyhost.com$'
     - '(.*\.)?3axis.co$'
+    - '(.*\.)?planetebook.com$'
     - '(.*\.)?domain.com$'
     - '(.*\.)?3dicons.co$'
     - '(.*\.)?3disometricicon.com$'
