@@ -290,6 +290,7 @@ hostnames:
     - '(.*\.)?svgbackgrounds.com$'
     - '(.*\.)?textures.world$'
     - '(.*\.)?superdesigner.co$'
+    - '(.*\.)?vellum.pub$'
     - '(.*\.)?01net.it$'
     - '(.*\.)?1onlyhost.com$'
     - '(.*\.)?3axis.co$'
