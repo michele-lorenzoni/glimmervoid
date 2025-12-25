@@ -279,6 +279,7 @@ hostnames:
     - '(.*\.)?pixcap.com$'
     - '(.*\.)?designmodo.com$'
     - '(.*\.)?graphicdesignjunction.com$'
+    - '(.*\.)?gratis-boek.nl$'
     - '(.*\.)?thepatterncollective.com$'
     - '(.*\.)?patterned.ai$'
     - '(.*\.)?bookchoice.com$'
