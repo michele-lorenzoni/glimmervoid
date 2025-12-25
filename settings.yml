@@ -284,6 +284,7 @@ hostnames:
     - '(.*\.)?mybard.com$'
     - '(.*\.)?iconcity.com$'
     - '(.*\.)?bookshelf.vitalsource.com$'
+    - '(.*\.)?e-booksdirectory.com$'
     - '(.*\.)?pixcap.com$'
     - '(.*\.)?designmodo.com$'
     - '(.*\.)?graphicdesignjunction.com$'
