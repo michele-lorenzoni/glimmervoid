@@ -280,6 +280,7 @@ hostnames:
     - '(.*\.)?graphicdesignjunction.com$'
     - '(.*\.)?thepatterncollective.com$'
     - '(.*\.)?patterned.ai$'
+    - '(.*\.)?bookchoice.com$'
     - '(.*\.)?svgbackgrounds.com$'
     - '(.*\.)?textures.world$'
     - '(.*\.)?superdesigner.co$'
