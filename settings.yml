@@ -276,6 +276,7 @@ hostnames:
     - '(.*\.)?thiings.co$'
     - '(.*\.)?365webresources.com$'
     - '(.*\.)?speckyboy.com$'
+    - '(.*\.)?freeebooks.com$'
     - '(.*\.)?iconcity.com$'
     - '(.*\.)?bookshelf.vitalsource.com$'
     - '(.*\.)?pixcap.com$'
