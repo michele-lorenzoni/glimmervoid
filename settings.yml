@@ -316,6 +316,7 @@ hostnames:
     - '(.*\.)?4easysoft.com$'
     - '(.*\.)?4kwallpapers.com$'
     - '(.*\.)?4sysops.com$'
+    - '(.*\.)?digilibraries.com$'
     - '(.*\.)?4tube.com$'
     - '(.*\.)?ebookselibrary.com$'
     - '(.*\.)?6sigma.us$'
