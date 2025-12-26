@@ -305,6 +305,7 @@ hostnames:
     - '(.*\.)?365webresources.com$'
     - '(.*\.)?gadgettechstore.com.au$'
     - '(.*\.)?coolcatlovesyou.com$'
+    - '(.*\.)?wowebook.net$'
     - '(.*\.)?booknook.biz$'
     - '(.*\.)?nha.nl$'
     - '(.*\.)?gadgethacks.com$'
