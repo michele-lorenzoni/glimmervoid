@@ -306,6 +306,7 @@ hostnames:
     - '(.*\.)?tweakers.net$'
     - '(.*\.)?gadgetstouse.com$'
     - '(.*\.)?gratis-boek.nl$'
+    - '(.*\.)?gadgetman.ie$'
     - '(.*\.)?bookboon.com$'
     - '(.*\.)?gogogadgetguys.com$'
     - '(.*\.)?thepatterncollective.com$'
