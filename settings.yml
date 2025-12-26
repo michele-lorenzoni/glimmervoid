@@ -309,6 +309,7 @@ hostnames:
     - '(.*\.)?mybard.com$'
     - '(.*\.)?technave.com$'
     - '(.*\.)?geeky-gadgets.com$'
+    - '(.*\.)?bruna.nl$'
     - '(.*\.)?gratisboekendownloaden.net$'
     - '(.*\.)?iconcity.com$'
     - '(.*\.)?bookshelf.vitalsource.com$'
