@@ -294,6 +294,7 @@ hostnames:
     - '(.*\.)?designmodo.com$'
     - '(.*\.)?graphicdesignjunction.com$'
     - '(.*\.)?gratis-boek.nl$'
+    - '(.*\.)?bookboon.com$'
     - '(.*\.)?thepatterncollective.com$'
     - '(.*\.)?patterned.ai$'
     - '(.*\.)?hcpl.overdrive.com$'
