@@ -298,6 +298,7 @@ hostnames:
     - '(.*\.)?designmodo.com$'
     - '(.*\.)?graphicdesignjunction.com$'
     - '(.*\.)?romancebookworms.com$'
+    - '(.*\.)?gadgetstouse.com$'
     - '(.*\.)?gratis-boek.nl$'
     - '(.*\.)?bookboon.com$'
     - '(.*\.)?thepatterncollective.com$'
