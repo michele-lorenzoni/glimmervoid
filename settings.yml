@@ -275,6 +275,7 @@ hostnames:
     - '(.*\.)?ebooks2go.com$'
     - '(.*\.)?designrr.io$'
     - '(.*\.)?gadgetadvisor.com$'
+    - '(.*\.)?techgadget.gr$'
     - '(.*\.)?gadget-rumours.com$'
     - '(.*\.)?svedic.org$'
     - '(.*\.)?mybookcave.com$'
