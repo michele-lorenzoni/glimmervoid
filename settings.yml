@@ -294,6 +294,7 @@ hostnames:
     - '(.*\.)?pixcap.com$'
     - '(.*\.)?designmodo.com$'
     - '(.*\.)?graphicdesignjunction.com$'
+    - '(.*\.)?romancebookworms.com$'
     - '(.*\.)?gratis-boek.nl$'
     - '(.*\.)?bookboon.com$'
     - '(.*\.)?thepatterncollective.com$'
