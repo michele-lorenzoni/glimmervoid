@@ -292,6 +292,7 @@ hostnames:
     - '(.*\.)?gadgets360.com$'
     - '(.*\.)?thiings.co$'
     - '(.*\.)?uniteforliteracy.com$'
+    - '(.*\.)?readshop.nl$'
     - '(.*\.)?ebooksgratuits.com$'
     - '(.*\.)?ebookdaily.com$'
     - '(.*\.)?365webresources.com$'
