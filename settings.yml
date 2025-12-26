@@ -274,6 +274,7 @@ hostnames:
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?ebooks2go.com$'
     - '(.*\.)?designrr.io$'
+    - '(.*\.)?gadgetadvisor.com$'
     - '(.*\.)?svedic.org$'
     - '(.*\.)?mybookcave.com$'
     - '(.*\.)?letsreadasia.org$'
