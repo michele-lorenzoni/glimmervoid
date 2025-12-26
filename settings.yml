@@ -288,6 +288,7 @@ hostnames:
     - '(.*\.)?ebookdaily.com$'
     - '(.*\.)?365webresources.com$'
     - '(.*\.)?coolcatlovesyou.com$'
+    - '(.*\.)?gadgethacks.com$'
     - '(.*\.)?speckyboy.com$'
     - '(.*\.)?freeebooks.com$'
     - '(.*\.)?transrealbooks.com$'
