@@ -276,6 +276,7 @@ hostnames:
     - '(.*\.)?designrr.io$'
     - '(.*\.)?gadgetadvisor.com$'
     - '(.*\.)?techgadget.gr$'
+    - '(.*\.)?gadgetgear.nl$'
     - '(.*\.)?gadget-rumours.com$'
     - '(.*\.)?svedic.org$'
     - '(.*\.)?mybookcave.com$'
