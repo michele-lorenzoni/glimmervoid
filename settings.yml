@@ -288,6 +288,7 @@ hostnames:
     - '(.*\.)?ebook.nl$'
     - '(.*\.)?onlinebibliotheek.nl$'
     - '(.*\.)?123freebook.com$'
+    - '(.*\.)?hebban.nl$'
     - '(.*\.)?gadgets360.com$'
     - '(.*\.)?thiings.co$'
     - '(.*\.)?uniteforliteracy.com$'
