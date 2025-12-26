@@ -324,6 +324,7 @@ hostnames:
     - '(.*\.)?icones8.fr$'
     - '(.*\.)?epubblica.com$'
     - '(.*\.)?3movs.com$'
+    - '(.*\.)?inspire2rise.com$'
     - '(.*\.)?jclibrary.org$'
     - '(.*\.)?4easysoft.com$'
     - '(.*\.)?4kwallpapers.com$'
