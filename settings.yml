@@ -281,6 +281,7 @@ hostnames:
     - '(.*\.)?gadgetgear.nl$'
     - '(.*\.)?gadget-rumours.com$'
     - '(.*\.)?svedic.org$'
+    - '(.*\.)?openebooks.org$'
     - '(.*\.)?mybookcave.com$'
     - '(.*\.)?letsreadasia.org$'
     - '(.*\.)?ebook-fieber.de$'
