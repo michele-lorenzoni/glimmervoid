@@ -301,6 +301,7 @@ hostnames:
     - '(.*\.)?mybard.com$'
     - '(.*\.)?technave.com$'
     - '(.*\.)?geeky-gadgets.com$'
+    - '(.*\.)?gratisboekendownloaden.net$'
     - '(.*\.)?iconcity.com$'
     - '(.*\.)?bookshelf.vitalsource.com$'
     - '(.*\.)?e-booksdirectory.com$'
