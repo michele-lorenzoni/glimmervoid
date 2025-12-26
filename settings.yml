@@ -302,6 +302,7 @@ hostnames:
     - '(.*\.)?riverheadnewsreview.timesreview.com$'
     - '(.*\.)?readshop.nl$'
     - '(.*\.)?gospelebooks.net$'
+    - '(.*\.)?broese.nl$'
     - '(.*\.)?ebooksgratuits.com$'
     - '(.*\.)?ebookdaily.com$'
     - '(.*\.)?365webresources.com$'
