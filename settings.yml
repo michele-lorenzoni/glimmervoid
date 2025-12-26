@@ -307,6 +307,7 @@ hostnames:
     - '(.*\.)?gadgetstouse.com$'
     - '(.*\.)?gratis-boek.nl$'
     - '(.*\.)?bookboon.com$'
+    - '(.*\.)?gogogadgetguys.com$'
     - '(.*\.)?thepatterncollective.com$'
     - '(.*\.)?patterned.ai$'
     - '(.*\.)?hcpl.overdrive.com$'
