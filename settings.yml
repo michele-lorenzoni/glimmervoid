@@ -330,6 +330,7 @@ hostnames:
     - '(.*\.)?planetebook.com$'
     - '(.*\.)?domain.com$'
     - '(.*\.)?3dicons.co$'
+    - '(.*\.)?epubbooks.com$'
     - '(.*\.)?3disometricicon.com$'
     - '(.*\.)?3dlogo.site$'
     - '(.*\.)?3dlogolab.io$'
