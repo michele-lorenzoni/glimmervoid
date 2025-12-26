@@ -279,6 +279,7 @@ hostnames:
     - '(.*\.)?letsreadasia.org$'
     - '(.*\.)?bestebooksworld.com$'
     - '(.*\.)?ebook.nl$'
+    - '(.*\.)?123freebook.com$'
     - '(.*\.)?thiings.co$'
     - '(.*\.)?uniteforliteracy.com$'
     - '(.*\.)?365webresources.com$'
