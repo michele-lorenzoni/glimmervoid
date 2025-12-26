@@ -300,6 +300,7 @@ hostnames:
     - '(.*\.)?designmodo.com$'
     - '(.*\.)?graphicdesignjunction.com$'
     - '(.*\.)?romancebookworms.com$'
+    - '(.*\.)?tweakers.net$'
     - '(.*\.)?gadgetstouse.com$'
     - '(.*\.)?gratis-boek.nl$'
     - '(.*\.)?bookboon.com$'
