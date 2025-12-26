@@ -273,6 +273,7 @@ hostnames:
     - '(.*\.)?getepic.com$'
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?ebooks2go.com$'
+    - '(.*\.)?gadgetzone.nl$'
     - '(.*\.)?designrr.io$'
     - '(.*\.)?gadgetadvisor.com$'
     - '(.*\.)?techgadget.gr$'
