@@ -278,6 +278,7 @@ hostnames:
     - '(.*\.)?gitglance.vercel.app$'
     - '(.*\.)?daily.dev$'
     - '(.*\.)?githubprofile.com$'
+    - '(.*\.)?coderstats.net$'
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
     - '(.*\.)?github-profile-gpt.vercel.app$'
     - '(.*\.)?ebooks2go.com$'
