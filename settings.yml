@@ -320,6 +320,7 @@ hostnames:
     - '(.*\.)?bookcreator.com$'
     - '(.*\.)?vanderveldeboeken.nl$'
     - '(.*\.)?awesomegithub.web.app$'
+    - '(.*\.)?github-stats.com$'
     - '(.*\.)?saclibrary.org'
     - '(.*\.)?gadgets360.com$'
     - '(.*\.)?thiings.co$'
