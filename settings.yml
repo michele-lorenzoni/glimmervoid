@@ -277,6 +277,7 @@ hostnames:
     - '(.*\.)?githubprofile.com$'
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
     - '(.*\.)?ebooks2go.com$'
+    - '(.*\.)?genreadme.cloud$'
     - '(.*\.)?profileme.dev$'
     - '(.*\.)?gh-stats-gen.vercel.app$'
     - '(.*\.)?soraapp.com$'
