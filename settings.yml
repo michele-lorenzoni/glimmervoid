@@ -309,6 +309,7 @@ hostnames:
     - '(.*\.)?bestebooksworld.com$'
     - '(.*\.)?cse-axima.fr$'
     - '(.*\.)?statsforgit.com$'
+    - '(.*\.)?githubstatsfordevs.netlify.app$'
     - '(.*\.)?ebook.nl$'
     - '(.*\.)?onlinebibliotheek.nl$'
     - '(.*\.)?readme.rustc.cloud$'
