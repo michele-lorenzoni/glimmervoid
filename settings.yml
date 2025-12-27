@@ -306,6 +306,7 @@ hostnames:
     - '(.*\.)?indiebound.org$'
     - '(.*\.)?bestebooksworld.com$'
     - '(.*\.)?cse-axima.fr$'
+    - '(.*\.)?statsforgit.com$'
     - '(.*\.)?ebook.nl$'
     - '(.*\.)?onlinebibliotheek.nl$'
     - '(.*\.)?readme.rustc.cloud$'
