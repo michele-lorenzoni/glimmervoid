@@ -274,6 +274,7 @@ hostnames:
     - '(.*\.)?books2ebooks.eu$'
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?githubprofile.com$'
+    - '(.*\.)?awesome-github-readme-profile.netlify.app$'
     - '(.*\.)?ebooks2go.com$'
     - '(.*\.)?soraapp.com$'
     - '(.*\.)?gadgetzone.nl$'
