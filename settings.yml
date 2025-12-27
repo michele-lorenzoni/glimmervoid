@@ -306,6 +306,7 @@ hostnames:
     - '(.*\.)?cse-axima.fr$'
     - '(.*\.)?ebook.nl$'
     - '(.*\.)?onlinebibliotheek.nl$'
+    - '(.*\.)?readme.rustc.cloud$'
     - '(.*\.)?prize.supplyframe.com$'
     - '(.*\.)?123freebook.com$'
     - '(.*\.)?hebban.nl$'
