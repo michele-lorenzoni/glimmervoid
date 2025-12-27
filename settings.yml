@@ -273,6 +273,7 @@ hostnames:
     - '(.*\.)?getepic.com$'
     - '(.*\.)?books2ebooks.eu$'
     - '(.*\.)?amazon.nl$'
+    - '(.*\.)?githubprofile.com$'
     - '(.*\.)?ebooks2go.com$'
     - '(.*\.)?soraapp.com$'
     - '(.*\.)?gadgetzone.nl$'
