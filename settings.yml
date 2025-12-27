@@ -290,6 +290,7 @@ hostnames:
     - '(.*\.)?boekenwereld.com$'
     - '(.*\.)?libris.nl$'
     - '(.*\.)?letsreadasia.org$'
+    - '(.*\.)?github-readme-maker.vercel.app$'
     - '(.*\.)?ebook-fieber.de$'
     - '(.*\.)?indiebound.org$'
     - '(.*\.)?bestebooksworld.com$'
