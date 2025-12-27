@@ -285,6 +285,7 @@ hostnames:
     - '(.*\.)?gadgetzone.nl$'
     - '(.*\.)?designrr.io$'
     - '(.*\.)?gadgetadvisor.com$'
+    - '(.*\.)?gitdevtool.com$'
     - '(.*\.)?techgadget.gr$'
     - '(.*\.)?gadgetgear.nl$'
     - '(.*\.)?gadget-rumours.com$'
