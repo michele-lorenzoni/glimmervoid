@@ -294,6 +294,7 @@ hostnames:
     - '(.*\.)?gitdevtool.com$'
     - '(.*\.)?readme-gen.streamlit.app$'
     - '(.*\.)?gitranks.com$'
+    - '(.*\.)?git-hub-streak-stats.vercel.app$'
     - '(.*\.)?techgadget.gr$'
     - '(.*\.)?hejazizo-github-profile-readme-srcstreamlit-app-i6skm7.streamlit.app$'
     - '(.*\.)?gitread.dev$'
