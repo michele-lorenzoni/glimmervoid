@@ -299,6 +299,7 @@ hostnames:
     - '(.*\.)?prize.supplyframe.com$'
     - '(.*\.)?123freebook.com$'
     - '(.*\.)?hebban.nl$'
+    - '(.*\.)?repolaunch.com$'
     - '(.*\.)?bookcreator.com$'
     - '(.*\.)?vanderveldeboeken.nl$'
     - '(.*\.)?saclibrary.org'
