@@ -277,6 +277,7 @@ hostnames:
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?githubprofile.com$'
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
+    - '(.*\.)?github-profile-gpt.vercel.app$'
     - '(.*\.)?ebooks2go.com$'
     - '(.*\.)?genreadme.cloud$'
     - '(.*\.)?profileme.dev$'
