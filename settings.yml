@@ -327,6 +327,7 @@ hostnames:
     - '(.*\.)?gospelebooks.net$'
     - '(.*\.)?broese.nl$'
     - '(.*\.)?ebooksgratuits.com$'
+    - '(.*\.)?peterpengnz.github.io$'
     - '(.*\.)?ebookdaily.com$'
     - '(.*\.)?365webresources.com$'
     - '(.*\.)?gadgettechstore.com.au$'
