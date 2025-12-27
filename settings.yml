@@ -285,6 +285,7 @@ hostnames:
     - '(.*\.)?gadgetgear.nl$'
     - '(.*\.)?gadget-rumours.com$'
     - '(.*\.)?svedic.org$'
+    - '(.*\.)?git-readme-generator.vercel.app$'
     - '(.*\.)?openebooks.org$'
     - '(.*\.)?mybookcave.com$'
     - '(.*\.)?boekenwereld.com$'
