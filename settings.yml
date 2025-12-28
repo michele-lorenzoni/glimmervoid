@@ -291,6 +291,7 @@ hostnames:
     - '(.*\.)?github-profile-gpt.vercel.app$'
     - '(.*\.)?gifpal.com$'
     - '(.*\.)?blinki.fr$'
+    - '(.*\.)?emojipedia.nl$'
     - '(.*\.)?ebooks2go.com$'
     - '(.*\.)?gififyai.com$'
     - '(.*\.)?genreadme.cloud$'
