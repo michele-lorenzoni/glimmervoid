@@ -277,6 +277,7 @@ hostnames:
     - '(.*\.)?prezo.jp$'
     - '(.*\.)?readme.linderhassinger.dev$'
     - '(.*\.)?emojirepo.org$'
+    - '(.*\.)?fsymbols.com$'
     - '(.*\.)?books2ebooks.eu$'
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?endorphinbath.com$'
