@@ -319,6 +319,7 @@ hostnames:
     - '(.*\.)?svedic.org$'
     - '(.*\.)?git-readme-generator.vercel.app$'
     - '(.*\.)?openebooks.org$'
+    - '(.*\.)?gifmake.com$'
     - '(.*\.)?mybookcave.com$'
     - '(.*\.)?github-states-generator.vercel.app$'
     - '(.*\.)?boekenwereld.com$'
