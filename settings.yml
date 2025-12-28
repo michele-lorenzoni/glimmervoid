@@ -283,6 +283,7 @@ hostnames:
     - '(.*\.)?daily.dev$'
     - '(.*\.)?biographynyc.com$'
     - '(.*\.)?githubprofile.com$'
+    - '(.*\.)?ahaemoji.com$'
     - '(.*\.)?sabr.org$'
     - '(.*\.)?devuurwerkhandel.nl$'
     - '(.*\.)?emojihub.org$'
