@@ -302,6 +302,7 @@ hostnames:
     - '(.*\.)?biographyonline.net$'
     - '(.*\.)?nano.komputronik.pl$'
     - '(.*\.)?biographies.net$'
+    - '(.*\.)?infoplease.com$'
     - '(.*\.)?readme-gen.streamlit.app$'
     - '(.*\.)?gitranks.com$'
     - '(.*\.)?git-hub-streak-stats.vercel.app$'
