@@ -283,6 +283,7 @@ hostnames:
     - '(.*\.)?githubprofile.com$'
     - '(.*\.)?sabr.org$'
     - '(.*\.)?devuurwerkhandel.nl$'
+    - '(.*\.)?emojihub.org$'
     - '(.*\.)?coderstats.net$'
     - '(.*\.)?blinkysbar.com$'
     - '(.*\.)?theblinkies.com$'
