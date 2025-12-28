@@ -295,6 +295,7 @@ hostnames:
     - '(.*\.)?nbe.com.eg$'
     - '(.*\.)?gadgetzone.nl$'
     - '(.*\.)?yhype.me$'
+    - '(.*\.)?linguee.nl$'
     - '(.*\.)?designrr.io$'
     - '(.*\.)?gadgetadvisor.com$'
     - '(.*\.)?gitdevtool.com$'
