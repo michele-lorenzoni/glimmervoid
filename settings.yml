@@ -329,6 +329,7 @@ hostnames:
     - '(.*\.)?biographyonline.net$'
     - '(.*\.)?nano.komputronik.pl$'
     - '(.*\.)?biographies.net$'
+    - '(.*\.)?copyandpastesymbols.net$'
     - '(.*\.)?infoplease.com$'
     - '(.*\.)?readme-gen.streamlit.app$'
     - '(.*\.)?getemoji.com$'
