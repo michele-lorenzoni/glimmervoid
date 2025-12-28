@@ -273,6 +273,7 @@ hostnames:
     - '(.*\.)?getepic.com$'
     - '(.*\.)?genreadme.cloud$'
     - '(.*\.)?emojifinder.com$'
+    - '(.*\.)?emojipicker.com$'
     - '(.*\.)?prezo.jp$'
     - '(.*\.)?readme.linderhassinger.dev$'
     - '(.*\.)?emojirepo.org$'
