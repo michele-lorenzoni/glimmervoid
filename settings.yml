@@ -309,6 +309,7 @@ hostnames:
     - '(.*\.)?3dgifmaker.com$'
     - '(.*\.)?designrr.io$'
     - '(.*\.)?gadgetadvisor.com$'
+    - '(.*\.)?emojiguide.org$'
     - '(.*\.)?gitdevtool.com$'
     - '(.*\.)?biographyonline.net$'
     - '(.*\.)?nano.komputronik.pl$'
