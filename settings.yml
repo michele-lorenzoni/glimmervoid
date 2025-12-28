@@ -286,6 +286,7 @@ hostnames:
     - '(.*\.)?ahaemoji.com$'
     - '(.*\.)?ziggo.nl$'
     - '(.*\.)?sabr.org$'
+    - '(.*\.)?emojidictionary.emojifoundation.com$'
     - '(.*\.)?devuurwerkhandel.nl$'
     - '(.*\.)?emojihub.org$'
     - '(.*\.)?worldemojiday.com$'
