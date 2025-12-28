@@ -314,6 +314,7 @@ hostnames:
     - '(.*\.)?makegif.org$'
     - '(.*\.)?iemoji.com$'
     - '(.*\.)?freegifmaker.me$'
+    - '(.*\.)?get-emoji.com$'
     - '(.*\.)?gadgetzone.nl$'
     - '(.*\.)?yhype.me$'
     - '(.*\.)?linguee.nl$'
