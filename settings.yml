@@ -302,6 +302,7 @@ hostnames:
     - '(.*\.)?profileme.dev$'
     - '(.*\.)?gh-stats-gen.vercel.app$'
     - '(.*\.)?emojicopy.com$'
+    - '(.*\.)?emoji.aranja.com$'
     - '(.*\.)?gifrun.com$'
     - '(.*\.)?soraapp.com$'
     - '(.*\.)?nbe.com.eg$'
