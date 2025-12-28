@@ -295,6 +295,7 @@ hostnames:
     - '(.*\.)?gifrun.com$'
     - '(.*\.)?soraapp.com$'
     - '(.*\.)?nbe.com.eg$'
+    - '(.*\.)?freegifmaker.me$'
     - '(.*\.)?gadgetzone.nl$'
     - '(.*\.)?yhype.me$'
     - '(.*\.)?linguee.nl$'
