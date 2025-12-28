@@ -305,6 +305,7 @@ hostnames:
     - '(.*\.)?git-readme-generator.vercel.app$'
     - '(.*\.)?openebooks.org$'
     - '(.*\.)?mybookcave.com$'
+    - '(.*\.)?github-states-generator.vercel.app$'
     - '(.*\.)?boekenwereld.com$'
     - '(.*\.)?pinmaker.supercell.com$'
     - '(.*\.)?libris.nl$'
