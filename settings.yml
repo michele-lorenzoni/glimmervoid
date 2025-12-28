@@ -289,6 +289,7 @@ hostnames:
     - '(.*\.)?biography.jrank.org$'
     - '(.*\.)?github-profile-gpt.vercel.app$'
     - '(.*\.)?gifpal.com$'
+    - '(.*\.)?blinki.fr$'
     - '(.*\.)?ebooks2go.com$'
     - '(.*\.)?gififyai.com$'
     - '(.*\.)?genreadme.cloud$'
