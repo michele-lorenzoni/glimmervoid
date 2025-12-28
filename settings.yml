@@ -305,6 +305,7 @@ hostnames:
     - '(.*\.)?openebooks.org$'
     - '(.*\.)?mybookcave.com$'
     - '(.*\.)?boekenwereld.com$'
+    - '(.*\.)?pinmaker.supercell.com$'
     - '(.*\.)?libris.nl$'
     - '(.*\.)?letsreadasia.org$'
     - '(.*\.)?github-readme-maker.vercel.app$'
