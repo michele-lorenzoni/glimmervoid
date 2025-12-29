@@ -288,6 +288,7 @@ hostnames:
     - '(.*\.)?githubprofile.com$'
     - '(.*\.)?ahaemoji.com$'
     - '(.*\.)?ziggo.nl$'
+    - '(.*\.)?tv8.it'
     - '(.*\.)?emojis.com$'
     - '(.*\.)?sabr.org$'
     - '(.*\.)?textcompare.io$'
