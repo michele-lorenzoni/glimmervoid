@@ -310,6 +310,7 @@ hostnames:
     - '(.*\.)?makeemoji.com$'
     - '(.*\.)?blinkysbar.com$'
     - '(.*\.)?filmsenzalimiti.name$'
+    - '(.*\.)?glotorrents.123proxy.app$'
     - '(.*\.)?theblinkies.com$'
     - '(.*\.)?screenworld.it$'
     - '(.*\.)?comingsoon.it$'
