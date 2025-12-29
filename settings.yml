@@ -301,6 +301,7 @@ hostnames:
     - '(.*\.)?blinkysbar.com$'
     - '(.*\.)?theblinkies.com$'
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
+    - '(.*\.)?caseconverter.tools$'
     - '(.*\.)?biography.jrank.org$'
     - '(.*\.)?github-profile-gpt.vercel.app$'
     - '(.*\.)?emojibetekenis.nl$'
