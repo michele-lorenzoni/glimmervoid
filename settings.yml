@@ -313,6 +313,7 @@ hostnames:
     - '(.*\.)?comingsoon.it$'
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
     - '(.*\.)?caseconverter.tools$'
+    - '(.*\.)?eurostreaming.pet$'
     - '(.*\.)?biography.jrank.org$'
     - '(.*\.)?jadwaltv.net$'
     - '(.*\.)?github-profile-gpt.vercel.app$'
