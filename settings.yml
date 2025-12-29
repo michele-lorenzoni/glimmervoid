@@ -314,6 +314,7 @@ hostnames:
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
     - '(.*\.)?caseconverter.tools$'
     - '(.*\.)?biography.jrank.org$'
+    - '(.*\.)?jadwaltv.net$'
     - '(.*\.)?github-profile-gpt.vercel.app$'
     - '(.*\.)?emojibetekenis.nl$'
     - '(.*\.)?gifpal.com$'
