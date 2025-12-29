@@ -322,6 +322,7 @@ hostnames:
     - '(.*\.)?zhidao.baidu.com$'
     - '(.*\.)?foodandwine.com$'
     - '(.*\.)?guida-tv.org$'
+    - '(.*\.)?de.bing.com$'
     - '(.*\.)?file.io$'
     - '(.*\.)?netflix-news.atsit.in$'
     - '(.*\.)?postcode.nl$'
