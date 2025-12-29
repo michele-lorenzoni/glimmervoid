@@ -338,6 +338,7 @@ hostnames:
     - '(.*\.)?nbe.com.eg$'
     - '(.*\.)?makegif.org$'
     - '(.*\.)?iemoji.com$'
+    - '(.*\.)?programma.sorrisi.com$'
     - '(.*\.)?freegifmaker.me$'
     - '(.*\.)?get-emoji.com$'
     - '(.*\.)?gadgetzone.nl$'
