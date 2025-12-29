@@ -308,6 +308,7 @@ hostnames:
     - '(.*\.)?textcompare.io$'
     - '(.*\.)?pastebin.freeswitch.org$'
     - '(.*\.)?emojidictionary.emojifoundation.com$'
+    - '(.*\.)?metacritic.com$'
     - '(.*\.)?longtake.it$'
     - '(.*\.)?cineblog01.tattoo$'
     - '(.*\.)?devuurwerkhandel.nl$'
