@@ -296,6 +296,7 @@ hostnames:
     - '(.*\.)?emojihub.org$'
     - '(.*\.)?worldemojiawards.com$'
     - '(.*\.)?worldemojiday.com$'
+    - '(.*\.)?cb01.pizza$'
     - '(.*\.)?coderstats.net$'
     - '(.*\.)?makeemoji.com$'
     - '(.*\.)?blinkysbar.com$'
