@@ -281,6 +281,7 @@ hostnames:
     - '(.*\.)?televideoteca.it$'
     - '(.*\.)?prezo.jp$'
     - '(.*\.)?lenadesign.org$'
+    - '(.*\.)?cssgenerator.org$'
     - '(.*\.)?readme.linderhassinger.dev$'
     - '(.*\.)?streamingcommunityz.fun$'
     - '(.*\.)?spolecznosc.ing.pl$'
