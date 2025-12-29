@@ -325,6 +325,7 @@ hostnames:
     - '(.*\.)?emojidictionary.emojifoundation.com$'
     - '(.*\.)?metacritic.com$'
     - '(.*\.)?longtake.it$'
+    - '(.*\.)?frame.io$'
     - '(.*\.)?cineblog01.tattoo$'
     - '(.*\.)?ign.com$'
     - '(.*\.)?devuurwerkhandel.nl$'
