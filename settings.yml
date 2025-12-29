@@ -298,6 +298,7 @@ hostnames:
     - '(.*\.)?githubprofile.com$'
     - '(.*\.)?c13.radioboss.fm$'
     - '(.*\.)?ahaemoji.com$'
+    - '(.*\.)?corriere.it$'
     - '(.*\.)?ziggo.nl$'
     - '(.*\.)?ciakmagazine.it$'
     - '(.*\.)?oggiintv.eu$'
