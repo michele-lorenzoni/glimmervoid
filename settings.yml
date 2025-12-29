@@ -323,6 +323,7 @@ hostnames:
     - '(.*\.)?c13.radioboss.fm$'
     - '(.*\.)?ahaemoji.com$'
     - '(.*\.)?corriere.it$'
+    - '(.*\.)?badg.us$'
     - '(.*\.)?ziggo.nl$'
     - '(.*\.)?tvprofil.com$'
     - '(.*\.)?ciakmagazine.it$'
