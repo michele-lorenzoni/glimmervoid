@@ -317,6 +317,7 @@ hostnames:
     - '(.*\.)?coderstats.net$'
     - '(.*\.)?streamingcommunity.family$'
     - '(.*\.)?makeemoji.com$'
+    - '(.*\.)?superguidatv.it$'
     - '(.*\.)?blinkysbar.com$'
     - '(.*\.)?filmsenzalimiti.name$'
     - '(.*\.)?glotorrents.123proxy.app$'
