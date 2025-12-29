@@ -277,6 +277,7 @@ hostnames:
     - '(.*\.)?emojipicker.com$'
     - '(.*\.)?moviemeter.nl$'
     - '(.*\.)?box-shadow.art$'
+    - '(.*\.)?imprintplus.com$'
     - '(.*\.)?streamingcommunityz.email$'
     - '(.*\.)?televideoteca.it$'
     - '(.*\.)?pathtoeagle.org$'
