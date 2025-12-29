@@ -276,6 +276,7 @@ hostnames:
     - '(.*\.)?emojipicker.com$'
     - '(.*\.)?prezo.jp$'
     - '(.*\.)?readme.linderhassinger.dev$'
+    - '(.*\.)?streamingcommunityz.fun$'
     - '(.*\.)?spolecznosc.ing.pl$'
     - '(.*\.)?emojirepo.org$'
     - '(.*\.)?cinemalibero.city$'
