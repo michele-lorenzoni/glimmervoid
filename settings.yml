@@ -321,6 +321,7 @@ hostnames:
     - '(.*\.)?metacritic.com$'
     - '(.*\.)?longtake.it$'
     - '(.*\.)?cineblog01.tattoo$'
+    - '(.*\.)?ign.com$'
     - '(.*\.)?devuurwerkhandel.nl$'
     - '(.*\.)?busymombandworkouts.com$'
     - '(.*\.)?emojigraph.org$'
