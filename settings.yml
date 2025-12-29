@@ -274,6 +274,7 @@ hostnames:
     - '(.*\.)?genreadme.cloud$'
     - '(.*\.)?emojifinder.com$'
     - '(.*\.)?emojipicker.com$'
+    - '(.*\.)?streamingcommunityz.email$'
     - '(.*\.)?prezo.jp$'
     - '(.*\.)?readme.linderhassinger.dev$'
     - '(.*\.)?streamingcommunityz.fun$'
