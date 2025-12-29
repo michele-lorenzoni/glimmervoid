@@ -314,6 +314,7 @@ hostnames:
     - '(.*\.)?ciakmagazine.it$'
     - '(.*\.)?oggiintv.eu$'
     - '(.*\.)?guida-tv.org$'
+    - '(.*\.)?file.io$'
     - '(.*\.)?netflix-news.atsit.in$'
     - '(.*\.)?postcode.nl$'
     - '(.*\.)?tv8.it$'
