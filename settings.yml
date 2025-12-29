@@ -303,6 +303,7 @@ hostnames:
     - '(.*\.)?endorphinbath.com$'
     - '(.*\.)?gitglance.vercel.app$'
     - '(.*\.)?streamingcommunityz.digital$'
+    - '(.*\.)?scoutles.com$'
     - '(.*\.)?daily.dev$'
     - '(.*\.)?biographynyc.com$'
     - '(.*\.)?slashfilm.com$'
