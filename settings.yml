@@ -359,6 +359,7 @@ hostnames:
     - '(.*\.)?blinkysbar.com$'
     - '(.*\.)?filmsenzalimiti.name$'
     - '(.*\.)?glotorrents.123proxy.app$'
+    - '(.*\.)?cssauthor.com$'
     - '(.*\.)?theblinkies.com$'
     - '(.*\.)?screenworld.it$'
     - '(.*\.)?filmtv.it$'
