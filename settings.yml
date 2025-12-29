@@ -300,6 +300,7 @@ hostnames:
     - '(.*\.)?daily.dev$'
     - '(.*\.)?biographynyc.com$'
     - '(.*\.)?slashfilm.com$'
+    - '(.*\.)?boxshadow.csscraftr.com$'
     - '(.*\.)?adessoin.tv$'
     - '(.*\.)?1337x.to$'
     - '(.*\.)?githubprofile.com$'
