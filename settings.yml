@@ -321,6 +321,7 @@ hostnames:
     - '(.*\.)?glotorrents.123proxy.app$'
     - '(.*\.)?theblinkies.com$'
     - '(.*\.)?screenworld.it$'
+    - '(.*\.)?mymovies.it$'
     - '(.*\.)?comingsoon.it$'
     - '(.*\.)?hisoftsroll.web.app$'
     - '(.*\.)?waltsbeefjerky.net$'
