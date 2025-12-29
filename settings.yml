@@ -315,6 +315,7 @@ hostnames:
     - '(.*\.)?devuurwerkhandel.nl$'
     - '(.*\.)?busymombandworkouts.com$'
     - '(.*\.)?emojigraph.org$'
+    - '(.*\.)?filmscoop.it$'
     - '(.*\.)?emojihub.org$'
     - '(.*\.)?worldemojiawards.com$'
     - '(.*\.)?invistanet.com.br$'
