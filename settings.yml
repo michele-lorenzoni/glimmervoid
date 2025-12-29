@@ -319,6 +319,7 @@ hostnames:
     - '(.*\.)?screenworld.it$'
     - '(.*\.)?comingsoon.it$'
     - '(.*\.)?hisoftsroll.web.app$'
+    - '(.*\.)?waltsbeefjerky.net$'
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
     - '(.*\.)?caseconverter.tools$'
     - '(.*\.)?eurostreaming.pet$'
