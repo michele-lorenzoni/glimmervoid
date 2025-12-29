@@ -295,6 +295,7 @@ hostnames:
     - '(.*\.)?movieswatchfreeonline.com$'
     - '(.*\.)?books2ebooks.eu$'
     - '(.*\.)?sproutvideo.com$'
+    - '(.*\.)?communaute.ebay.fr$'
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?streamingcommunity.computer$'
     - '(.*\.)?endorphinbath.com$'
