@@ -340,6 +340,7 @@ hostnames:
     - '(.*\.)?textcompare.io$'
     - '(.*\.)?pastebin.freeswitch.org$'
     - '(.*\.)?emojidictionary.emojifoundation.com$'
+    - '(.*\.)?bestpractices.dev$'
     - '(.*\.)?metacritic.com$'
     - '(.*\.)?longtake.it$'
     - '(.*\.)?frame.io$'
