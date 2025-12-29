@@ -288,6 +288,7 @@ hostnames:
     - '(.*\.)?staseraintv.com$'
     - '(.*\.)?emojirepo.org$'
     - '(.*\.)?summerlandfestival.it$'
+    - '(.*\.)?random.css-pattern.com$'
     - '(.*\.)?cinemalibero.city$'
     - '(.*\.)?today.it$'
     - '(.*\.)?fsymbols.com$'
