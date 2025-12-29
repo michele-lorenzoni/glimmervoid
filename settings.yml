@@ -280,6 +280,7 @@ hostnames:
     - '(.*\.)?readme.linderhassinger.dev$'
     - '(.*\.)?streamingcommunityz.fun$'
     - '(.*\.)?spolecznosc.ing.pl$'
+    - '(.*\.)?staseraintv.com$'
     - '(.*\.)?emojirepo.org$'
     - '(.*\.)?cinemalibero.city$'
     - '(.*\.)?fsymbols.com$'
