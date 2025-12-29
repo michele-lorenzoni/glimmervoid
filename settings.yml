@@ -305,6 +305,7 @@ hostnames:
     - '(.*\.)?gitglance.vercel.app$'
     - '(.*\.)?streamingcommunityz.digital$'
     - '(.*\.)?scoutles.com$'
+    - '(.*\.)?programmerhumor.io$'
     - '(.*\.)?daily.dev$'
     - '(.*\.)?biographynyc.com$'
     - '(.*\.)?slashfilm.com$'
