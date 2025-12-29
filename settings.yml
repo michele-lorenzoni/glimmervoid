@@ -342,6 +342,7 @@ hostnames:
     - '(.*\.)?cineblog01.tattoo$'
     - '(.*\.)?ign.com$'
     - '(.*\.)?devuurwerkhandel.nl$'
+    - '(.*\.)?sharedrop.io$'
     - '(.*\.)?busymombandworkouts.com$'
     - '(.*\.)?emojigraph.org$'
     - '(.*\.)?filmscoop.it$'
