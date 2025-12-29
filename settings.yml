@@ -282,6 +282,7 @@ hostnames:
     - '(.*\.)?fsymbols.com$'
     - '(.*\.)?books2ebooks.eu$'
     - '(.*\.)?amazon.nl$'
+    - '(.*\.)?streamingcommunity.computer$'
     - '(.*\.)?endorphinbath.com$'
     - '(.*\.)?gitglance.vercel.app$'
     - '(.*\.)?streamingcommunityz.digital$'
