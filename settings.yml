@@ -301,6 +301,7 @@ hostnames:
     - '(.*\.)?worldemojiday.com$'
     - '(.*\.)?cb01.pizza$'
     - '(.*\.)?coderstats.net$'
+    - '(.*\.)?streamingcommunity.family$'
     - '(.*\.)?makeemoji.com$'
     - '(.*\.)?blinkysbar.com$'
     - '(.*\.)?filmsenzalimiti.name$'
