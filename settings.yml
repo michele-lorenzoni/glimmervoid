@@ -334,6 +334,7 @@ hostnames:
     - '(.*\.)?awesome-github-readme-profile.netlify.app$'
     - '(.*\.)?caseconverter.tools$'
     - '(.*\.)?eurostreaming.pet$'
+    - '(.*\.)?colmeia.blog.br$'
     - '(.*\.)?biography.jrank.org$'
     - '(.*\.)?jadwaltv.net$'
     - '(.*\.)?github-profile-gpt.vercel.app$'
