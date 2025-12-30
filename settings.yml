@@ -370,6 +370,7 @@ hostnames:
     - '(.*\.)?scoutlife.org$'
     - '(.*\.)?textcompare.io$'
     - '(.*\.)?scrappybook.com$'
+    - '(.*\.)?gadgetify.fun$'
     - '(.*\.)?pastebin.freeswitch.org$'
     - '(.*\.)?binky.nl$'
     - '(.*\.)?emojidictionary.emojifoundation.com$'
