@@ -297,6 +297,7 @@ hostnames:
     - '(.*\.)?random.css-pattern.com$'
     - '(.*\.)?juststickers.in$'
     - '(.*\.)?liquidfiles.com$'
+    - '(.*\.)?gadgetifyshop.com$'
     - '(.*\.)?cinemalibero.city$'
     - '(.*\.)?today.it$'
     - '(.*\.)?thesoftwareguild.com$'
