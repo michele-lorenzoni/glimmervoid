@@ -340,6 +340,7 @@ hostnames:
     - '(.*\.)?sendbig.com$'
     - '(.*\.)?guida-tv.org$'
     - '(.*\.)?de.bing.com$'
+    - '(.*\.)?filetransfer.uvm.edu$'
     - '(.*\.)?dotbadges.com$'
     - '(.*\.)?file.io$'
     - '(.*\.)?netflix-news.atsit.in$'
