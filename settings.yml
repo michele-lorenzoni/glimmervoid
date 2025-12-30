@@ -303,6 +303,7 @@ hostnames:
     - '(.*\.)?fsymbols.com$'
     - '(.*\.)?movieswatchfreeonline.com$'
     - '(.*\.)?books2ebooks.eu$'
+    - '(.*\.)?gadgetifystore.com$'
     - '(.*\.)?sproutvideo.com$'
     - '(.*\.)?communaute.ebay.fr$'
     - '(.*\.)?cssscript.com$'
