@@ -304,6 +304,7 @@ hostnames:
     - '(.*\.)?sproutvideo.com$'
     - '(.*\.)?communaute.ebay.fr$'
     - '(.*\.)?cssscript.com$'
+    - '(.*\.)?blinki.es$'
     - '(.*\.)?scoutsmarts.com$'
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?patternify.com$'
