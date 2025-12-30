@@ -340,6 +340,7 @@ hostnames:
     - '(.*\.)?robadadonne.it$'
     - '(.*\.)?tv.zam.it$'
     - '(.*\.)?sendvid.com$'
+    - '(.*\.)?gadgetify.shop$'
     - '(.*\.)?c13.radioboss.fm$'
     - '(.*\.)?ahaemoji.com$'
     - '(.*\.)?corriere.it$'
