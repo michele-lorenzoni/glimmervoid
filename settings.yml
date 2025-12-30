@@ -377,6 +377,7 @@ hostnames:
     - '(.*\.)?frame.io$'
     - '(.*\.)?cineblog01.tattoo$'
     - '(.*\.)?ign.com$'
+    - '(.*\.)?gadgetifybd.com$'
     - '(.*\.)?devuurwerkhandel.nl$'
     - '(.*\.)?sharedrop.io$'
     - '(.*\.)?g4dgetify.myshopify.com$'
