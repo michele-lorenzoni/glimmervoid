@@ -321,6 +321,7 @@ hostnames:
     - '(.*\.)?freesvgdownload.com$'
     - '(.*\.)?aliexpress.com$'
     - '(.*\.)?daily.dev$'
+    - '(.*\.)?docklab.nl$'
     - '(.*\.)?biographynyc.com$'
     - '(.*\.)?badges.mybluemix.net$'
     - '(.*\.)?slashfilm.com$'
