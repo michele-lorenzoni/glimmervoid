@@ -309,6 +309,7 @@ hostnames:
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?patternify.com$'
     - '(.*\.)?streamingcommunity.computer$'
+    - '(.*\.)?dropsend.com$'
     - '(.*\.)?endorphinbath.com$'
     - '(.*\.)?gitglance.vercel.app$'
     - '(.*\.)?streamingcommunityz.digital$'
