@@ -339,6 +339,7 @@ hostnames:
     - '(.*\.)?ciakmagazine.it$'
     - '(.*\.)?blinkies.eu$'
     - '(.*\.)?oggiintv.eu$'
+    - '(.*\.)?datatransfer.com$'
     - '(.*\.)?zhidao.baidu.com$'
     - '(.*\.)?foodandwine.com$'
     - '(.*\.)?sendbig.com$'
