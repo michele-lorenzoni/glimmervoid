@@ -320,6 +320,7 @@ hostnames:
     - '(.*\.)?dropsend.com$'
     - '(.*\.)?endorphinbath.com$'
     - '(.*\.)?gadgetify.info$'
+    - '(.*\.)?alphabetize.org$'
     - '(.*\.)?gitglance.vercel.app$'
     - '(.*\.)?gadgetify-shop.de$'
     - '(.*\.)?streamingcommunityz.digital$'
