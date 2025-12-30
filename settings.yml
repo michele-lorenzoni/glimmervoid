@@ -288,6 +288,7 @@ hostnames:
     - '(.*\.)?streamingcommunityz.fun$'
     - '(.*\.)?spolecznosc.ing.pl$'
     - '(.*\.)?staseraintv.com$'
+    - '(.*\.)?gadgetifyofficial.com$'
     - '(.*\.)?emojirepo.org$'
     - '(.*\.)?welstech.wels.net$'
     - '(.*\.)?filedropshare.com$'
