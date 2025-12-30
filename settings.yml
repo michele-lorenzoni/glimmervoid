@@ -313,6 +313,7 @@ hostnames:
     - '(.*\.)?programmerhumor.io$'
     - '(.*\.)?daily.dev$'
     - '(.*\.)?biographynyc.com$'
+    - '(.*\.)?badges.mybluemix.net$'
     - '(.*\.)?slashfilm.com$'
     - '(.*\.)?boxshadow.csscraftr.com$'
     - '(.*\.)?adessoin.tv$'
