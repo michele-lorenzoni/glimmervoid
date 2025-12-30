@@ -295,6 +295,7 @@ hostnames:
     - '(.*\.)?juststickers.in$'
     - '(.*\.)?cinemalibero.city$'
     - '(.*\.)?today.it$'
+    - '(.*\.)?thesoftwareguild.com$'
     - '(.*\.)?fsymbols.com$'
     - '(.*\.)?movieswatchfreeonline.com$'
     - '(.*\.)?books2ebooks.eu$'
