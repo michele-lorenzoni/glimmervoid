@@ -336,6 +336,7 @@ hostnames:
     - '(.*\.)?oggiintv.eu$'
     - '(.*\.)?zhidao.baidu.com$'
     - '(.*\.)?foodandwine.com$'
+    - '(.*\.)?sendbig.com$'
     - '(.*\.)?guida-tv.org$'
     - '(.*\.)?de.bing.com$'
     - '(.*\.)?dotbadges.com$'
