@@ -302,6 +302,7 @@ hostnames:
     - '(.*\.)?today.it$'
     - '(.*\.)?thesoftwareguild.com$'
     - '(.*\.)?fsymbols.com$'
+    - '(.*\.)?thelanguagecloset.com$'
     - '(.*\.)?movieswatchfreeonline.com$'
     - '(.*\.)?books2ebooks.eu$'
     - '(.*\.)?gadgetifystore.com$'
