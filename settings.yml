@@ -372,6 +372,7 @@ hostnames:
     - '(.*\.)?emojigraph.org$'
     - '(.*\.)?filmscoop.it$'
     - '(.*\.)?emojihub.org$'
+    - '(.*\.)?blinkiescosmetics.com$'
     - '(.*\.)?worldemojiawards.com$'
     - '(.*\.)?invistanet.com.br$'
     - '(.*\.)?worldemojiday.com$'
