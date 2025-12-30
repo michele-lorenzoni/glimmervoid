@@ -378,6 +378,7 @@ hostnames:
     - '(.*\.)?ign.com$'
     - '(.*\.)?devuurwerkhandel.nl$'
     - '(.*\.)?sharedrop.io$'
+    - '(.*\.)?g4dgetify.myshopify.com$'
     - '(.*\.)?busymombandworkouts.com$'
     - '(.*\.)?emojigraph.org$'
     - '(.*\.)?filmscoop.it$'
