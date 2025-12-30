@@ -432,6 +432,7 @@ hostnames:
     - '(.*\.)?gh-stats-gen.vercel.app$'
     - '(.*\.)?textemoji.org$'
     - '(.*\.)?emojicopy.com$'
+    - '(.*\.)?files.fm$'
     - '(.*\.)?emoji-translator.com$'
     - '(.*\.)?emoji.aranja.com$'
     - '(.*\.)?studenti.it$'
