@@ -381,6 +381,7 @@ hostnames:
     - '(.*\.)?devuurwerkhandel.nl$'
     - '(.*\.)?sharedrop.io$'
     - '(.*\.)?g4dgetify.myshopify.com$'
+    - '(.*\.)?easygadgetify.store$'
     - '(.*\.)?busymombandworkouts.com$'
     - '(.*\.)?emojigraph.org$'
     - '(.*\.)?filmscoop.it$'
