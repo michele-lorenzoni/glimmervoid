@@ -394,6 +394,7 @@ hostnames:
     - '(.*\.)?emojihub.org$'
     - '(.*\.)?blinkiescosmetics.com$'
     - '(.*\.)?worldemojiawards.com$'
+    - '(.*\.)?gadgify.us$'
     - '(.*\.)?gadgetifyworld.com$'
     - '(.*\.)?invistanet.com.br$'
     - '(.*\.)?worldemojiday.com$'
