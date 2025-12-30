@@ -290,6 +290,7 @@ hostnames:
     - '(.*\.)?staseraintv.com$'
     - '(.*\.)?emojirepo.org$'
     - '(.*\.)?welstech.wels.net$'
+    - '(.*\.)?filedropshare.com$'
     - '(.*\.)?summerlandfestival.it$'
     - '(.*\.)?random.css-pattern.com$'
     - '(.*\.)?juststickers.in$'
