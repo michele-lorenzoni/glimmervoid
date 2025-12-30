@@ -443,6 +443,7 @@ hostnames:
     - '(.*\.)?3dgifmaker.com$'
     - '(.*\.)?designrr.io$'
     - '(.*\.)?gadgetadvisor.com$'
+    - '(.*\.)?blinkieseec.com.au$'
     - '(.*\.)?emojiguide.org$'
     - '(.*\.)?gitdevtool.com$'
     - '(.*\.)?biographyonline.net$'
