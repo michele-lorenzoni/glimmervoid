@@ -312,6 +312,7 @@ hostnames:
     - '(.*\.)?streamingcommunityz.digital$'
     - '(.*\.)?scoutles.com$'
     - '(.*\.)?programmerhumor.io$'
+    - '(.*\.)?sharedfilespro.com$'
     - '(.*\.)?aliexpress.com$'
     - '(.*\.)?daily.dev$'
     - '(.*\.)?biographynyc.com$'
