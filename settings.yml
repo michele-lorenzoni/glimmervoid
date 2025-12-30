@@ -304,6 +304,7 @@ hostnames:
     - '(.*\.)?fsymbols.com$'
     - '(.*\.)?thelanguagecloset.com$'
     - '(.*\.)?movieswatchfreeonline.com$'
+    - '(.*\.)?abcya.com$'
     - '(.*\.)?books2ebooks.eu$'
     - '(.*\.)?gadgetifystore.com$'
     - '(.*\.)?sproutvideo.com$'
