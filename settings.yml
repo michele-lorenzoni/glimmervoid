@@ -311,6 +311,7 @@ hostnames:
     - '(.*\.)?scoutsmarts.com$'
     - '(.*\.)?amazon.nl$'
     - '(.*\.)?sewsweetness.com$'
+    - '(.*\.)?e-gadgetify.com$'
     - '(.*\.)?patternify.com$'
     - '(.*\.)?streamingcommunity.computer$'
     - '(.*\.)?dropsend.com$'
