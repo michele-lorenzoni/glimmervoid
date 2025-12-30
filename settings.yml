@@ -362,6 +362,7 @@ hostnames:
     - '(.*\.)?bestpractices.dev$'
     - '(.*\.)?metacritic.com$'
     - '(.*\.)?longtake.it$'
+    - '(.*\.)?blinkies.pl$'
     - '(.*\.)?frame.io$'
     - '(.*\.)?cineblog01.tattoo$'
     - '(.*\.)?ign.com$'
