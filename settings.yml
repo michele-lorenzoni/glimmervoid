@@ -402,6 +402,7 @@ hostnames:
     - '(.*\.)?coderstats.net$'
     - '(.*\.)?smartgadgetify.com$'
     - '(.*\.)?streamingcommunity.family$'
+    - '(.*\.)?gadgetifygalaxy.com$'
     - '(.*\.)?ilcorsaronero.link$'
     - '(.*\.)?makeemoji.com$'
     - '(.*\.)?superguidatv.it$'
