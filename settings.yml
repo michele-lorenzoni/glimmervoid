@@ -338,6 +338,7 @@ hostnames:
     - '(.*\.)?ziggo.nl$'
     - '(.*\.)?tvprofil.com$'
     - '(.*\.)?ciakmagazine.it$'
+    - '(.*\.)?deja-designs.com$'
     - '(.*\.)?blinkies.eu$'
     - '(.*\.)?oggiintv.eu$'
     - '(.*\.)?datatransfer.com$'
