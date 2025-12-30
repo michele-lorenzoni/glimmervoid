@@ -317,6 +317,7 @@ hostnames:
     - '(.*\.)?scoutles.com$'
     - '(.*\.)?programmerhumor.io$'
     - '(.*\.)?sharedfilespro.com$'
+    - '(.*\.)?freesvgdownload.com$'
     - '(.*\.)?aliexpress.com$'
     - '(.*\.)?daily.dev$'
     - '(.*\.)?biographynyc.com$'
