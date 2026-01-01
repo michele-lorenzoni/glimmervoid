@@ -270,6 +270,7 @@ hostnames:
 #     '(.*\.)?redd\.it$': 'teddit.example.com'
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
+    - '(.*\.)?doppelme.com$'
     - '(.*\.)?ai-avatar-generator.com$'
     - '(.*\.)?readyplayer.me$'
     - '(.*\.)?gan.ai$'
