@@ -270,6 +270,7 @@ hostnames:
 #     '(.*\.)?redd\.it$': 'teddit.example.com'
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
+    - '(.*\.)?apprentissage-virtuel.com$'
     - '(.*\.)?medevel.com$'
     - '(.*\.)?sis.mancosa.co.za$'
     - '(.*\.)?codingislove.com$'
