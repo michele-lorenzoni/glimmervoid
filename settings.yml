@@ -270,6 +270,7 @@ hostnames:
 #     '(.*\.)?redd\.it$': 'teddit.example.com'
 #     '(www\.)?twitter\.com$': 'nitter.example.com'
   remove:
+    - '(.*\.)?webcli.jp$'
     - '(.*\.)?teknoverimlilik.com.tr$'
     - '(.*\.)?byggahus.se$'
     - '(.*\.)?metricool.app$'
