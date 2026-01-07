@@ -6,10 +6,20 @@
 set -e
 
 # === CONFIGURAZIONE ===
-DOMAINS_FILE="blocked_domains.txt"
-SETTINGS_TEMPLATE="settings.yml.template"
-SETTINGS_OUTPUT="settings.yml"
-BACKUP_DIR="backups"
+# Rileva se siamo in Docker o in ambiente locale
+if [ -f "/tmp/settings.yml.template" ]; then
+    # Ambiente Docker
+    DOMAINS_FILE="/tmp/blocked_domains.txt"
+    SETTINGS_TEMPLATE="/tmp/settings.yml.template"
+    SETTINGS_OUTPUT="/tmp/settings.yml"
+    BACKUP_DIR="/tmp/backups"
+else
+    # Ambiente locale
+    DOMAINS_FILE="blocked_domains.txt"
+    SETTINGS_TEMPLATE="settings.yml.template"
+    SETTINGS_OUTPUT="settings.yml"
+    BACKUP_DIR="backups"
+fi
 SEARXNG_DIR="/etc/searxng"  # Modifica se necessario
 
 # === FUNZIONI ===
