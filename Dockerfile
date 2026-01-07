@@ -3,16 +3,30 @@ FROM searxng/searxng:latest
 # Copia i file necessari per generare settings.yml
 COPY settings.yml.template /tmp/settings.yml.template
 COPY blocked_domains.txt /tmp/blocked_domains.txt
-COPY generate_settings.sh /tmp/generate_settings.sh
 
-# Genera settings.yml durante il build
+# Genera settings.yml durante il build (script inline)
 USER root
-RUN chmod +x /tmp/generate_settings.sh && \
-    cd /tmp && \
-    ./generate_settings.sh && \
-    mv /tmp/settings.yml /etc/searxng/settings.yml && \
+RUN set -e && \
+    echo "[INFO] Inizio generazione settings.yml" && \
+    # Genera la lista di domini formattati
+    DOMAINS_YAML="" && \
+    while IFS= read -r domain || [ -n "$domain" ]; do \
+        domain=$(echo "$domain" | sed 's/#.*$//' | xargs); \
+        if [ -n "$domain" ]; then \
+            DOMAINS_YAML="${DOMAINS_YAML}      - ${domain}\n"; \
+        fi; \
+    done < /tmp/blocked_domains.txt && \
+    # Sostituisci il placeholder nel template
+    if grep -q "{{BLOCKED_DOMAINS}}" /tmp/settings.yml.template; then \
+        perl -pe "s/\{\{BLOCKED_DOMAINS\}\}/${DOMAINS_YAML}/g" /tmp/settings.yml.template > /etc/searxng/settings.yml; \
+        echo "[INFO] File settings.yml generato con successo!"; \
+    else \
+        echo "[ERROR] Placeholder {{BLOCKED_DOMAINS}} non trovato!"; \
+        exit 1; \
+    fi && \
+    # Cleanup
     chown searxng:searxng /etc/searxng/settings.yml && \
-    rm -f /tmp/settings.yml.template /tmp/blocked_domains.txt /tmp/generate_settings.sh
+    rm -f /tmp/settings.yml.template /tmp/blocked_domains.txt
 
 # Copia i file di personalizzazione
 COPY searx/templates/static/themes/simple/highlight.css /usr/local/searxng/searx/static/themes/simple/highlight.css
