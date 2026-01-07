@@ -5,10 +5,12 @@ COPY searx/templates/static/themes/simple/img/favicon.png /usr/local/searxng/sea
 COPY searx/templates/static/themes/simple/img/favicon.svg /usr/local/searxng/searx/static/themes/simple/img/favicon.svg
 
 USER root
-
-RUN cd /usr/local/searxng/searx/static/themes/simple/img/ && \
+# Installa brotli e rigenera le versioni compresse
+RUN apk add --no-cache brotli && \
+    cd /usr/local/searxng/searx/static/themes/simple/img/ && \
     rm -f favicon.svg.gz favicon.svg.br && \
-    gzip -9 -k favicon.svg
+    gzip -9 -k favicon.svg && \
+    brotli -9 -k favicon.svg
 
 COPY searx/templates/simple/base_index.html /usr/local/searxng/searx/templates/simple/base_index.html
 COPY searx/templates/simple/index.html /usr/local/searxng/searx/templates/simple/index.html
