@@ -5,8 +5,11 @@ COPY searx/templates/static/themes/simple/img/favicon.png /usr/local/searxng/sea
 COPY searx/templates/static/themes/simple/img/favicon.svg /usr/local/searxng/searx/static/themes/simple/img/favicon.svg
 
 USER root
-RUN rm -f /usr/local/searxng/searx/static/themes/simple/img/favicon.svg.gz && \
-    rm -f /usr/local/searxng/searx/static/themes/simple/img/favicon.svg.br
+
+RUN cd /usr/local/searxng/searx/static/themes/simple/img/ && \
+    rm -f favicon.svg.gz favicon.svg.br && \
+    gzip -9 -k favicon.svg && \
+    brotli -9 -k favicon.svg
 
 COPY searx/templates/simple/base_index.html /usr/local/searxng/searx/templates/simple/base_index.html
 COPY searx/templates/simple/index.html /usr/local/searxng/searx/templates/simple/index.html
