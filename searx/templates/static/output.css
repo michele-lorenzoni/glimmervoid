@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-950: oklch(13% 0.028 261.692);
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
@@ -198,6 +199,9 @@
   }
   .bg-gray-950 {
     background-color: var(--color-gray-950);
+  }
+  .text-gray-50 {
+    color: var(--color-gray-50);
   }
   .underline {
     text-decoration-line: underline;
