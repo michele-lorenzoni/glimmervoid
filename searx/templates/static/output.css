@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -170,6 +171,12 @@
   }
   .hidden {
     display: none;
+  }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
+  .h-screen {
+    height: 100vh;
   }
   .flex-col {
     flex-direction: column;
