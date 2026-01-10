@@ -193,6 +193,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
