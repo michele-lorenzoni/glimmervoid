@@ -127,7 +127,7 @@
 #clear_search,
 #send_search {
   border-radius: 0 !important;
-  transition: background 0.25s, color 0.25s;
+  transition: all 0.25s, color 0.25s;
   color: #FAFAFA !important;
   cursor: pointer !important;
   border: 1px solid transparent !important;
