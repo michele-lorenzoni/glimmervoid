@@ -50,14 +50,14 @@
     </div>
     {% endif %}
 
-    <nav id="links_on_top h-24">
+    <nav id="links_on_top h-[32rem]">
       {%- from 'simple/icons.html' import icon_big -%}
       {%- block linkto_preferences -%}
       {%- if request.args.get('preferences') -%}
       <a href="{{ url_for('preferences') }}?preferences={{ request.args.get('preferences') }}&preferences_preview_only=true"
-        class="link_on_top_preferences">preferences</a>
+        class="link_on_top_preferences">{{ icon_big('settings') }}</a>
       {%- else -%}
-      <a href="{{ url_for('preferences') }}" class="link_on_top_preferences">preferences</a>
+      <a href="{{ url_for('preferences') }}" class="link_on_top_preferences">{{ icon_big('settings') }}</a>
       {%- endif -%}
       {%- endblock -%}
     </nav>
