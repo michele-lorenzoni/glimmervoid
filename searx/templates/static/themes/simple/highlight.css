@@ -129,6 +129,7 @@
   border-radius: 0 !important;
   transition: background 0.25s, color 0.25s;
   color: #FAFAFA !important;
+  cursor: pointer !important;
 }
 
 #clear_search:hover,
