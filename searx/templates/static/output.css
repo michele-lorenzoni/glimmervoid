@@ -187,6 +187,9 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
+  .h-128 {
+    height: calc(var(--spacing) * 128);
+  }
   .h-\[24px\] {
     height: 24px;
   }
