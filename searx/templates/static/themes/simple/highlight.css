@@ -71,11 +71,12 @@
 }
 
 #backToTop {
-	border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 /* Media query: stessa cosa, togli il '>' */
 @media screen and (max-width: 800px) {
+
   #urls div.highlight-url,
   #urls div.unwanted-url,
   #urls div.favorite-url {
@@ -87,6 +88,7 @@
 }
 
 @media screen and (max-width: 480px) {
+
   #urls div.highlight-url,
   #urls div.unwanted-url,
   #urls div.favorite-url {
@@ -98,6 +100,7 @@
 }
 
 @media screen and (max-width: 360px) {
+
   #urls div.highlight-url,
   #urls div.unwanted-url,
   #urls div.favorite-url {
@@ -107,37 +110,49 @@
 }
 
 #pagination {
-    margin: 1rem 2% !important;
+  margin: 1rem 2% !important;
 }
 
 /* Rimuovi bordi arrotondati dall'input di ricerca nella home */
 #q {
   border-radius: 0 !important;
 }
-  
+
 /* Rimuovi bordi arrotondati dal bottone di ricerca nella home */
-#send_search {
-  border-radius: 0 !important;
+#clear_search {
+  padding: .8rem !important;
+  width: auto;
 }
 
+#clear_search,
+#send_search {
+  border-radius: 0 !important;
+  transition: background 0.25s, color 0.25s;
+  color: #FAFAFA !important;
+}
+
+#clear_search:hover,
 #send_search:hover {
-	background-color: #FFC400 !important;
+  background-color: #FFC400 !important;
+  color: #212121 !important;
 }
 
 /* Rimuovi bordi arrotondati dai risultati in evidenza */
 #sidebar .infobox {
   border-radius: 0 !important;
 }
-  
+
 /* Rimuovi footer */
 footer {
   visibility: hidden;
 }
 
-input[type=submit], #results button[type=submit], .button {
+input[type=submit],
+#results button[type=submit],
+.button {
   border-radius: 0 !important;
 }
-  
+
 .dialog-error-block {
   border-radius: 0 !important;
 }
@@ -147,54 +162,36 @@ input[type=submit], #results button[type=submit], .button {
 }
 
 a.link_on_top_about {
-	visibility: hidden !important;
+  visibility: hidden !important;
 }
 
 .center-alignment-no #links_on_top span {
-	display: none !important;
+  display: none !important;
 }
 
 #links_on_top {
-	top: 2rem !important;
-	right: 2rem !important;
+  top: 2rem !important;
+  right: 2rem !important;
 }
 
 :root.theme-auto {
-	--color-base-background: #212121 !important;
-	--color-base-background-mobile: #212121 !important;
+  --color-base-background: #212121 !important;
+  --color-base-background-mobile: #212121 !important;
 }
 
 .search_box {
-	border-radius: 0 !important;
-	border: 1px solid #424242 !important;
-}
-
-#clear_search {
-	padding: .8rem !important;
-}
-
-#clear_search {
-	width: auto;
-}
-
-#clear_search:hover {
-	background-color: #FFC400 !important;
-}
-
-#send_search {
-	transition: background 0.25s, color 0.25s;
-	color: red !important;
+  border-radius: 0 !important;
+  border: 1px solid #424242 !important;
 }
 
 body {
-	background-color: #212121 !important;
-	/* background-image: url('http://www.transparenttextures.com/patterns/triangles.png') !important; */
+  background-color: #212121 !important;
 }
 
 #links_on_top a svg {
-	margin: 0 !important;
+  margin: 0 !important;
 }
 
 .result .altlink a {
-	border-radius: 0 !important;
+  border-radius: 0 !important;
 }
