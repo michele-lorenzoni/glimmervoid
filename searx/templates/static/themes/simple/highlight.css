@@ -119,7 +119,11 @@
 #send_search {
   border-radius: 0 !important;
 }
-  
+
+#send_search:hover {
+	background-color: #C6FF00 !important;
+}
+
 /* Rimuovi bordi arrotondati dai risultati in evidenza */
 #sidebar .infobox {
   border-radius: 0 !important;
