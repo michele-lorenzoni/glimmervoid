@@ -38,7 +38,7 @@
 
 <body class="{{ endpoint }}_endpoint flex flex-col h-screen bg-gray-950 text-gray-50">
   <main id="main_{{  self._TemplateReference__context.name|replace(" simple/", "" )|replace(".html", "" ) }}"
-    class="{{body_class}} flex flex-col">
+    class="{{body_class}} flex flex-1 flex-col">
     {% if errors %}
     <div class="dialog-error" role="alert">
       <a href="#" class="close" aria-label="close" title="close">×</a>
