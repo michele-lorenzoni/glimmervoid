@@ -306,6 +306,9 @@
   .font-\[\'FTY_SKORZHEN_NCV\'\] {
     font-family: 'FTY SKORZHEN NCV';
   }
+  .font-\[\'QUEENBEAR\'\,sans-serif\] {
+    font-family: 'QUEENBEAR',sans-serif;
+  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
