@@ -207,6 +207,12 @@
   .w-3xs {
     width: var(--container-3xs);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-\[24px\] {
+    width: 24px;
+  }
   .w-full {
     width: 100%;
   }
