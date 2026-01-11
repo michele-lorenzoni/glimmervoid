@@ -16,13 +16,6 @@
   <script type="module" src="{{ url_for('static', filename='sxng-core.min.js') }}"
     client_settings="{{ client_settings }}"></script>
   {% block meta %}{% endblock %}
-  <!--
-  {% if rtl %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='sxng-rtl.min.css') }}" type="text/css" media="screen">
-  {% else %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='sxng-ltr.min.css') }}" type="text/css" media="screen">
-  {% endif %}
-  -->
   {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
   <link rel="stylesheet" href="{{ url_for('client_token', token=link_token) }}" type="text/css">
   {% endif %}
@@ -34,10 +27,9 @@
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/favicon.png') }}">
   <link href="./../static/output.css" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/queenbear" rel="stylesheet">
 </head>
 
-<body class="{{ endpoint }}_endpoint flex flex-col h-screen bg-gray-950 text-gray-50">
+<body class="{{ endpoint }}_endpoint flex flex-col h-screen bg-gray-950 text-gray-50 font-ubuntu_r">
   <main id="main_{{  self._TemplateReference__context.name|replace(" simple/", "" )|replace(".html", "" ) }}"
     class="{{body_class}} flex flex-1 flex-col">
     {% if errors %}
