@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'digital_dreamer';
+    src: url('/searx/templates/static/digital_dreamer.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
