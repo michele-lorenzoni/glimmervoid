@@ -1,7 +1,7 @@
 <form id="search" method="{{ method or 'POST' }}" action="{{ url_for('search') }}" role="search">
   <div id="search_header">
     <div id="search_view">
-      <div class="search_box bg-gray-900 p-2 border border-gray-800 w-xl">
+      <div class="flex search_box bg-gray-900 p-2 border border-gray-800 w-xl">
         <input class="w-full outline-none" id="q" name="q" type="text" placeholder="{{ _('Search for...') }}"
           autocomplete="off" autocapitalize="none" spellcheck="false" autocorrect="off" dir="auto"
           value="{{ q or '' }}">
@@ -14,6 +14,14 @@
           <ul></ul>
         </div>
         -->
+        <button class="send_search" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-search-icon lucide-search">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+        </button>
       </div>
     </div>
   </div>
