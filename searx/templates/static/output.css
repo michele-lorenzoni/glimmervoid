@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -181,6 +182,9 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
@@ -196,8 +200,17 @@
   .flex-1 {
     flex: 1;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -214,6 +227,10 @@
   .justify-center {
     justify-content: center;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
@@ -229,12 +246,22 @@
   .font-\[\'digital_dreamer\'\,sans-serif\] {
     font-family: 'digital dreamer',sans-serif;
   }
+  .font-\[\'digital_dreamer\'\] {
+    font-family: 'digital dreamer';
+  }
   .text-7xl {
     font-size: var(--text-7xl);
     line-height: var(--tw-leading, var(--text-7xl--line-height));
   }
   .text-gray-50 {
     color: var(--color-gray-50);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .outline-none {
     --tw-outline-style: none;
@@ -246,4 +273,22 @@
   src: url('./digital_dreamer.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-outline-style: solid;
+    }
+  }
 }
