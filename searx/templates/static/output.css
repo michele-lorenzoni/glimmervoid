@@ -173,6 +173,9 @@
   .static {
     position: static;
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
   }
