@@ -226,9 +226,6 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
-  .font-\[\'digital_dreamer\'\] {
-    font-family: 'digital dreamer';
-  }
   .text-7xl {
     font-size: var(--text-7xl);
     line-height: var(--tw-leading, var(--text-7xl--line-height));
@@ -247,6 +244,15 @@
   font-weight: normal;
   font-style: normal;
 }
-.font-digital {
+@font-face {
+  font-family: 'ubuntu_r';
+  src: url('./ubuntu_r.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-digital_dreamer {
   font-family: 'digital_dreamer', sans-serif;
+}
+.font-ubuntu_r {
+  font-family: 'ubuntu_r', sans-serif;
 }

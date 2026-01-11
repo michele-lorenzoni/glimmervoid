@@ -7,6 +7,17 @@
     font-style: normal;
 }
 
-.font-digital {
+@font-face {
+    font-family: 'ubuntu_r';
+    src: url('./ubuntu_r.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-digital_dreamer {
     font-family: 'digital_dreamer', sans-serif;
+}
+
+.font-ubuntu_r {
+    font-family: 'ubuntu_r', sans-serif;
 }
