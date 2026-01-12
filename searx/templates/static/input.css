@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: 'digital_dreamer';
-    src: url('./digital_dreamer.otf') format('opentype');
+    src: url('./fonts/digital_dreamer.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ubuntu_r';
-    src: url('./ubuntu_r.ttf') format('truetype');
+    src: url('./fonts/ubuntu_r.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
