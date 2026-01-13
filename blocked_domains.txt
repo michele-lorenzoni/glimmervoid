@@ -1,3 +1,4 @@
+structured.app
 akiflow.com
 elementary.io
 onecalendar.nl
