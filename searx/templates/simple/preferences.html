@@ -5,22 +5,12 @@
 <div class="tabs" role="tablist">
   {%- endmacro -%}
 
-  {%- macro tab_header(name, id, label, active_tab) -%}
-  <button type="button" id="tab-label-{{ id }}" class="tab-button {% if active_tab == id %}active{% endif %}"
-    onclick="window.location.href='?tab={{ id }}';" role="tab" aria-controls="tab-content-{{ id }}"
+  {%- macro tab_header_button(name, id, label, active_tab) -%}
+  <a href="?tab={{ id }}" id="tab-label-{{ id }}" class="tab-button {% if active_tab == id %}active{% endif %}"
+    role="tab" aria-controls="tab-content-{{ id }}"
     aria-selected="{% if active_tab == id %}true{% else %}false{% endif %}">
     {{ label }}
-  </button>
-  {%- endmacro -%}
-
-  {%- macro tab_content_open(id, active_tab) -%}
-  {% if active_tab == id %}
-  <section id="tab-content-{{ id }}" role="tabpanel" aria-hidden="false">
-    {%- endmacro -%}
-
-    {%- macro tab_content_close(id, active_tab) -%}
-  </section>
-  {% endif %}
+  </a>
   {%- endmacro -%}
 
   {%- macro tabs_close() -%}
@@ -169,7 +159,10 @@
       border: 1px solid #ccc;
       border-bottom: none;
       cursor: pointer;
+      text-decoration: none;
+      color: inherit;
       transition: all 0.2s;
+      display: inline-block;
     }
 
     .tab-button:hover {
@@ -208,94 +201,106 @@
     {{- tabs_open() -}}
 
     <div class="tab-buttons">
-      {{- tab_header('maintab', 'general', _('General'), active_tab) -}}
-      {{- tab_header('maintab', 'ui', _('User interface'), active_tab) -}}
-      {{- tab_header('maintab', 'privacy', _('Privacy'), active_tab) -}}
-      {{- tab_header('maintab', 'engines', _('Engines'), active_tab) -}}
-      {{- tab_header('maintab', 'query', _('Special Queries'), active_tab) -}}
-      {{- tab_header('maintab', 'cookies', _('Cookies'), active_tab) -}}
+      {{- tab_header_button('maintab', 'general', _('General'), active_tab) -}}
+      {{- tab_header_button('maintab', 'ui', _('User interface'), active_tab) -}}
+      {{- tab_header_button('maintab', 'privacy', _('Privacy'), active_tab) -}}
+      {{- tab_header_button('maintab', 'engines', _('Engines'), active_tab) -}}
+      {{- tab_header_button('maintab', 'query', _('Special Queries'), active_tab) -}}
+      {{- tab_header_button('maintab', 'cookies', _('Cookies'), active_tab) -}}
     </div>
 
     {# tab: general #}
-    {{- tab_content_open('general', active_tab) -}}
-    {%- if 'categories' not in locked_preferences -%}
-    <fieldset>
-      <legend>{{- _('Default categories') -}}</legend>
-      {% set display_tooltip = false %}
-      {% include 'simple/categories.html' %}
-    </fieldset>
-    {%- endif -%}
-    {%- if 'language' not in locked_preferences -%}
-    {%- include 'simple/preferences/language.html' -%}
+    {% if active_tab == 'general' %}
+    <section id="tab-content-general" role="tabpanel">
+      {%- if 'categories' not in locked_preferences -%}
+      <fieldset>
+        <legend>{{- _('Default categories') -}}</legend>
+        {% set display_tooltip = false %}
+        {% include 'simple/categories.html' %}
+      </fieldset>
+      {%- endif -%}
+      {%- if 'language' not in locked_preferences -%}
+      {%- include 'simple/preferences/language.html' -%}
+      {% endif %}
+      {%- if 'autocomplete' not in locked_preferences -%}
+      {%- include 'simple/preferences/autocomplete.html' -%}
+      {%- endif -%}
+      {%- if 'favicon' not in locked_preferences -%}
+      {%- include 'simple/preferences/favicon.html' -%}
+      {%- endif -%}
+      {% if 'safesearch' not in locked_preferences %}
+      {%- include 'simple/preferences/safesearch.html' -%}
+      {%- endif -%}
+      {%- include 'simple/preferences/tokens.html' -%}
+      {{- plugin_preferences('general') -}}
+      {%- if 'doi_resolver' not in locked_preferences %}
+      {%- include 'simple/preferences/doi_resolver.html' -%}
+      {%- endif -%}
+    </section>
     {% endif %}
-    {%- if 'autocomplete' not in locked_preferences -%}
-    {%- include 'simple/preferences/autocomplete.html' -%}
-    {%- endif -%}
-    {%- if 'favicon' not in locked_preferences -%}
-    {%- include 'simple/preferences/favicon.html' -%}
-    {%- endif -%}
-    {% if 'safesearch' not in locked_preferences %}
-    {%- include 'simple/preferences/safesearch.html' -%}
-    {%- endif -%}
-    {%- include 'simple/preferences/tokens.html' -%}
-    {{- plugin_preferences('general') -}}
-    {%- if 'doi_resolver' not in locked_preferences %}
-    {%- include 'simple/preferences/doi_resolver.html' -%}
-    {%- endif -%}
-    {{- tab_content_close('general', active_tab) -}}
 
     {# tab: ui #}
-    {{- tab_content_open('ui', active_tab) -}}
-    {%- if 'locale' not in locked_preferences -%}
-    {%- include 'simple/preferences/ui_locale.html' -%}
-    {%- endif -%}
-    {%- if 'theme' not in locked_preferences -%}
-    {%- include 'simple/preferences/theme.html' -%}
-    {%- endif -%}
-    {%- if 'results_on_new_tab' not in locked_preferences -%}
-    {%- include 'simple/preferences/results_on_new_tab.html' -%}
-    {%- endif -%}
-    {%- if 'search_on_category_select' not in locked_preferences -%}
-    {%- include 'simple/preferences/search_on_category_select.html' -%}
-    {%- endif -%}
-    {%- include 'simple/preferences/hotkeys.html' -%}
-    {%- include 'simple/preferences/urlformatting.html' -%}
-    {{- plugin_preferences('ui') -}}
-    {{- tab_content_close('ui', active_tab) -}}
+    {% if active_tab == 'ui' %}
+    <section id="tab-content-ui" role="tabpanel">
+      {%- if 'locale' not in locked_preferences -%}
+      {%- include 'simple/preferences/ui_locale.html' -%}
+      {%- endif -%}
+      {%- if 'theme' not in locked_preferences -%}
+      {%- include 'simple/preferences/theme.html' -%}
+      {%- endif -%}
+      {%- if 'results_on_new_tab' not in locked_preferences -%}
+      {%- include 'simple/preferences/results_on_new_tab.html' -%}
+      {%- endif -%}
+      {%- if 'search_on_category_select' not in locked_preferences -%}
+      {%- include 'simple/preferences/search_on_category_select.html' -%}
+      {%- endif -%}
+      {%- include 'simple/preferences/hotkeys.html' -%}
+      {%- include 'simple/preferences/urlformatting.html' -%}
+      {{- plugin_preferences('ui') -}}
+    </section>
+    {% endif %}
 
     {# tab: privacy #}
-    {{- tab_content_open('privacy', active_tab) -}}
-    {%- if 'method' not in locked_preferences -%}
-    {%- include 'simple/preferences/method.html' -%}
-    {%- endif -%}
-    {%- if 'image_proxy' not in locked_preferences -%}
-    {%- include 'simple/preferences/image_proxy.html' -%}
-    {%- endif -%}
-    {%- if 'query_in_title' not in locked_preferences -%}
-    {%- include 'simple/preferences/query_in_title.html' -%}
-    {%- endif -%}
-    {{- plugin_preferences('privacy') -}}
-    {{- tab_content_close('privacy', active_tab) -}}
+    {% if active_tab == 'privacy' %}
+    <section id="tab-content-privacy" role="tabpanel">
+      {%- if 'method' not in locked_preferences -%}
+      {%- include 'simple/preferences/method.html' -%}
+      {%- endif -%}
+      {%- if 'image_proxy' not in locked_preferences -%}
+      {%- include 'simple/preferences/image_proxy.html' -%}
+      {%- endif -%}
+      {%- if 'query_in_title' not in locked_preferences -%}
+      {%- include 'simple/preferences/query_in_title.html' -%}
+      {%- endif -%}
+      {{- plugin_preferences('privacy') -}}
+    </section>
+    {% endif %}
 
     {# tab: engines #}
-    {{- tab_content_open('engines', active_tab) -}}
-    <p>{{- _('Currently used search engines') -}}</p>
-    {{- tabs_open() -}}
-    {%- include 'simple/preferences/engines.html' -%}
-    {{- tabs_close() -}}
-    {{- tab_content_close('engines', active_tab) -}}
+    {% if active_tab == 'engines' %}
+    <section id="tab-content-engines" role="tabpanel">
+      <p>{{- _('Currently used search engines') -}}</p>
+      {{- tabs_open() -}}
+      {%- include 'simple/preferences/engines.html' -%}
+      {{- tabs_close() -}}
+    </section>
+    {% endif %}
 
     {# tab: query #}
-    {{- tab_content_open('query', active_tab) -}}
-    {%- if answer_storage -%}
-    {%- include 'simple/preferences/answerers.html' -%}
-    {%- endif -%}
-    {{- tab_content_close('query', active_tab) -}}
+    {% if active_tab == 'query' %}
+    <section id="tab-content-query" role="tabpanel">
+      {%- if answer_storage -%}
+      {%- include 'simple/preferences/answerers.html' -%}
+      {%- endif -%}
+    </section>
+    {% endif %}
 
     {# tab: cookies #}
-    {{- tab_content_open('cookies', active_tab) -}}
-    {%- include 'simple/preferences/cookies.html' -%}
-    {{- tab_content_close('cookies', active_tab) -}}
+    {% if active_tab == 'cookies' %}
+    <section id="tab-content-cookies" role="tabpanel">
+      {%- include 'simple/preferences/cookies.html' -%}
+    </section>
+    {% endif %}
 
     {{- tabs_close() -}}
 
