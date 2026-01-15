@@ -161,11 +161,11 @@
 
   <form id="search_form" method="post" action="{{ url_for('preferences') }}" autocomplete="off" class="flex-col">
     {{- tabs_open() -}}
+    <div class="bg-gray-800">
+      {# tab: general #}
 
-    {# tab: general #}
-
-    {{- tab_header('maintab', 'general', _('General'), True) -}}
-    <!--
+      {{- tab_header('maintab', 'general', _('General'), True) -}}
+      <!--
     {%- if 'categories' not in locked_preferences -%}
       <fieldset>
         <legend>{{- _('Default categories') -}}</legend>
@@ -174,26 +174,27 @@
       </fieldset>
     {%- endif -%}
     -->
-    {%- if 'language' not in locked_preferences -%}
-    {%- include 'simple/preferences/language.html' -%}
-    {% endif %}
-    {%- if 'autocomplete' not in locked_preferences -%}
-    {%- include 'simple/preferences/autocomplete.html' -%}
-    {%- endif -%}
-    {%- if 'favicon' not in locked_preferences -%}
-    {%- include 'simple/preferences/favicon.html' -%}
-    {%- endif -%}
-    {% if 'safesearch' not in locked_preferences %}
-    {%- include 'simple/preferences/safesearch.html' -%}
-    {%- endif -%}
-    {%- include 'simple/preferences/tokens.html' -%}
-    {{- plugin_preferences('general') -}}
+      {%- if 'language' not in locked_preferences -%}
+      {%- include 'simple/preferences/language.html' -%}
+      {% endif %}
+      {%- if 'autocomplete' not in locked_preferences -%}
+      {%- include 'simple/preferences/autocomplete.html' -%}
+      {%- endif -%}
+      {%- if 'favicon' not in locked_preferences -%}
+      {%- include 'simple/preferences/favicon.html' -%}
+      {%- endif -%}
+      {% if 'safesearch' not in locked_preferences %}
+      {%- include 'simple/preferences/safesearch.html' -%}
+      {%- endif -%}
+      {%- include 'simple/preferences/tokens.html' -%}
+      {{- plugin_preferences('general') -}}
 
 
-    {%- if 'doi_resolver' not in locked_preferences %}
-    {%- include 'simple/preferences/doi_resolver.html' -%}
-    {%- endif -%}
-    {{- tab_footer() -}}
+      {%- if 'doi_resolver' not in locked_preferences %}
+      {%- include 'simple/preferences/doi_resolver.html' -%}
+      {%- endif -%}
+      {{- tab_footer() -}}
+    </div>
 
     {# tab: ui #}
 
