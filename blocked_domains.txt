@@ -2235,6 +2235,7 @@ pxbarn.com
 python-fiddle.com
 pythonhosted.org
 python.irobot.com
+python.land
 python-playground.netlify.app
 pythonprogramming.altervista.org
 qiita.com
