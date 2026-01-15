@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html
+    class="no-js theme-{{ preferences.get_value('simple_style') or 'auto' }} center-alignment-{{ preferences.get_value('center_alignment') and 'yes' or 'no' }}"
+    lang="{{ locale_rfc5646 }}" {% if rtl %} dir="rtl" {% endif %}>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="endpoint" content="{{ endpoint }}">
+    <meta name="description" content="SearXNG — a privacy-respecting, open metasearch engine">
+    <meta name="keywords" content="SearXNG, search, search engine, metasearch, meta search">
+    <meta name="generator" content="searxng/{{ searx_version }}">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}{{ instance_name }}</title>
+    <script type="module" src="{{ url_for('static', filename='sxng-core.min.js') }}"
+        client_settings="{{ client_settings }}"></script>
+    {% block meta %}{% endblock %}
+    {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
+    <link rel="stylesheet" href="{{ url_for('client_token', token=link_token) }}" type="text/css">
+    {% endif %}
+    {% block head %}
+    <link title="{{ instance_name }}" type="application/opensearchdescription+xml" rel="search"
+        href="{{ opensearch_url }}">
+    {% endblock %}
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="any">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link href="./../static/output.css" rel="stylesheet">
+</head>
+
+<body class="{{ endpoint }}_endpoint flex flex-col h-screen bg-gray-950 text-gray-50 font-ubuntu_r">
+    <main id="main_{{  self._TemplateReference__context.name|replace(" simple/", "" )|replace(".html", "" ) }}"
+        class="{{body_class}} flex flex-1 flex-col mx-8">
+        {% if errors %}
+        <div class="dialog-error" role="alert">
+            <a href="#" class="close" aria-label="close" title="close">×</a>
+            <ul>
+                {% for message in errors %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <nav class="p-8 h-auto flex flex-row-reverse" id="links_on_top">
+            {%- from 'simple/icons.html' import icon_big -%}
+            {%- block linkto_preferences -%}
+            {%- if request.args.get('preferences') -%}
+            <a href="{{ url_for('preferences') }}?preferences={{ request.args.get('preferences') }}&preferences_preview_only=true"
+                class="link_on_top_preferences">{{ icon_big('settings') }}</a>
+            {%- else -%}
+            <a href="{{ url_for('preferences') }}" class="link_on_top_preferences">{{ icon_big('settings') }}</a>
+            {%- endif -%}
+            {%- endblock -%}
+        </nav>
+        {% block header %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>
