@@ -7,7 +7,7 @@
 
   {%- macro tab_header_button(name, id, label, active_tab) -%}
   <a href="?tab={{ id }}" id="tab-label-{{ id }}"
-    class="tab-button {% if active_tab == id %}active{% endif %} bg-gray-900 border border-gray-800 p-2" role="tab"
+    class="tab-button {% if active_tab == id %}active{% endif %} bg-gray-900 border border-gray-800 p-2 mr-6" role="tab"
     aria-controls="tab-content-{{ id }}" aria-selected="{% if active_tab == id %}true{% else %}false{% endif %}">
     {{ label }}
   </a>
