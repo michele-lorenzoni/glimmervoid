@@ -15,8 +15,8 @@
         </tr>
 
         {%- for info in answer_storage -%}
-        <tr>{{- '' -}}
-            <td class="checkbox-col p-2 border-b border-gray-800"></td>{{- '' -}}
+        <tr class="border-b border-gray-800">{{- '' -}}
+            <td class="checkbox-col p-2"></td>{{- '' -}}
             <td class="p-2">{{ info.keywords|join(', ') }}</td>{{- '' -}}
             <td class="p-2">{{ info.name }}</td>{{- '' -}}
             <td class="p-2">{{ info.description }}</td>{{- '' -}}
@@ -32,7 +32,7 @@
 
             {%- for plugin in plugins_storage -%}
             {%- if plugin.preference_section == 'query' -%}
-        <tr>{{- '' -}}
+        <tr class="border-b border-gray-800">{{- '' -}}
             <td class="checkbox-col p-2">{{- checkbox_onoff_reversed('plugin_' + plugin.id, plugin.id not in
                 allowed_plugins, 'plugin_labelledby' + plugin.id) -}}</td>{{- '' -}}
             <td class="p-2">{{ plugin.keywords|join(', ') }}</td>{{- '' -}}
