@@ -145,7 +145,7 @@
 
   {%- set active_tab = request.args.get('tab', 'general') -%}
 
-  <h1>{{ _('Preferences') }}</h1>
+  <h1 class="text-5xl">{{ _('Preferences') }}</h1>
 
   {%- if request.args.get('preferences_preview_only') == 'true' -%}
   <div class="dialog-warning-block">
