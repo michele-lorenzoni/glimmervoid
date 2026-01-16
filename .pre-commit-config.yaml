@@ -9,7 +9,7 @@ repos:
       
       - id: sort-json-files
         name: Sort JSON files alphabetically
-        entry: bash -c 'python3 -c "import json, sys; data=json.load(open(sys.argv[1])); json.dump(data, open(sys.argv[1], \"w\"), indent=2, sort_keys=True, ensure_ascii=False); open(sys.argv[1], \"a\").write(\"\\n\")"'
+        entry: python3 scripts/sort_json.py
         language: system
         files: \.json$
         pass_filenames: true
