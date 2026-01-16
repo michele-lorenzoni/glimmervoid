@@ -1,6 +1,6 @@
 <div class="scrollx">{{- '' -}}
-    <table class="striped">{{- '' -}}
-        <tr class="mb-4">{{- '' -}}
+    <table class="striped border-spacing-2">{{- '' -}}
+        <tr>{{- '' -}}
             <th>{{ _('Allow') }}</th>{{- '' -}}
             <th>{{ _('Keywords (first word in query)') }}</th>{{- '' -}}
             <th>{{ _('Name') }}</th>{{- '' -}}
@@ -8,14 +8,14 @@
             <th>{{ _('Examples') }}</th>{{- '' -}}
         </tr>{{- '' -}}
 
-        <tr class="pref-group mb-4">{{- '' -}}
-            <th scope="colgroup" colspan="5">
-                {{- _("This is the list of SearXNG's instant answering modules.") -}}
+        <tr class="pref-group>{{- '' -}}
+            <th scope=" colgroup" colspan="5">
+            {{- _("This is the list of SearXNG's instant answering modules.") -}}
             </th>{{- '' -}}
         </tr>
 
         {%- for info in answer_storage -%}
-        <tr class="mb-4">{{- '' -}}
+        <tr>{{- '' -}}
             <td class="checkbox-col"></td>{{- '' -}}
             <td>{{ info.keywords|join(', ') }}</td>{{- '' -}}
             <td>{{ info.name }}</td>{{- '' -}}
@@ -24,7 +24,7 @@
         </tr>
         {%- endfor -%}
 
-        <tr class="pref-group mb-4">{{- '' -}}
+        <tr class="pref-group">{{- '' -}}
             <th scope="colgroup" colspan="5">
                 {{- _('This is the list of plugins.') -}}
             </th>{{- '' -}}
@@ -32,7 +32,7 @@
 
             {%- for plugin in plugins_storage -%}
             {%- if plugin.preference_section == 'query' -%}
-        <tr class="mb-4">{{- '' -}}
+        <tr>{{- '' -}}
             <td class="checkbox-col">{{- checkbox_onoff_reversed('plugin_' + plugin.id, plugin.id not in
                 allowed_plugins, 'plugin_labelledby' + plugin.id) -}}</td>{{- '' -}}
             <td>{{ plugin.keywords|join(', ') }}</td>{{- '' -}}
