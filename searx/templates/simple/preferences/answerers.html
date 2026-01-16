@@ -1,6 +1,6 @@
 <div class="scrollx">{{- '' -}}
     <table class="striped">{{- '' -}}
-        <tr>{{- '' -}}
+        <tr class="border-b border-gray-800">{{- '' -}}
             <th class="p-2">{{ _('Allow') }}</th>{{- '' -}}
             <th class="p-2">{{ _('Keywords (first word in query)') }}</th>{{- '' -}}
             <th class="p-2">{{ _('Name') }}</th>{{- '' -}}
@@ -8,7 +8,7 @@
             <th class="p-2">{{ _('Examples') }}</th>{{- '' -}}
         </tr>{{- '' -}}
 
-        <tr class="pref-group">{{- '' -}}
+        <tr class="pref-group border-b border-gray-800">{{- '' -}}
             <th scope="colgroup" colspan="5" class="p-2">
                 {{- _("This is the list of SearXNG's instant answering modules.") -}}
             </th>{{- '' -}}
@@ -16,7 +16,7 @@
 
         {%- for info in answer_storage -%}
         <tr>{{- '' -}}
-            <td class="checkbox-col p-2"></td>{{- '' -}}
+            <td class="checkbox-col p-2 border-b border-gray-800"></td>{{- '' -}}
             <td class="p-2">{{ info.keywords|join(', ') }}</td>{{- '' -}}
             <td class="p-2">{{ info.name }}</td>{{- '' -}}
             <td class="p-2">{{ info.description }}</td>{{- '' -}}
@@ -24,7 +24,7 @@
         </tr>
         {%- endfor -%}
 
-        <tr class="pref-group">{{- '' -}}
+        <tr class="pref-group border-b border-gray-800">{{- '' -}}
             <th scope="colgroup" colspan="5" class="p-2">
                 {{- _('This is the list of plugins.') -}}
             </th>{{- '' -}}
