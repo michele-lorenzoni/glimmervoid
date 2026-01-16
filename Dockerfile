@@ -67,6 +67,7 @@ COPY logo.png /usr/local/searxng/searx/static/themes/simple/img/searxng.png
 
 COPY searx/templates/simple/preferences/footer.html /usr/local/searxng/searx/templates/simple/preferences/footer.html
 COPY searx/templates/simple/preferences/cookies.html /usr/local/searxng/searx/templates/simple/preferences/cookies.html
+COPY searx/templates/simple/preferences/answerers.html /usr/local/searxng/searx/templates/simple/preferences/answerers.html
 
 COPY searx/templates/simple/messages/no_cookies.html /usr/local/searxng/searx/templates/simple/messages/no_cookies.html
 
