@@ -397,6 +397,7 @@ c99shell.net
 c99shell-r57shell.webnode.page
 cadmus.io
 cafeastrology.com
+cafepia.fr
 calcthat.com
 calculateaspectratio.com
 calculatemypercentage.com
@@ -2726,6 +2727,7 @@ techno-tools.it
 techwiser.com
 teck.in
 tecmint.com
+teft.es
 teknotel.com
 teknoverimlilik.com.tr
 teletype.in
