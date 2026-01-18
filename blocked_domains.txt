@@ -2172,6 +2172,7 @@ placeholderimage.dev
 placeit.net
 planetebook.com
 planetnumerology.com
+planettravel.co.nz
 playminigames.net
 play-python.asyncmove.com
 playstation.com
