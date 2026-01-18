@@ -48,6 +48,7 @@ aadisol.in
 abc7.com
 abcya.com
 abeka.com
+ab-info.eu
 abiresearch.com
 accounts.google.nl
 ac-illust.com
@@ -1228,6 +1229,7 @@ gosexpod.com
 gospelebooks.net
 go-to-zlibrary.com
 govanguard.com
+gowithcruiseplanners.com
 gowithus.com
 graficsea.com
 granddynamics.com
@@ -2499,6 +2501,7 @@ scalebranding.com
 scan-me.cc
 scanme.digital
 scanmehome.com
+scantours.net
 schemecolor.com
 schooltv.nl
 scienceabc.com
@@ -2894,6 +2897,7 @@ tozetta.com
 tpp-dev.optum.com
 trainingcenter.com
 transangels.com
+transfermarkt.us
 transfermyfile.com
 translate.google.de
 transrealbooks.com
