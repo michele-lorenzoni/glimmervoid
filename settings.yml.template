@@ -127,7 +127,7 @@ valkey:
 #   favorite_urls:
 #     - "github.com"
 #     - "stackoverflow.com"
-    
+
   static_path: ""
   # Custom templates path - leave it blank if you didn't change
   templates_path: ""
@@ -2669,6 +2669,14 @@ engines:
     shortcut: brnews
     categories: news
     brave_category: news
+
+ - name: brave_api
+    engine: brave_api
+    disabled: false
+    shortcut: bapi
+    weight: 1.5
+    categories: [general, web]
+    timeout: 5.0
 
   # - name: brave.goggles
   #   engine: brave
