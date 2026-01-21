@@ -446,6 +446,7 @@ caseconverter.tools
 cavecreekcoffee.com
 cb01.pizza
 cb-india.com
+cdkm.com
 cdn.font-store.ir
 cdpath.com
 celebra.cat
@@ -573,6 +574,7 @@ component.gallery
 condoom.nl
 convertacolor.com
 converters.co
+convertio.co
 convertsvgtopng.net
 coolcatlovesyou.com
 coolfont.org
