@@ -5,6 +5,16 @@
 <div class="tabs" role="tablist">
 {%- endmacro -%}
 
+{%- macro tab_header(name, id, label, checked) -%}
+<input type="radio" name="{{ name }}" id="tab-{{ id }}" {% if checked is sameas true %}checked="checked"{% endif %}>
+<label id="tab-label-{{ id }}" for="tab-{{ id }}" role="tab" aria-controls="tab-content-{{ id }}">{{ label }}</label>
+<section id="tab-content-{{ id }}" role="tabpanel" aria-hidden="false">
+{%- endmacro -%}
+
+{%- macro tab_footer() -%}
+</section>
+{%- endmacro -%}
+
 {%- macro tab_header_button(name, id, label, active_tab) -%}
 <a href="?tab={{ id }}"
    id="tab-label-{{ id }}"
@@ -185,6 +195,34 @@
     margin-bottom: -2px;
     font-weight: bold;
   }
+
+  /* Stile per i tab annidati (engines) */
+  .tabs > input[type="radio"] {
+    display: none;
+  }
+
+  .tabs > input[type="radio"]:checked + label + section {
+    display: block;
+  }
+
+  .tabs > section {
+    display: none;
+  }
+
+  .tabs > label {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    margin-right: 0.25rem;
+  }
+
+  .tabs > input[type="radio"]:checked + label {
+    background: #fff;
+    font-weight: bold;
+    border-bottom-color: transparent;
+  }
 </style>
 {%- endblock -%}
 
@@ -289,7 +327,7 @@
   {% if active_tab == 'engines' %}
   <section id="tab-content-engines" role="tabpanel">
     <p>{{- _('Currently used search engines') -}}</p>
-    <div class="engines-container">
+    <div class="tabs engines-tabs" role="tablist">
       {%- include 'simple/preferences/engines.html' -%}
     </div>
   </section>
