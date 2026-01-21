@@ -2670,6 +2670,14 @@ engines:
     categories: news
     brave_category: news
 
+  - name: brave_api
+    engine: brave_api
+    shortcut: brapi
+    time_range_support: true
+    paging: true
+    categories: [general, web]
+    brave_category: search
+
   # - name: brave.goggles
   #   engine: brave
   #   network: brave
