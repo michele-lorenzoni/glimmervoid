@@ -2670,14 +2670,6 @@ engines:
     categories: news
     brave_category: news
 
- - name: brave_api
-    engine: brave_api
-    disabled: false
-    shortcut: bapi
-    weight: 1.5
-    categories: [general, web]
-    timeout: 5.0
-
   # - name: brave.goggles
   #   engine: brave
   #   network: brave
