@@ -469,6 +469,7 @@ chisel.com
 christan.design
 christianbook.com
 chrisvanwaes.nl
+chscantelli.it
 ciakmagazine.it
 ciaociaogelatocafe.com
 ciaocomo.it
@@ -863,6 +864,7 @@ electricman.space
 elementary.io
 elephantlearning.com
 elest.io
+elettroerosionefantihpm.com
 elpoderdeluniverso.com
 elsaspeak.com
 elsevier.cn
@@ -1072,6 +1074,7 @@ foolishdeveloper.com
 ford-trucks.com
 formatswap.com
 formia.so
+fortiniortofrutticoli.com
 fortnite.com
 forums.warframe.com
 fossil-scm.com
@@ -1895,6 +1898,7 @@ md5hashing.net
 mdbootstrap.com
 mde.tw
 mdpi.cn
+mebcostruzionimeccaniche.it
 medevel.com
 mediahuman.com
 media.io
@@ -2821,6 +2825,7 @@ sssh.com
 stackoom.com
 staging.freenet.org
 standardwool.uk
+stanzani.it
 starcss.com
 starfall.com
 starryai.com
@@ -2935,6 +2940,7 @@ teck.in
 tecmint.com
 teenxy.com
 teft.es
+teknomotor.com
 teknotel.com
 teknoverimlilik.com.tr
 teletype.in
