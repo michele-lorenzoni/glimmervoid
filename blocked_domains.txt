@@ -1078,6 +1078,7 @@ fontstand.com
 fontyukle.net
 fontz.net
 foodandwine.com
+food-e-commerces.vercel.app
 foolishdeveloper.com
 ford-trucks.com
 formatswap.com
