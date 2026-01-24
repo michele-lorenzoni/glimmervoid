@@ -1084,6 +1084,7 @@ fontz.net
 foodandwine.com
 foodebasket.com.pk
 food-e-commerces.vercel.app
+foodfusion.com
 foolishdeveloper.com
 ford-trucks.com
 formatswap.com
@@ -1564,6 +1565,7 @@ imtoo.com
 indianrail.gov.in
 indianrailways.gov.in
 indiebound.org
+indolj.pk
 indtrk.org
 inflact.com
 infoplease.com
@@ -2020,6 +2022,7 @@ muncievoice.com
 mutschler.dev
 mybard.com
 mybookcave.com
+mycart.pk
 mydadwroteaporno.com
 myebooks.mheducation.com
 myedit.online
@@ -2072,6 +2075,7 @@ neoland.dev
 neosb.net
 neo.space
 nerdiedad.com
+nestle.pk
 netflix-news.atsit.in
 netgosystems.hu
 netseccloud.com
@@ -2082,6 +2086,7 @@ neuralwriter.com
 newtravelplanner.com
 newwaveart.com
 nextui.org
+nfoods.com
 nftinc.com
 nft.nl
 nftnow.com
@@ -2222,6 +2227,7 @@ packprint.com
 pagedart.com
 paginegialle.it
 pakistaneats.com
+paksupermarkets.com
 palettemaker.com
 pamsteele.org
 panavision-tours.es
@@ -2840,6 +2846,7 @@ soundsofspeech.uiowa.edu
 sourcetreeapp.com
 spanishdict.com
 sparkylinux.org
+spar.pk
 speakometer.net
 speckyboy.com
 specstechdb.com
