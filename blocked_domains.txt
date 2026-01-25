@@ -624,6 +624,7 @@ craiyon.com
 crazygames.com
 createhentai.com
 creately.com
+create.onlineinvoices.com
 create-react-app.dev
 createyourfavicon.com
 creativefabrica.com
@@ -1245,6 +1246,7 @@ get-emoji.com
 getemoji.com
 getepic.com
 getillustrations.com
+getinvoify.com
 getpercent.online
 getporn.xxx
 getpronounce.com
@@ -1616,6 +1618,9 @@ intrepus.com
 inumeriprimi.com
 invideo.io
 invistanet.com.br
+invoicegenerator.com
+invoicegenerators.net
+invoicemaker.com
 ioflood.com
 ioriver.io
 ipaddress.com
@@ -2533,6 +2538,7 @@ programmerhumor.io
 progress.guide
 progressier.com
 progsoft.net
+proinvoicegenerator.com
 promeai.pro
 promli.com
 promova.com
