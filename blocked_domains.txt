@@ -259,6 +259,7 @@ avrebo.com
 awesome-github-readme-profile.netlify.app
 awesomegithub.web.app
 awesome-loaders.netlify.app
+axeetech.com
 axenov.dev
 ayoa.com
 azconversion.com
@@ -1138,6 +1139,7 @@ fr.bing.com
 freechoice.co.za
 freeconsulting.accessiway.com
 freeconvert.com
+free-cookiesnetflix.blogspot.com
 freedesignfile.com
 freeebooks.com
 freefontsvault.com
@@ -2146,6 +2148,7 @@ neo.space
 nerdiedad.com
 nestle.com
 nestle.pk
+netflix-cookies.techbigs.com
 netflix-news.atsit.in
 netgosystems.hu
 netseccloud.com
