@@ -2673,6 +2673,7 @@ readyplayer.me
 realitykings.com
 receive-sms.cc
 receivesmsfast.com
+receive-sms-free.cc
 receive-smss.com
 receive-smss.live
 recraft.ai
@@ -3096,9 +3097,11 @@ tempmail100.com
 temp-mail.io
 tempmail.ninja
 temp-number.com
+temp-number.online
 temp-number.org
 temporarynumber.com
 temporary-phone-number.com
+temp-phone-number.com
 tencent.com
 tendanceouest.com
 tenereteam.com
