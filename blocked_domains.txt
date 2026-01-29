@@ -1870,6 +1870,7 @@ libsyn.com
 lightroom.adobe.com
 lightworkersnet.com
 lightxeditor.com
+ligolang.org
 lingojam.com
 linguee.nl
 linkcheck.org
