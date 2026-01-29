@@ -1419,6 +1419,7 @@ hamachi.nl
 hanime.boo
 hanishbagga.com
 hardcorepost.com
+harpersbazaar.com
 harvestright.com
 hashes.com
 havenly.com
@@ -2497,6 +2498,7 @@ planettravel.co.nz
 playminigames.net
 play-python.asyncmove.com
 playstation.com
+playthebazaar.com
 playvids.com
 plu.mx
 pl.wiktionary.org
@@ -3188,6 +3190,7 @@ tgbots.cc
 thatbacheloretteshow.com
 thatguyfromdelhi.com
 thebackroomsurrey.ca
+thebazaar.com
 theblinkies.com
 thebookee.net
 thebrief.ai
