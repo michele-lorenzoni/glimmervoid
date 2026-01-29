@@ -545,8 +545,10 @@ clipsafari.com
 cliti.com
 cloakmobile.com
 closedlooplabs.com
+cloud9cannabis.com
 cloud9fabrics.com
 cloud9.gg
+cloud9health.ai
 cloud9.money
 clrn.org
 clubunescocuneo.it
@@ -1890,6 +1892,7 @@ linuxnasm.be
 liquidfiles.com
 liquidglassgen.com
 liquid-glass-js.com
+liquipedia.net
 liteapks.com
 litecoin-earning.com
 litecoinrewards.click
@@ -3497,6 +3500,7 @@ vivid.com
 vi.wikipedia.org
 vixen.com
 vk.com
+vlr.gg
 vodohod-cruises.com
 vogue.mx
 voicecup.com
