@@ -60,6 +60,7 @@ accounts.google.nl
 ac-illust.com
 ad69.com
 adamtheautomator.com
+addictinggames.com
 addlance.com
 adeptclippingpath.com
 adessoin.tv
@@ -77,6 +78,7 @@ advanced-percentage-calculator.com
 aebn.com
 aestheticwallpapers.io
 afontgenerator.com
+agame.com
 agenda.com
 agendav.org
 agilecrosswords.com
@@ -1315,6 +1317,7 @@ gghh.noharm.org
 ggithubprofile.vercel.app
 ggservice.com
 gh-stats-gen.vercel.app
+gidd.io
 giddyupcoffeehouse.com
 giddyup.io
 gififyai.com
@@ -1809,12 +1812,14 @@ kitco.com
 kitemetric.com
 kitploit.com
 kiwifonts.com
+kizi.com
 kjelectric.com
 kkmart.pk
 knoji.com
 knuddels.de
 kodekloud.com
 kombai.com
+kongregate.com
 kontent.ai
 kooora.com
 korben.info
@@ -2082,6 +2087,7 @@ mindnode.com
 mindomo.com
 minetime.ai
 minhanumerologia.com
+miniclip.com
 minitool.com
 miniwebtool.com
 miro.com
@@ -2230,6 +2236,7 @@ notion-avatar.app
 noto.ink
 notopizza.com
 nourishingexistence.com
+now.gg
 npack.eu
 npack.kr
 npo.nl
@@ -2534,6 +2541,7 @@ pngtree.com
 pnw-custom.com
 pocket-lint.com
 podbase.com
+pogo.com
 poindeo.com
 pokecut.com
 poki.com
@@ -3559,6 +3567,7 @@ weather.com
 webcatalog.io
 webcli.jp
 webdeasy.de
+webgames.io
 webptogif.org
 webshell.co
 webshell.lol
