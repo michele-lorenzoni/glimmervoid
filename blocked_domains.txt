@@ -2,6 +2,7 @@
 01net.it
 1000fonts.com
 1000logos.net
+1000webgames.com
 10015.io
 1001fonts.com
 1001freefonts.com
@@ -570,6 +571,7 @@ cocce.it
 cockdude.com
 cocodoc.com
 codebeautify.org
+codecombat.com
 codediesel.com
 codeformatting.com
 codehs.com
@@ -1273,6 +1275,7 @@ gamedevicons.com
 gamemake.org
 gamers-outlet.net
 gamespew.com
+gamigo.com
 gaming4free.net
 gan.ai
 gatewaygators.com
@@ -2225,6 +2228,7 @@ nicknamesearch.com
 nientepopcorn.it
 nieuwbouw-rijndael.nl
 ninja.it
+nitrome.com
 nl.wikisage.org
 nocobase.com
 nonparloitaliano.com
