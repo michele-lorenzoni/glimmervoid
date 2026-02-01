@@ -82,6 +82,7 @@ aestheticwallpapers.io
 affica.pro
 afontgenerator.com
 agame.com
+agar.live
 agenda.com
 agendav.org
 agilecrosswords.com
@@ -272,6 +273,7 @@ axeetech.com
 axenov.dev
 ayoa.com
 azconversion.com
+azgames.io
 b1.org
 b2cdatabase.com
 babesource.com
@@ -482,6 +484,7 @@ canva.com
 caparra.ai
 capcut.com
 capterra.nl
+capybara-game.com
 carlaaston.com
 carrabbas.com
 carrabbasoriginal.com
@@ -649,11 +652,13 @@ cookieclicker-1.github.io
 cookie-clicker2.com
 cookieclicker2.io
 cookieclickercity.com
+cookie-clicker-online.neocities.org
 cookieclickeronline.net
 cookieclicker.playsaurus.com
 cookieclickers.io
 cookie-clicker.us
 cookieclickervillan.neocities.org
+cookieupdate.neocities.org
 coolcatlovesyou.com
 coolfont.org
 coolors.co
