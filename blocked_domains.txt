@@ -336,6 +336,7 @@ betaalvereniging.nl
 betterterminal.com
 bezkoder.com
 bgames.com
+bgstatsapp.com
 bhg.com
 bhosted.nl
 bibliomanie.it
@@ -388,6 +389,7 @@ bmw-m.com
 bnbicons.com
 bnsf.com
 boardgamearena.com
+boardgamesmaker.com
 bobbyhadz.com
 bodymind-integration.com
 boekenwereld.com
@@ -834,6 +836,7 @@ de.wikipedia.org
 de.wordpress.org
 dfviewer.com
 dhiwise.com
+dicetower.com
 dictionary.com
 digilibraries.com
 digitalblasphemy.com
@@ -1190,6 +1193,7 @@ formia.so
 fortiniortofrutticoli.com
 fortnite.com
 fortnite.gg
+fortuna-speelkaarten.nl
 forums.warframe.com
 fossil-scm.com
 fotoflexer.com
@@ -1306,6 +1310,7 @@ gal-estaudois.fr
 gallery.yopriceville.com
 gamedevicons.com
 gamemake.org
+gamenerdz.com
 gamers-outlet.net
 gamescard.net
 gamesnacks.com
@@ -1401,6 +1406,7 @@ glockapps.com
 glotorrents.123proxy.app
 gmass.co
 g-maxx.nl
+gmtgames.com
 gnaughtygnomes.net
 gobuses.com
 gocruising.cruisefactory.net
@@ -1468,6 +1474,7 @@ g-vloeren.nl
 gwaa.net
 haax.fr
 habr.com
+hachetteboardgames.com
 hackingloops.com
 hackshells.org
 hacksland.net
@@ -3335,6 +3342,7 @@ themeskingdom.com
 themodernham.com
 themorning.com
 thenumerologypower.com
+theop.games
 theorangepeel.net
 thepatterncollective.com
 thepercentcalculator.com
