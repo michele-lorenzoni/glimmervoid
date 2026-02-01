@@ -677,6 +677,7 @@ coolors.co
 coolsymbol.com
 copyandpasteemoji.com
 copyandpastesymbols.net
+copy-paste.net
 copywriterai.it
 coqnu.com
 coralsandsinn.com
@@ -752,6 +753,7 @@ custom-cursor.weebly.com
 custom-cursor.world
 customneon.com
 customneon.co.uk
+cuteinternet.com
 cuttle.xyz
 cvedetails.com
 cyberghostvpn.com
@@ -1619,6 +1621,7 @@ hytaleservers.dev
 hytaleservers.org
 hytaleservers.space
 hytaleserver.xyz
+i2symbol.com
 iamag.co
 ias-artiperlasalute.it
 ibrameble.pl
@@ -1725,6 +1728,7 @@ inpixio.com
 inprnt.com
 insmind.com
 inspire2rise.com
+inspiremari.nl
 instaastro.com
 instadp.com
 instafonts.io
@@ -1893,6 +1897,7 @@ kravatar.com
 kravemart.com
 krisp.ai
 krysslexikon.se
+kulaone.com
 kunstbus.nl
 kwai.com
 kyotomestre.it
@@ -3233,6 +3238,7 @@ swioz.com
 swissadme.ch
 sxyprn.com
 sxyprn.net
+symbolcopy.com
 symbolsdecoded.com
 syncfusion.com
 synthesia.io
@@ -3311,7 +3317,9 @@ test-ipv6.com
 texascreative.com
 texascss.net
 textcompare.io
+texteditor.com
 textemoji.org
+textgenerator.net
 text.is
 textstudio.com
 texture-packs.com
