@@ -886,6 +886,7 @@ downgit.cvbox.org
 downgit.evecalm.com
 download-github.ubiops.com
 download.it
+downrightnow.com
 dqydj.com
 drawkit.com
 draw.kits.blog
@@ -3364,6 +3365,7 @@ thelanguagecloset.com
 thelinuxcode.com
 thelogoshoppeonline.com
 themebeta.com
+themegallery.robdor.com
 themeskingdom.com
 themodernham.com
 themorning.com
