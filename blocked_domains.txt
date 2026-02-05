@@ -1358,6 +1358,8 @@ genfavicon.com
 genreadme.cloud
 genreadme.cloud
 geodash.org
+geometrydash22.com
+geometrydash23.com
 geometrydash-2.bitbucket.io
 geometrydash2.io
 geometrydashbreeze.com
@@ -1373,13 +1375,17 @@ geometry-dashonline.com
 geometrydashspam.io
 geometrydash-subzero.io
 geometrydashsubzero.net
+geometrydashunblockedgames.com
+geometrydash.us.com
 geometrydashx.io
 geometry-free.com
 geometrygame.io
 geometry-games.io
 geometrygames.io
+geometry-lite.com
 geometrylitegame.io
 geometrylitegame.org
+geometry-lite.io
 geometrylitepc.io
 geometry-online.io
 getapp.nl
@@ -3885,6 +3891,7 @@ yeschat.ai
 yhype.me
 yobase64decode.com
 yollo.ai
+yoplay.io
 yopmail.com
 youaudiodown.com
 youfeed.it
