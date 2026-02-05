@@ -3369,6 +3369,7 @@ tempfile.pro
 templated.co
 templated.io
 tempmail100.com
+temp-mail.app
 temp-mail.io
 tempmail.ninja
 temp-number.com
