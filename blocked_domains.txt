@@ -783,6 +783,7 @@ darkweblinkssites.com
 dartfirststate.com
 dart.org
 darwinexzero.com
+dashmetry.com
 datablitz.com.ph
 databreachtoday.com
 databshop.com
@@ -1357,9 +1358,15 @@ genreadme.cloud
 genreadme.cloud
 geodash.org
 geometrydashfullversion.io
+geometry-dash.gg
 geometrydash-lite.io
+geometry-dashonline.com
 geometrydash-subzero.io
+geometry-free.com
 geometry-games.io
+geometrygames.io
+geometrylitegame.io
+geometrylitegame.org
 geometrylitepc.io
 getapp.nl
 getastra.com
