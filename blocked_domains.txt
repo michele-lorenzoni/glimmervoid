@@ -915,6 +915,7 @@ dryicons.com
 dtf.com
 dtmts.com
 duckdns.vercel.app
+duckmail.sbs
 dummydash.com
 dummyimage.web.app
 dummyimg.in
@@ -987,6 +988,7 @@ emailproleads.com
 email-templates.com
 emeditor.com
 emide.org
+eml.monster
 emoji.aranja.com
 emojibetekenis.nl
 emojicombos.com
@@ -1232,6 +1234,7 @@ freechoice.co.za
 freeconsulting.accessiway.com
 freeconvert.com
 free-cookiesnetflix.blogspot.com
+freecustom.email
 freedesignfile.com
 freeebooks.com
 freefontsvault.com
@@ -2124,6 +2127,7 @@ maeva.com
 magecomp.com
 maggianos.com
 mailanon.cc
+mail.chatgpt.org.uk
 mailinator.com
 mail.ru
 mail.tm
@@ -2363,6 +2367,7 @@ nl.wikisage.org
 nocobase.com
 nonparloitaliano.com
 noodlemagazine.com
+noopmail.org
 nordvpn.com
 northerncentralrailway.com
 notebookandpenguin.com
@@ -3384,6 +3389,7 @@ temp-number.com
 temp-number.online
 temp-number.org
 tempnumber.pw
+temporary-mail.net
 temporarynumber.com
 temporary-phone-number.com
 temp-phone-number.com
@@ -3536,6 +3542,7 @@ transfermarkt.us
 transfermyfile.com
 translate.google.de
 transrealbooks.com
+trashlify.com
 trattoriaallastazione.it
 trattoriastazione.com
 travelagents.cruiseone.com
