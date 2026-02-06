@@ -1053,6 +1053,7 @@ eugeniocorrao.it
 euroresidentes.es
 eurostreaming.pet
 evaeaston.com
+evapmail.com
 evaristegalois.org
 evdfrance.fr
 eveen.pk
@@ -1090,6 +1091,8 @@ face.co
 facetuneapp.com
 fahimai.com
 faiellanicolasrl.it
+fake-email.pro
+fakemailgenerator.com
 fakenamegenerator.com
 fakepersongenerator.com
 fakexy.com
@@ -2151,7 +2154,9 @@ mailanon.cc
 mail.chatgpt.org.uk
 mailinator.com
 mail.ru
+mailsac.com
 mail.tm
+mailwave.dev
 makeagif.com
 makeemoji.com
 makegif.org
@@ -3422,6 +3427,7 @@ tempmail.email
 tempmail.ing
 temp-mail.io
 tempmail.la
+tempmail.lol
 tempmail.ninja
 tempmail.plus
 tempmail.so
