@@ -290,6 +290,7 @@ b2cdatabase.com
 babesource.com
 backiee.com
 badges.mybluemix.net
+badgr.com
 badg.us
 baggu.com
 baiadellaconoscenza.com
@@ -522,6 +523,7 @@ cdn.font-store.ir
 cdpath.com
 celebra.cat
 certificatetool.com
+certifyme.online
 channelnewsasia.com
 charactercreator.org
 chatopenai.de
@@ -2526,6 +2528,8 @@ ononoki.org
 onzetaal.nl
 opautoclicker.com
 openart.ai
+openbadgeforge.com
+openbadges.me
 opencharacter.org
 openculture.com
 openebooks.org
@@ -3781,6 +3785,7 @@ vintagevectors.com
 violentmonkey.com
 vip-tour.vn
 vipwank.com
+virtualbadge.io
 virtualizare.net
 visitlakedistrict.com
 vistaprint.com
