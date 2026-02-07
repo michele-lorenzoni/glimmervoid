@@ -3475,6 +3475,7 @@ tempmail.co
 tempmail.email
 tempmail.ing
 temp-mail.io
+tempmail.io
 tempmail.la
 tempmail.lol
 tempmail.net
