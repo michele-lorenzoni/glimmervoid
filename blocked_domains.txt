@@ -3490,6 +3490,7 @@ tempmail.so
 tempmailto.com
 tempmailturbo.com
 tempmailusa.com
+tempmailx.xyz
 temp-number.com
 temp-number.online
 temp-number.org
