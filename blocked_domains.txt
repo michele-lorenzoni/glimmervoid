@@ -1228,6 +1228,7 @@ fontgenerator.name
 fontget.com
 fontjedi.com
 fontmeme.com
+fonts101.com
 fonts2u.com
 fonts4.com
 fonts4free.net
@@ -1244,6 +1245,7 @@ fontspace.io
 fontstand.com
 fontyukle.net
 fontz.net
+fontzone.net
 foodandwine.com
 foodebasket.com.pk
 food-e-commerces.vercel.app
@@ -3256,6 +3258,7 @@ simplesvgeditor.com
 simplified.com
 simplifycpp.org
 simplycodes.com
+simplythebest.net
 simplytranslate.com
 simyo.nl
 sis.mancosa.co.za
@@ -3538,6 +3541,7 @@ texascss.net
 textcompare.io
 texteditor.com
 textemoji.org
+textfontfree.com
 textgenerator.net
 text.is
 textstudio.com
