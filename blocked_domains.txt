@@ -1226,6 +1226,7 @@ fontgenerator.name
 fontget.com
 fontjedi.com
 fontmeme.com
+fonts4free.net
 fontsempire.com
 fontserver.ir
 fontsgoogle.com
