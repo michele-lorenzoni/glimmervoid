@@ -1683,6 +1683,7 @@ houzz.com
 hover.dev
 howdoyouspell.co
 howjsay.com
+howtogeek.com
 howtoinstall.me
 howtopronounce.com
 how-to-say.com
