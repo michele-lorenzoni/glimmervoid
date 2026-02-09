@@ -1228,11 +1228,13 @@ fontgenerator.name
 fontget.com
 fontjedi.com
 fontmeme.com
+fonts2u.com
 fonts4.com
 fonts4free.net
 fonts4free.vg
 fontsempire.com
 fontserver.ir
+fontsforyou.com
 fontsgoogle.com
 fontshmonts.com
 fontshop.com
@@ -1821,6 +1823,7 @@ imparaflutter.it
 imprintplus.com
 imresizer.com
 imtoo.com
+inanimarbles.com
 inboxes.com
 incognitomail.co
 indianrail.gov.in
