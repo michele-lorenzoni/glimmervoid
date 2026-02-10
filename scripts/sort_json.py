@@ -19,7 +19,7 @@ for filepath in sys.argv[1:]:
             pass  # sort_keys=True lo gestisce dopo
         
         with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, sort_keys=True, ensure_ascii=False)
+            json.dump(data, f, indent=4, sort_keys=True, ensure_ascii=False)
             f.write('\n')
         
         print(f"Sorted: {filepath}")
