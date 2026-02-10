@@ -1026,6 +1026,7 @@ emide.org
 eml.monster
 emoji.aranja.com
 emojibetekenis.nl
+emoji.com
 emojicombos.com
 emojicopy.com
 emojidb.org
