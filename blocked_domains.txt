@@ -1227,6 +1227,7 @@ font-generator.com
 fontgenerator.name
 fontget.com
 fontjedi.com
+fontke.com
 fontmeme.com
 fonts101.com
 fonts2u.com
