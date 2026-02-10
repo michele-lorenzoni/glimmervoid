@@ -1033,6 +1033,7 @@ emojidb.org
 emojidictionary.emojifoundation.com
 emojifinder.com
 emojigraph.org
+emojiguide.com
 emojiguide.org
 emojihub.org
 emojiisland.com
