@@ -1261,6 +1261,7 @@ fonts.net.cn
 fontsonic.com
 fontspace.io
 fontstand.com
+fonttr.com
 fontyukle.net
 fontz.net
 fontzone.net
