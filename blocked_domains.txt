@@ -3308,6 +3308,7 @@ shop.app
 shop-pro.jp
 shortruby.com
 shoshitamam.com
+shotcut.org
 shrink.media
 shudder.com
 shutterstock.com
