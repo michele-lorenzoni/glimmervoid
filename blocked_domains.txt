@@ -2097,6 +2097,7 @@ linkcheck.org
 linkz.ai
 linuxcommandlibrary.com
 linuxconfig.org
+linuxg.net
 linuxhint.com
 linuxhostsupport.com
 linuxjournal.com
