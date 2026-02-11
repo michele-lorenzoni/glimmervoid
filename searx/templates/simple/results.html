@@ -18,7 +18,7 @@
   {% set only_template = '' %}
 {% endif %}
 
-<div id="results" class="{{ only_template }}">
+<div id="results" class="{{ only_template }} flex">
 
   {%- if answers -%}
     {%- include 'simple/elements/answers.html' -%}
