@@ -1791,6 +1791,7 @@ icalculate.app
 icanvas.com
 icecreamapps.com
 icedit.net
+icoconverter.com
 icofont.com
 icomoon.io
 iconarchive.com
