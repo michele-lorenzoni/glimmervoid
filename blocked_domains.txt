@@ -1166,6 +1166,7 @@ fasttech.xyz
 fatihex.dev
 favicon.digital
 favicongenerator.io
+favicon-generator.org
 faviconify.com
 favicon.now
 favicon.pub
