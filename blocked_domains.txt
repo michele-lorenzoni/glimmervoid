@@ -1168,6 +1168,7 @@ favicon.digital
 favicongenerator.io
 favicon-generator.org
 faviconify.com
+favicon.io
 favicon.now
 favicon.pub
 fbcd.co
