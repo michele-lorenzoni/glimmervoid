@@ -1849,6 +1849,7 @@ idx.dev
 iemoji.com
 ifavicon.com
 ifonts.xyz
+ifood.tv
 igfonts.io
 ign.com
 ignite.duq.edu
