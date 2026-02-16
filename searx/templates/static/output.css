@@ -327,6 +327,11 @@
       }
     }
   }
+  .md\:flex-wrap {
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
+  }
   .lg\:w-xl {
     @media (width >= 64rem) {
       width: var(--container-xl);
