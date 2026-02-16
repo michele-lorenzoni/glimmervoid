@@ -43,7 +43,7 @@ COPY searx/templates/static/custom/favorite_urls.json /usr/local/searxng/searx/s
 
 COPY searx/templates/static/fonts/digital_dreamer.otf /usr/local/searxng/searx/static/fonts/digital_dreamer.otf
 COPY searx/templates/static/fonts/ubuntu_r.ttf /usr/local/searxng/searx/static/fonts/ubuntu_r.ttf
-COPY searx/templates/static/fonts/monoid_nf_regular.ttf /usr/local/searxng/searx/static/fonts/monoid_nf_regular.ttf
+
 COPY searx/templates/static/output.css /usr/local/searxng/searx/static/output.css
 
 # Copia i file di personalizzazione

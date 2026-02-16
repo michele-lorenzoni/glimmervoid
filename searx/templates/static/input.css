@@ -14,23 +14,12 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "monoid_nf_regular";
-    src: url("./fonts/monoid_nf_regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 .font-digital_dreamer {
     font-family: "digital_dreamer", sans-serif;
 }
 
 .font-ubuntu_r {
     font-family: "ubuntu_r", sans-serif;
-}
-
-.font-monoid_nf_regular {
-    font-family: "monoid_nf_regular", sans-serif;
 }
 
 @layer components {
