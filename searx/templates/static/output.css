@@ -182,6 +182,9 @@
   .m-24 {
     margin: calc(var(--spacing) * 24);
   }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
