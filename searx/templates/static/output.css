@@ -577,6 +577,14 @@
       }
     }
   }
+  .hover\:shadow-\[0_0_5px_rgba\(100\,108\,255\,0\.5\)\] {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0 0 5px var(--tw-shadow-color, rgba(100,108,255,0.5));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
   .hover\:shadow-sm {
     &:hover {
       @media (hover: hover) {
