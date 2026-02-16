@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'digital_dreamer';
-    src: url('./fonts/digital_dreamer.otf') format('opentype');
+    font-family: "digital_dreamer";
+    src: url("./fonts/digital_dreamer.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu_r';
-    src: url('./fonts/ubuntu_r.ttf') format('truetype');
+    font-family: "monospace";
+    src: url("./fonts/ubuntu_r.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 .font-digital_dreamer {
-    font-family: 'digital_dreamer', sans-serif;
+    font-family: "digital_dreamer", sans-serif;
 }
 
 .font-ubuntu_r {
-    font-family: 'ubuntu_r', sans-serif;
+    font-family: "ubuntu_r", sans-serif;
 }
 
 @layer components {
-    .tabs>input:checked~section {
+    .tabs > input:checked ~ section {
         display: none;
     }
 }
