@@ -13,6 +13,7 @@
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-gray-950: oklch(13% 0.028 261.692);
     --spacing: 0.25rem;
+    --container-sm: 24rem;
     --container-xl: 36rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
@@ -224,6 +225,9 @@
   .w-full {
     width: 100%;
   }
+  .w-sm {
+    width: var(--container-sm);
+  }
   .w-xl {
     width: var(--container-xl);
   }
@@ -317,6 +321,11 @@
       @media (hover: hover) {
         background-color: var(--color-emerald-500);
       }
+    }
+  }
+  .lg\:w-xl {
+    @media (width >= 64rem) {
+      width: var(--container-xl);
     }
   }
   .lg\:text-9xl {
