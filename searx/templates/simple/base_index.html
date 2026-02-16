@@ -48,7 +48,8 @@
       {%- block linkto_preferences -%}
       {%- if request.args.get('preferences') -%}
       <a href="{{ url_for('preferences') }}?preferences={{ request.args.get('preferences') }}&preferences_preview_only=true"
-        class="link_on_top_preferences">{{ icon_big('settings') }}</a>
+        class="link_on_top_preferences transition-all duration-100 rotate-45 transform-gpu">{{ icon_big('settings')
+        }}</a>
       {%- else -%}
       <a href="{{ url_for('preferences') }}" class="link_on_top_preferences">{{ icon_big('settings') }}</a>
       {%- endif -%}
