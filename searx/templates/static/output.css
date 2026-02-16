@@ -209,6 +209,9 @@
   .hidden {
     display: none;
   }
+  .inline-grid {
+    display: inline-grid;
+  }
   .table {
     display: table;
   }
