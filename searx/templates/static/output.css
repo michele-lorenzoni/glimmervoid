@@ -421,6 +421,13 @@
       }
     }
   }
+  .hover\:rotate-180 {
+    &:hover {
+      @media (hover: hover) {
+        rotate: 180deg;
+      }
+    }
+  }
   .hover\:border-\[\#34C534\] {
     &:hover {
       @media (hover: hover) {
