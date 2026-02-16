@@ -352,6 +352,16 @@
     --tw-outline-style: none;
     outline-style: none;
   }
+  .hover\:scale-150 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 150%;
+        --tw-scale-y: 150%;
+        --tw-scale-z: 150%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:border-\[\#34C534\] {
     &:hover {
       @media (hover: hover) {
