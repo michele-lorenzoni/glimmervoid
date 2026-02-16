@@ -327,9 +327,16 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .delay-150 {
+    transition-delay: 150ms;
+  }
   .duration-150 {
     --tw-duration: 150ms;
     transition-duration: 150ms;
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
   }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
@@ -343,6 +350,13 @@
     &:hover {
       @media (hover: hover) {
         border-color: #34C534;
+      }
+    }
+  }
+  .hover\:border-\[\#646CFF\] {
+    &:hover {
+      @media (hover: hover) {
+        border-color: #646CFF;
       }
     }
   }
