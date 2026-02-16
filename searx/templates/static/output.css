@@ -14,7 +14,6 @@
     --color-gray-950: oklch(13% 0.028 261.692);
     --spacing: 0.25rem;
     --container-xs: 20rem;
-    --container-sm: 24rem;
     --container-xl: 36rem;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
@@ -206,17 +205,8 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .hidden {
     display: none;
-  }
-  .inline-grid {
-    display: inline-grid;
-  }
-  .table {
-    display: table;
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
@@ -229,9 +219,6 @@
   }
   .h-dvh {
     height: 100dvh;
-  }
-  .h-screen {
-    height: 100vh;
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
@@ -248,20 +235,8 @@
   .flex-none {
     flex: none;
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .grow {
     flex-grow: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
-  .grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -280,9 +255,6 @@
   }
   .items-center {
     align-items: center;
-  }
-  .justify-between {
-    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
@@ -326,13 +298,6 @@
   .text-gray-50 {
     color: var(--color-gray-50);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -367,11 +332,6 @@
       width: var(--container-xl);
     }
   }
-  .lg\:grid-cols-8 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(8, minmax(0, 1fr));
-    }
-  }
   .lg\:text-9xl {
     @media (width >= 64rem) {
       font-size: var(--text-9xl);
@@ -386,8 +346,14 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "monospace";
+  font-family: "ubuntu_r";
   src: url("./fonts/ubuntu_r.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "monoid_nf_regular";
+  src: url("./fonts/monoid_nf_regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -397,17 +363,15 @@
 .font-ubuntu_r {
   font-family: "ubuntu_r", sans-serif;
 }
+.font-monoid_nf_regular {
+  font-family: "monoid_nf_regular", sans-serif;
+}
 @layer components {
-  .tabs > input:checked ~ section {
+  .tabs>input:checked~section {
     display: none;
   }
 }
 @property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -424,7 +388,6 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
     }
