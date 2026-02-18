@@ -26,11 +26,11 @@
   {%- endif -%}
   <div class="url_wrapper">
     {%- for part in get_pretty_url(result.parsed_url) -%}
-    <span class="url_o{{loop.index}}"><span class="url_i{{loop.index}} italic">{{- part -}}</span></span>
+    <span class="url_o{{loop.index}}"><span class="url_i{{loop.index}} italic hover:underline">{{- part -}}</span></span>
     {%- endfor %}
   </div>
   {{- result_close_link() -}}
-  <h3 class="font-bold">{{ result_link(result.url, result.title|safe) }}</h3>
+  <h3 class="font-bold hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
 {%- endmacro -%}
 
 <!-- Draw result sub header -->
