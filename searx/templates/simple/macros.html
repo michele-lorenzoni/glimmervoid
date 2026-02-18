@@ -30,7 +30,6 @@
     {%- endfor %}
   </div>
   {{- result_close_link() -}}
-  {%- if result.thumbnail %}{{ result_open_link(result.url, classes='thumbnail_link') }}<img class="thumbnail" src="{{ image_proxify(result.thumbnail) }}" title="{{ result.title|striptags }}" loading="lazy">{%- if result.length -%}<span class="thumbnail_length">{{ result.length }}</span>{%- endif -%}{{ result_close_link() }}{% endif -%}
   <h3 class="font-bold text-white">{{ result_link(result.url, result.title|safe) }}</h3>
 {%- endmacro -%}
 
