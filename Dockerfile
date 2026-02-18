@@ -48,6 +48,8 @@ COPY searx/templates/static/output.css /usr/local/searxng/searx/static/output.cs
 
 # Copia i file di personalizzazione
 COPY searx/templates/static/themes/simple/highlight.css /usr/local/searxng/searx/static/themes/simple/highlight.css
+COPY searx/templates/static/themes/simple/sxng-core.min.js /usr/local/searxng/searx/static/themes/simple/sxng-core.min.js
+
 COPY searx/templates/static/themes/simple/img/favicon.png /usr/local/searxng/searx/static/themes/simple/img/favicon.png
 COPY searx/templates/static/themes/simple/img/favicon.svg /usr/local/searxng/searx/static/themes/simple/img/favicon.svg
 COPY searx/templates/static/themes/simple/img/favicon.svg.gz /usr/local/searxng/searx/static/themes/simple/img/favicon.svg.gz
