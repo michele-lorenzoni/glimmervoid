@@ -6,7 +6,7 @@
 {%- endmacro %}
 
 {% macro result_open_link(url, classes='') -%}
-    <a href="{{ url }}" {% if classes %}class="{{ classes }}" {% endif %}{% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %}>
+    <a href="{{ url }}" {% if classes %}class="{{ classes }} italic hover:underline" {% endif %}{% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %}>
 {%- endmacro %}
 
 {%- macro result_close_link() -%}
@@ -26,7 +26,7 @@
   {%- endif -%}
   <div class="url_wrapper">
     {%- for part in get_pretty_url(result.parsed_url) -%}
-    <span class="url_o{{loop.index}} italic hover:underline"><span class="url_i{{loop.index}}">{{- part -}}</span></span>
+    <span class="url_o{{loop.index}}"><span class="url_i{{loop.index}}">{{- part -}}</span></span>
     {%- endfor %}
   </div>
   {{- result_close_link() -}}
