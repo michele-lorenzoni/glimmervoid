@@ -3496,6 +3496,7 @@ skyrock.fm
 slackmojis.com
 slamjam.us
 slant.co
+slashdot.org
 slashfilm.com
 slazzer.com
 slimframework.com
@@ -3907,6 +3908,7 @@ toolversal.com
 toolxox.com
 toonitalia.green
 topbestalternatives.com
+topbusinesssoftware.com
 topcoder.com
 tophonetics.com
 tophytaleserver.net
