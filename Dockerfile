@@ -66,6 +66,8 @@ COPY searx/templates/simple/index.html /usr/local/searxng/searx/templates/simple
 COPY searx/templates/simple/results.html /usr/local/searxng/searx/templates/simple/results.html
 COPY searx/templates/simple/icons.html /usr/local/searxng/searx/templates/simple/icons.html
 COPY searx/templates/simple/base.html /usr/local/searxng/searx/templates/simple/base.html
+COPY searx/templates/simple/macros.html /usr/local/searxng/searx/templates/simple/macros.html
+
 COPY logo.png /usr/local/searxng/searx/static/themes/simple/img/searxng.png
 
 COPY searx/engines/brave_api.py /usr/local/searxng/searx/engines/brave_api.py
