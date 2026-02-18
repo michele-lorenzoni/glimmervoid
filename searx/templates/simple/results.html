@@ -37,10 +37,10 @@
         {% include 'simple/messages/no_results.html' %}
     {% endif %}
     </div>
-    <div id="backToTop">
-      <a href="#" aria-label="{{ _('Back to top') }}">{{ icon_small('navigate-up') }}</a>
-    </div>
-    
+    <!-- <div id="backToTop"> -->
+    <!--   <a href="#" aria-label="{{ _('Back to top') }}">{{ icon_small('navigate-up') }}</a> -->
+    <!-- </div> -->
+
 	<script>
 	window.addEventListener('load', async function() {
 	  try {
@@ -106,7 +106,7 @@
 	</script>
 
     {% if paging %}
-    <nav id="pagination" role="navigation">
+    <nav id="pagination" role="navigation" class="flex">
         {% if pageno > 1 %}
             <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="previous_page">
                 <div class="{% if rtl %}right{% else %}left{% endif %}">
@@ -150,7 +150,7 @@
             {% set pend = pageno + 6 %}
         {% endif %}
 
-        <div class="numbered_pagination">
+        <div class="numbered_pagination flex">
         {% for x in range(pstart, pend) %}
             <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="page_number">
                 <input type="hidden" name="q" value="{{ q|e }}" >
