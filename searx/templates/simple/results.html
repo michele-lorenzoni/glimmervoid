@@ -152,7 +152,7 @@
 
         <div class="numbered_pagination flex">
         {% for x in range(pstart, pend) %}
-            <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="page_number mx-2">
+            <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="page_number mx-2 text-white cursor-pointer">
                 <input type="hidden" name="q" value="{{ q|e }}" >
                 {% for category in selected_categories %}
                 <input type="hidden" name="category_{{ category }}" value="1" >
