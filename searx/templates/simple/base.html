@@ -45,7 +45,7 @@
     </div>
     {% endif %}
 
-    <nav id="links_on_top">
+    <nav id="links_on_top" class="flex">
       {%- from 'simple/icons.html' import icon_big -%}
       {%- block linkto_about -%}
       <a href="{{ url_for('info', pagename='about') }}" class="link_on_top_about">{{ icon_big('information-circle')
