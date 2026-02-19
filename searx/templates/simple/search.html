@@ -3,9 +3,9 @@
       action="{{ url_for("search") }}"
       role="search"
       class="flex flex-col max-w-3xl">
-    <div id="search_header">
-        <div id="search_view">
-            <div class="search_box">
+    <div id="search_header" class="w-full">
+        <div id="search_view" class="w-full">
+            <div class="search_box" class="w-full">
                 <input id="q"
                        name="q"
                        type="text"
@@ -16,7 +16,8 @@
                        spellcheck="false"
                        autocorrect="off"
                        dir="auto"
-                       value="{{ q or '' }}" />
+                       value="{{ q or '' }}"
+                       class="w-full" />
                 <!--
                 <button id="clear_search"
                         type="reset"
