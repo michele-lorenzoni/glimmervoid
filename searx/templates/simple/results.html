@@ -74,7 +74,8 @@
 			  // Check UNWANTED (rosso)
 			  unwantedUrls.forEach(function(unwantedUrl) {
 				if (url === unwantedUrl) {
-				  article.classList.add('unwanted-url');
+				    article.classList.add('bg-red-700');
+                    article.classList.remove('bg-gray-900');
 				  matched = true;
 				}
 			  });
