@@ -6,7 +6,7 @@
 {%- endmacro %}
 
 {% macro result_open_link(url, classes='') -%}
-    <a href="{{ url }}" {% if classes %}class="{{ classes }} font-fira italic hover:underline" {% endif %}{% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %}>
+    <a href="{{ url }}" {% if classes %}class="{{ classes }} overflow-hidden font-fira italic hover:underline" {% endif %}{% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %}>
 {%- endmacro %}
 
 {%- macro result_close_link() -%}
