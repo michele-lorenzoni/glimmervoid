@@ -15,9 +15,9 @@
     "TV": "tv",
     "videos": "play"
 } -%}
-<div id="categories" class="search_categories flex justify-between">
+<div id="categories" class="search_categories flex">
     {{- '' -}}
-    <div id="categories_container">
+    <div id="categories_container flex justify-between">
         {%- if not search_on_category_select or not display_tooltip -%}
             {%- for category in categories -%}
                 <div class="category category_checkbox">
