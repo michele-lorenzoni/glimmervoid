@@ -75,7 +75,7 @@
 			  unwantedUrls.forEach(function(unwantedUrl) {
 				if (url === unwantedUrl) {
                   article.classList.remove('bg-gray-900');
-                    article.classList.add('bg-red-700', 'opacity-25');
+                    article.classList.add('bg-red-700/50');
 				  matched = true;
 				}
 			  });
@@ -85,7 +85,7 @@
 			  favoriteUrls.forEach(function(favoriteUrl) {
 				if (url === favoriteUrl) {
                   article.classList.remove('bg-gray-900');
-                    article.classList.add('bg-green-700', 'opacity-25');
+                    article.classList.add('bg-green-700/50');
                   matched = true;
 				}
 			  });
@@ -95,7 +95,7 @@
 			  highlightUrls.forEach(function(highlightUrl) {
 				if (url === highlightUrl) {
                   article.classList.remove('bg-gray-900');
-                    article.classList.add('bg-yellow-700', 'opacity-25');
+                    article.classList.add('bg-yellow-700/50');
 				  matched = true;
 				}
 			  });
