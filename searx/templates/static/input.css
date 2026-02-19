@@ -27,7 +27,7 @@
 /* --- MonoidNerdFont --- */
 @font-face {
   font-family: 'MonoidNerdFont';
-  src: url('MonoidNerdFont-Regular.ttf') format('truetype');
+  src: url('./fonts/MonoidNerdFont-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
