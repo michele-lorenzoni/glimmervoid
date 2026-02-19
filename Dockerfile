@@ -42,6 +42,7 @@ COPY searx/templates/static/custom/unwanted_urls.json /usr/local/searxng/searx/s
 COPY searx/templates/static/custom/favorite_urls.json /usr/local/searxng/searx/static/custom/favorite_urls.json
 
 COPY searx/templates/static/fonts/ /usr/local/searxng/searx/static/fonts/
+COPY searx/templates/simple/filters/ /usr/local/searxng/searx/templates/simple/filters/
 
 COPY searx/templates/static/output.css /usr/local/searxng/searx/static/output.css
 
