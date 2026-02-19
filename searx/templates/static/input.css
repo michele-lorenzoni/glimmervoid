@@ -14,6 +14,99 @@
     font-style: normal;
 }
 
+/* =============================================
+   Monoid Nerd Font — @font-face declarations
+   ============================================= */
+
+/* --- MonoidNerdFont --- */
+@font-face {
+  font-family: 'MonoidNerdFont';
+  src: url('MonoidNerdFont-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFont';
+  src: url('./fonts/MonoidNerdFont-Retina.ttf') format('truetype');
+  font-weight: 450; /* Retina: peso intermedio tra Regular e Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFont';
+  src: url('./fonts/MonoidNerdFont-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFont';
+  src: url('./fonts/MonoidNerdFont-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* --- MonoidNerdFontMono --- */
+@font-face {
+  font-family: 'MonoidNerdFontMono';
+  src: url('./fonts/MonoidNerdFontMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFontMono';
+  src: url('./fonts/MonoidNerdFontMono-Retina.ttf') format('truetype');
+  font-weight: 450;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFontMono';
+  src: url('./fonts/MonoidNerdFontMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFontMono';
+  src: url('./fonts/MonoidNerdFontMono-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* --- MonoidNerdFontPropo --- */
+@font-face {
+  font-family: 'MonoidNerdFontPropo';
+  src: url('./fonts/MonoidNerdFontPropo-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFontPropo';
+  src: url('./fonts/MonoidNerdFontPropo-Retina.ttf') format('truetype');
+  font-weight: 450;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFontPropo';
+  src: url('./fonts/MonoidNerdFontPropo-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonoidNerdFontPropo';
+  src: url('./fonts/MonoidNerdFontPropo-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
 .font-digital_dreamer {
     font-family: "digital_dreamer", sans-serif;
 }
