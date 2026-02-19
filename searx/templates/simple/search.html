@@ -5,7 +5,8 @@
       class="flex flex-col max-w-3xl">
     <div id="search_header" class="w-full">
         <div id="search_view" class="w-full">
-            <div class="flex search_box bg-gray-900 border border-gray-800 w-full" class="w-full">
+            <div class="flex search_box bg-gray-900 border border-gray-800 w-full"
+                 class="w-full">
                 <input id="q"
                        name="q"
                        type="text"
@@ -19,10 +20,7 @@
                        value="{{ q or '' }}"
                        class="w-full outline-none p-2" />
                 <!--
-                <button id="clear_search"
-                        type="reset"
-                        aria-label="{{ _("clear") }}"
-                        class="hide_if_nojs">
+                <button id="clear_search" type="reset" aria-label="{{ _("clear") }}" class="hide_if_nojs">
                     <span>{{ icon_big("close") }}</span><span class="show_if_nojs">{{ _("clear") }}</span>
                 </button>
                 <button
@@ -49,7 +47,7 @@
         {% set display_tooltip = true %}
         {% include 'simple/categories.html' %}
     </div>
-    <div class="search_filters flex justify-start flex-wrap">
+    <div class="search_filters flex justify-start flex-wrap my-2">
         {% include 'simple/filters/languages.html' %}
         {% include
         'simple/filters/time_range.html' %}
