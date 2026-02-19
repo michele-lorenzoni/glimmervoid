@@ -6,7 +6,7 @@
 {%- endmacro %}
 
 {% macro result_open_link(url, classes='') -%}
-    <a href="{{ url }}" {% if classes %}class="{{ classes }} italic hover:underline" {% endif %}{% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %}>
+    <a href="{{ url }}" {% if classes %}class="{{ classes }} fira-sans-regular-italic hover:underline" {% endif %}{% if results_on_new_tab %}target="_blank" rel="noopener noreferrer"{% else %}rel="noreferrer"{% endif %}>
 {%- endmacro %}
 
 {%- macro result_close_link() -%}
@@ -30,7 +30,7 @@
     {%- endfor %}
   </div>
   {{- result_close_link() -}}
-  <h3 class="font-bold hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
+  <h3 class="fira-sans-bold hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
 {%- endmacro -%}
 
 <!-- Draw result sub header -->
