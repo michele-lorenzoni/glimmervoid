@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --font-monoid: 'MonoidNerdFont', monospace;
+  --font-monoid-mono: 'MonoidNerdFontMono', monospace;
+  --font-monoid-propo: 'MonoidNerdFontPropo', monospace;
+}
+
 @font-face {
     font-family: "digital_dreamer";
     src: url("./fonts/digital_dreamer.otf") format("opentype");
