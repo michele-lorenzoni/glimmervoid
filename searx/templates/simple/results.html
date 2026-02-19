@@ -74,8 +74,8 @@
 			  // Check UNWANTED (rosso)
 			  unwantedUrls.forEach(function(unwantedUrl) {
 				if (url === unwantedUrl) {
-				    article.classList.add('bg-red-700');
-                    article.classList.remove('bg-gray-900');
+                  article.classList.remove('bg-gray-900');
+                    article.classList.add('bg-red-700', 'opacity-75');
 				  matched = true;
 				}
 			  });
@@ -84,8 +84,9 @@
 			  // Check FAVORITE (verde)
 			  favoriteUrls.forEach(function(favoriteUrl) {
 				if (url === favoriteUrl) {
-				  parentDiv.classList.add('favorite-url');
-				  matched = true;
+                  article.classList.remove('bg-gray-900');
+                    article.classList.add('bg-green-700', 'opacity-75');
+                  matched = true;
 				}
 			  });
 			  if (matched) return;
@@ -93,7 +94,8 @@
 			  // Check HIGHLIGHT (arancione)
 			  highlightUrls.forEach(function(highlightUrl) {
 				if (url === highlightUrl) {
-				  classList.add('highlight-url');
+                  article.classList.remove('bg-gray-900');
+                    article.classList.add('bg-yellow-700', 'opacity-75');
 				  matched = true;
 				}
 			  });
