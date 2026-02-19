@@ -35,7 +35,7 @@
         {%- else -%}
         {%- for category in categories -%}{{- '\n' -}}
         <button type="submit" name="category_{{ category }}"
-            class="category category_button mx-2 {% if category in selected_categories %}selected{% endif %}">
+            class="category category_button ml-2 {% if category in selected_categories %}selected{% endif %}">
             <div class="category_name {% if category in selected_categories %}text-sky-600 underline{% endif %}">{{- _(category) -}}</div>
             {{- '' -}}
         </button>
