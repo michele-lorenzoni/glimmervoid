@@ -41,7 +41,7 @@
               href="{{ url_for('static', filename='img/favicon.png') }}">
         <link href="./../static/output.css" rel="stylesheet">
     </head>
-    <body class="{{ endpoint }}_endpoint bg-gray-950 text-gray-50 p-8 fira-sans-regular">
+    <body class="{{ endpoint }}_endpoint bg-gray-950 text-gray-50 p-8 font-fira">
         <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"
               class="{{ body_class }}">
             {% if errors %}
