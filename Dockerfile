@@ -41,8 +41,7 @@ COPY searx/templates/static/custom/highlight_urls.json /usr/local/searxng/searx/
 COPY searx/templates/static/custom/unwanted_urls.json /usr/local/searxng/searx/static/custom/unwanted_urls.json
 COPY searx/templates/static/custom/favorite_urls.json /usr/local/searxng/searx/static/custom/favorite_urls.json
 
-COPY searx/templates/static/fonts/digital_dreamer.otf /usr/local/searxng/searx/static/fonts/digital_dreamer.otf
-COPY searx/templates/static/fonts/ubuntu_r.ttf /usr/local/searxng/searx/static/fonts/ubuntu_r.ttf
+COPY searx/templates/static/fonts/ /usr/local/searxng/searx/static/fonts/
 
 COPY searx/templates/static/output.css /usr/local/searxng/searx/static/output.css
 
