@@ -109,7 +109,7 @@
 	</script>
 
     {% if paging %}
-    <nav id="pagination" role="navigation" class="flex max-w-3xl">
+    <nav id="pagination" role="navigation" class="flex max-w-3xl my-4">
         {% if pageno > 1 %}
             <form method="{{ method or 'POST' }}" action="{{ url_for('search') }}" class="previous_page">
                 <div class="{% if rtl %}right{% else %}left{% endif %}">
