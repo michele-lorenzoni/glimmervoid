@@ -37,7 +37,7 @@
                     <button type="submit"
                             name="category_{{ category }}"
                             class="category category_button mr-2 {% if category in selected_categories %}selected{% endif %}">
-                        <div class="category_name capitalize{% if category in selected_categories %}text-sky-600 underline{% endif %}">
+                        <div class="category_name capitalize {% if category in selected_categories %}text-sky-600 underline{% endif %}">
                             {{- _(category) -}}
                         </div>
                         {{- '' -}}
