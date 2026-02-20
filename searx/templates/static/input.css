@@ -4,7 +4,8 @@
 @theme {
     --font-fira: "Fira Sans", sans-serif;
 
-    --bg-element: #ffffff;
+    --color-body: #030712;
+    --color-element: #1e2939;
 }
 
 @layer components {

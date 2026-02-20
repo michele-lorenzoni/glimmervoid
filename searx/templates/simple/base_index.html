@@ -41,7 +41,7 @@
               href="{{ url_for('static', filename='img/favicon.png') }}">
         <link href="./../static/output.css" rel="stylesheet">
     </head>
-    <body class="{{ endpoint }}_endpoint flex flex-col h-dvh bg-gray-950 text-gray-50 font-fira">
+    <body class="{{ endpoint }}_endpoint flex flex-col h-dvh bg-body text-gray-50 font-fira">
         <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"
               class="{{ body_class }} flex flex-1 flex-col">
             {% if errors %}
