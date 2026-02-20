@@ -2234,6 +2234,7 @@ linuxjournal.com
 linuxlinks.com
 linuxmint.hu
 linuxnasm.be
+linuxsimply.com
 linuxtechi.com
 linuxtldr.com
 liquidfiles.com
