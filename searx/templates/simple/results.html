@@ -77,8 +77,8 @@
 			
 			Array.from(links).forEach(function(link) {
 			  if (matched) return;
-			  const url = link.href;
-			  
+			    const url = link.href;
+			    
 			  // Check UNWANTED (rosso)
 			  unwantedUrls.forEach(function(unwantedUrl) {
 				if (url === unwantedUrl) {
@@ -98,7 +98,7 @@
 				}
 			  });
 			  if (matched) return;
-			  
+
 			  // Check HIGHLIGHT (arancione)
 			  highlightUrls.forEach(function(highlightUrl) {
 				if (url === highlightUrl) {
