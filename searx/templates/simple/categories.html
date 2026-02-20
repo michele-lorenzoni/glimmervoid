@@ -25,7 +25,7 @@
                     <input type="checkbox" id="checkbox_{{ category|replace(' ', '_') }}" name="category_{{ category }}" {% if
                         category in selected_categories %} checked="checked" {% endif %}>
                         <label for="checkbox_{{ category|replace(' ', '_') }}" class="tooltips">
-                            <div class="category_name">{{- _(category) -}}</div>
+                            <div class="category_name capitalize">{{- _(category) -}}</div>
                         </label>
                     </div>
                 {%- endfor -%}
