@@ -142,13 +142,13 @@
               if (articleAttivo) {
                 // Rimuovi 'active' da TUTTI gli article
                 document.querySelectorAll('article').forEach(article => {
-                    article.classList.remove('border-4');
-                    article.classList.add('border');
+                    article.classList.remove('border-sky-800');
+                    article.classList.add('border-gray-800');
                 });
 
                 // Aggiungi 'active' solo all'article cliccato
-                articleAttivo.classList.remove('border');
-                articleAttivo.classList.add('border-4');
+                articleAttivo.classList.remove('border-gray-800');
+                articleAttivo.classList.add('border-sky-800');
               }
             });
           });
