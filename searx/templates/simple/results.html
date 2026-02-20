@@ -133,6 +133,16 @@
                   console.error("Errore nel caricamento degli URL:", error);
               }
           });
+
+          document.querySelectorAll('span, h3').forEach(elemento => {
+            elemento.addEventListener('click', function() {
+              if (this.classList.contains('active')) {
+                this.classList.remove('active');
+              } else {
+                this.classList.add('active');
+              }
+            });
+          });
         </script>
         {% if paging %}
             <nav id="pagination"
