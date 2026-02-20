@@ -1,52 +1,59 @@
 <!DOCTYPE html>
-<html
-    class="no-js theme-{{ preferences.get_value('simple_style') or 'auto' }} center-alignment-{{ preferences.get_value('center_alignment') and 'yes' or 'no' }}"
-    lang="{{ locale_rfc5646 }}" {% if rtl %} dir="rtl" {% endif %}>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="endpoint" content="{{ endpoint }}">
-    <meta name="description" content="SearXNG — a privacy-respecting, open metasearch engine">
-    <meta name="keywords" content="SearXNG, search, search engine, metasearch, meta search">
-    <meta name="generator" content="searxng/{{ searx_version }}">
-    <meta name="referrer" content="no-referrer">
-    <meta name="robots" content="noarchive">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{% endblock %}{{ instance_name }}</title>
-    <script type="module" src="{{ url_for('static', filename='sxng-core.min.js') }}"
-        client_settings="{{ client_settings }}"></script>
-    {% block meta %}{% endblock %}
-    {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
-    <link rel="stylesheet" href="{{ url_for('client_token', token=link_token) }}" type="text/css">
-    {% endif %}
-    {% block head %}
-    <link title="{{ instance_name }}" type="application/opensearchdescription+xml" rel="search"
-        href="{{ opensearch_url }}">
-    {% endblock %}
-    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="any">
-    <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/favicon.png') }}">
-        <!--<link href="./../static/output.css" rel="stylesheet">-->
-</head>
-
-<body class="{{ endpoint }}_endpoint flex flex-col bg-gray-950 text-gray-50 font-ubuntu_r m-24">
-    <main id="main_{{  self._TemplateReference__context.name|replace(" simple/", "" )|replace(".html", "" ) }}"
-        class="{{body_class}} flex flex-col">
-        {% if errors %}
-        <div class="dialog-error" role="alert">
-            <a href="#" class="close" aria-label="close" title="close">×</a>
-            <ul>
-                {% for message in errors %}
-                <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+<html class="no-js theme-{{ preferences.get_value("simple_style") or 'auto' }} center-alignment-{{ preferences.get_value("center_alignment") and 'yes' or 'no' }}"
+      lang="{{ locale_rfc5646 }}"
+      {% if rtl %}dir="rtl"{% endif %}>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="endpoint" content="{{ endpoint }}">
+        <meta name="description"
+              content="SearXNG — a privacy-respecting, open metasearch engine">
+        <meta name="keywords"
+              content="SearXNG, search, search engine, metasearch, meta search">
+        <meta name="generator" content="searxng/{{ searx_version }}">
+        <meta name="referrer" content="no-referrer">
+        <meta name="robots" content="noarchive">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            {% block title %}{% endblock %}
+        {{ instance_name }}</title>
+        <script type="module"
+                src="{{ url_for('static', filename='sxng-core.min.js') }}"
+                client_settings="{{ client_settings }}"></script>
+        {% block meta %}{% endblock %}
+        {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
+            <link rel="stylesheet"
+                  href="{{ url_for('client_token', token=link_token) }}"
+                  type="text/css">
         {% endif %}
-        {% block header %}
+        {% block head %}
+            <link title="{{ instance_name }}"
+                  type="application/opensearchdescription+xml"
+                  rel="search"
+                  href="{{ opensearch_url }}">
         {% endblock %}
-        {% block content %}
-        {% endblock %}
-    </main>
-</body>
-
+        <link rel="icon"
+              href="{{ url_for('static', filename='img/favicon.png') }}"
+              sizes="any">
+        <link rel="icon"
+              href="{{ url_for('static', filename='img/favicon.svg') }}"
+              type="image/svg+xml">
+        <link rel="apple-touch-icon"
+              href="{{ url_for('static', filename='img/favicon.png') }}">
+        <!--<link href="./../static/output.css" rel="stylesheet">-->
+    </head>
+    <body class="{{ endpoint }}_endpoint flex flex-col bg-body text-gray-50 font-ubuntu_r m-24">
+        <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"
+              class="{{ body_class }} flex flex-col">
+            {% if errors %}
+                <div class="dialog-error" role="alert">
+                    <a href="#" class="close" aria-label="close" title="close">×</a>
+                    <ul>
+                        {% for message in errors %}<li>{{ message }}</li>{% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            {% block header %}{% endblock %}
+            {% block content %}{% endblock %}
+        </main>
+    </body>
 </html>
