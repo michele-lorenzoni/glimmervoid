@@ -3658,6 +3658,7 @@ svgeditor.pro
 svgmaker.io
 svgomg.net
 svgrepo.com
+svgstack.com
 svgtopng.com
 svg-to-png.net
 svgtrace.com
