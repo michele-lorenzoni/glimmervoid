@@ -1357,6 +1357,7 @@ fontshop.com
 fonts.net.cn
 fontsonic.com
 fontspace.io
+fontsrepo.com
 fontstand.com
 fonttr.com
 fontyukle.net
