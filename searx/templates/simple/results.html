@@ -207,6 +207,40 @@
                         </form>
                     {% endfor %}
                 </div>
+                {% set pstart_m = 1 %}
+                {% set pend_m = 6 %}
+                {% if pageno > 3 %}
+                    {% set pstart_m = pageno - 2 %}
+                    {% set pend_m = pageno + 3 %}
+                {% endif %}
+                <div class="numbered_pagination sm:hidden flex">
+                    {% for x in range(pstart_m, pend_m) %}
+                        <form method="{{ method or 'POST' }}"
+                              action="{{ url_for("search") }}"
+                              class="page_number mx-2 text-white cursor-pointer">
+                            <input type="hidden" name="q" value="{{ q|e }}">
+                            {% for category in selected_categories %}<input type="hidden" name="category_{{ category }}" value="1">{% endfor %}
+                            <input type="hidden" name="pageno" value="{{ x }}">
+                            <input type="hidden" name="language" value="{{ current_language }}">
+                            <input type="hidden" name="time_range" value="{{ time_range }}">
+                            <input type="hidden" name="safesearch" value="{{ safesearch }}">
+                            <input type="hidden" name="theme" value="{{ theme }}">
+                            {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}">{% endif %}
+                            {{- engine_data_form(engine_data) -}}
+                            {% if pageno == x %}
+                                <input role="link"
+                                       class="page_number_current cursor-pointer hover:underline text-sky-600"
+                                       type="button"
+                                       value="{{ x }}">
+                            {% else %}
+                                <input role="link"
+                                       class="page_number cursor-pointer hover:underline"
+                                       type="submit"
+                                       value="{{ x }}">
+                            {% endif %}
+                        </form>
+                    {% endfor %}
+                </div>
                 {%- if results | count > 0 -%}
                     <form method="{{ method or 'POST' }}"
                           action="{{ url_for("search") }}"
