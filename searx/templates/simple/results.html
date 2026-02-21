@@ -179,7 +179,7 @@
                     {% set pstart = pageno - 4 %}
                     {% set pend = pageno + 6 %}
                 {% endif %}
-                <div class="numbered_pagination flex">
+                <div class="numbered_pagination hidden sm:flex">
                     {% for x in range(pstart, pend) %}
                         <form method="{{ method or 'POST' }}"
                               action="{{ url_for("search") }}"
