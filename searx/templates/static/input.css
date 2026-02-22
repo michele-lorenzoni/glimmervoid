@@ -16,6 +16,12 @@
     --color-cust-categorie-border: #ffffff00;
 }
 
+@layer base {
+    h1 {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+    }
+}
+
 @layer components {
     .tabs > input:checked ~ section {
         display: none;
