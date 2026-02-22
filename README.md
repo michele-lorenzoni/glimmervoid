@@ -1,3 +1,4 @@
-# Maddog
+# Glimmervoid
 
-![homa_page](/showcase/home_page.png)
+![index](/showcase/index.png)
+![index_mobile](/showcase/index_mobile.png)
