@@ -16,9 +16,6 @@
         <title>
             {% block title %}{% endblock %}
         {{ instance_name }}</title>
-        <!-- <script type="module" -->
-        <!--         src="{{ url_for('static', filename='sxng-core.min.js') }}" -->
-        <!--         client_settings="{{ client_settings }}"></script> -->
         {% block meta %}{% endblock %}
         {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
             <link rel="stylesheet"
