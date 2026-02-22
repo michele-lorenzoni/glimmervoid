@@ -6,9 +6,9 @@
         <meta charset="UTF-8">
         <meta name="endpoint" content="{{ endpoint }}">
         <meta name="description"
-              content="SearXNG — a privacy-respecting, open metasearch engine">
+              content="Glimmervoid — a privacy-respecting, open metasearch engine">
         <meta name="keywords"
-              content="SearXNG, search, search engine, metasearch, meta search">
+              content="Glimmervoid, search, search engine, metasearch, meta search">
         <meta name="generator" content="searxng/{{ searx_version }}">
         <meta name="referrer" content="no-referrer">
         <meta name="robots" content="noarchive">
@@ -17,9 +17,6 @@
         <title>
             {% block title %}{% endblock %}
         {{ instance_name }}</title>
-        <script type="module"
-                src="{{ url_for('static', filename='sxng-core.min.js') }}"
-                data-client-settings="{{ client_settings }}"></script>
         {% block meta %}{% endblock %}
         {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
             <link rel="stylesheet"
