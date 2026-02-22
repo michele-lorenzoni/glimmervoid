@@ -3855,6 +3855,7 @@ texascss.net
 textcompare.io
 texteditor.com
 textemoji.org
+textfac.es
 textfontfree.com
 textgenerator.net
 text.is
