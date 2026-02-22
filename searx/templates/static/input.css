@@ -6,6 +6,10 @@
     --font-fira: "Fira Sans", sans-serif;
     --font-inknut-antiqua: "Inknut Antiqua", serif;
 
+    --font-size-fluid-sm: clamp(0.875rem, 1.5vw, 1rem);
+    --font-size-fluid-md: clamp(1rem, 2.5vw, 1.5rem);
+    --font-size-fluid-lg: clamp(1.5rem, 4vw, 3rem);
+
     --color-cust-body: #030712;
     --color-cust-element: #1e2939;
     --color-cust-border: #364153;
