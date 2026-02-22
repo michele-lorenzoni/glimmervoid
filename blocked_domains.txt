@@ -2867,6 +2867,7 @@ parall.app
 pardus.org.tr
 partslogic.com
 password-depot.de
+passwords-generator.org
 pastebin.calculate-linux.org
 pastebin.co
 pastebin.com
