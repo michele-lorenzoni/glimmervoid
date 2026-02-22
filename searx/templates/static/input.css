@@ -18,7 +18,7 @@
 
 @layer base {
     h1 {
-        font-size: clamp(1.5rem, 3.5vw + 0.8rem, 5rem);
+        font-size: clamp(3rem, 2vw + 2.6rem, 5rem);
     }
 }
 
