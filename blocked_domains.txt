@@ -1645,6 +1645,7 @@ git-fork.com
 gitglance.vercel.app
 gitgroomer.com
 github.co.jp
+github.com
 githubprofile.com
 github-profile-gpt.vercel.app
 github-readme-maker.vercel.app
