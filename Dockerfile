@@ -1,5 +1,6 @@
 
 FROM	searxng/searxng:latest
+EXPOSE	8080
 COPY	settings.yml.template	/tmp/settings.yml.template
 COPY	blocked_domains.txt	/tmp/blocked_domains.txt
 USER	root
