@@ -3696,6 +3696,7 @@ startupdefense.io
 startupstash.com
 staseraintv.com
 stash.ws
+static.app
 statsforgit.com
 status.epicgames.com
 status.io
