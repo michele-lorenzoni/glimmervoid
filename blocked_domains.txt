@@ -1259,6 +1259,7 @@ fasttech.xyz
 fatihex.dev
 favicon.digital
 favicongenerator.io
+favicon-generator.mintsu-dev.com
 favicon-generator.org
 faviconify.com
 favicon.io
