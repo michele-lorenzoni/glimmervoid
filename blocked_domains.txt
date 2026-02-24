@@ -1422,6 +1422,7 @@ freecustom.email
 freecutphoto.com
 freedesignfile.com
 freeebooks.com
+freefavico.com
 freefaviconcreator.com
 freefonts.co
 freefonts.io
