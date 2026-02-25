@@ -25,7 +25,7 @@
     {% else %}
         {% set only_template = "" %}
     {% endif %}
-    <div id="results" class="{{ only_template }} flex flex-col">
+    <div id="results" class="{{ only_template }} flex flex-col max-w-3xl">
         {%- if answers -%}
             {%- include 'simple/elements/answers.html' -%}
         {%- endif %}
