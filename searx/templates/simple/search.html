@@ -5,8 +5,7 @@
       class="flex flex-col max-w-3xl">
     <div id="search_header" class="w-full">
         <div id="search_view" class="w-full">
-            <div class="flex search_box bg-cust-element border border-cust-border w-full"
-                 class="w-full">
+            <div class="flex search_box bg-cust-element border border-cust-border w-full p-2">
                 <input id="q"
                        name="q"
                        type="text"
@@ -18,14 +17,13 @@
                        autocorrect="off"
                        dir="auto"
                        value="{{ q or '' }}"
-                       class="w-full outline-none p-2" />
+                       class="w-full outline-none" />
                 <!--
                 <button id="clear_search" type="reset" aria-label="{{ _("clear") }}" class="hide_if_nojs">
                     <span>{{ icon_big("close") }}</span><span class="show_if_nojs">{{ _("clear") }}</span>
                 </button>
                 -->
                 <button
-                    class="px-2"
                     id="send_search"
                     type="submit"
                     {%-
