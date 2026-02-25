@@ -3910,6 +3910,7 @@ textcompare.io
 texteditor.com
 textemoji.org
 textfac.es
+textfixer.com
 textfontfree.com
 textgenerator.net
 text.is
