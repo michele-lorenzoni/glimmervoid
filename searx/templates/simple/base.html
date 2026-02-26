@@ -55,12 +55,13 @@
                 {%- block linkto_preferences -%}
                     {%- if request.args.get('preferences') -%}
                         <a href="{{ url_for("preferences") }}?preferences={{ request.args.get("preferences") }}&preferences_preview_only=true"
-                           class="link_on_top_preferences">{{ icon_big("settings") }}</a>
+                           class="link_on_top_preferences p-2">{{ icon_big("settings") }}</a>
                     {%- else -%}
-                        <a href="{{ url_for("preferences") }}" class="link_on_top_preferences">{{ icon_big("settings") }}</a>
+                        <a href="{{ url_for("preferences") }}"
+                           class="link_on_top_preferences p-2">{{ icon_big("settings") }}</a>
                     {%- endif -%}
                 {%- endblock -%}
-                <a class="text-fuchsia-800">{{ icon_big("donate") }}</a>
+                <a class="text-fuchsia-800 p-2">{{ icon_big("donate") }}</a>
             </nav>
             {% block header %}{% endblock %}
             {% block content %}{% endblock %}
