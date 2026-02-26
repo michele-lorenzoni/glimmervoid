@@ -54,7 +54,7 @@
             {% if paging %}
                 <nav id="pagination"
                      role="navigation"
-                     class="flex max-w-3xl my-4 justify-center">
+                     class="flex w-full my-4 justify-center">
                     {% if pageno > 1 %}
                         <form method="{{ method or 'POST' }}"
                               action="{{ url_for("search") }}"
