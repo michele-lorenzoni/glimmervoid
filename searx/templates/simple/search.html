@@ -18,10 +18,12 @@
                        dir="auto"
                        value="{{ q or '' }}"
                        class="w-full outline-none p-2" />
-                <button class="transition-all duration-100 text-gray-50 hover:text-cust-element hover:bg-gray-50 cursor-pointer p-2"
-                        id="clear_search"
+                <button id="clear_search"
                         type="reset"
-                        aria-label="{{ _("clear") }}">{{ icon_big("close") }}</button>
+                        aria-label="{{ _("clear") }}"
+                        class="transition-all duration-100 text-gray-50 hover:text-cust-element hover:bg-gray-50 cursor-pointer p-2">
+                    {{ icon_big("close") }}
+                </button>
                 <button
                     class="transition-all duration-100 text-gray-50 hover:text-cust-element hover:bg-gray-50 cursor-pointer p-2"
                     id="send_search"
