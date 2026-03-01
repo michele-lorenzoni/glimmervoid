@@ -1076,6 +1076,7 @@ duckmail.sbs
 duda.co
 dulux.co.nz
 dummydash.com
+dummyfile.net
 dummyimage.web.app
 dummyimg.in
 dumpor.io
