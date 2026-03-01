@@ -1313,6 +1313,7 @@ fg-group.it
 fhqlaw.com
 fig.io
 filedropshare.com
+file-examples.com
 fileinfo.com
 file.io
 fileion.com
