@@ -2064,6 +2064,7 @@ imageresizer.work
 images.google.es
 imagetocartoon.com
 imageworkindia.com
+imagy.app
 imail.edu.vn
 img2go.com
 imgcandy.com
