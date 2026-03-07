@@ -1087,6 +1087,7 @@ duckmail.sbs
 duda.co
 dulux.co.nz
 dummydash.com
+dummyfilegenerator.com
 dummyfile.net
 dummyimage.web.app
 dummyimg.in
