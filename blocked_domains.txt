@@ -2845,6 +2845,7 @@ newpipe.info
 newroman.net
 newtravelplanner.com
 newwaveart.com
+nexskill.com
 nextleap.app
 nextool.dev
 nextui.org
