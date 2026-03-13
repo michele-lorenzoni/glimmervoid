@@ -3560,6 +3560,7 @@ repeato.app
 repocloud.io
 repolaunch.com
 resizehood.com
+resizeimage.io
 resizepanda.com
 resizepng.com
 resizer.ai
