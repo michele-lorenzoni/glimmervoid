@@ -1482,6 +1482,7 @@ fr.wiktionary.org
 fractal.ai
 fractalaudio.com
 frame.io
+frameratetest.com
 framesfashion.com
 framesports.ai
 frankenphp.dev
