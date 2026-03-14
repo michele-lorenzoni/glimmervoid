@@ -52,8 +52,8 @@ window.addEventListener("load", async function () {
                                 "border-gray-800",
                             );
                             article.classList.add(
-                                "bg-green-700/50",
-                                "border-green-600/50",
+                                "bg-cust-element-favorite",
+                                "border-cust-border-favorite",
                             );
                             matched = true;
                         }
@@ -68,8 +68,8 @@ window.addEventListener("load", async function () {
                                 "border-gray-800",
                             );
                             article.classList.add(
-                                "bg-yellow-700/50",
-                                "border-yellow-600/50",
+                                "bg-cust-element-highlight",
+                                "border-cust-border-highlight",
                             );
                             matched = true;
                         }

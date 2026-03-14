@@ -15,11 +15,11 @@
     --color-cust-border: #374151; /* gray-700 */
     --color-cust-categorie-border: #ffffff00;
 
-    --color-cust-element-favorite: rgb(30 41 57 / 0.5);
-    --color-cust-border-favorite: rgb(30 41 57 / 0.5);
-    --color-cust-element-highlight: rgb(30 41 57 / 0.5);
-    --color-cust-border-highlight: rgb(30 41 57 / 0.5);
-    --color-cust-element-unwanted: #450a0a; /* red-900 */
+    --color-cust-element-favorite: #052e16;
+    --color-cust-border-favorite: #15803d;
+    --color-cust-element-highlight: #422006;
+    --color-cust-border-highlight: #a16207;
+    --color-cust-element-unwanted: #450a0a; /* red-950 */
     --color-cust-border-unwanted: #b91c1c; /* red-700 */
 }
 
