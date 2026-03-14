@@ -11,7 +11,7 @@
     --font-size-fluid-lg: clamp(1.5rem, 4vw, 3rem);
 
     --color-cust-body: #030712;
-    --color-cust-element: #1e2939;
+    --color-cust-element: rgb(30 41 57 / 0.5);
     --color-cust-border: #364153;
     --color-cust-categorie-border: #ffffff00;
 }
