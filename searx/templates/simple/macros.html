@@ -33,7 +33,7 @@
             {%- endfor %}
         </div>
         {{- result_close_link() -}}
-        <h3 class="font-bold text-base hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
+        <h3 class="font-medium text-base hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
     {%- endmacro -%}
     <!-- Draw result sub header -->
     {%- macro result_sub_header(result) -%}
