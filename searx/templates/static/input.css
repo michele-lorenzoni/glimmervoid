@@ -12,6 +12,14 @@
 
     --color-cust-body: #030712;
     --color-cust-element: rgb(30 41 57 / 0.5);
+    /*
+    HEX: #1e2939
+    RGB: rgb(30,41,57)
+    RGBA: rgba(30,41,57,1.000)
+    ARGB: #ff1e2939
+    HSL: hsl(216,31%,17%)
+    OKLCH: oklch(0.2784 0.0335 257.67)
+    */
     --color-cust-border: #364153;
     --color-cust-categorie-border: #ffffff00;
 
