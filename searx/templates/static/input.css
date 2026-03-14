@@ -22,6 +22,8 @@
     --color-cust-border-highlight: #a16207;
     --color-cust-element-unwanted: #450a0a; /* red-950 */
     --color-cust-border-unwanted: #b91c1c; /* red-700 */
+
+    --color-cust-url: #e5e5e5; /* neutral-200 */
 }
 
 @layer base {
