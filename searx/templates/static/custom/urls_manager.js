@@ -36,8 +36,8 @@ window.addEventListener("load", async function () {
                                 "border-gray-800",
                             );
                             article.classList.add(
-                                "bg-red-700/50",
-                                "border-red-600/50",
+                                "bg-cust-element-unwanted",
+                                "border-cust-border-unwanted",
                             );
                             matched = true;
                         }
