@@ -1916,6 +1916,7 @@ herfinland.com
 heroscreen.cc
 hex-rgb.com
 hex-to-rgb.com
+hexcalculator.org
 hexcolor.co
 heygen.com
 heyreach.io
