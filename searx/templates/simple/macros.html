@@ -20,7 +20,7 @@
 {%- endmacro -%}
 <!-- Draw result header -->
 {% macro result_header(result, favicons, image_proxify) -%}
-    <article class="transition-all duration-100 bg-cust-element w-full border border-cust-border rounded-xs p-2 mt-2 result {% if result['template'] %}result-{{ result.template|replace('.html', '') }}{% else %}result-default{% endif %} {% if result['category'] %}category-{{ result['category'] }}{% endif %}">
+    <article class="transition-all duration-100 bg-cust-element w-full border border-cust-border rounded-xs p-2 mt-2 text-sm result {% if result['template'] %}result-{{ result.template|replace('.html', '') }}{% else %}result-default{% endif %} {% if result['category'] %}category-{{ result['category'] }}{% endif %}">
         {{- result_open_link(result.url, "url_header") -}}
         {%- if favicon_resolver != "" %}
             <div class="favicon">
@@ -33,7 +33,7 @@
             {%- endfor %}
         </div>
         {{- result_close_link() -}}
-        <h3 class="font-fira font-bold hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
+        <h3 class="font-fira font-bold text-base hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
     {%- endmacro -%}
     <!-- Draw result sub header -->
     {%- macro result_sub_header(result) -%}
