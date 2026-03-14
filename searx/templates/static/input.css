@@ -23,7 +23,7 @@
     --color-cust-element-unwanted: #450a0a; /* red-950 */
     --color-cust-border-unwanted: #b91c1c; /* red-700 */
 
-    --color-cust-url: #d1d5db; /* gray-300 */
+    --color-cust-url: #d4d4d4; /* neutral-300 */
 }
 
 @layer base {
