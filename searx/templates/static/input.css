@@ -10,6 +10,7 @@
     --font-size-fluid-md: clamp(1rem, 2.5vw, 1.5rem);
     --font-size-fluid-lg: clamp(1.5rem, 4vw, 3rem);
 
+    /* TailwindCSS v4.2 Colors */
     --color-cust-body: #030712; /* gray-950 */
     --color-cust-element: #111827; /* gray-900 */
     --color-cust-border: #374151; /* gray-700 */
