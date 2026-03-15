@@ -1065,6 +1065,7 @@ dotnetfiddle.net
 dotnettutorials.net
 douban.com
 downforeveryoneorjustme.com
+downformeorforeveryone.com
 downgit.cvbox.org
 downgit.evecalm.com
 download-github.ubiops.com
