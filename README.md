@@ -1,6 +1,5 @@
 # Glimmervoid
 
-![index](./showcase/index.png)
-![index_mobile](./showcase/index_mobile.png)
-![results](./showcase/results.png)
-![results_mobile](./showcase/results_mobile.png)
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
