@@ -1752,7 +1752,6 @@ github-readme-maker.vercel.app
 github-states-generator.vercel.app
 github-stats.com
 github.co.jp
-github.com
 githubprofile.com
 githubstatsfordevs.netlify.app
 gitlab.cn
