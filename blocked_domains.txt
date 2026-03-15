@@ -3951,6 +3951,7 @@ stash.ws
 static.app
 statsforgit.com
 status.epicgames.com
+status.goto.com
 status.io
 status.make.com
 steelcitycollectibles.com
