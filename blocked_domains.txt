@@ -1078,6 +1078,7 @@ dotnetfiddle.net
 dotnettutorials.net
 strongpasswordgenerator.org
 douban.com
+authgen.netlify.app
 downforeveryoneorjustme.com
 pwgen.io
 downformeorforeveryone.com
