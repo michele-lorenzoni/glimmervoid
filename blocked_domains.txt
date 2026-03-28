@@ -1052,7 +1052,6 @@ distrowiz.com
 djamware.com
 dktig.de
 dnschecker.org
-docker.com
 dockerhub.com
 docklab.nl
 dockuniverse.com
