@@ -1075,6 +1075,7 @@ dotbadges.com
 dotlinux.net
 passord.net
 dotnetcurry.com
+cleverpdf.com
 passwordsgenerator.com
 dotnetfiddle.net
 dotnettutorials.net
