@@ -1078,6 +1078,7 @@ dostring.com
 ia.net
 dotbadges.com
 dotlinux.net
+textpad.com
 texteditor.co
 easyslidesdownloader.com
 fconvert.com
