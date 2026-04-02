@@ -1084,6 +1084,7 @@ texteditor.co
 easyslidesdownloader.com
 fconvert.com
 onlineminitools.com
+crimsoneditor.com
 imgupscaler.ai
 kmz2shp.com
 slidesharedownloader.net
