@@ -1941,6 +1941,7 @@ imgocr.com
 forged4x4.com
 pkms.org.sg
 tana.inc
+invertcolors.net
 grizzlysms.com
 quartzinversion.com
 imageinverter.app
