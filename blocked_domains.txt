@@ -1931,6 +1931,7 @@ getwidget.dev
 gridicons.co.uk
 hazelchicago.com
 velocityx.net
+invertcolors.app
 pkms.org.sg
 tana.inc
 grizzlysms.com
