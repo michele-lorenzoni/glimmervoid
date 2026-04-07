@@ -1932,6 +1932,7 @@ getwidget.dev
 gridicons.co.uk
 hazelchicago.com
 aifreeforever.com
+invertimage.org
 velocityx.net
 invertcolors.app
 generateit.net
