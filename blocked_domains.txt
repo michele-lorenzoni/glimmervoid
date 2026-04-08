@@ -2630,6 +2630,7 @@ logo.app
 logo.com
 mdviewer.org
 markdownviewer.site
+emojicombiner.com
 mdviewer.app
 logoadvantage.com
 beverlyareadermd.com
