@@ -2637,6 +2637,7 @@ idn.id
 dummyapi.io
 logo.app
 logo.com
+fakejson.com
 mdviewer.org
 markdownviewer.site
 emojicombiner.com
