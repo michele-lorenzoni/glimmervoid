@@ -2634,6 +2634,7 @@ singsys.com
 macdown.uranusjr.com
 logo-shop.nl
 idn.id
+dummyapi.io
 logo.app
 logo.com
 mdviewer.org
