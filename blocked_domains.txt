@@ -2632,6 +2632,7 @@ heroictoken.com
 qrstuff.com
 qrcode.kaywa.com
 logfinish.com
+qr.io
 divinetechs.com
 mdviewer.in
 fakestoreapi.com
