@@ -2650,6 +2650,7 @@ logo.app
 softwaresuggest.com
 logo.com
 devrel.co
+eventbrite.com
 fakejson.com
 mdviewer.org
 markdownviewer.site
