@@ -2635,6 +2635,7 @@ logfinish.com
 qr.io
 divinetechs.com
 mdviewer.in
+qrcodecreator.com
 fakestoreapi.com
 socrivproducts.com
 singsys.com
