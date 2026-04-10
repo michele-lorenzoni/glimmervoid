@@ -2646,6 +2646,7 @@ logo-shop.nl
 idn.id
 dummyapi.io
 logo.app
+softwaresuggest.com
 logo.com
 fakejson.com
 mdviewer.org
