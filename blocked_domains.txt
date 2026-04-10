@@ -2645,6 +2645,7 @@ webtask.solutions
 macdown.uranusjr.com
 gardenly.app
 logo-shop.nl
+runescape.wiki
 idn.id
 dummyapi.io
 logo.app
