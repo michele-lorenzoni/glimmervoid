@@ -2648,6 +2648,7 @@ dummyapi.io
 logo.app
 softwaresuggest.com
 logo.com
+devrel.co
 fakejson.com
 mdviewer.org
 markdownviewer.site
