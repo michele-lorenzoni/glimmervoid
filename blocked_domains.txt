@@ -2649,6 +2649,7 @@ macdown.uranusjr.com
 gardenly.app
 logo-shop.nl
 runescape.wiki
+tryastro.app
 idn.id
 arcsurfaces.com
 dummyapi.io
