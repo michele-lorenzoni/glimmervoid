@@ -3,13 +3,14 @@ repos:
     hooks:
       - id: sort-txt-file
         name: Sort text file alphabetically
-        entry: bash -c 'sort -o blocked_domains.txt blocked_domains.txt'
+        entry: python scripts/sort_txt.py
         language: system
         files: blocked_domains\.txt$
-      
+        pass_filenames: true
+
       - id: sort-json-files
         name: Sort JSON files alphabetically
-        entry: python3 scripts/sort_json.py
+        entry: python scripts/sort_json.py
         language: system
         files: \.json$
         pass_filenames: true
