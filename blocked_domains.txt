@@ -2633,6 +2633,7 @@ qrstuff.com
 qrcode.kaywa.com
 logfinish.com
 qr.io
+teleporthq.io
 divinetechs.com
 mdviewer.in
 qrcodecreator.com
