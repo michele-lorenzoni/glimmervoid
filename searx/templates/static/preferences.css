@@ -1,0 +1,425 @@
+/* Preferences stylesheet — dark theme coerente con output.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --pref-body: #030712;
+  --pref-surface: #111827;
+  --pref-surface-2: #1f2937;
+  --pref-border: #374151;
+  --pref-border-strong: #4b5563;
+  --pref-text: #fafafa;
+  --pref-text-muted: #d4d4d4;
+  --pref-text-dim: #9ca3af;
+  --pref-accent: #15803d;
+  --pref-accent-hover: #16a34a;
+  --pref-warning-bg: #422006;
+  --pref-warning-border: #a16207;
+  --pref-danger-bg: #450a0a;
+  --pref-danger-border: #b91c1c;
+  --pref-success-bg: #052e16;
+  --pref-success-border: #15803d;
+  --pref-radius: 6px;
+  --pref-radius-sm: 4px;
+  --pref-font: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  background: var(--pref-body);
+  color: var(--pref-text);
+  font-family: var(--pref-font);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body.preferences_endpoint {
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 0 1.5rem;
+}
+
+body.preferences_endpoint main {
+  background: var(--pref-surface);
+  border: 1px solid var(--pref-border);
+  border-radius: calc(var(--pref-radius) * 1.5);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--pref-text);
+  border-bottom: 1px solid var(--pref-border);
+  padding-bottom: 0.75rem;
+}
+
+h2,
+h3,
+legend {
+  color: var(--pref-text);
+  font-weight: 500;
+}
+
+a {
+  color: var(--pref-accent-hover);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Top-level tab buttons */
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--pref-border);
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  padding: 0.65rem 1.25rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: var(--pref-radius) var(--pref-radius) 0 0;
+  color: var(--pref-text-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  font-size: 0.95rem;
+}
+
+.tab-button:hover {
+  background: var(--pref-surface-2);
+  color: var(--pref-text);
+  text-decoration: none;
+}
+
+.tab-button.active {
+  background: var(--pref-surface-2);
+  border-color: var(--pref-border);
+  color: var(--pref-text);
+  font-weight: 600;
+  margin-bottom: -1px;
+}
+
+/* Nested tabs (engines) */
+.tabs > label {
+  background: var(--pref-surface-2);
+  border: 1px solid var(--pref-border);
+  color: var(--pref-text-muted);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--pref-radius-sm) var(--pref-radius-sm) 0 0;
+  margin-right: 0.2rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tabs > label:hover {
+  background: var(--pref-border);
+  color: var(--pref-text);
+}
+
+.tabs > input[type="radio"]:checked + label {
+  background: var(--pref-accent);
+  color: var(--pref-text);
+  border-color: var(--pref-accent);
+}
+
+/* Fieldsets / groups */
+fieldset {
+  background: var(--pref-surface-2);
+  border: 1px solid var(--pref-border);
+  border-radius: var(--pref-radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+fieldset legend {
+  padding: 0 0.5rem;
+  color: var(--pref-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+fieldset .description {
+  color: var(--pref-text-dim);
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+/* Form controls */
+input[type="text"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+select,
+textarea {
+  background: var(--pref-body);
+  color: var(--pref-text);
+  border: 1px solid var(--pref-border);
+  border-radius: var(--pref-radius-sm);
+  padding: 0.45rem 0.65rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--pref-accent-hover);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--pref-accent-hover);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: var(--pref-accent);
+  color: var(--pref-text);
+  border: 1px solid var(--pref-accent);
+  border-radius: var(--pref-radius);
+  padding: 0.55rem 1.15rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: var(--pref-accent-hover);
+  border-color: var(--pref-accent-hover);
+}
+
+input[type="reset"] {
+  background: transparent;
+  color: var(--pref-text-muted);
+  border-color: var(--pref-border-strong);
+}
+
+input[type="reset"]:hover {
+  background: var(--pref-surface-2);
+  color: var(--pref-text);
+  border-color: var(--pref-border-strong);
+}
+
+/* Tables (engines list, stats) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  background: var(--pref-body);
+  border: 1px solid var(--pref-border);
+  border-radius: var(--pref-radius);
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--pref-border);
+  font-size: 0.88rem;
+}
+
+th {
+  background: var(--pref-surface-2);
+  color: var(--pref-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+tbody tr:hover {
+  background: rgba(22, 163, 74, 0.06);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Reliability labels */
+td.success,
+.success {
+  color: #4ade80;
+}
+
+td.warning,
+.warning {
+  color: #facc15;
+}
+
+td.danger,
+.danger {
+  color: #f87171;
+}
+
+/* Bang chips */
+.bang {
+  display: inline-block;
+  background: var(--pref-surface-2);
+  border: 1px solid var(--pref-border);
+  color: var(--pref-text-muted);
+  padding: 0.1rem 0.5rem;
+  margin: 0.1rem 0.15rem;
+  border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+}
+
+/* Tooltip (engine info) */
+.engine-tooltip {
+  background: var(--pref-surface);
+  border: 1px solid var(--pref-border-strong);
+  border-radius: var(--pref-radius);
+  padding: 0.75rem 1rem;
+  color: var(--pref-text-muted);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  font-size: 0.85rem;
+}
+
+.engine-tooltip p {
+  margin: 0.25rem 0;
+}
+
+.engine-tooltip .right {
+  float: right;
+  color: var(--pref-text-dim);
+}
+
+/* Dialogs / alerts */
+.dialog-error,
+.dialog-warning-block {
+  background: var(--pref-danger-bg);
+  border: 1px solid var(--pref-danger-border);
+  color: var(--pref-text);
+  border-radius: var(--pref-radius);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.dialog-warning-block {
+  background: var(--pref-warning-bg);
+  border-color: var(--pref-warning-border);
+}
+
+.dialog-error .close {
+  float: right;
+  color: var(--pref-text);
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+/* Stacked bar chart (response times) */
+.stacked-bar-chart {
+  display: inline-block;
+  width: 80px;
+  height: 6px;
+  background: var(--pref-border);
+  border-radius: 3px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
+.stacked-bar-chart .bar {
+  height: 100%;
+  display: inline-block;
+}
+
+.stacked-bar-chart-median {
+  background: var(--pref-accent-hover);
+}
+
+.stacked-bar-chart-rate80 {
+  background: #facc15;
+}
+
+.stacked-bar-chart-rate95 {
+  background: #f87171;
+}
+
+.stacked-bar-chart-value {
+  color: var(--pref-text-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8rem;
+}
+
+/* Footer (save / reset row) */
+form > div:last-child,
+.preferences-footer,
+#search_form > div.tabs + * {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--pref-border);
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Category / engine checkbox grid */
+.category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--pref-surface-2);
+  border: 1px solid var(--pref-border);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  margin: 0.15rem;
+  color: var(--pref-text-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.category:hover {
+  background: var(--pref-border);
+  color: var(--pref-text);
+}
+
+/* Small responsive tweaks */
+@media (max-width: 720px) {
+  body.preferences_endpoint {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+  }
+  body.preferences_endpoint main {
+    padding: 1.25rem;
+  }
+  .tab-button {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    font-size: 0.8rem;
+  }
+}

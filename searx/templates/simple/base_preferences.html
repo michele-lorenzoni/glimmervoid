@@ -40,6 +40,7 @@
         <link rel="apple-touch-icon"
               href="{{ url_for('static', filename='img/favicon.png') }}">
         <!--<link href="./../static/output.css" rel="stylesheet">-->
+        <link href="{{ url_for('static', filename='preferences.css') }}" rel="stylesheet">
     </head>
     <body class="{{ endpoint }}_endpoint flex flex-col bg-cust-body text-gray-50 font-ubuntu_r m-24">
         <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"

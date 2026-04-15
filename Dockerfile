@@ -21,6 +21,7 @@ COPY	searx/templates/static/custom/	/usr/local/searxng/searx/static/custom/
 COPY	searx/templates/static/fonts/	/usr/local/searxng/searx/static/fonts/
 COPY	searx/templates/simple/filters/	/usr/local/searxng/searx/templates/simple/filters/
 COPY	searx/templates/static/output.css	/usr/local/searxng/searx/static/output.css
+COPY	searx/templates/static/preferences.css	/usr/local/searxng/searx/static/preferences.css
 COPY	searx/templates/static/themes/simple/highlight.css	/usr/local/searxng/searx/static/themes/simple/highlight.css
 COPY	searx/templates/static/themes/simple/sxng-core.min.js	/usr/local/searxng/searx/static/themes/simple/sxng-core.min.js
 COPY	searx/templates/static/themes/simple/img/favicon.png	/usr/local/searxng/searx/static/themes/simple/img/favicon.png
