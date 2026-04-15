@@ -161,61 +161,14 @@
 
 {%- block head -%}
 <style>
-  /* Hide nested engine category sections at first paint to avoid FOUC
-     before sxng-core.min.js takes over the tab behavior. */
+  /* Structural-only rules applied at first paint to avoid FOUC.
+     All colors/borders/typography live in /static/preferences.css */
+  .tabs { display: flex; flex-direction: column; }
+  .tab-buttons { display: flex; }
+  .tab-button { display: inline-block; text-decoration: none; cursor: pointer; }
   .engines-tabs > input[type="radio"] { display: none !important; }
   .engines-tabs > section { display: none !important; }
   .engines-tabs > input[type="radio"]:checked + label + section { display: block !important; }
-
-  .tabs {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .tab-buttons {
-    display: flex;
-    gap: 0.5rem;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 1rem;
-  }
-
-  .tab-button {
-    padding: 0.75rem 1.5rem;
-    background: #f5f5f5;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.2s;
-    display: inline-block;
-  }
-
-  .tab-button:hover {
-    background: #e5e5e5;
-  }
-
-  .tab-button.active {
-    background: #fff;
-    border-bottom: 2px solid #fff;
-    margin-bottom: -2px;
-    font-weight: bold;
-  }
-
-  .tabs > label {
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    border: 1px solid #ddd;
-    background: #f9f9f9;
-    margin-right: 0.25rem;
-  }
-
-  .tabs > input[type="radio"]:checked + label {
-    background: #fff;
-    font-weight: bold;
-    border-bottom-color: transparent;
-  }
 </style>
 {%- endblock -%}
 
