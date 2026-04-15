@@ -1,7 +1,5 @@
 /* Preferences stylesheet — dark theme coerente con output.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap");
-
 :root {
   --pref-body: #030712;
   --pref-surface: #111827;
