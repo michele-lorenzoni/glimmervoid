@@ -2680,7 +2680,7 @@ engines:
 
   - name: commoncrawl
     engine: commoncrawl
-    shortcut: cc
+    shortcut: ccr
     categories: [general, web]
     paging: true
     disabled: true
