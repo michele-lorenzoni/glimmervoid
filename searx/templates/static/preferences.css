@@ -231,6 +231,36 @@ input[type="reset"]:hover {
   border-color: var(--pref-border-strong);
 }
 
+/* Reset defaults / Back — rendered server-side as <div><a>...</a></div>.
+   Make them look like secondary buttons. */
+.preferences_back {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--pref-border-strong);
+  border-radius: var(--pref-radius);
+  padding: 0.55rem 1.15rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.preferences_back a {
+  color: var(--pref-text-muted);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.preferences_back:hover {
+  background: var(--pref-surface-2);
+  border-color: var(--pref-border-strong);
+}
+
+.preferences_back:hover a {
+  color: var(--pref-text);
+  text-decoration: none;
+}
+
 /* Tables (engines list, stats) */
 table {
   width: 100%;
