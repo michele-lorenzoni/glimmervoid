@@ -41,6 +41,7 @@ COPY	searx/templates/simple/macros.html	/usr/local/searxng/searx/templates/simpl
 COPY	searx/templates/simple/search.html	/usr/local/searxng/searx/templates/simple/search.html
 COPY	searx/templates/simple/result_templates/videos.html	/usr/local/searxng/searx/templates/simple/result_templates/videos.html
 COPY	searx/engines/brave_api.py	/usr/local/searxng/searx/engines/brave_api.py
+COPY	searx/engines/commoncrawl.py	/usr/local/searxng/searx/engines/commoncrawl.py
 COPY	searx/templates/simple/preferences/footer.html	/usr/local/searxng/searx/templates/simple/preferences/footer.html
 COPY	searx/templates/simple/preferences/cookies.html	/usr/local/searxng/searx/templates/simple/preferences/cookies.html
 COPY	searx/templates/simple/preferences/answerers.html	/usr/local/searxng/searx/templates/simple/preferences/answerers.html
