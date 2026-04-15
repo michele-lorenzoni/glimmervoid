@@ -3,7 +3,17 @@
         "allow": [
             "Bash(venv/Scripts/python -m pre_commit install)",
             "Bash(venv/Scripts/python -m pre_commit run --all-files)",
-            "WebFetch(domain:raw.githubusercontent.com)"
+            "WebFetch(domain:raw.githubusercontent.com)",
+            "WebFetch(domain:atlassian.design)",
+            "WebSearch",
+            "WebFetch(domain:www.colorsandfonts.com)",
+            "WebFetch(domain:www.designpieces.com)",
+            "WebFetch(domain:unpkg.com)",
+            "WebFetch(domain:cdn.jsdelivr.net)",
+            "WebFetch(domain:color-system.netlify.app)",
+            "Bash(python *)",
+            "Bash(C:/Users/Sviluppo/Documents/projects/glimmervoid/venv/Scripts/python.exe *)",
+            "Bash(pip install *)"
         ]
     }
 }
