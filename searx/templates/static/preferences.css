@@ -295,6 +295,10 @@ td {
   text-align: left;
   border-bottom: 1px solid var(--pref-border);
   font-size: 0.88rem;
+  line-height: 1.4;
+  height: 2.5rem;
+  vertical-align: middle;
+  box-sizing: border-box;
 }
 
 th {
