@@ -24,6 +24,12 @@
   --pref-font: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   background: var(--pref-body);
@@ -31,6 +37,8 @@ body {
   font-family: var(--pref-font);
   font-size: 15px;
   line-height: 1.5;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body.preferences_endpoint {
@@ -228,12 +236,22 @@ input[type="reset"]:hover {
 /* Tables (engines list, stats) */
 table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   margin: 0.75rem 0;
   background: var(--pref-body);
   border: 1px solid var(--pref-border);
   border-radius: var(--pref-radius);
   overflow: hidden;
+  table-layout: auto;
+  word-break: break-word;
+}
+
+.tabs,
+#tab-content-engines,
+section[role="tabpanel"] {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 th,
