@@ -310,8 +310,19 @@ td.danger,
   font-size: 0.78rem;
 }
 
-/* Tooltip (engine info) */
+/* Tooltip (engine info) — hidden by default, revealed on hover over the name */
+th.name {
+  position: relative;
+}
+
 .engine-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 30;
+  min-width: 260px;
+  max-width: 420px;
   background: var(--pref-surface);
   border: 1px solid var(--pref-border-strong);
   border-radius: var(--pref-radius);
@@ -319,6 +330,12 @@ td.danger,
   color: var(--pref-text-muted);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
   font-size: 0.85rem;
+  white-space: normal;
+}
+
+th.name:hover > .engine-tooltip,
+.engine-tooltip:hover {
+  display: block;
 }
 
 .engine-tooltip p {
