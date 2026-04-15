@@ -161,6 +161,12 @@
 
 {%- block head -%}
 <style>
+  /* Hide nested engine category sections at first paint to avoid FOUC
+     before sxng-core.min.js takes over the tab behavior. */
+  .engines-tabs > input[type="radio"] { display: none !important; }
+  .engines-tabs > section { display: none !important; }
+  .engines-tabs > input[type="radio"]:checked + label + section { display: block !important; }
+
   .tabs {
     display: flex;
     flex-direction: column;
@@ -194,23 +200,6 @@
     border-bottom: 2px solid #fff;
     margin-bottom: -2px;
     font-weight: bold;
-  }
-
-  /* Stile per i tab annidati (engines) */
-  .tabs > input[type="radio"] {
-    display: none;
-  }
-
-  .tabs > input[type="radio"]:checked + label + section {
-    display: block;
-  }
-
-  .engines-tabs > section {
-    display: none;
-  }
-
-  .engines-tabs > input[type="radio"]:checked + label + section {
-    display: block;
   }
 
   .tabs > label {

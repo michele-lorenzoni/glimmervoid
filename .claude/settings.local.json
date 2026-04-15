@@ -2,7 +2,8 @@
     "permissions": {
         "allow": [
             "Bash(venv/Scripts/python -m pre_commit install)",
-            "Bash(venv/Scripts/python -m pre_commit run --all-files)"
+            "Bash(venv/Scripts/python -m pre_commit run --all-files)",
+            "WebFetch(domain:raw.githubusercontent.com)"
         ]
     }
 }
