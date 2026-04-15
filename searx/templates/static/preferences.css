@@ -252,6 +252,13 @@ section[role="tabpanel"] {
   overflow-x: auto;
 }
 
+#toggle-all-engines-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 th,
 td {
   padding: 0.55rem 0.75rem;
