@@ -205,8 +205,12 @@
     display: block;
   }
 
-  .tabs > section {
+  .engines-tabs > section {
     display: none;
+  }
+
+  .engines-tabs > input[type="radio"]:checked + label + section {
+    display: block;
   }
 
   .tabs > label {
