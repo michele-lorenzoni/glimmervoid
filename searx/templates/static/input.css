@@ -39,4 +39,43 @@
     .tabs > input:checked ~ section {
         display: none;
     }
+
+    article.bg-cust-element-favorite,
+    article.bg-cust-element-highlight,
+    article.bg-cust-element-unwanted {
+        position: relative;
+    }
+
+    article.bg-cust-element-favorite::before,
+    article.bg-cust-element-highlight::before,
+    article.bg-cust-element-unwanted::before {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-family: var(--font-default);
+        font-size: 0.625rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #fafafa;
+        padding: 0.15rem 0.45rem;
+        border-radius: 2px;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    article.bg-cust-element-favorite::before {
+        content: "preferiti";
+        background-color: var(--color-cust-border-favorite);
+    }
+
+    article.bg-cust-element-highlight::before {
+        content: "visitati";
+        background-color: var(--color-cust-border-highlight);
+    }
+
+    article.bg-cust-element-unwanted::before {
+        content: "indesiderati";
+        background-color: var(--color-cust-border-unwanted);
+    }
 }
