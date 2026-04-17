@@ -1,34 +1,42 @@
 window.addEventListener("load", async function () {
     try {
-        const [highlightResponse, unwantedResponse, favoriteResponse] =
-            await Promise.all([
-                fetch("/static/custom/highlight_urls.json"),
-                fetch("/static/custom/unwanted_urls.json"),
-                fetch("/static/custom/favorite_urls.json"),
-            ]);
+        const [
+            highlightResponse,
+            unwantedResponse,
+            favoriteResponse,
+            ignoredResponse,
+        ] = await Promise.all([
+            fetch("/static/custom/highlight_urls.json"),
+            fetch("/static/custom/unwanted_urls.json"),
+            fetch("/static/custom/favorite_urls.json"),
+            fetch("/static/custom/ignored_urls.json"),
+        ]);
 
         const highlightUrls = new Set(await highlightResponse.json());
         const unwantedUrls = new Set(await unwantedResponse.json());
         const favoriteUrls = new Set(await favoriteResponse.json());
+        const ignoredUrls = new Set(await ignoredResponse.json());
 
         const categories = [
             {
                 set: favoriteUrls,
-                borderClass: "border-cust-border-favorite",
                 badgeClass: "url-badge-favorite",
                 label: "preferiti",
             },
             {
                 set: highlightUrls,
-                borderClass: "border-cust-border-highlight",
                 badgeClass: "url-badge-highlight",
                 label: "visitati",
             },
             {
                 set: unwantedUrls,
-                borderClass: "border-cust-border-unwanted",
                 badgeClass: "url-badge-unwanted",
                 label: "indesiderati",
+            },
+            {
+                set: ignoredUrls,
+                badgeClass: "url-badge-ignored",
+                label: "ignorati",
             },
         ];
 
@@ -50,14 +58,12 @@ window.addEventListener("load", async function () {
 
             if (matched.length === 0) return;
 
-            article.classList.remove("border-gray-800");
             article.classList.add("url-tagged");
 
             const badgeContainer = document.createElement("div");
             badgeContainer.className = "url-badges";
 
             matched.forEach(function (cat) {
-                article.classList.add(cat.borderClass);
                 const badge = document.createElement("span");
                 badge.className = "url-badge " + cat.badgeClass;
                 badge.textContent = cat.label;

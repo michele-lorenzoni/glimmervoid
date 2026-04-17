@@ -22,6 +22,8 @@
     --color-cust-border-highlight: #a16207;
     --color-cust-element-unwanted: #450a0a; /* red-950 */
     --color-cust-border-unwanted: #b91c1c; /* red-700 */
+    --color-cust-element-ignored: #172554; /* blue-950 */
+    --color-cust-border-ignored: #3b82f6; /* blue-500 */
 
     --color-cust-default: #fafafa; /* neutral-50 */
     --color-cust-url: #d4d4d4; /* neutral-300 */
@@ -76,5 +78,9 @@
 
     .url-badge-unwanted {
         background-color: var(--color-cust-border-unwanted);
+    }
+
+    .url-badge-ignored {
+        background-color: var(--color-cust-border-ignored);
     }
 }
