@@ -13,7 +13,9 @@
             "WebFetch(domain:color-system.netlify.app)",
             "Bash(python *)",
             "Bash(C:/Users/Sviluppo/Documents/projects/glimmervoid/venv/Scripts/python.exe *)",
-            "Bash(pip install *)"
+            "Bash(pip install *)",
+            "Bash(npx @tailwindcss/cli --help)",
+            "Bash(npx @tailwindcss/cli -i searx/templates/static/input.css -o searx/templates/static/output.css --minify)"
         ]
     }
 }
