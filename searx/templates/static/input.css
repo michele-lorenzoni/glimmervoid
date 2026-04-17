@@ -40,18 +40,22 @@
         display: none;
     }
 
-    article.bg-cust-element-favorite,
-    article.bg-cust-element-highlight,
-    article.bg-cust-element-unwanted {
+    article.url-tagged {
         position: relative;
     }
 
-    article.bg-cust-element-favorite::before,
-    article.bg-cust-element-highlight::before,
-    article.bg-cust-element-unwanted::before {
+    .url-badges {
         position: absolute;
         top: 0.5rem;
         right: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .url-badge {
         font-family: var(--font-default);
         font-size: 0.625rem;
         font-weight: 600;
@@ -60,22 +64,17 @@
         color: #fafafa;
         padding: 0.15rem 0.45rem;
         border-radius: 2px;
-        z-index: 1;
-        pointer-events: none;
     }
 
-    article.bg-cust-element-favorite::before {
-        content: "preferiti";
+    .url-badge-favorite {
         background-color: var(--color-cust-border-favorite);
     }
 
-    article.bg-cust-element-highlight::before {
-        content: "visitati";
+    .url-badge-highlight {
         background-color: var(--color-cust-border-highlight);
     }
 
-    article.bg-cust-element-unwanted::before {
-        content: "indesiderati";
+    .url-badge-unwanted {
         background-color: var(--color-cust-border-unwanted);
     }
 }
