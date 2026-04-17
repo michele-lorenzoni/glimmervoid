@@ -1721,6 +1721,7 @@
     "https://www.nuget.org/packages/commandlineparser",
     "https://www.nuget.org/packages/dapper/",
     "https://www.nuget.org/packages/fakeiteasy/",
+    "https://www.nuget.org/packages/nunit/",
     "https://www.nuget.org/packages/sixlabors.imagesharp/",
     "https://www.nuget.org/profiles/Evergine",
     "https://www.nuget.org/profiles/cake-build",
