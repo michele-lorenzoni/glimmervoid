@@ -31,14 +31,16 @@ body.preferences_endpoint {
 }
 
 /* Anchor styling limitato al contenuto: nav top (.term-nav-link) e i tab
-   principali (.tab-button) mantengono lo stile definito altrove. */
-body.preferences_endpoint a:not(.term-nav-link):not(.tab-button) {
+   principali (.tab-button) mantengono lo stile definito altrove.
+   :where() azzera la specificity così regole più specifiche (es.
+   .preferences_back a) vincono senza bisogno di !important. */
+body.preferences_endpoint :where(a:not(.term-nav-link):not(.tab-button)) {
     color: var(--pref-text-muted);
     text-decoration: none;
     border-bottom: 1px dashed transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
-body.preferences_endpoint a:not(.term-nav-link):not(.tab-button):hover {
+body.preferences_endpoint :where(a:not(.term-nav-link):not(.tab-button)):hover {
     color: var(--pref-accent);
     border-bottom-color: var(--pref-accent);
 }
