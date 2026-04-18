@@ -123,4 +123,19 @@
         font-weight: 500;
         line-height: 1;
     }
+
+    /* Nav link in testa alla pagina (prefs / donate): [ label ] */
+    .term-nav-link {
+        color: #6b7280;
+        padding: 0.4rem 0.6rem;
+        text-transform: lowercase;
+        cursor: pointer;
+        transition: color 0.15s ease;
+    }
+    .term-nav-link:hover { color: #7aff8f; }
+    .term-nav-link .bracket {
+        color: #374151;
+        transition: color 0.15s ease;
+    }
+    .term-nav-link:hover .bracket { color: #7aff8f; }
 }

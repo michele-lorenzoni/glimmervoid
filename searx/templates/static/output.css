@@ -371,6 +371,9 @@
   .justify-start {
     justify-content: flex-start;
   }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
@@ -499,9 +502,6 @@
   }
   .text-cust-url {
     color: var(--color-cust-url);
-  }
-  .text-fuchsia-800 {
-    color: var(--color-fuchsia-800);
   }
   .text-gray-50 {
     color: var(--color-gray-50);
@@ -749,6 +749,23 @@
     flex-shrink: 0;
     font-weight: 500;
     line-height: 1;
+  }
+  .term-nav-link {
+    color: #6b7280;
+    padding: 0.4rem 0.6rem;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: color 0.15s ease;
+  }
+  .term-nav-link:hover {
+    color: #7aff8f;
+  }
+  .term-nav-link .bracket {
+    color: #374151;
+    transition: color 0.15s ease;
+  }
+  .term-nav-link:hover .bracket {
+    color: #7aff8f;
   }
 }
 @property --tw-rotate-x {
