@@ -37,7 +37,9 @@
               type="image/svg+xml">
         <link rel="apple-touch-icon"
               href="{{ url_for('static', filename='img/favicon.png') }}">
-        <link href="./../static/output.css" rel="stylesheet">
+        {% block stylesheets %}
+            <link href="./../static/output.css" rel="stylesheet">
+        {% endblock %}
     </head>
     <body class="{{ endpoint }}_endpoint bg-cust-body text-gray-50 p-8 font-default font-normal text-cust-default">
         <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"

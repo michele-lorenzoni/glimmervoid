@@ -1,65 +1,10 @@
-<!DOCTYPE html>
-<html class="no-js theme-{{ preferences.get_value("simple_style") or 'auto' }} center-alignment-{{ preferences.get_value("center_alignment") and 'yes' or 'no' }}"
-      lang="{{ locale_rfc5646 }}"
-      {% if rtl %}dir="rtl"{% endif %}>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="endpoint" content="{{ endpoint }}">
-        <meta name="description"
-              content="Glimmervoid — a privacy-respecting, open metasearch engine">
-        <meta name="keywords"
-              content="Glimmervoid, search, search engine, metasearch, meta search">
-        <meta name="generator" content="searxng/{{ searx_version }}">
-        <meta name="referrer" content="no-referrer">
-        <meta name="robots" content="noarchive">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>
-            {% block title %}{% endblock %}
-        {{ instance_name }}</title>
-        {% block meta %}{% endblock %}
-        {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
-            <link rel="stylesheet"
-                  href="{{ url_for('client_token', token=link_token) }}"
-                  type="text/css">
-        {% endif %}
-        {% block head %}
-            <link title="{{ instance_name }}"
-                  type="application/opensearchdescription+xml"
-                  rel="search"
-                  href="{{ opensearch_url }}">
-        {% endblock %}
-        <link rel="icon"
-              href="{{ url_for('static', filename='img/favicon.png') }}"
-              sizes="any">
-        <link rel="icon"
-              href="{{ url_for('static', filename='img/favicon.svg') }}"
-              type="image/svg+xml">
-        <link rel="apple-touch-icon"
-              href="{{ url_for('static', filename='img/favicon.png') }}">
-        <link href="./../static/output.css" rel="stylesheet">
-        <link href="{{ url_for('static', filename='preferences.css') }}" rel="stylesheet">
-    </head>
-    <body class="{{ endpoint }}_endpoint bg-cust-body text-gray-50 p-8 font-default font-normal text-cust-default">
-        <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"
-              class="{{ body_class }}">
-            {% if errors %}
-                <div class="dialog-error" role="alert">
-                    <a href="#" class="close" aria-label="close" title="close">×</a>
-                    <ul>
-                        {% for message in errors %}<li>{{ message }}</li>{% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
-            <nav id="links_on_top" class="term-font flex flex-row-reverse items-center gap-1 mb-8 text-[11px] tracking-widest">
-                {%- block linkto_preferences -%}
-                    <a href="{{ url_for("preferences") }}"
-                       class="term-nav-link link_on_top_preferences"><span class="bracket">[</span>&nbsp;prefs&nbsp;<span class="bracket">]</span></a>
-                {%- endblock -%}
-                <a class="term-nav-link" href="#donate"><span class="bracket">[</span>&nbsp;donate&nbsp;<span class="bracket">]</span></a>
-                <a class="term-nav-link" href="{{ url_for('index') }}" aria-label="home"><span class="bracket">[</span>&nbsp;home&nbsp;<span class="bracket">]</span></a>
-            </nav>
-            {% block header %}{% endblock %}
-            {% block content %}{% endblock %}
-        </main>
-    </body>
-</html>
+{% extends "simple/base.html" %}
+
+{# Unico punto di divergenza da base.html: aggiunge preferences.css dopo
+   output.css. Tutto il resto (meta, favicon, nav [prefs/donate/home],
+   body class, blocchi title/meta/head/header/content/linkto_preferences)
+   è ereditato da base.html. #}
+{% block stylesheets %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='preferences.css') }}" rel="stylesheet">
+{% endblock %}
