@@ -492,7 +492,11 @@ tr.pref-group th::before {
    7-10 colonne compresse in meno di 640px diventano illeggibili. */
 @media (max-width: 640px) {
     .answerers-table,
-    .table_engines { display: block; }
+    .table_engines {
+        display: block;
+        width: 100%;
+    }
+    .scrollx { width: 100%; }
 
     .answerers-table .header-row,
     .table_engines .header-row { display: none; }
@@ -500,6 +504,8 @@ tr.pref-group th::before {
     .answerers-table tr:not(.pref-group):not(.header-row),
     .table_engines tr:not(.pref-group):not(.header-row) {
         display: block;
+        width: 100%;
+        box-sizing: border-box;
         border: 1px solid var(--pref-border);
         border-radius: var(--pref-radius);
         padding: 0.55rem 0.75rem;
