@@ -558,12 +558,165 @@ tr.pref-group th::before {
 }
 
 /* ------- Responsive ------- */
+
+/* Tablet / phone grande */
 @media (max-width: 720px) {
+    body.preferences_endpoint {
+        padding: 1.25rem 1rem;
+    }
+    body.preferences_endpoint h1 {
+        font-size: 1.15rem;
+        padding-bottom: 0.6rem;
+        margin-bottom: 1rem;
+    }
     body.preferences_endpoint .tab-button {
-        padding: 0.3rem 0.45rem;
+        padding: 0.45rem 0.4rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+    }
+    body.preferences_endpoint .tab-button::before,
+    body.preferences_endpoint .tab-button::after {
+        margin-left: 0.28rem;
+        margin-right: 0.28rem;
+    }
+    fieldset {
+        padding: 0.85rem 0 1rem 0;
+    }
+    input[type="text"],
+    input[type="search"],
+    input[type="url"],
+    select,
+    textarea {
+        width: 100%;
+    }
+    input[type="number"] {
+        max-width: 100%;
+    }
+    table { font-size: 0.78rem; }
+    th, td { padding: 0.4rem 0.55rem; }
+    .tabs > label {
+        padding: 0.35rem 0.6rem;
         font-size: 0.72rem;
     }
-    table, thead, tbody, th, td, tr {
+}
+
+/* Smartphone (portrait) — layout più compatto e tap target adeguati */
+@media (max-width: 480px) {
+    body.preferences_endpoint {
+        padding: 0.85rem 0.75rem;
+        font-size: 13px;
+    }
+    body.preferences_endpoint h1 {
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+    }
+
+    /* Tabs: wrap compatto, bracket ridotte, tap target ~36px */
+    .tab-buttons { gap: 0.2rem 0.35rem; }
+    body.preferences_endpoint .tab-button {
+        padding: 0.5rem 0.35rem;
+        font-size: 0.7rem;
+        min-height: 2.25rem;
+    }
+    body.preferences_endpoint .tab-button::before,
+    body.preferences_endpoint .tab-button::after {
+        margin-left: 0.22rem;
+        margin-right: 0.22rem;
+    }
+
+    /* Fieldset più snello */
+    fieldset {
+        padding: 0.7rem 0 0.85rem 0;
+    }
+    fieldset legend {
+        font-size: 0.68rem;
+        margin-bottom: 0.45rem;
+    }
+    fieldset .description {
+        font-size: 0.72rem;
+    }
+
+    /* Checkbox/radio leggermente più grandi per il touch */
+    input[type="checkbox"]:not(.checkbox-onoff),
+    input[type="radio"]:not(.checkbox-onoff) {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+
+    /* Bottoni: tap target, font lowercase coerente */
+    body.preferences_endpoint button,
+    body.preferences_endpoint input[type="submit"],
+    body.preferences_endpoint input[type="reset"],
+    body.preferences_endpoint .preferences_back {
+        padding: 0.6rem 0.9rem;
+        min-height: 2.4rem;
+        font-size: 0.75rem;
+    }
+    /* Footer: i 3 pulsanti occupano tutta la larghezza equamente */
+    #search_form > div.flex.mt-4,
+    .preferences-footer {
+        gap: 0.5rem;
+        margin-top: 1.2rem;
+    }
+    .preferences-footer > * {
+        flex: 1 1 0;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    /* Tabelle: le teniamo scrollabili (overflow-x già sul tabpanel) */
+    table { font-size: 0.74rem; }
+    th, td {
+        padding: 0.35rem 0.45rem;
+        line-height: 1.35;
+    }
+    th {
+        font-size: 0.62rem;
+        letter-spacing: 0.06em;
+    }
+
+    /* Engines tabs (nested pills) */
+    .engines-tabs { padding-bottom: 0.25rem; }
+    .tabs > label {
+        padding: 0.35rem 0.55rem;
+        font-size: 0.7rem;
+    }
+
+    /* Category chip */
+    .category {
+        padding: 0.3rem 0.55rem;
+        font-size: 0.72rem;
+    }
+
+    /* Bang chip */
+    .bang {
+        font-size: 0.7rem;
+        padding: 0.05rem 0.4rem;
+    }
+
+    /* Selectable URL: font più leggibile, wrap consentito */
+    .selectable_url pre {
+        font-size: 0.72rem;
+        padding: 0.5rem 0.6rem;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+
+    /* h4 sezioni interne */
+    body.preferences_endpoint h4 {
+        font-size: 0.68rem;
+    }
+
+    /* Dialog alerts un filo più compatti */
+    .dialog-error,
+    .dialog-warning-block {
+        padding: 0.7rem 0.85rem;
         font-size: 0.78rem;
+    }
+
+    /* Engine tooltip sempre full-width per non sforare */
+    .engine-tooltip {
+        min-width: 0;
+        max-width: calc(100vw - 2rem);
     }
 }
