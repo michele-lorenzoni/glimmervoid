@@ -1019,6 +1019,7 @@ select:not([multiple]) {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
+    letter-spacing: normal !important;
     cursor: pointer;
 }
 select::-ms-expand {
