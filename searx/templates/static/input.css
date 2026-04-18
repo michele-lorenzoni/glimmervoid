@@ -160,6 +160,79 @@
     .term-nav-link.active .bracket,
     .term-nav-link.active:hover .bracket { color: #7aff8f; }
 
+    /* ================================================================
+       Checkbox / radio — stile tema terminale, applicato globalmente.
+       Reset dell'appearance nativa, bg = cust-element (come la search-
+       bar), bordo cust-border → accent quando checked/focus. Escluso
+       .checkbox-onoff (toggle switch upstream con layout proprio).
+       ================================================================ */
+    input[type="checkbox"]:not(.checkbox-onoff),
+    input[type="radio"]:not(.checkbox-onoff) {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #111827;
+        border: 1px solid #374151;
+        border-radius: 2px;
+        width: 1rem;
+        height: 1rem;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        vertical-align: middle;
+        flex-shrink: 0;
+        transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    input[type="checkbox"]:not(.checkbox-onoff):hover,
+    input[type="radio"]:not(.checkbox-onoff):hover {
+        border-color: #4b5563;
+    }
+    input[type="checkbox"]:not(.checkbox-onoff):focus-visible,
+    input[type="radio"]:not(.checkbox-onoff):focus-visible {
+        outline: none;
+        border-color: #7aff8f;
+        box-shadow: 0 0 0 1px #7aff8f;
+    }
+    input[type="checkbox"]:not(.checkbox-onoff):checked,
+    input[type="radio"]:not(.checkbox-onoff):checked {
+        border-color: #7aff8f;
+    }
+    input[type="checkbox"]:not(.checkbox-onoff):checked::after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 4px;
+        width: 5px;
+        height: 9px;
+        border: solid #7aff8f;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    input[type="radio"]:not(.checkbox-onoff):checked::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        background: #7aff8f;
+        border-radius: 2px;
+    }
+    input[type="checkbox"]:disabled,
+    input[type="radio"]:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    @media (max-width: 480px) {
+        input[type="checkbox"]:not(.checkbox-onoff),
+        input[type="radio"]:not(.checkbox-onoff) {
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+    }
+
     @media (max-width: 640px) {
         .term-nav-link { padding: 0.3rem 0.35rem; letter-spacing: 0.04em; }
         #links_on_top { margin-bottom: 1.25rem !important; }
