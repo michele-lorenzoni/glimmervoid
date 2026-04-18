@@ -158,11 +158,30 @@
             margin-top: 0.45rem;
             line-height: 1.55;
             font-size: 13px;
+            /* stringhe lunghe senza spazi (URL, token, ID, …) devono spezzarsi
+               dentro al riquadro invece di sfondare il layout */
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
         .terminal-results #urls .result .content.empty_element {
             color: #4b5563;
             font-style: italic;
         }
+
+        /* stesso trattamento anche per i pezzi dell'URL (breadcrumbs),
+           che possono essere percorsi enormi in una parola sola */
+        .terminal-results #urls .result a.url_header,
+        .terminal-results #urls .result .url_wrapper,
+        .terminal-results #urls .result .url_i1,
+        .terminal-results #urls .result .url_i2 {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        /* l'intero article deve poter ridursi fino alla larghezza del contenitore,
+           così overflow-wrap ha qualcosa rispetto a cui calcolare il break */
+        .terminal-results #urls article.result,
+        .terminal-results #urls .result { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
 
         /* Highlight interni (match della query) */
         .terminal-results #urls .result .content b,
