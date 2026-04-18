@@ -486,15 +486,19 @@ tr.pref-group th::before {
     color: var(--pref-border);
 }
 
-/* ------- Answerers table: layout a card su mobile -------
-   Su desktop resta una tabella classica. Sotto 640px si trasforma in
-   blocchi verticali con label/valore — 5 colonne sono troppe in meno
-   di 640px, comprimerle rende description/examples illeggibili. */
+/* ------- Tabelle answerers / engines: layout a card su mobile -------
+   Su desktop restano tabelle classiche. Sotto 640px ogni riga dati
+   diventa un blocco con label/valore (via data-label sui td/th) — con
+   7-10 colonne compresse in meno di 640px diventano illeggibili. */
 @media (max-width: 640px) {
-    .answerers-table { display: block; }
-    .answerers-table .header-row { display: none; }
+    .answerers-table,
+    .table_engines { display: block; }
 
-    .answerers-table tr:not(.pref-group):not(.header-row) {
+    .answerers-table .header-row,
+    .table_engines .header-row { display: none; }
+
+    .answerers-table tr:not(.pref-group):not(.header-row),
+    .table_engines tr:not(.pref-group):not(.header-row) {
         display: block;
         border: 1px solid var(--pref-border);
         border-radius: var(--pref-radius);
@@ -502,29 +506,39 @@ tr.pref-group th::before {
         margin: 0.5rem 0;
         background: transparent;
     }
-    .answerers-table tr:not(.pref-group):not(.header-row):hover {
+    .answerers-table tr:not(.pref-group):not(.header-row):hover,
+    .table_engines tr:not(.pref-group):not(.header-row):hover {
         background: rgba(122, 255, 143, 0.04);
     }
 
-    .answerers-table tr.pref-group {
+    .answerers-table tr.pref-group,
+    .table_engines tr.pref-group {
         display: block;
     }
-    .answerers-table tr.pref-group th {
+    .answerers-table tr.pref-group th,
+    .table_engines tr.pref-group th {
         display: block;
         padding: 0.85rem 0 0.5rem 0;
         border-top: 1px dashed var(--pref-border);
         border-bottom: none;
     }
 
-    .answerers-table td {
+    .answerers-table td,
+    .table_engines td,
+    .table_engines th.name {
         display: flex;
         gap: 0.75rem;
         padding: 0.25rem 0;
         border: none;
         font-size: 0.78rem;
         line-height: 1.45;
+        height: auto;
+        text-align: left;
+        font-weight: 400;
     }
-    .answerers-table td::before {
+    .answerers-table td::before,
+    .table_engines td::before,
+    .table_engines th.name::before {
         content: attr(data-label);
         color: var(--pref-text-dim);
         text-transform: uppercase;
@@ -534,15 +548,33 @@ tr.pref-group th::before {
         flex-shrink: 0;
         padding-top: 0.22rem;
     }
-    .answerers-table td.checkbox-col {
+    .answerers-table td.checkbox-col,
+    .table_engines td.checkbox-col {
         align-items: center;
         padding-bottom: 0.35rem;
     }
-    .answerers-table td:empty::before {
+    .answerers-table td:empty::before,
+    .table_engines td:empty::before {
         color: var(--pref-border);
     }
-    .answerers-table td:empty {
+    .answerers-table td:empty,
+    .table_engines td:empty {
         display: none;
+    }
+
+    /* Engine name prominente */
+    .table_engines th.name {
+        color: var(--pref-text);
+        font-weight: 500;
+        padding-bottom: 0.45rem;
+    }
+    .table_engines th.name label {
+        font-weight: 500;
+    }
+
+    /* Toggle enable/disable sopra la tabella: full-width + wrap */
+    #toggle-all-engines-container {
+        flex-wrap: wrap;
     }
 }
 

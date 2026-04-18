@@ -98,7 +98,7 @@
 {%- endmacro -%}
 
 {%- macro engine_time(engine_name) -%}
-<td class="{{ label }}">{{- '' -}}
+<td class="{{ label }}" data-label="{{ _('Response time') }}">{{- '' -}}
   {%- if stats[engine_name].time != None -%}
   <span class="stacked-bar-chart-value">{{- stats[engine_name].time -}}</span>{{- '' -}}
   <span class="stacked-bar-chart" aria-hidden="true">
@@ -136,7 +136,7 @@
 {%- set r = '' -%}
 {%- endif -%}
 {%- if checker_result or errors -%}
-<td class="{{ label }} column-reliability">{{- '' -}}
+<td class="{{ label }} column-reliability" data-label="{{ _('Reliability') }}">{{- '' -}}
   <a href="{{ url_for('stats', engine=engine_name|e) }}">{{- '' -}}
     <span>
       {{- icon_big('alert', 'The engine is not reliabled') }} {{ r -}}
@@ -153,7 +153,7 @@
   </div>{{- '' -}}
 </td>
 {%- else -%}
-<td class="{{ label }}">{% if r %}<span>{{ r }}</span>
+<td class="{{ label }}" data-label="{{ _('Reliability') }}">{% if r %}<span>{{ r }}</span>
 {%- endif -%}
 </td>
 {%- endif -%}
