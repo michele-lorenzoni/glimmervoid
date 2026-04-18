@@ -15,6 +15,7 @@
     --color-sky-800: oklch(44.3% 0.11 240.79);
     --color-fuchsia-800: oklch(45.2% 0.211 324.591);
     --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-neutral-400: oklch(70.8% 0 0);
@@ -506,6 +507,9 @@
   .text-gray-50 {
     color: var(--color-gray-50);
   }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
   .text-sky-600 {
     color: var(--color-sky-600);
   }
@@ -586,6 +590,13 @@
       }
     }
   }
+  .hover\:bg-\[\#7aff8f\]\/15 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, #7aff8f 15%, transparent);
+      }
+    }
+  }
   .hover\:bg-\[\#7aff8f\]\/20 {
     &:hover {
       @media (hover: hover) {
@@ -600,17 +611,10 @@
       }
     }
   }
-  .hover\:bg-gray-50 {
+  .hover\:text-\[\#7aff8f\] {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-gray-50);
-      }
-    }
-  }
-  .hover\:text-cust-element {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-cust-element);
+        color: #7aff8f;
       }
     }
   }

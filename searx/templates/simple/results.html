@@ -18,9 +18,206 @@
           title="Searx search: {{ q|e }}"
           href="{{ url_for('search', _external=True) }}?q={{ q|urlencode }}&amp;categories={{ selected_categories|join(",") | replace(' ','+') }}&amp;pageno={{ pageno }}&amp;time_range={{ time_range }}&amp;language={{ current_language }}&amp;safesearch={{ safesearch }}&amp;format=rss">
 {% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+        /* Terminal theme, scoped to search results page */
+        body.search_endpoint {
+            font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+            font-feature-settings: "liga" 0, "calt" 0;
+        }
+        body.search_endpoint .term-accent { color: #7aff8f; }
+        body.search_endpoint .term-dim    { color: #6b7280; }
+
+        /* Search bar prompt + placeholder */
+        body.search_endpoint .term-prompt {
+            color: #7aff8f;
+            padding: 0 0.6rem 0 0.75rem;
+            align-self: center;
+            user-select: none;
+            font-weight: 500;
+        }
+        body.search_endpoint #q {
+            font-family: inherit;
+            letter-spacing: 0.02em;
+        }
+        body.search_endpoint #q::placeholder {
+            color: #4b5563;
+            font-style: normal;
+        }
+
+        /* Terminal header meta row */
+        .term-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 1rem 0 1.25rem 0;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            color: #6b7280;
+        }
+        .term-meta .slash { color: #7aff8f; }
+        .term-meta .sep   { color: #374151; }
+        .term-meta .rule  { flex: 1; border-top: 1px dashed #374151; height: 0; }
+
+        /* Result list: numbering + dashed separators */
+        body.search_endpoint #urls { counter-reset: result-idx; }
+        body.search_endpoint #urls > div > .result,
+        body.search_endpoint #urls > .result,
+        body.search_endpoint #urls .result {
+            counter-increment: result-idx;
+            border-top: 1px dashed #374151;
+            padding: 1rem 0;
+            position: relative;
+        }
+        body.search_endpoint #urls .result::before {
+            content: "[" counter(result-idx, decimal-leading-zero) "]";
+            display: inline-block;
+            color: #7aff8f;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            margin-right: 0.6rem;
+            vertical-align: 2px;
+        }
+
+        /* Result title */
+        body.search_endpoint #urls .result h3,
+        body.search_endpoint #urls .result h4 {
+            display: inline;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+        body.search_endpoint #urls .result h3 a,
+        body.search_endpoint #urls .result h4 a,
+        body.search_endpoint #urls .result a.url_wrapper {
+            color: #fafafa;
+            text-decoration: none;
+        }
+        body.search_endpoint #urls .result h3 a:hover,
+        body.search_endpoint #urls .result h4 a:hover {
+            color: #7aff8f;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-underline-offset: 3px;
+        }
+
+        /* URL / breadcrumbs / engine labels */
+        body.search_endpoint #urls .result .url_wrapper,
+        body.search_endpoint #urls .result .url_i1,
+        body.search_endpoint #urls .result .url_i2,
+        body.search_endpoint #urls .result .engines,
+        body.search_endpoint #urls .result .cache_link,
+        body.search_endpoint #urls .result .proxyfied_link {
+            color: #6b7280;
+            font-size: 11px;
+            letter-spacing: 0.02em;
+        }
+        body.search_endpoint #urls .result .engines span { color: #6b7280; }
+
+        /* Description content */
+        body.search_endpoint #urls .result .content,
+        body.search_endpoint #urls .result p {
+            color: #d4d4d4;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+            font-size: 13px;
+        }
+
+        /* Highlights inside results */
+        body.search_endpoint #urls .result b,
+        body.search_endpoint #urls .result strong,
+        body.search_endpoint #urls .result .highlight {
+            color: #7aff8f;
+            font-weight: 500;
+            background: transparent;
+        }
+
+        /* Image / video / thumbnail results tweak */
+        body.search_endpoint #urls .result img,
+        body.search_endpoint #urls .result video {
+            border-radius: 2px;
+        }
+
+        /* Answers block */
+        body.search_endpoint #answers,
+        body.search_endpoint .answer,
+        body.search_endpoint .infobox {
+            border: 1px dashed #374151;
+            border-radius: 2px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            background: transparent;
+        }
+
+        /* Pagination */
+        body.search_endpoint #pagination {
+            border-top: 1px dashed #374151;
+            margin-top: 2rem;
+            padding-top: 1.25rem;
+            font-size: 13px;
+        }
+        body.search_endpoint #pagination button,
+        body.search_endpoint #pagination input[type="submit"],
+        body.search_endpoint #pagination input[type="button"] {
+            background: transparent;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            padding: 0.25rem 0.35rem;
+            font-family: inherit;
+            letter-spacing: 0.03em;
+        }
+        body.search_endpoint #pagination button:hover,
+        body.search_endpoint #pagination input[type="submit"]:hover {
+            color: #7aff8f;
+        }
+        body.search_endpoint #pagination .page_number_current {
+            color: #7aff8f !important;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-underline-offset: 3px;
+        }
+        body.search_endpoint #pagination .previous_page button::before {
+            content: "\25C2 ";
+            color: #7aff8f;
+            margin-right: 0.2rem;
+        }
+        body.search_endpoint #pagination .next_page button::after {
+            content: " \25B8";
+            color: #7aff8f;
+            margin-left: 0.2rem;
+        }
+
+        /* No-results message */
+        body.search_endpoint .dialog-error,
+        body.search_endpoint #urls .no_results {
+            border: 1px dashed #b91c1c;
+            border-radius: 2px;
+            padding: 1rem;
+            background: transparent;
+            color: #fecaca;
+        }
+
+        /* Responsive: mobile padding */
+        @media (max-width: 640px) {
+            body.search_endpoint { padding: 1rem; }
+            body.search_endpoint #urls .result { padding: 0.75rem 0; }
+        }
+    </style>
+{% endblock %}
 {% block content %}
-    <div class="flex flex-col max-w-3xl">
+    <div class="flex flex-col max-w-3xl w-full">
         {% include 'simple/search.html' %}
+
+        <div class="term-meta">
+            <span class="slash">//</span>
+            <span>results</span>
+            {% if q %}<span class="sep">·</span><span>query: "{{ q|e }}"</span>{% endif %}
+            <span class="sep">·</span><span>page {{ '%02d'|format(pageno) }}</span>
+            <span class="rule"></span>
+        </div>
         {% if results and results|map(attribute='template')|unique|list|count == 1 %}
             {% set only_template = 'only_template_' + results[0]['template']|default('default')|replace('.html', '') %}
         {% else %}
