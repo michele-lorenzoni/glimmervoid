@@ -970,16 +970,11 @@ input[type="checkbox"]:checked,
 input[type="radio"]:checked {
     border-color: #7aff8f !important;
 }
-input[type="checkbox"]:checked::after {
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 4px;
-    width: 5px;
-    height: 9px;
-    border: solid #7aff8f;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237aff8f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 0.8rem 0.8rem !important;
 }
 input[type="radio"]:checked::after {
     content: '';
