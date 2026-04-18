@@ -491,20 +491,24 @@ tr.pref-group th::before {
    diventa un blocco con label/valore (via data-label sui td/th) — con
    7-10 colonne compresse in meno di 640px diventano illeggibili. */
 @media (max-width: 640px) {
+    .scrollx,
     .answerers-table,
-    .table_engines {
-        display: block;
-        width: 100%;
+    .table_engines,
+    .table_engines > tbody,
+    .answerers-table > tbody {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
-    .scrollx { width: 100%; }
 
     .answerers-table .header-row,
-    .table_engines .header-row { display: none; }
+    .table_engines .header-row { display: none !important; }
 
     .answerers-table tr:not(.pref-group):not(.header-row),
     .table_engines tr:not(.pref-group):not(.header-row) {
-        display: block;
-        width: 100%;
+        display: block !important;
+        width: 100% !important;
         box-sizing: border-box;
         border: 1px solid var(--pref-border);
         border-radius: var(--pref-radius);
