@@ -236,7 +236,10 @@
     {%- if 'locale' not in locked_preferences -%}
     {%- include 'simple/preferences/ui_locale.html' -%}
     {%- endif -%}
-    {# Il tema è 'terminal' fisso (vedi STYLE_GUIDE.md) — selettore rimosso. #}
+    {%- if 'theme' not in locked_preferences -%}
+    {%- include 'simple/preferences/theme.html' -%}
+    {%- endif -%}
+    {%- include 'simple/preferences/palette.html' -%}
     {%- if 'results_on_new_tab' not in locked_preferences -%}
     {%- include 'simple/preferences/results_on_new_tab.html' -%}
     {%- endif -%}

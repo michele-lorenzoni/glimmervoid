@@ -1,0 +1,29 @@
+<fieldset>{{- '' -}}
+  <legend id="pref_palette">{{- _('Palette') -}}</legend>{{- '' -}}
+  <div class="value">{{- '' -}}
+    <select id="palette-select" aria-labelledby="pref_palette" data-palette-selector>{{- '' -}}
+      <option value="neon">Neon</option>{{- '' -}}
+    </select>{{- '' -}}
+  </div>{{- '' -}}
+  <div class="description">
+    {{- _('Variante cromatica del tema — salvata in localStorage, non richiede reload.') -}}
+  </div>{{- '' -}}
+</fieldset>{{- '' -}}
+
+<script>
+    (function () {
+        var sel = document.querySelector('[data-palette-selector]');
+        if (!sel) return;
+        var saved = localStorage.getItem('palette') || 'neon';
+        // assicura che il value esista tra le option; altrimenti fallback
+        if (!sel.querySelector('option[value="' + saved + '"]')) {
+            saved = 'neon';
+        }
+        sel.value = saved;
+        document.documentElement.dataset.palette = saved;
+        sel.addEventListener('change', function () {
+            localStorage.setItem('palette', sel.value);
+            document.documentElement.dataset.palette = sel.value;
+        });
+    })();
+</script>

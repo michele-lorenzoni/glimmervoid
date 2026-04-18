@@ -5,9 +5,18 @@ Tema **`terminal`**: background scuro, font monospace, palette neon differenziat
 > **Mantenere aggiornata.** Ogni modifica allo stile che introduce, cambia o rimuove una convenzione (nuovo colore in palette, nuovo pattern componente, cambio di border/radius/spacing, nuovo breakpoint responsive, nuova regola sulle icone o sull'architettura CSS) va riflessa in questa guida **nello stesso commit**. Tweak una tantum che non generalizzano restano locali; tutto ciò che qualcun altro deve seguire va qui.
 
 ### Theme naming
-- La `<html>` ha sempre classe `theme-terminal` (hardcoded in `base.html`).
+- La `<html>` ha sempre classe `theme-terminal` (hardcoded in `base.html`). Oggi è l'unico tema; altri arriveranno.
 - Il valore di `simple_style` in `settings.yml.template` è lasciato a `auto` solo per compatibilità con upstream: il nostro CSS non ne dipende.
-- Il selettore "Theme" nella preferences UI tab è stato rimosso — non serve dare una scelta dove il tema è uno solo.
+- Il selettore "Theme" nel tab UI della preferences è presente (override locale in `preferences/theme.html`) ma mostra solo l'opzione "Terminal" — resta visibile per quando aggiungeremo nuovi temi.
+
+### Palette
+- Nel tab UI c'è un secondo fieldset "Palette" (partial `preferences/palette.html`) che gestisce la variante cromatica del tema attivo.
+- Oggi esiste una sola palette: **`neon`** (quella documentata sopra).
+- Il valore è salvato in `localStorage['palette']` ed esposto come `html[data-palette="neon"]`. Un inline script in `base.html` legge localStorage al boot per evitare FOUC.
+- Per aggiungere una palette nuova (es. `crt-green`, `amber`, `cyberpunk`):
+    1. aggiungere `<option value="…">` in `preferences/palette.html`
+    2. definire i `--neon-*` override dentro un selettore `html[data-palette="…"]` nel CSS
+    3. le regole `:root` attuali restano come fallback/default della palette `neon`
 
 ---
 
