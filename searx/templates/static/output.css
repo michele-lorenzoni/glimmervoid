@@ -1025,3 +1025,11 @@ select:not([multiple]) {
 select::-ms-expand {
     display: none;
 }
+
+/* Mobile: cap i select al container width anche se max-content è più
+   grande del viewport (es. ui_locale con nomi lingua lunghi). */
+@media (max-width: 640px) {
+    select:not([multiple]) {
+        width: 100% !important;
+    }
+}
