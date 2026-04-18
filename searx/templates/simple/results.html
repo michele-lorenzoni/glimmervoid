@@ -214,26 +214,26 @@
         .terminal-results #pagination input[type="submit"],
         .terminal-results #pagination input[type="button"] {
             background: transparent;
-            border: 1px solid transparent;
+            border: none;
             color: #6b7280;
             cursor: pointer;
-            padding: 0.3rem 0.6rem;
+            padding: 0.3rem 0.5rem;
             font-family: inherit;
             letter-spacing: 0.03em;
-            border-radius: 2px;
-            transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
-            min-width: 2.2rem;
+            transition: color 0.12s ease;
+            min-width: 2rem;
         }
         .terminal-results #pagination button:hover,
         .terminal-results #pagination input[type="submit"]:hover {
             color: #7aff8f;
-            border-color: #374151;
         }
         .terminal-results #pagination .page_number_current {
             color: #7aff8f !important;
-            background: rgba(122, 255, 143, 0.08);
-            border: 1px solid #7aff8f !important;
             cursor: default;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
         }
         .terminal-results #pagination .previous_page button::before {
             content: "\25C2 ";
