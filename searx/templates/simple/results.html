@@ -110,12 +110,35 @@
             text-decoration: none;
         }
         .terminal-results #urls .result a.url_header { display: block; margin-bottom: 0.2rem; }
-        .terminal-results #urls .result .engines { margin-top: 0.4rem; }
-        .terminal-results #urls .result .engines span {
-            margin-right: 0.5rem;
-            padding: 0 0.3rem;
+
+        /* Sub-header chips: data, lunghezza, autore, views — stessa estetica
+           delle chip dei motori (bordino sottile, radius 2px, spazio attorno). */
+        .terminal-results #urls .result .published_date,
+        .terminal-results #urls .result .result_length,
+        .terminal-results #urls .result .result_author,
+        .terminal-results #urls .result .result_views {
+            display: inline-block;
+            margin: 0.1rem 0 0.1rem 0.55rem;
+            padding: 0.05rem 0.4rem;
             border: 1px solid #374151;
             border-radius: 2px;
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            vertical-align: 2px;
+            line-height: 1.4;
+        }
+
+        /* Engines (sub-footer) */
+        .terminal-results #urls .result .engines { margin-top: 0.55rem; }
+        .terminal-results #urls .result .engines span {
+            display: inline-block;
+            margin-right: 0.5rem;
+            padding: 0.05rem 0.4rem;
+            border: 1px solid #374151;
+            border-radius: 2px;
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            line-height: 1.4;
         }
 
         /* Descrizione */
