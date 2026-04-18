@@ -142,6 +142,7 @@
         text-transform: lowercase;
         cursor: pointer;
         transition: color 0.15s ease;
+        white-space: nowrap;
     }
     .term-nav-link:hover { color: #7aff8f; }
     .term-nav-link .bracket {
@@ -149,4 +150,9 @@
         transition: color 0.15s ease;
     }
     .term-nav-link:hover .bracket { color: #7aff8f; }
+
+    @media (max-width: 640px) {
+        .term-nav-link { padding: 0.3rem 0.35rem; letter-spacing: 0.04em; }
+        #links_on_top { margin-bottom: 1.25rem !important; }
+    }
 }

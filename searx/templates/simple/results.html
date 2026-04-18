@@ -32,16 +32,25 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.55rem 0.75rem;
             margin: 1rem 0 1.25rem 0;
             font-size: 11px;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             color: #6b7280;
         }
         .terminal-results .term-meta .slash { color: #7aff8f; }
         .terminal-results .term-meta .sep   { color: #374151; }
+        .terminal-results .term-meta .label { text-transform: uppercase; color: #9ca3af; }
+        .terminal-results .term-meta .query {
+            max-width: 32ch;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #d4d4d4;
+        }
         .terminal-results .term-meta .rule  {
             flex: 1;
+            min-width: 2rem;
             border-top: 1px dashed #374151;
             height: 0;
         }
@@ -189,38 +198,52 @@
             margin-top: 2rem;
             padding-top: 1.25rem;
             font-size: 13px;
+            gap: 0.25rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .terminal-results #pagination form { margin: 0 !important; }
+        .terminal-results #pagination .numbered_pagination {
+            gap: 0.15rem;
+        }
+        .terminal-results #pagination .previous_page,
+        .terminal-results #pagination .next_page {
+            padding: 0 0.5rem;
         }
         .terminal-results #pagination button,
         .terminal-results #pagination input[type="submit"],
         .terminal-results #pagination input[type="button"] {
             background: transparent;
-            border: none;
+            border: 1px solid transparent;
             color: #6b7280;
             cursor: pointer;
-            padding: 0.25rem 0.35rem;
+            padding: 0.3rem 0.6rem;
             font-family: inherit;
             letter-spacing: 0.03em;
+            border-radius: 2px;
+            transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+            min-width: 2.2rem;
         }
         .terminal-results #pagination button:hover,
         .terminal-results #pagination input[type="submit"]:hover {
             color: #7aff8f;
+            border-color: #374151;
         }
         .terminal-results #pagination .page_number_current {
             color: #7aff8f !important;
-            text-decoration: underline;
-            text-decoration-style: solid;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 3px;
+            background: rgba(122, 255, 143, 0.08);
+            border: 1px solid #7aff8f !important;
+            cursor: default;
         }
         .terminal-results #pagination .previous_page button::before {
             content: "\25C2 ";
             color: #7aff8f;
-            margin-right: 0.2rem;
+            margin-right: 0.35rem;
         }
         .terminal-results #pagination .next_page button::after {
             content: " \25B8";
             color: #7aff8f;
-            margin-left: 0.2rem;
+            margin-left: 0.35rem;
         }
 
         /* Messaggi (no results / errors) */
@@ -238,6 +261,19 @@
             body.search_endpoint { padding: 1rem; }
             .terminal-results #urls article.result,
             .terminal-results #urls .result { padding: 0.9rem 0.5rem; }
+            .terminal-results .term-meta { font-size: 10px; gap: 0.4rem 0.55rem; }
+            .terminal-results .term-meta .rule { display: none; }
+            .terminal-results .term-meta .query { max-width: 18ch; }
+            .terminal-results #pagination { padding-top: 1rem; font-size: 12px; gap: 0.15rem; }
+            .terminal-results #pagination button,
+            .terminal-results #pagination input[type="submit"],
+            .terminal-results #pagination input[type="button"] {
+                padding: 0.25rem 0.45rem;
+                min-width: 1.8rem;
+            }
+            .terminal-results #urls .result h3,
+            .terminal-results #urls .result h4 { font-size: 0.95rem; }
+            .terminal-results #urls .result .content { font-size: 12.5px; }
         }
     </style>
 {% endblock %}
@@ -247,9 +283,12 @@
 
         <div class="term-meta">
             <span class="slash">//</span>
-            <span>results</span>
-            {% if q %}<span class="sep">·</span><span>query: "{{ q|e }}"</span>{% endif %}
+            <span class="label">results</span>
+            {% if q %}<span class="sep">·</span><span class="query">query: "{{ q|e }}"</span>{% endif %}
             <span class="sep">·</span><span>page {{ '%02d'|format(pageno) }}</span>
+            {% if number_of_results and number_of_results|int > 0 %}
+                <span class="sep">·</span><span>{{ '{:,}'.format(number_of_results|int).replace(',', ' ') }} matches</span>
+            {% endif %}
             <span class="rule"></span>
         </div>
 
