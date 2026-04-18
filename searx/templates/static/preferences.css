@@ -139,7 +139,10 @@ body.preferences_endpoint .tab-button.active {
     background: transparent;
     border: 1px solid var(--pref-border);
     color: var(--pref-text-dim);
-    padding: 0.35rem 0.75rem;
+    padding: 0 0.75rem;
+    min-height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
     border-radius: var(--pref-radius);
     margin: 0 0.25rem 0.35rem 0;
     font-family: var(--pref-font);
@@ -236,7 +239,8 @@ body.preferences_endpoint input[type="reset"] {
     color: var(--pref-text-muted);
     border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
-    padding: 0.45rem 0.9rem;
+    padding: 0 0.9rem;
+    min-height: 2.5rem;
     font-family: var(--pref-font);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
@@ -254,11 +258,14 @@ body.preferences_endpoint input[type="reset"]:hover {
 
 /* Back / Reset links renderizzati come <div class="preferences_back">...</div> */
 body.preferences_endpoint .preferences_back {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--pref-element);
     border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
-    padding: 0.45rem 0.9rem;
+    padding: 0 0.9rem;
+    min-height: 2.5rem;
     font-family: var(--pref-font);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
@@ -311,6 +318,7 @@ th, td {
     font-size: 0.82rem;
     line-height: 1.4;
     vertical-align: middle;
+    height: 2.5rem; /* altezza minima uniforme record tabelle */
 }
 th {
     background: transparent;
@@ -599,7 +607,7 @@ tr.pref-group th::before {
     table { font-size: 0.78rem; }
     th, td { padding: 0.4rem 0.55rem; }
     .tabs > label {
-        padding: 0.35rem 0.6rem;
+        padding: 0 0.6rem;
         font-size: 0.72rem;
     }
 }
@@ -640,13 +648,12 @@ tr.pref-group th::before {
         font-size: 0.72rem;
     }
 
-    /* Bottoni: tap target, font lowercase coerente */
+    /* Bottoni: font lowercase coerente, min-height uniforme da desktop */
     body.preferences_endpoint button,
     body.preferences_endpoint input[type="submit"],
     body.preferences_endpoint input[type="reset"],
     body.preferences_endpoint .preferences_back {
-        padding: 0.6rem 0.9rem;
-        min-height: 2.4rem;
+        padding: 0 0.9rem;
         font-size: 0.75rem;
     }
     /* Footer: bottoni a larghezza naturale, senza wrap del testo interno */
@@ -673,7 +680,7 @@ tr.pref-group th::before {
     /* Engines tabs (nested pills) */
     .engines-tabs { padding-bottom: 0.25rem; }
     .tabs > label {
-        padding: 0.35rem 0.55rem;
+        padding: 0 0.55rem;
         font-size: 0.7rem;
     }
 
