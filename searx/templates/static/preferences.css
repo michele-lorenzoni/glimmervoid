@@ -515,8 +515,10 @@ tr.pref-group th::before {
     .scrollx,
     .answerers-table,
     .table_engines,
+    .cookies,
     .table_engines > tbody,
-    .answerers-table > tbody {
+    .answerers-table > tbody,
+    .cookies > tbody {
         display: block !important;
         width: 100% !important;
         max-width: 100% !important;
@@ -524,10 +526,12 @@ tr.pref-group th::before {
     }
 
     .answerers-table .header-row,
-    .table_engines .header-row { display: none !important; }
+    .table_engines .header-row,
+    .cookies .header-row { display: none !important; }
 
     .answerers-table tr:not(.pref-group):not(.header-row),
-    .table_engines tr:not(.pref-group):not(.header-row) {
+    .table_engines tr:not(.pref-group):not(.header-row),
+    .cookies tr:not(.header-row) {
         display: block !important;
         width: 100% !important;
         box-sizing: border-box;
@@ -538,7 +542,8 @@ tr.pref-group th::before {
         background: transparent;
     }
     .answerers-table tr:not(.pref-group):not(.header-row):hover,
-    .table_engines tr:not(.pref-group):not(.header-row):hover {
+    .table_engines tr:not(.pref-group):not(.header-row):hover,
+    .cookies tr:not(.header-row):hover {
         background: rgba(34, 211, 238, 0.05);
     }
 
@@ -556,7 +561,8 @@ tr.pref-group th::before {
 
     .answerers-table td,
     .table_engines td,
-    .table_engines th.name {
+    .table_engines th.name,
+    .cookies td {
         display: flex;
         gap: 0.75rem;
         padding: 0.25rem 0;
@@ -566,10 +572,12 @@ tr.pref-group th::before {
         height: auto;
         text-align: left;
         font-weight: 400;
+        word-break: break-all;
     }
     .answerers-table td::before,
     .table_engines td::before,
-    .table_engines th.name::before {
+    .table_engines th.name::before,
+    .cookies td::before {
         content: attr(data-label);
         color: var(--pref-text-dim);
         text-transform: uppercase;
@@ -578,6 +586,7 @@ tr.pref-group th::before {
         min-width: 5.5rem;
         flex-shrink: 0;
         padding-top: 0.22rem;
+        word-break: normal;
     }
     .answerers-table td.checkbox-col,
     .table_engines td.checkbox-col {

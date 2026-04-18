@@ -5,14 +5,14 @@
 </p>
 {% if cookies %}
 <table class="cookies">
-    <tr>{{- '' -}}
+    <tr class="header-row">{{- '' -}}
         <th>{{ _('Cookie name') }}</th>{{- '' -}}
         <th>{{ _('Value') }}</th>{{- '' -}}
     </tr>
     {%- for cookie in cookies -%}
     <tr>{{- '' -}}
-        <td>{{ cookie }}</td>{{- '' -}}
-        <td>{{ cookies[cookie] }}</td>{{- '' -}}
+        <td data-label="{{ _('Cookie name') }}">{{ cookie }}</td>{{- '' -}}
+        <td data-label="{{ _('Value') }}">{{ cookies[cookie] }}</td>{{- '' -}}
     </tr>
     {%- endfor -%}
 </table>
