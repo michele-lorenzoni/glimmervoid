@@ -1003,3 +1003,23 @@ input[type="radio"]:disabled {
         height: 1.1rem !important;
     }
 }
+
+/* ============================================================
+   Select — chevron custom in stile Lucide (stessa famiglia della
+   lente della searchbar: stroke #7aff8f, width 2, linecap round).
+   Padding a destra equivalente a quello della lente (0.5rem).
+   ============================================================ */
+select:not([multiple]) {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237aff8f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.5rem center !important;
+    background-size: 1rem 1rem !important;
+    padding-right: 2rem !important;
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
