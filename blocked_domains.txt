@@ -924,6 +924,7 @@ cubitt.com.ve
 cufonfonts.com
 culturahistorica.org
 currencyrate.today
+currents.dev
 cursa.app
 cursor.style
 cursors-4u.com
