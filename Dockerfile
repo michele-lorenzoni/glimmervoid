@@ -35,6 +35,7 @@ COPY	searx/templates/simple/page_with_header.html	/usr/local/searxng/searx/templ
 COPY	searx/templates/simple/preferences.html	/usr/local/searxng/searx/templates/simple/preferences.html
 COPY	searx/templates/simple/simple_search.html	/usr/local/searxng/searx/templates/simple/simple_search.html
 COPY	searx/templates/simple/index.html	/usr/local/searxng/searx/templates/simple/index.html
+COPY	searx/templates/simple/_icons/	/usr/local/searxng/searx/templates/simple/_icons/
 COPY	searx/templates/simple/results.html	/usr/local/searxng/searx/templates/simple/results.html
 COPY	searx/templates/simple/icons.html	/usr/local/searxng/searx/templates/simple/icons.html
 COPY	searx/templates/simple/base.html	/usr/local/searxng/searx/templates/simple/base.html
