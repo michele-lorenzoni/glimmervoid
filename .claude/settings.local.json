@@ -15,7 +15,20 @@
             "Bash(C:/Users/Sviluppo/Documents/projects/glimmervoid/venv/Scripts/python.exe *)",
             "Bash(pip install *)",
             "Bash(npx @tailwindcss/cli --help)",
-            "Bash(npx @tailwindcss/cli -i searx/templates/static/input.css -o searx/templates/static/output.css --minify)"
+            "Bash(npx @tailwindcss/cli -i searx/templates/static/input.css -o searx/templates/static/output.css --minify)",
+            "Bash(sed -n '15,19p' index.html)",
+            "Bash(sed -n '27,31p' index.html)",
+            "Bash(sed -n '39,43p' index.html)",
+            "Bash(sed -n '51,55p' index.html)",
+            "Bash(sed -n '63,67p' index.html)",
+            "Bash(npx @tailwindcss/cli -i searx/templates/static/input.css -o searx/templates/static/output.css)",
+            "Bash(git add *)",
+            "Bash(git commit -m ' *)",
+            "Bash(git push *)",
+            "Bash(git commit *)",
+            "Bash(curl -sIL \"https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5/index.css\")",
+            "Bash(curl -s \"https://raw.githubusercontent.com/searxng/searxng/master/searx/templates/simple/result_templates/default.html\")",
+            "Bash(curl -s \"https://raw.githubusercontent.com/searxng/searxng/master/searx/webapp.py\")"
         ]
     }
 }
