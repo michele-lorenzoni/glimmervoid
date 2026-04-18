@@ -652,16 +652,14 @@ tr.pref-group th::before {
         min-height: 2.4rem;
         font-size: 0.75rem;
     }
-    /* Footer: i 3 pulsanti occupano tutta la larghezza equamente */
+    /* Footer: bottoni a larghezza naturale, senza wrap del testo interno */
     #search_form > div.flex.mt-4,
     .preferences-footer {
         gap: 0.5rem;
         margin-top: 1.2rem;
     }
     .preferences-footer > * {
-        flex: 1 1 0;
-        text-align: center;
-        margin-right: 0 !important;
+        white-space: nowrap;
     }
 
     /* Tabelle: le teniamo scrollabili (overflow-x già sul tabpanel) */
@@ -694,12 +692,10 @@ tr.pref-group th::before {
         padding: 0.05rem 0.4rem;
     }
 
-    /* Selectable URL: font più leggibile, wrap consentito */
+    /* Selectable URL: font più leggibile, scroll orizzontale nativo del pre */
     .selectable_url pre {
         font-size: 0.72rem;
         padding: 0.5rem 0.6rem;
-        white-space: pre-wrap;
-        word-break: break-all;
     }
 
     /* h4 sezioni interne */
