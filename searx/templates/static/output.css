@@ -56,6 +56,58 @@
     --color-neon-blue: #60a5fa;
   }
 }
+
+/* ============================================================
+   Palette alternative — selezionate via html[data-palette="…"]
+   da preferences/palette.html (persistenza in localStorage).
+   Le 6 --color-neon-* sono nomi di SLOT funzionali; ogni palette
+   li rimappa ai propri colori. `high-contrast` override anche le
+   superfici per massimo contrasto (black/white pure).
+   ============================================================ */
+html[data-palette="amber-crt"] {
+    --color-neon-green: #ffb000;  /* active: amber primary */
+    --color-neon-cyan:  #ffd54f;  /* hover: bright amber */
+    --color-neon-pink:  #ffeb9c;  /* heading: pale amber */
+    --color-neon-amber: #ff9500;  /* warn: orange */
+    --color-neon-red:   #ff5050;  /* danger: soft red */
+    --color-neon-blue:  #b8860b;  /* info: dim amber */
+}
+
+html[data-palette="mono-green"] {
+    --color-neon-green: #00ff41;
+    --color-neon-cyan:  #7fff7f;
+    --color-neon-pink:  #ccffcc;
+    --color-neon-amber: #ffaa00;
+    --color-neon-red:   #ff4444;
+    --color-neon-blue:  #00aa22;
+}
+
+html[data-palette="cyberpunk"] {
+    --color-neon-green: #ff00ff;  /* active: magenta */
+    --color-neon-cyan:  #00ffff;  /* hover: cyan */
+    --color-neon-pink:  #ffff00;  /* heading: yellow */
+    --color-neon-amber: #ff9500;  /* warn: orange */
+    --color-neon-red:   #ff0040;  /* danger: hot red */
+    --color-neon-blue:  #b347ff;  /* info: violet */
+}
+
+html[data-palette="high-contrast"] {
+    /* Palette accessibile — ratio WCAG AAA su sfondo nero puro */
+    --color-neon-green: #00ff00;
+    --color-neon-cyan:  #ffffff;
+    --color-neon-pink:  #ffff00;
+    --color-neon-amber: #ffaa00;
+    --color-neon-red:   #ff4040;
+    --color-neon-blue:  #00e5ff;
+    /* Superfici: black/white pure */
+    --color-cust-body: #000000;
+    --color-cust-element: #0a0a0a;
+    --color-cust-border: #ffffff;
+    --color-cust-default: #ffffff;
+    --color-cust-url: #ffffff;
+    --color-cust-description: #f5f5f5;
+    --color-cust-title: #ffffff;
+}
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
     box-sizing: border-box;
@@ -951,8 +1003,8 @@ input[type="radio"] {
     appearance: none !important;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-    background: #111827 !important;
-    border: 1px solid #374151 !important;
+    background: var(--color-cust-element) !important;
+    border: 1px solid var(--color-cust-border) !important;
     border-radius: 2px !important;
     width: 1rem !important;
     height: 1rem !important;
@@ -1017,7 +1069,7 @@ select:not([multiple]) {
     appearance: none !important;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
-    background-color: #111827 !important;
+    background-color: var(--color-cust-element) !important;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237aff8f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") !important;
     background-repeat: no-repeat !important;
     background-position: right 0.65rem center !important;

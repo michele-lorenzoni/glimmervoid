@@ -4,13 +4,15 @@
    ciò che riguarda la pagina preferenze (form, fieldset, tabelle, tabs). */
 
 :root {
-    --pref-body: #030712;           /* cust-body / gray-950 */
-    --pref-element: #111827;        /* cust-element / gray-900 — stesso bg della searchbar */
-    --pref-border: #374151;         /* cust-border / gray-700 */
-    --pref-border-strong: #4b5563;  /* gray-600 */
-    --pref-text: #fafafa;           /* cust-default / neutral-50 */
-    --pref-text-muted: #d4d4d4;     /* neutral-300 */
-    --pref-text-dim: #6b7280;       /* term-dim / gray-500 */
+    /* Superfici → puntano alle vars globali @theme, così cascada
+       anche la palette high-contrast (che override cust-*). */
+    --pref-body:         var(--color-cust-body);
+    --pref-element:      var(--color-cust-element);
+    --pref-border:       var(--color-cust-border);
+    --pref-border-strong: #4b5563;  /* gray-600 — intermedio, non palette-driven */
+    --pref-text:         var(--color-cust-default);
+    --pref-text-muted:   var(--color-cust-url);
+    --pref-text-dim:     #6b7280;
 
     /* Palette neon — alias locali che puntano alle vars globali
        definite nel @theme Tailwind (output.css :root). Cambiare

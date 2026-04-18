@@ -10,13 +10,24 @@ Tema **`terminal`**: background scuro, font monospace, palette neon differenziat
 - Il selettore "Theme" nel tab UI della preferences è presente (override locale in `preferences/theme.html`) ma mostra solo l'opzione "Terminal" — resta visibile per quando aggiungeremo nuovi temi.
 
 ### Palette
-- Nel tab UI c'è un secondo fieldset "Palette" (partial `preferences/palette.html`) che gestisce la variante cromatica del tema attivo.
-- Oggi esiste una sola palette: **`neon`** (quella documentata sopra).
-- Il valore è salvato in `localStorage['palette']` ed esposto come `html[data-palette="neon"]`. Un inline script in `base.html` legge localStorage al boot per evitare FOUC.
-- Per aggiungere una palette nuova (es. `crt-green`, `amber`, `cyberpunk`):
-    1. aggiungere `<option value="…">` in `preferences/palette.html`
-    2. definire i `--neon-*` override dentro un selettore `html[data-palette="…"]` nel CSS
-    3. le regole `:root` attuali restano come fallback/default della palette `neon`
+Nel tab UI c'è un secondo fieldset "Palette" che gestisce la variante cromatica. La scelta è salvata in `localStorage['palette']` ed esposta come `html[data-palette="…"]`. Un inline script in `base.html` legge localStorage al boot e imposta l'attributo prima del render (no FOUC).
+
+Le 6 `--color-neon-*` sono **slot funzionali**: il nome (`green`, `cyan`, `pink`, ecc.) identifica la FUNZIONE (attivo, hover, heading, warn, danger, info), il VALORE dipende dalla palette attiva.
+
+| Valore | Label | Concept |
+|---|---|---|
+| `neon` (default) | Neon | Palette originale: verde/ciano/rosa/ambra/rosso/blu su gray-950 |
+| `amber-crt` | Amber CRT | Terminale vintage ambra/arancio, mono-amber con rosso soft per danger |
+| `mono-green` | Mono green | Terminale classico verde fosforescente, con amber/rosso per warn/danger |
+| `cyberpunk` | Cyberpunk | Magenta/ciano/giallo ad alta saturazione, vibe synth-wave |
+| `high-contrast` | High contrast | **Accessibilità** — palette WCAG AAA-like su sfondo nero puro (#000), bordi bianchi, colori saturi (green/yellow/red). Override anche `--color-cust-*` per superfici (text bianco, border bianco) |
+
+Le superfici palette-aware passano tutte da `--color-cust-*` (body/element/border/default/url/description/title). In `preferences.css`, le vars `--pref-*` sono alias che puntano a queste globali — niente hex duplicati.
+
+Per aggiungere una palette:
+1. `<option value="my-palette">My palette</option>` in `preferences/palette.html`
+2. Blocco `html[data-palette="my-palette"] { --color-neon-*: …; (opzionalmente --color-cust-*: …) }` in `input.css` E `output.css`
+3. Documentarla nella tabella qui sopra.
 
 ---
 
