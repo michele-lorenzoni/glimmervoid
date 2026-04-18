@@ -48,5 +48,6 @@ COPY	searx/templates/simple/preferences/footer.html	/usr/local/searxng/searx/tem
 COPY	searx/templates/simple/preferences/cookies.html	/usr/local/searxng/searx/templates/simple/preferences/cookies.html
 COPY	searx/templates/simple/preferences/answerers.html	/usr/local/searxng/searx/templates/simple/preferences/answerers.html
 COPY	searx/templates/simple/preferences/engines.html	/usr/local/searxng/searx/templates/simple/preferences/engines.html
+COPY	searx/templates/simple/preferences/method.html	/usr/local/searxng/searx/templates/simple/preferences/method.html
 COPY	searx/templates/simple/messages/no_cookies.html	/usr/local/searxng/searx/templates/simple/messages/no_cookies.html
 USER	searxng
