@@ -2,6 +2,8 @@
 
 Tema **"terminal neon"**: background scuro, font monospace, palette neon differenziata per funzione. Questa guida raccoglie le decisioni prese nel repo — consultala prima di aggiungere UI per mantenere coerenza.
 
+> **Mantenere aggiornata.** Ogni modifica allo stile che introduce, cambia o rimuove una convenzione (nuovo colore in palette, nuovo pattern componente, cambio di border/radius/spacing, nuovo breakpoint responsive, nuova regola sulle icone o sull'architettura CSS) va riflessa in questa guida **nello stesso commit**. Tweak una tantum che non generalizzano restano locali; tutto ciò che qualcun altro deve seguire va qui.
+
 ---
 
 ## 1. Palette

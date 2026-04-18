@@ -4,6 +4,8 @@ See `PROJECT_MAP.md` in the repo root for a structural map of the codebase (layo
 
 See `STYLE_GUIDE.md` for the visual conventions: neon palette (green=active, cyan=hover, pink=headings, amber=warn, red=danger), dashed vs solid borders, Lucide icon family, component patterns (nav, tabs, buttons, inputs, checkbox/radio), responsive rules, and CSS architecture. Always check it before adding UI so new elements match the existing language.
 
+**Keep `STYLE_GUIDE.md` in sync.** Whenever you introduce, remove, or change a visual convention — new palette color, new component pattern, new responsive breakpoint, new icon family, new responsive rule, changes to border/radius/spacing, new CSS layer architecture — update the relevant section of `STYLE_GUIDE.md` in the same commit. Drift between code and guide defeats the purpose of having one. If a change is a one-off tweak that doesn't generalize, it can stay local; if it sets a new convention someone else should follow, it goes in the guide.
+
 ## Styling
 
 - **Border radius must always be `2px`.** Applies to every CSS rule in the repo (regular radii, `--pref-radius*` tokens, pill/chip shapes, buttons, inputs, cards, tooltips, dialogs). Do not use other radius values, do not use `999px` for pills, do not use `0` to "flatten" — always `2px`.
