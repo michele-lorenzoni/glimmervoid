@@ -11,7 +11,7 @@
     Blocco {% call %} opzionale: per iniettare categories/filters dentro al form
     (viene renderizzato subito dopo la barra e prima degli hidden field).
 #}
-{% macro terminal_search_bar(show_clear=False, max_width='max-w-xl') -%}
+{% macro terminal_search_bar(show_clear=False, max_width='max-w-xl', include_default_hiddens=True) -%}
 <form id="search"
       method="{{ method or 'POST' }}"
       action="{{ url_for('search') }}"
@@ -63,9 +63,15 @@
     {% for category in selected_categories %}
         <input type="hidden" name="category_{{ category }}" value="1" />
     {% endfor %}
-    <input type="hidden" name="language"   value="{{ current_language }}" />
-    <input type="hidden" name="time_range" value="{{ time_range }}" />
-    <input type="hidden" name="safesearch" value="{{ safesearch }}" />
+    {# I campi language/time_range/safesearch sono qui solo se il caller non
+       inietta già i filter widget (es. homepage). Sulla results page i filtri
+       sono dentro al {% call %} e forniscono gli stessi name via <select>,
+       quindi duplicarli come hidden causa 'Invalid settings' in searxng. #}
+    {% if include_default_hiddens %}
+        <input type="hidden" name="language"   value="{{ current_language }}" />
+        <input type="hidden" name="time_range" value="{{ time_range }}" />
+        <input type="hidden" name="safesearch" value="{{ safesearch }}" />
+    {% endif %}
     <input type="hidden" name="theme"      value="{{ theme }}" />
     {% if timeout_limit %}
         <input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" />
