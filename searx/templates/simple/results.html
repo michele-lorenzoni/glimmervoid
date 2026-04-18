@@ -54,13 +54,8 @@
             counter-increment: result-idx;
             display: block;
             border-top: 1px dashed #374151;
-            padding: 1rem 0;
+            padding: 1.1rem 1rem;
             position: relative;
-        }
-        .terminal-results #urls article.result:first-of-type,
-        .terminal-results #urls .result:first-child {
-            border-top: none;
-            padding-top: 0.5rem;
         }
         .terminal-results #urls article.result::before,
         .terminal-results #urls .result::before {
@@ -190,7 +185,8 @@
         .terminal-results #pagination .page_number_current {
             color: #7aff8f !important;
             text-decoration: underline;
-            text-decoration-style: dashed;
+            text-decoration-style: solid;
+            text-decoration-thickness: 1px;
             text-underline-offset: 3px;
         }
         .terminal-results #pagination .previous_page button::before {
@@ -217,7 +213,8 @@
         /* Responsive */
         @media (max-width: 640px) {
             body.search_endpoint { padding: 1rem; }
-            .terminal-results #urls .result { padding: 0.75rem 0; }
+            .terminal-results #urls article.result,
+            .terminal-results #urls .result { padding: 0.9rem 0.5rem; }
         }
     </style>
 {% endblock %}
