@@ -246,9 +246,8 @@ select:not([multiple]) {
     background-position: right 0.6rem center !important;
     background-size: 1rem 1rem !important;
     padding-right: 2.25rem !important;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    width: auto;
+    max-width: 100%;
     cursor: pointer;
 }
 select::-ms-expand {
