@@ -148,7 +148,9 @@ valkey:
   # Open result links in a new tab by default
   # results_on_new_tab: false
   theme_args:
-    # style of simple theme: auto, light, dark, black
+    # Glimmervoid ha un unico tema chiamato 'terminal' (vedi STYLE_GUIDE.md),
+    # hardcoded in base.html come 'theme-terminal' a prescindere dal valore
+    # di simple_style. Questo resta a 'auto' solo per compatibilità upstream.
     simple_style: auto
   # Perform search immediately if a category selected.
   # Disable to select multiple categories at once and start the search manually.

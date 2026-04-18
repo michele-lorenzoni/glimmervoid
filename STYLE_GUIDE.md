@@ -1,8 +1,13 @@
 # Glimmervoid — style guide
 
-Tema **"terminal neon"**: background scuro, font monospace, palette neon differenziata per funzione. Questa guida raccoglie le decisioni prese nel repo — consultala prima di aggiungere UI per mantenere coerenza.
+Tema **`terminal`**: background scuro, font monospace, palette neon differenziata per funzione. È l'unico tema del progetto, impostato come default e hardcoded — non c'è un selettore di tema nella preferences. Questa guida raccoglie le decisioni prese nel repo — consultala prima di aggiungere UI per mantenere coerenza.
 
 > **Mantenere aggiornata.** Ogni modifica allo stile che introduce, cambia o rimuove una convenzione (nuovo colore in palette, nuovo pattern componente, cambio di border/radius/spacing, nuovo breakpoint responsive, nuova regola sulle icone o sull'architettura CSS) va riflessa in questa guida **nello stesso commit**. Tweak una tantum che non generalizzano restano locali; tutto ciò che qualcun altro deve seguire va qui.
+
+### Theme naming
+- La `<html>` ha sempre classe `theme-terminal` (hardcoded in `base.html`).
+- Il valore di `simple_style` in `settings.yml.template` è lasciato a `auto` solo per compatibilità con upstream: il nostro CSS non ne dipende.
+- Il selettore "Theme" nella preferences UI tab è stato rimosso — non serve dare una scelta dove il tema è uno solo.
 
 ---
 
