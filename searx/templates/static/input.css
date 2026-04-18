@@ -168,43 +168,43 @@
 
 /* ============================================================
    Checkbox / radio — stile tema terminale, globale.
-   UNLAYERED di proposito: se upstream carica CSS non layered,
-   rules in @layer components perderebbero sul cascade.
-   .checkbox-onoff (toggle switch upstream) escluso.
+   UNLAYERED + !important sulle proprietà critiche per vincere
+   su qualunque CSS upstream (anche non layered).
    ============================================================ */
-input[type="checkbox"]:not(.checkbox-onoff),
-input[type="radio"]:not(.checkbox-onoff) {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: #111827;
-    border: 1px solid #374151;
-    border-radius: 2px;
-    width: 1rem;
-    height: 1rem;
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background: #111827 !important;
+    border: 1px solid #374151 !important;
+    border-radius: 2px !important;
+    width: 1rem !important;
+    height: 1rem !important;
     margin: 0;
     padding: 0;
     cursor: pointer;
     position: relative;
     vertical-align: middle;
     flex-shrink: 0;
+    box-shadow: none;
     transition: border-color 0.15s ease, background-color 0.15s ease;
 }
-input[type="checkbox"]:not(.checkbox-onoff):hover,
-input[type="radio"]:not(.checkbox-onoff):hover {
-    border-color: #4b5563;
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    border-color: #4b5563 !important;
 }
-input[type="checkbox"]:not(.checkbox-onoff):focus-visible,
-input[type="radio"]:not(.checkbox-onoff):focus-visible {
-    outline: none;
-    border-color: #7aff8f;
-    box-shadow: 0 0 0 1px #7aff8f;
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+    outline: none !important;
+    border-color: #7aff8f !important;
+    box-shadow: 0 0 0 1px #7aff8f !important;
 }
-input[type="checkbox"]:not(.checkbox-onoff):checked,
-input[type="radio"]:not(.checkbox-onoff):checked {
-    border-color: #7aff8f;
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    border-color: #7aff8f !important;
 }
-input[type="checkbox"]:not(.checkbox-onoff):checked::after {
+input[type="checkbox"]:checked::after {
     content: '';
     position: absolute;
     top: 1px;
@@ -215,7 +215,7 @@ input[type="checkbox"]:not(.checkbox-onoff):checked::after {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
-input[type="radio"]:not(.checkbox-onoff):checked::after {
+input[type="radio"]:checked::after {
     content: '';
     position: absolute;
     top: 3px;
@@ -231,9 +231,9 @@ input[type="radio"]:disabled {
     cursor: not-allowed;
 }
 @media (max-width: 480px) {
-    input[type="checkbox"]:not(.checkbox-onoff),
-    input[type="radio"]:not(.checkbox-onoff) {
-        width: 1.1rem;
-        height: 1.1rem;
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: 1.1rem !important;
+        height: 1.1rem !important;
     }
 }
