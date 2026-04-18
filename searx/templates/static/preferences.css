@@ -230,7 +230,7 @@ textarea:focus {
 body.preferences_endpoint button,
 body.preferences_endpoint input[type="submit"],
 body.preferences_endpoint input[type="reset"] {
-    background: transparent;
+    background-color: var(--pref-element);
     color: var(--pref-text-muted);
     border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
@@ -240,19 +240,20 @@ body.preferences_endpoint input[type="reset"] {
     letter-spacing: 0.08em;
     text-transform: lowercase;
     cursor: pointer;
-    transition: color 0.15s ease, border-color 0.15s ease;
+    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 body.preferences_endpoint button:hover,
 body.preferences_endpoint input[type="submit"]:hover,
 body.preferences_endpoint input[type="reset"]:hover {
     color: var(--pref-accent);
     border-color: var(--pref-accent);
+    background-color: rgba(122, 255, 143, 0.08);
 }
 
 /* Back / Reset links renderizzati come <div class="preferences_back">...</div> */
 body.preferences_endpoint .preferences_back {
     display: inline-block;
-    background: transparent;
+    background-color: var(--pref-element);
     border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
     padding: 0.45rem 0.9rem;
@@ -261,7 +262,7 @@ body.preferences_endpoint .preferences_back {
     letter-spacing: 0.08em;
     text-transform: lowercase;
     cursor: pointer;
-    transition: color 0.15s ease, border-color 0.15s ease;
+    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 body.preferences_endpoint .preferences_back a {
     color: var(--pref-text-muted);
@@ -269,6 +270,7 @@ body.preferences_endpoint .preferences_back a {
 }
 body.preferences_endpoint .preferences_back:hover {
     border-color: var(--pref-accent);
+    background-color: rgba(122, 255, 143, 0.08);
 }
 body.preferences_endpoint .preferences_back:hover a {
     color: var(--pref-accent);
