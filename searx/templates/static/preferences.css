@@ -5,6 +5,7 @@
 
 :root {
     --pref-body: #030712;           /* cust-body / gray-950 */
+    --pref-element: #111827;        /* cust-element / gray-900 — stesso bg della searchbar */
     --pref-border: #374151;         /* cust-border / gray-700 */
     --pref-border-strong: #4b5563;  /* gray-600 */
     --pref-text: #fafafa;           /* cust-default / neutral-50 */
@@ -203,7 +204,7 @@ input[type="search"],
 input[type="url"],
 select,
 textarea {
-    background: var(--pref-body);
+    background: var(--pref-element);
     color: var(--pref-text);
     border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
@@ -223,12 +224,66 @@ textarea:focus {
     border-color: var(--pref-accent);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    accent-color: var(--pref-accent);
-    width: 0.95rem;
-    height: 0.95rem;
+/* Custom checkbox/radio — appearance reset per avere lo stesso bg chiaro
+   (cust-element) della searchbar + spunta verde in stile accent.
+   Escludi .checkbox-onoff (toggle switch upstream, ha layout proprio). */
+input[type="checkbox"]:not(.checkbox-onoff),
+input[type="radio"]:not(.checkbox-onoff) {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--pref-element);
+    border: 1px solid var(--pref-border);
+    border-radius: var(--pref-radius);
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    padding: 0;
     cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    flex-shrink: 0;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+input[type="checkbox"]:not(.checkbox-onoff):hover,
+input[type="radio"]:not(.checkbox-onoff):hover {
+    border-color: var(--pref-border-strong);
+}
+input[type="checkbox"]:not(.checkbox-onoff):focus-visible,
+input[type="radio"]:not(.checkbox-onoff):focus-visible {
+    outline: none;
+    border-color: var(--pref-accent);
+    box-shadow: 0 0 0 1px var(--pref-accent);
+}
+input[type="checkbox"]:not(.checkbox-onoff):checked,
+input[type="radio"]:not(.checkbox-onoff):checked {
+    border-color: var(--pref-accent);
+}
+input[type="checkbox"]:not(.checkbox-onoff):checked::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    width: 5px;
+    height: 9px;
+    border: solid var(--pref-accent);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+input[type="radio"]:not(.checkbox-onoff):checked::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    background: var(--pref-accent);
+    border-radius: var(--pref-radius);
+}
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* ------- Buttons: `[ action ]` minimal ------- */
