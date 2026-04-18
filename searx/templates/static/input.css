@@ -85,4 +85,42 @@
     .url-badge-ignored {
         background-color: var(--color-cust-border-ignored);
     }
+
+    /* ================================================================
+       Terminal theme primitives — shared by homepage, results page and
+       any future page that wants the terminal aesthetic. Kept here (not
+       inline in templates) so they live in one place.
+       ================================================================ */
+    .term-font {
+        font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+        font-feature-settings: "liga" 0, "calt" 0;
+    }
+    .term-accent { color: #7aff8f; }
+    .term-dim    { color: #6b7280; }
+
+    .term-search {
+        font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+        font-feature-settings: "liga" 0, "calt" 0;
+    }
+    .term-search #q,
+    .term-search input[type="text"] {
+        font-family: inherit;
+        letter-spacing: 0.02em;
+    }
+    .term-search #q::placeholder,
+    .term-search input[type="text"]::placeholder {
+        color: #4b5563;
+        font-style: normal;
+    }
+    .term-prompt {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #7aff8f;
+        padding: 0 0.6rem 0 0.75rem;
+        user-select: none;
+        flex-shrink: 0;
+        font-weight: 500;
+        line-height: 1;
+    }
 }

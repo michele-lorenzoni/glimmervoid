@@ -1,15 +1,12 @@
 {% extends "simple/base.html" %}
-{% from 'simple/icons.html' import icon_big %}
+{% from 'simple/_search_bar.html' import terminal_search_bar %}
 
 {% block head %}
     {{ super() }}
     <style>
-        .term-font {
-            font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
-            font-feature-settings: "liga" 0, "calt" 0;
-        }
-        .term-accent { color: #7aff8f; }
-        .term-dim    { color: #6b7280; }
+        /* Solo stili specifici della homepage — le primitive condivise
+           (.term-font, .term-search, .term-prompt, .term-dim, .term-accent)
+           vivono in input.css. */
 
         @keyframes term-blink {
             0%, 55%  { opacity: 1; }
@@ -57,27 +54,6 @@
             color: #7aff8f;
         }
 
-        /* Search bar: terminal-style */
-        .term-search {
-            font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
-        }
-        .term-search #q {
-            font-family: inherit;
-            letter-spacing: 0.02em;
-        }
-        .term-search #q::placeholder {
-            color: #4b5563;
-            font-style: normal;
-        }
-        .term-prompt {
-            color: #7aff8f;
-            padding: 0 0.6rem 0 0.75rem;
-            align-self: center;
-            user-select: none;
-        }
-
-        /* Responsive: restringi il padding globale del body solo sulla homepage
-           e riduci margini verticali su schermi piccoli. */
         @media (max-width: 640px) {
             body.index_endpoint { padding: 1rem; }
             .term-caret-el { width: 0.45ch; }
@@ -109,49 +85,7 @@
     </div>
 
     <div class="flex flex-col w-full max-w-xl px-2 sm:px-0">
-
-        <div class="term-search flex items-stretch bg-cust-element border border-cust-border rounded-[2px]">
-            <span class="term-prompt">&gt;</span>
-            <form class="flex grow"
-                  id="search"
-                  method="{{ method or 'POST' }}"
-                  action="{{ url_for('search') }}"
-                  role="search">
-                <input class="w-full outline-none bg-transparent p-2"
-                       id="q"
-                       name="q"
-                       type="text"
-                       placeholder="search..."
-                       autocomplete="off"
-                       autocapitalize="none"
-                       spellcheck="false"
-                       autocorrect="off"
-                       dir="auto"
-                       value="{{ q or '' }}" />
-                <button aria-label="search"
-                        class="send_search transition-all duration-150 ease-in-out hover:bg-[#7aff8f]/20 p-2"
-                        type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="22"
-                         height="22"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="#7aff8f"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round">
-                        <path d="m21 21-4.34-4.34" />
-                        <circle cx="11" cy="11" r="8" />
-                    </svg>
-                </button>
-                {% for category in selected_categories %}<input type="hidden" name="category_{{ category }}" value="1" />{% endfor %}
-                <input type="hidden" name="language" value="{{ current_language }}" />
-                <input type="hidden" name="time_range" value="{{ time_range }}" />
-                <input type="hidden" name="safesearch" value="{{ safesearch }}" />
-                <input type="hidden" name="theme" value="{{ theme }}" />
-                {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" />{% endif %}
-            </form>
-        </div>
+        {{ terminal_search_bar(show_clear=False, max_width='max-w-xl') }}
 
         <div class="mt-8 mb-3 sm:mt-10 sm:mb-4 flex items-center gap-3 text-[11px] sm:text-xs">
             <span class="term-accent">//</span>

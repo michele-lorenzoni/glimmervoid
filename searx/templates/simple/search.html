@@ -1,60 +1,10 @@
-<form id="search"
-      method="{{ method or 'POST' }}"
-      action="{{ url_for("search") }}"
-      role="search"
-      class="term-font flex flex-col w-full max-w-3xl">
-    <div id="search_header" class="w-full">
-        <div id="search_view" class="w-full">
-            <div class="term-search search_box flex items-stretch bg-cust-element border border-cust-border rounded-[2px] w-full">
-                <span class="term-prompt" aria-hidden="true">&gt;</span>
-                <input id="q"
-                       name="q"
-                       type="text"
-                       placeholder="{{ _("Search for...") }}"
-                       tabindex="1"
-                       autocomplete="off"
-                       autocapitalize="none"
-                       spellcheck="false"
-                       autocorrect="off"
-                       dir="auto"
-                       value="{{ q or '' }}"
-                       class="w-full outline-none bg-transparent p-2" />
-                <button id="clear_search"
-                        type="reset"
-                        aria-label="{{ _("clear") }}"
-                        class="transition-all duration-150 text-gray-400 hover:text-[#7aff8f] cursor-pointer p-2">
-                    {{ icon_big("close") }}
-                </button>
-                <button id="send_search"
-                        type="submit"
-                        {%- if search_on_category_select -%}
-                            name="category_{{ selected_categories[0]|replace(' ', '_') }}"
-                        {%- endif -%}
-                        aria-label="{{ _("search") }}"
-                        class="transition-all duration-150 ease-in-out hover:bg-[#7aff8f]/15 cursor-pointer p-2">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="22"
-                         height="22"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="#7aff8f"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round">
-                        <path d="m21 21-4.34-4.34" />
-                        <circle cx="11" cy="11" r="8" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        {% set display_tooltip = true %}
-        {% include 'simple/categories.html' %}
-    </div>
+{% from 'simple/_search_bar.html' import terminal_search_bar %}
+{% call terminal_search_bar(show_clear=True, max_width='max-w-3xl') %}
+    {% set display_tooltip = true %}
+    {% include 'simple/categories.html' %}
     <div class="search_filters justify-start flex-wrap mt-2 hidden">
         {% include 'simple/filters/languages.html' %}
         {% include 'simple/filters/time_range.html' %}
         {% include 'simple/filters/safesearch.html' %}
     </div>
-    <input type="hidden" name="theme" value="{{ theme }}" />
-    {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" />{% endif %}
-</form>
+{% endcall %}

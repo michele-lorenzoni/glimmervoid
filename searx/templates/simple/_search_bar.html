@@ -1,0 +1,74 @@
+{% from 'simple/icons.html' import icon_big %}
+
+{#
+    Terminal search bar — componente condiviso.
+    Usato sia dalla homepage che dalla pagina dei risultati.
+
+    Parametri:
+        show_clear  — mostra il pulsante 'clear' (tipicamente true in result, false in home)
+        max_width   — classe Tailwind per la larghezza massima del form (es. 'max-w-xl', 'max-w-3xl')
+
+    Blocco {% call %} opzionale: per iniettare categories/filters dentro al form
+    (viene renderizzato subito dopo la barra e prima degli hidden field).
+#}
+{% macro terminal_search_bar(show_clear=False, max_width='max-w-xl') -%}
+<form id="search"
+      method="{{ method or 'POST' }}"
+      action="{{ url_for('search') }}"
+      role="search"
+      class="term-font flex flex-col w-full {{ max_width }}">
+    <div class="term-search search_box flex items-stretch bg-cust-element border border-cust-border rounded-[2px] w-full">
+        <span class="term-prompt" aria-hidden="true">&gt;</span>
+        <input id="q"
+               name="q"
+               type="text"
+               placeholder="{{ _('Search for...') }}"
+               tabindex="1"
+               autocomplete="off"
+               autocapitalize="none"
+               spellcheck="false"
+               autocorrect="off"
+               dir="auto"
+               value="{{ q or '' }}"
+               class="w-full outline-none bg-transparent p-2" />
+        {% if show_clear %}
+            <button id="clear_search"
+                    type="reset"
+                    aria-label="{{ _('clear') }}"
+                    class="transition-all duration-150 text-gray-400 hover:text-[#7aff8f] cursor-pointer p-2">
+                {{ icon_big('close') }}
+            </button>
+        {% endif %}
+        <button id="send_search"
+                type="submit"
+                {%- if search_on_category_select and selected_categories %}
+                    name="category_{{ selected_categories[0]|replace(' ', '_') }}"
+                {% endif -%}
+                aria-label="{{ _('search') }}"
+                class="transition-all duration-150 ease-in-out hover:bg-[#7aff8f]/15 cursor-pointer p-2">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="22" height="22" viewBox="0 0 24 24"
+                 fill="none" stroke="#7aff8f" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+            </svg>
+        </button>
+    </div>
+
+    {% if caller is defined and caller %}
+        {{ caller() }}
+    {% endif %}
+
+    {% for category in selected_categories %}
+        <input type="hidden" name="category_{{ category }}" value="1" />
+    {% endfor %}
+    <input type="hidden" name="language"   value="{{ current_language }}" />
+    <input type="hidden" name="time_range" value="{{ time_range }}" />
+    <input type="hidden" name="safesearch" value="{{ safesearch }}" />
+    <input type="hidden" name="theme"      value="{{ theme }}" />
+    {% if timeout_limit %}
+        <input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" />
+    {% endif %}
+</form>
+{%- endmacro %}
