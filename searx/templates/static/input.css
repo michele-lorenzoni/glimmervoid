@@ -19,13 +19,13 @@
     --color-cust-categorie-border: #ffffff00;
 
     --color-cust-element-favorite: #052e16;
-    --color-cust-border-favorite: #15803d;
+    --color-cust-border-favorite: #166534;  /* green-800 — allineato neon */
     --color-cust-element-highlight: #422006;
-    --color-cust-border-highlight: #a16207;
+    --color-cust-border-highlight: #92400e; /* amber-800 — allineato neon */
     --color-cust-element-unwanted: #450a0a; /* red-950 */
-    --color-cust-border-unwanted: #b91c1c; /* red-700 */
-    --color-cust-element-ignored: #172554; /* blue-950 */
-    --color-cust-border-ignored: #3b82f6; /* blue-500 */
+    --color-cust-border-unwanted: #991b1b;  /* red-800 — allineato neon */
+    --color-cust-element-ignored: #172554;  /* blue-950 */
+    --color-cust-border-ignored: #1e40af;   /* blue-800 — allineato neon */
 
     --color-cust-default: #fafafa; /* neutral-50 */
     --color-cust-url: #d4d4d4; /* neutral-300 */
@@ -73,28 +73,28 @@
         line-height: 1.3;
     }
 
-    /* favorite — verde */
+    /* favorite — verde neon */
     .url-badge-favorite {
-        color: #4ade80;           /* green-400 */
-        border-color: #15803d;    /* green-700, =cust-border-favorite */
+        color: #7aff8f;           /* neon-green */
+        border-color: #166534;    /* green-800 */
     }
 
-    /* highlight — giallo/ambra */
+    /* highlight — ambra neon */
     .url-badge-highlight {
-        color: #fcd34d;           /* amber-300 */
-        border-color: #a16207;    /* amber-700, =cust-border-highlight */
+        color: #fbbf24;           /* neon-amber */
+        border-color: #92400e;    /* amber-800 */
     }
 
-    /* unwanted — rosso */
+    /* unwanted — rosso neon */
     .url-badge-unwanted {
-        color: #fca5a5;           /* red-300 */
-        border-color: #b91c1c;    /* red-700, =cust-border-unwanted */
+        color: #ef4444;           /* neon-red */
+        border-color: #991b1b;    /* red-800 */
     }
 
-    /* ignored — blu */
+    /* ignored — blu neon */
     .url-badge-ignored {
-        color: #93c5fd;           /* blue-300 */
-        border-color: #3b82f6;    /* blue-500, =cust-border-ignored */
+        color: #60a5fa;           /* blue-400 */
+        border-color: #1e40af;    /* blue-800 */
     }
 
     /* ================================================================
@@ -159,6 +159,12 @@
     }
     .term-nav-link.active .bracket,
     .term-nav-link.active:hover .bracket { color: #7aff8f; }
+
+    /* Result corrente durante la keyboard nav (active_article.js)
+       — bordo cyan (interactive) invece del vecchio sky-800. */
+    .term-result-active {
+        border-top-color: #22d3ee !important;
+    }
 
     @media (max-width: 640px) {
         .term-nav-link { padding: 0.3rem 0.35rem; letter-spacing: 0.04em; }

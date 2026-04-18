@@ -1,3 +1,5 @@
+const ACTIVE_CLASS = "term-result-active";
+
 document.querySelectorAll("article a").forEach((link) => {
     link.addEventListener("click", function (e) {
         // Trova il primo <article> genitore del link cliccato
@@ -6,18 +8,18 @@ document.querySelectorAll("article a").forEach((link) => {
         if (articleAttivo) {
             // Rimuovi 'active' da TUTTI gli article
             document.querySelectorAll("article").forEach((article) => {
-                article.classList.remove("border-sky-800");
+                article.classList.remove(ACTIVE_CLASS);
             });
 
             // Aggiungi 'active' solo all'article cliccato
-            articleAttivo.classList.add("border-sky-800");
+            articleAttivo.classList.add(ACTIVE_CLASS);
         }
     });
 });
 
 // --- Keyboard navigation ---------------------------------------------------
 (function () {
-    const ACTIVE = "border-sky-800";
+    const ACTIVE = ACTIVE_CLASS;
     const getArticles = () => Array.from(document.querySelectorAll("#urls article"));
 
     const isTyping = (el) =>

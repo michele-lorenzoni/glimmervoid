@@ -26,8 +26,8 @@
 
     /* Alias per compatibilità — `--pref-accent` = verde primary */
     --pref-accent: var(--neon-green);
-    --pref-warning-border: #a16207;
-    --pref-danger-border: #b91c1c;
+    --pref-warning-border: var(--neon-amber);
+    --pref-danger-border: var(--neon-red);
 
     --pref-radius: 2px;
     --pref-font: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;

@@ -45,13 +45,16 @@ Il tema **non è monocromatico**: ogni colore neon indica una funzione precisa. 
 | `--neon-red` | `#ef4444` | **Danger / error**. Reliability <50%, `rate95` bar, `.danger` td, dialog-error border. |
 
 ### URL badges (results page)
-Colori ereditati da `input.css` `@layer components`:
+Allineati alla palette neon:
 | Badge | Fill | Border |
 |---|---|---|
-| `.url-badge-favorite` (verde) | `#4ade80` | `#15803d` |
-| `.url-badge-highlight` (ambra) | `#fcd34d` | `#a16207` |
-| `.url-badge-unwanted` (rosso) | `#fca5a5` | `#b91c1c` |
-| `.url-badge-ignored` (blu) | `#93c5fd` | `#3b82f6` |
+| `.url-badge-favorite` (verde) | `#7aff8f` (neon-green) | `#166534` (green-800) |
+| `.url-badge-highlight` (ambra) | `#fbbf24` (neon-amber) | `#92400e` (amber-800) |
+| `.url-badge-unwanted` (rosso) | `#ef4444` (neon-red) | `#991b1b` (red-800) |
+| `.url-badge-ignored` (blu) | `#60a5fa` (blue-400) | `#1e40af` (blue-800) |
+
+### Result attivo (keyboard nav)
+`.term-result-active` applicata da `active_article.js` sull'`<article>` correntemente selezionato con `↑/↓/j/k`: border-top cyan `#22d3ee` (stesso hover-color della palette, coerente col concetto di "interactive focus"). Sostituisce il vecchio `border-sky-800`.
 
 ---
 
