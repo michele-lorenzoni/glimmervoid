@@ -48,6 +48,12 @@
     --color-cust-url: #d4d4d4;
     --color-cust-title: #fafafa;
     --color-cust-description: #e5e5e5;
+    --color-neon-green: #7aff8f;
+    --color-neon-cyan: #22d3ee;
+    --color-neon-pink: #f472b6;
+    --color-neon-amber: #fbbf24;
+    --color-neon-red: #ef4444;
+    --color-neon-blue: #60a5fa;
   }
 }
 @layer base {
@@ -568,10 +574,10 @@
       }
     }
   }
-  .hover\:border-\[\#7aff8f\] {
+  .hover\:border-\[\var(--color-neon-green)\] {
     &:hover {
       @media (hover: hover) {
-        border-color: #7aff8f;
+        border-color: var(--color-neon-green);
       }
     }
   }
@@ -582,17 +588,17 @@
       }
     }
   }
-  .hover\:bg-\[\#7aff8f\]\/15 {
+  .hover\:bg-\[\var(--color-neon-green)\]\/15 {
     &:hover {
       @media (hover: hover) {
-        background-color: color-mix(in oklab, #7aff8f 15%, transparent);
+        background-color: color-mix(in oklab, var(--color-neon-green) 15%, transparent);
       }
     }
   }
-  .hover\:bg-\[\#7aff8f\]\/20 {
+  .hover\:bg-\[\var(--color-neon-green)\]\/20 {
     &:hover {
       @media (hover: hover) {
-        background-color: color-mix(in oklab, #7aff8f 20%, transparent);
+        background-color: color-mix(in oklab, var(--color-neon-green) 20%, transparent);
       }
     }
   }
@@ -603,10 +609,10 @@
       }
     }
   }
-  .hover\:text-\[\#7aff8f\] {
+  .hover\:text-\[\var(--color-neon-green)\] {
     &:hover {
       @media (hover: hover) {
-        color: #7aff8f;
+        color: var(--color-neon-green);
       }
     }
   }
@@ -705,19 +711,19 @@
     line-height: 1.3;
   }
   .url-badge-favorite {
-    color: #7aff8f;
+    color: var(--color-neon-green);
     border-color: #166534;
   }
   .url-badge-highlight {
-    color: #fbbf24;
+    color: var(--color-neon-amber);
     border-color: #92400e;
   }
   .url-badge-unwanted {
-    color: #ef4444;
+    color: var(--color-neon-red);
     border-color: #991b1b;
   }
   .url-badge-ignored {
-    color: #60a5fa;
+    color: var(--color-neon-blue);
     border-color: #1e40af;
   }
   .term-font {
@@ -725,7 +731,7 @@
     font-feature-settings: "liga" 0, "calt" 0;
   }
   .term-accent {
-    color: #7aff8f;
+    color: var(--color-neon-green);
   }
   .term-dim {
     color: #6b7280;
@@ -746,7 +752,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #7aff8f;
+    color: var(--color-neon-green);
     padding: 0 0.6rem 0 0.75rem;
     user-select: none;
     flex-shrink: 0;
@@ -762,26 +768,26 @@
     white-space: nowrap;
   }
   .term-nav-link:hover {
-    color: #22d3ee;
+    color: var(--color-neon-cyan);
   }
   .term-nav-link .bracket {
     color: #374151;
     transition: color 0.15s ease;
   }
   .term-nav-link:hover .bracket {
-    color: #22d3ee;
+    color: var(--color-neon-cyan);
   }
   .term-nav-link.active,
   .term-nav-link.active:hover {
-    color: #7aff8f;
+    color: var(--color-neon-green);
     cursor: default;
   }
   .term-nav-link.active .bracket,
   .term-nav-link.active:hover .bracket {
-    color: #7aff8f;
+    color: var(--color-neon-green);
   }
   .term-result-active {
-    border-top-color: #22d3ee !important;
+    border-top-color: var(--color-neon-cyan) !important;
   }
   @media (max-width: 640px) {
     .term-nav-link {
@@ -966,12 +972,12 @@ input[type="radio"]:hover {
 input[type="checkbox"]:focus-visible,
 input[type="radio"]:focus-visible {
     outline: none !important;
-    border-color: #7aff8f !important;
-    box-shadow: 0 0 0 1px #7aff8f !important;
+    border-color: var(--color-neon-green) !important;
+    box-shadow: 0 0 0 1px var(--color-neon-green) !important;
 }
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-    border-color: #7aff8f !important;
+    border-color: var(--color-neon-green) !important;
 }
 input[type="checkbox"]:checked {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237aff8f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
@@ -986,7 +992,7 @@ input[type="radio"]:checked::after {
     left: 3px;
     width: 8px;
     height: 8px;
-    background: #7aff8f;
+    background: var(--color-neon-green);
     border-radius: 2px;
 }
 input[type="checkbox"]:disabled,
@@ -1004,7 +1010,7 @@ input[type="radio"]:disabled {
 
 /* ============================================================
    Select — chevron custom in stile Lucide (stessa famiglia della
-   lente della searchbar: stroke #7aff8f, width 2, linecap round).
+   lente della searchbar: stroke var(--color-neon-green), width 2, linecap round).
    Padding a destra equivalente a quello della lente (0.5rem).
    ============================================================ */
 select:not([multiple]) {

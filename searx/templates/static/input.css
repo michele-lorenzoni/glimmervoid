@@ -31,6 +31,17 @@
     --color-cust-url: #d4d4d4; /* neutral-300 */
     --color-cust-title: #fafafa; /* neutral-50 */
     --color-cust-description: #e5e5e5; /* neutral-200 */
+
+    /* Palette neon — funzionale, differenziata per uso (vedi STYLE_GUIDE.md).
+       Essendo in @theme, queste vars diventano anche utility Tailwind
+       (bg-neon-green, text-neon-cyan, ecc.). Per cambiare palette
+       bastera' overrideare questi valori in html[data-palette="..."]. */
+    --color-neon-green: #7aff8f; /* stato attivo / checked / success */
+    --color-neon-cyan:  #22d3ee; /* hover interattivo */
+    --color-neon-pink:  #f472b6; /* decorazioni: // prefix, [ legend ] */
+    --color-neon-amber: #fbbf24; /* warning */
+    --color-neon-red:   #ef4444; /* danger / error */
+    --color-neon-blue:  #60a5fa; /* info / badge ignored */
 }
 
 @layer base {
@@ -75,25 +86,25 @@
 
     /* favorite — verde neon */
     .url-badge-favorite {
-        color: #7aff8f;           /* neon-green */
+        color: var(--color-neon-green);           /* neon-green */
         border-color: #166534;    /* green-800 */
     }
 
     /* highlight — ambra neon */
     .url-badge-highlight {
-        color: #fbbf24;           /* neon-amber */
+        color: var(--color-neon-amber);           /* neon-amber */
         border-color: #92400e;    /* amber-800 */
     }
 
     /* unwanted — rosso neon */
     .url-badge-unwanted {
-        color: #ef4444;           /* neon-red */
+        color: var(--color-neon-red);           /* neon-red */
         border-color: #991b1b;    /* red-800 */
     }
 
     /* ignored — blu neon */
     .url-badge-ignored {
-        color: #60a5fa;           /* blue-400 */
+        color: var(--color-neon-blue);           /* blue-400 */
         border-color: #1e40af;    /* blue-800 */
     }
 
@@ -106,7 +117,7 @@
         font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
         font-feature-settings: "liga" 0, "calt" 0;
     }
-    .term-accent { color: #7aff8f; }
+    .term-accent { color: var(--color-neon-green); }
     .term-dim    { color: #6b7280; }
 
     .term-search {
@@ -127,7 +138,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        color: #7aff8f;
+        color: var(--color-neon-green);
         padding: 0 0.6rem 0 0.75rem;
         user-select: none;
         flex-shrink: 0;
@@ -144,26 +155,26 @@
         transition: color 0.15s ease;
         white-space: nowrap;
     }
-    .term-nav-link:hover { color: #22d3ee; }
+    .term-nav-link:hover { color: var(--color-neon-cyan); }
     .term-nav-link .bracket {
         color: #374151;
         transition: color 0.15s ease;
     }
-    .term-nav-link:hover .bracket { color: #22d3ee; }
+    .term-nav-link:hover .bracket { color: var(--color-neon-cyan); }
 
     /* Pagina corrente: colore accent + brackets accent, non-interattivo. */
     .term-nav-link.active,
     .term-nav-link.active:hover {
-        color: #7aff8f;
+        color: var(--color-neon-green);
         cursor: default;
     }
     .term-nav-link.active .bracket,
-    .term-nav-link.active:hover .bracket { color: #7aff8f; }
+    .term-nav-link.active:hover .bracket { color: var(--color-neon-green); }
 
     /* Result corrente durante la keyboard nav (active_article.js)
        — bordo cyan (interactive) invece del vecchio sky-800. */
     .term-result-active {
-        border-top-color: #22d3ee !important;
+        border-top-color: var(--color-neon-cyan) !important;
     }
 
     @media (max-width: 640px) {
@@ -203,12 +214,12 @@ input[type="radio"]:hover {
 input[type="checkbox"]:focus-visible,
 input[type="radio"]:focus-visible {
     outline: none !important;
-    border-color: #7aff8f !important;
-    box-shadow: 0 0 0 1px #7aff8f !important;
+    border-color: var(--color-neon-green) !important;
+    box-shadow: 0 0 0 1px var(--color-neon-green) !important;
 }
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-    border-color: #7aff8f !important;
+    border-color: var(--color-neon-green) !important;
 }
 input[type="checkbox"]:checked {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237aff8f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
@@ -223,7 +234,7 @@ input[type="radio"]:checked::after {
     left: 3px;
     width: 8px;
     height: 8px;
-    background: #7aff8f;
+    background: var(--color-neon-green);
     border-radius: 2px;
 }
 input[type="checkbox"]:disabled,
@@ -241,7 +252,7 @@ input[type="radio"]:disabled {
 
 /* ============================================================
    Select — chevron custom in stile Lucide (stessa famiglia della
-   lente della searchbar: stroke #7aff8f, width 2, linecap round).
+   lente della searchbar: stroke var(--color-neon-green), width 2, linecap round).
    ============================================================ */
 select:not([multiple]) {
     appearance: none !important;

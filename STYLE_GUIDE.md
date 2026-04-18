@@ -36,13 +36,18 @@ Tema **`terminal`**: background scuro, font monospace, palette neon differenziat
 ### Palette neon funzionale
 Il tema **non è monocromatico**: ogni colore neon indica una funzione precisa. Non scambiarli.
 
-| Token | Hex | Funzione |
+Sorgente di verità: `@theme` in `input.css` → `:root` in `output.css`. Tutti i riferimenti nel CSS usano `var(...)`, mai gli hex. Per cambiare un colore si modifica in un solo posto (la definizione nel `@theme`); per creare una palette alternativa si overrideano queste vars in un selettore `html[data-palette="…"]`.
+
+| Token (globale) | Hex default | Funzione |
 |---|---|---|
-| `--neon-green` | `#7aff8f` | **Stato attivo / current / checked / success**. Tab selezionato, pagina corrente (`.term-nav-link.active`), checkbox checked, prompt `>`, search lens, chevron dropdown, caret homepage. |
-| `--neon-cyan` | `#22d3ee` | **Hover interattivo**. Link hover (`.term-nav-link:hover`), tab hover, bottoni hover (border + bg tint), focus input/select, chip hover, category hover. |
-| `--neon-pink` | `#f472b6` | **Decorazioni: heading / section label**. Prefissi `//` di h1/h4/pref-group, brackets `[ LEGEND ]` dei `<legend>`, colore del testo dei legend. |
-| `--neon-amber` | `#fbbf24` | **Warning**. Reliability 50-80%, `rate80` bar, `.warning` td. |
-| `--neon-red` | `#ef4444` | **Danger / error**. Reliability <50%, `rate95` bar, `.danger` td, dialog-error border. |
+| `--color-neon-green` | `#7aff8f` | **Stato attivo / current / checked / success**. Tab selezionato, pagina corrente (`.term-nav-link.active`), checkbox checked, prompt `>`, search lens, chevron dropdown, caret homepage. |
+| `--color-neon-cyan` | `#22d3ee` | **Hover interattivo**. Link hover (`.term-nav-link:hover`), tab hover, bottoni hover (border + bg tint), focus input/select, chip hover, category hover, keyboard-nav active result. |
+| `--color-neon-pink` | `#f472b6` | **Decorazioni: heading / section label**. Prefissi `//` di h1/h4/pref-group, brackets `[ LEGEND ]` dei `<legend>`, colore del testo dei legend. |
+| `--color-neon-amber` | `#fbbf24` | **Warning**. Reliability 50-80%, `rate80` bar, `.warning` td, `dialog-warning` border. |
+| `--color-neon-red` | `#ef4444` | **Danger / error**. Reliability <50%, `rate95` bar, `.danger` td, `dialog-error` border. |
+| `--color-neon-blue` | `#60a5fa` | **Info / neutrale**. Badge `ignored` URL. |
+
+In `preferences.css` esistono anche alias locali `--neon-*` → `var(--color-neon-*)` per continuità storica; usa indifferentemente i due nomi, il risultato è identico.
 
 ### URL badges (results page)
 Allineati alla palette neon:

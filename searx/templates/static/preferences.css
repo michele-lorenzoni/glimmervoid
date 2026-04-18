@@ -12,17 +12,15 @@
     --pref-text-muted: #d4d4d4;     /* neutral-300 */
     --pref-text-dim: #6b7280;       /* term-dim / gray-500 */
 
-    /* Palette neon, differenziata per FUNZIONE:
-         green   → stato attivo / checked / success / primary accent
-         cyan    → hover interattivo (link, tabs, bottoni, focus input)
-         pink    → decorazioni: heading prefix // e legend brackets [ ]
-         amber   → warning
-         red     → danger / error */
-    --neon-green: #7aff8f;
-    --neon-cyan:  #22d3ee;
-    --neon-pink:  #f472b6;
-    --neon-amber: #fbbf24;
-    --neon-red:   #ef4444;
+    /* Palette neon — alias locali che puntano alle vars globali
+       definite nel @theme Tailwind (output.css :root). Cambiare
+       palette (es. via data-palette="...") aggiorna solo le
+       --color-neon-* e tutto il resto cascada. */
+    --neon-green: var(--color-neon-green);
+    --neon-cyan:  var(--color-neon-cyan);
+    --neon-pink:  var(--color-neon-pink);
+    --neon-amber: var(--color-neon-amber);
+    --neon-red:   var(--color-neon-red);
 
     /* Alias per compatibilità — `--pref-accent` = verde primary */
     --pref-accent: var(--neon-green);
