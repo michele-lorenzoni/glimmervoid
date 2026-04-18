@@ -1,6 +1,6 @@
 <div class="scrollx">{{- '' -}}
     <table class="striped answerers-table">{{- '' -}}
-        <tr>{{- '' -}}
+        <tr class="header-row">{{- '' -}}
             <th>{{ _('Allow') }}</th>{{- '' -}}
             <th>{{ _('Keywords (first word in query)') }}</th>{{- '' -}}
             <th>{{ _('Name') }}</th>{{- '' -}}
@@ -16,11 +16,11 @@
 
         {%- for info in answer_storage -%}
         <tr>{{- '' -}}
-            <td class="checkbox-col"></td>{{- '' -}}
-            <td>{{ info.keywords|join(', ') }}</td>{{- '' -}}
-            <td>{{ info.name }}</td>{{- '' -}}
-            <td>{{ info.description }}</td>{{- '' -}}
-            <td>{{ info.examples|join(', ') }}</td>{{- '' -}}
+            <td class="checkbox-col" data-label="{{ _('Allow') }}"></td>{{- '' -}}
+            <td data-label="{{ _('Keywords') }}">{{ info.keywords|join(', ') }}</td>{{- '' -}}
+            <td data-label="{{ _('Name') }}">{{ info.name }}</td>{{- '' -}}
+            <td data-label="{{ _('Description') }}">{{ info.description }}</td>{{- '' -}}
+            <td data-label="{{ _('Examples') }}">{{ info.examples|join(', ') }}</td>{{- '' -}}
         </tr>
         {%- endfor -%}
 
@@ -33,12 +33,12 @@
         {%- for plugin in plugins_storage -%}
         {%- if plugin.preference_section == 'query' -%}
         <tr>{{- '' -}}
-            <td class="checkbox-col">{{- checkbox_onoff_reversed('plugin_' + plugin.id, plugin.id not in
+            <td class="checkbox-col" data-label="{{ _('Allow') }}">{{- checkbox_onoff_reversed('plugin_' + plugin.id, plugin.id not in
                 allowed_plugins, 'plugin_labelledby' + plugin.id) -}}</td>{{- '' -}}
-            <td>{{ plugin.keywords|join(', ') }}</td>{{- '' -}}
-            <td>{{ _(plugin.name) }}</td>{{- '' -}}
-            <td id="{{ 'plugin_labelledby' + plugin.id }}">{{ _(plugin.description) }}</td>{{- '' -}}
-            <td>{{ plugin.examples|join(', ') }}</td>{{- '' -}}
+            <td data-label="{{ _('Keywords') }}">{{ plugin.keywords|join(', ') }}</td>{{- '' -}}
+            <td data-label="{{ _('Name') }}">{{ _(plugin.name) }}</td>{{- '' -}}
+            <td data-label="{{ _('Description') }}" id="{{ 'plugin_labelledby' + plugin.id }}">{{ _(plugin.description) }}</td>{{- '' -}}
+            <td data-label="{{ _('Examples') }}">{{ plugin.examples|join(', ') }}</td>{{- '' -}}
         </tr>
         {%- endif -%}
         {%- endfor -%}

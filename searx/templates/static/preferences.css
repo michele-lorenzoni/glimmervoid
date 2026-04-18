@@ -534,6 +534,66 @@ tr.pref-group th::before {
     color: var(--pref-border);
 }
 
+/* ------- Answerers table: layout a card su mobile -------
+   Su desktop resta una tabella classica. Sotto 640px si trasforma in
+   blocchi verticali con label/valore — 5 colonne sono troppe in meno
+   di 640px, comprimerle rende description/examples illeggibili. */
+@media (max-width: 640px) {
+    .answerers-table { display: block; }
+    .answerers-table .header-row { display: none; }
+
+    .answerers-table tr:not(.pref-group):not(.header-row) {
+        display: block;
+        border: 1px solid var(--pref-border);
+        border-radius: var(--pref-radius);
+        padding: 0.55rem 0.75rem;
+        margin: 0.5rem 0;
+        background: transparent;
+    }
+    .answerers-table tr:not(.pref-group):not(.header-row):hover {
+        background: rgba(122, 255, 143, 0.04);
+    }
+
+    .answerers-table tr.pref-group {
+        display: block;
+    }
+    .answerers-table tr.pref-group th {
+        display: block;
+        padding: 0.85rem 0 0.5rem 0;
+        border-top: 1px dashed var(--pref-border);
+        border-bottom: none;
+    }
+
+    .answerers-table td {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.25rem 0;
+        border: none;
+        font-size: 0.78rem;
+        line-height: 1.45;
+    }
+    .answerers-table td::before {
+        content: attr(data-label);
+        color: var(--pref-text-dim);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-size: 0.62rem;
+        min-width: 5.5rem;
+        flex-shrink: 0;
+        padding-top: 0.22rem;
+    }
+    .answerers-table td.checkbox-col {
+        align-items: center;
+        padding-bottom: 0.35rem;
+    }
+    .answerers-table td:empty::before {
+        color: var(--pref-border);
+    }
+    .answerers-table td:empty {
+        display: none;
+    }
+}
+
 /* ------- Category / engine chips ------- */
 .category {
     display: inline-flex;
