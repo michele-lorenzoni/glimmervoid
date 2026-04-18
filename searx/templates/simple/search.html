@@ -1,4 +1,4 @@
-{% from 'simple/_search_bar.html' import terminal_search_bar %}
+{% from 'simple/_search_bar.html' import terminal_search_bar with context %}
 {# include_default_hiddens=False: sui risultati, language/time_range/safesearch
    vengono emessi come <select> dai filter template — inserirli anche come
    hidden duplicherebbe i name e searxng rigetta con 'Invalid settings'. #}
