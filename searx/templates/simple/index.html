@@ -4,53 +4,159 @@
 {% block head %}
     {{ super() }}
     <style>
-        .mini-tile .mini-icon {
-            filter: grayscale(1);
-            opacity: 0.45;
-            transition: filter 0.2s ease, opacity 0.2s ease;
+        .term-font {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+            font-feature-settings: "liga" 0, "calt" 0;
         }
-        .mini-tile:hover .mini-icon {
+        .term-accent { color: #7aff8f; }
+        .term-dim    { color: #6b7280; }
+
+        @keyframes term-blink {
+            0%, 55%  { opacity: 1; }
+            56%, 100%{ opacity: 0; }
+        }
+        .term-caret::after {
+            content: "";
+            display: inline-block;
+            width: 0.55ch;
+            height: 1em;
+            margin-left: 0.3ch;
+            background: #7aff8f;
+            vertical-align: -0.12em;
+            animation: term-blink 1.1s steps(1) infinite;
+        }
+
+        .term-title {
+            font-size: clamp(1.5rem, 1.5vw + 1rem, 2.25rem);
+            font-weight: 500;
+            letter-spacing: 0.06em;
+        }
+
+        .term-rule {
+            flex: 1;
+            border-top: 1px dashed #374151;
+            height: 0;
+        }
+
+        .term-tile .term-icon {
+            filter: grayscale(1);
+            opacity: 0.5;
+            transition: filter 0.15s ease, opacity 0.15s ease;
+        }
+        .term-tile:hover .term-icon {
             filter: grayscale(0);
             opacity: 1;
         }
-        .mini-title {
-            font-weight: 200;
-            letter-spacing: 0.38em;
-            text-transform: lowercase;
-            font-size: clamp(1.75rem, 1.5vw + 1.25rem, 2.75rem);
+        .term-tile .term-label {
+            transition: color 0.15s ease;
+        }
+        .term-tile:hover .term-label {
+            color: #7aff8f;
+        }
+
+        /* Search bar: terminal-style */
+        .term-search {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+        }
+        .term-search #q {
+            font-family: inherit;
+            letter-spacing: 0.02em;
+        }
+        .term-search #q::placeholder {
+            color: #4b5563;
+            font-style: normal;
+        }
+        .term-prompt {
+            color: #7aff8f;
+            padding: 0 0.6rem 0 0.75rem;
+            align-self: center;
+            user-select: none;
         }
     </style>
 {% endblock %}
 
 {% set shortcuts = [
-    ('github',   'https://github.com/'),
-    ('orcid',    'https://orcid.org/'),
-    ('claude',   'https://claude.ai/'),
-    ('codeberg', 'https://codeberg.org/'),
-    ('gitlab',   'https://about.gitlab.com/'),
-    ('lpi',      'https://www.lpi.org/'),
-    ('fish',     'https://fishshell.com/'),
-    ('elsevier', 'https://www.elsevier.com/'),
-    ('vite',     'https://vite.dev/')
+    ('github',   'https://github.com/',          'github'),
+    ('orcid',    'https://orcid.org/',           'orcid'),
+    ('claude',   'https://claude.ai/',           'claude'),
+    ('codeberg', 'https://codeberg.org/',        'codeberg'),
+    ('gitlab',   'https://about.gitlab.com/',    'gitlab'),
+    ('lpi',      'https://www.lpi.org/',         'lpi'),
+    ('fish',     'https://fishshell.com/',       'fish'),
+    ('elsevier', 'https://www.elsevier.com/',    'elsevier'),
+    ('vite',     'https://vite.dev/',            'vite')
 ] %}
 
 {% block content %}
-<div class="index flex flex-col grow justify-center items-center content-center">
-    <div class="mt-12 mb-10">
-        <h1 class="mini-title text-cust-default">glimmervoid</h1>
+<div class="index term-font flex flex-col grow justify-center items-center content-center">
+
+    <div class="mt-10 mb-10 flex flex-col items-center">
+        <h1 class="term-title term-caret text-cust-default">
+            <span class="term-dim">[&nbsp;</span><span>glimmervoid</span><span class="term-dim">&nbsp;]</span>
+        </h1>
+        <div class="mt-3 text-xs term-dim tracking-widest">// privacy-respecting metasearch</div>
     </div>
 
     <div class="flex flex-col w-xs lg:w-xl">
-        {% include 'simple/simple_search.html' %}
 
-        <div class="mt-10 flex flex-row flex-wrap w-full justify-center gap-2">
-            {% for key, url in shortcuts %}
-                <a class="mini-tile cursor-default flex-none" href="{{ url }}">
-                    <div class="cursor-pointer w-11 h-11 p-2 flex items-center justify-center bg-cust-element border border-cust-border rounded-[2px] transition-all duration-150 ease-out hover:border-neutral-400 hover:-translate-y-[2px]">
-                        <div class="w-6 h-6 mini-icon">
+        <div class="term-search flex items-stretch bg-cust-element border border-cust-border rounded-[2px]">
+            <span class="term-prompt">&gt;</span>
+            <form class="flex grow"
+                  id="search"
+                  method="{{ method or 'POST' }}"
+                  action="{{ url_for('search') }}"
+                  role="search">
+                <input class="w-full outline-none bg-transparent p-2"
+                       id="q"
+                       name="q"
+                       type="text"
+                       placeholder="search..."
+                       autocomplete="off"
+                       autocapitalize="none"
+                       spellcheck="false"
+                       autocorrect="off"
+                       dir="auto"
+                       value="{{ q or '' }}" />
+                <button aria-label="search"
+                        class="send_search transition-all duration-150 ease-in-out hover:bg-[#7aff8f]/20 p-2"
+                        type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="22"
+                         height="22"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="#7aff8f"
+                         stroke-width="2"
+                         stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="m21 21-4.34-4.34" />
+                        <circle cx="11" cy="11" r="8" />
+                    </svg>
+                </button>
+                {% for category in selected_categories %}<input type="hidden" name="category_{{ category }}" value="1" />{% endfor %}
+                <input type="hidden" name="language" value="{{ current_language }}" />
+                <input type="hidden" name="time_range" value="{{ time_range }}" />
+                <input type="hidden" name="safesearch" value="{{ safesearch }}" />
+                <input type="hidden" name="theme" value="{{ theme }}" />
+                {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}" />{% endif %}
+            </form>
+        </div>
+
+        <div class="mt-10 mb-4 flex items-center gap-3 text-xs">
+            <span class="term-accent">//</span>
+            <span class="term-dim tracking-widest uppercase">shortcuts</span>
+            <span class="term-rule"></span>
+        </div>
+
+        <div class="flex flex-row flex-wrap w-full justify-center gap-x-4 gap-y-5">
+            {% for key, url, label in shortcuts %}
+                <a class="term-tile cursor-default flex-none flex flex-col items-center" href="{{ url }}">
+                    <div class="cursor-pointer w-12 h-12 p-2.5 flex items-center justify-center bg-cust-element border border-cust-border rounded-[2px] transition-all duration-150 ease-out hover:border-[#7aff8f]">
+                        <div class="w-7 h-7 term-icon">
                             {% include 'simple/_icons/' ~ key ~ '.html' %}
                         </div>
                     </div>
+                    <span class="term-label term-dim text-[10px] mt-1.5 tracking-widest uppercase">{{ label }}</span>
                 </a>
             {% endfor %}
         </div>
