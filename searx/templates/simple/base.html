@@ -61,6 +61,7 @@
                     {%- endif -%}
                 {%- endblock -%}
                 <a class="term-nav-link" href="#donate"><span class="bracket">[</span>&nbsp;donate&nbsp;<span class="bracket">]</span></a>
+                <a class="term-nav-link" href="{{ url_for('index') }}" aria-label="home"><span class="bracket">[</span>&nbsp;home&nbsp;<span class="bracket">]</span></a>
             </nav>
             {% block header %}{% endblock %}
             {% block content %}{% endblock %}
