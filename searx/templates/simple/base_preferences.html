@@ -6,9 +6,9 @@
         <meta charset="UTF-8">
         <meta name="endpoint" content="{{ endpoint }}">
         <meta name="description"
-              content="SearXNG — a privacy-respecting, open metasearch engine">
+              content="Glimmervoid — a privacy-respecting, open metasearch engine">
         <meta name="keywords"
-              content="SearXNG, search, search engine, metasearch, meta search">
+              content="Glimmervoid, search, search engine, metasearch, meta search">
         <meta name="generator" content="searxng/{{ searx_version }}">
         <meta name="referrer" content="no-referrer">
         <meta name="robots" content="noarchive">
@@ -16,9 +16,6 @@
         <title>
             {% block title %}{% endblock %}
         {{ instance_name }}</title>
-        <script type="module"
-                src="{{ url_for('static', filename='sxng-core.min.js') }}"
-                client_settings="{{ client_settings }}"></script>
         {% block meta %}{% endblock %}
         {% if get_setting('server.limiter') or get_setting('server.public_instance') %}
             <link rel="stylesheet"
@@ -39,15 +36,12 @@
               type="image/svg+xml">
         <link rel="apple-touch-icon"
               href="{{ url_for('static', filename='img/favicon.png') }}">
-        <!--<link href="./../static/output.css" rel="stylesheet">-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=optional" rel="stylesheet">
+        <link href="./../static/output.css" rel="stylesheet">
         <link href="{{ url_for('static', filename='preferences.css') }}" rel="stylesheet">
     </head>
-    <body class="{{ endpoint }}_endpoint flex flex-col bg-cust-body text-gray-50 font-ubuntu_r m-24">
+    <body class="{{ endpoint }}_endpoint bg-cust-body text-gray-50 p-8 font-default font-normal text-cust-default">
         <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"
-              class="{{ body_class }} flex flex-col">
+              class="{{ body_class }}">
             {% if errors %}
                 <div class="dialog-error" role="alert">
                     <a href="#" class="close" aria-label="close" title="close">×</a>
@@ -56,6 +50,14 @@
                     </ul>
                 </div>
             {% endif %}
+            <nav id="links_on_top" class="term-font flex flex-row-reverse items-center gap-1 mb-8 text-[11px] tracking-widest">
+                {%- block linkto_preferences -%}
+                    <a href="{{ url_for("preferences") }}"
+                       class="term-nav-link link_on_top_preferences"><span class="bracket">[</span>&nbsp;prefs&nbsp;<span class="bracket">]</span></a>
+                {%- endblock -%}
+                <a class="term-nav-link" href="#donate"><span class="bracket">[</span>&nbsp;donate&nbsp;<span class="bracket">]</span></a>
+                <a class="term-nav-link" href="{{ url_for('index') }}" aria-label="home"><span class="bracket">[</span>&nbsp;home&nbsp;<span class="bracket">]</span></a>
+            </nav>
             {% block header %}{% endblock %}
             {% block content %}{% endblock %}
         </main>

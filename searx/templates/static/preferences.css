@@ -1,501 +1,519 @@
-/* Preferences stylesheet — dark theme coerente con output.css */
+/* Preferences stylesheet — terminal theme coerente con home e results.
+   Primitive condivise (.term-font, .term-accent, .term-dim, .term-nav-link,
+   bg-cust-*) vivono in input.css → output.css. Questo file ridefinisce solo
+   ciò che riguarda la pagina preferenze (form, fieldset, tabelle, tabs). */
 
 :root {
-  --pref-body: #030712;
-  --pref-surface: #111827;
-  --pref-surface-2: #1f2937;
-  --pref-border: #374151;
-  --pref-border-strong: #4b5563;
-  --pref-text: #fafafa;
-  --pref-text-muted: #d4d4d4;
-  --pref-text-dim: #9ca3af;
-  --pref-accent: #15803d;
-  --pref-accent-hover: #16a34a;
-  --pref-warning-bg: #422006;
-  --pref-warning-border: #a16207;
-  --pref-danger-bg: #450a0a;
-  --pref-danger-border: #b91c1c;
-  --pref-success-bg: #052e16;
-  --pref-success-border: #15803d;
-  --pref-radius: 2px;
-  --pref-radius-sm: 2px;
-  --pref-font: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
+    --pref-body: #030712;           /* cust-body / gray-950 */
+    --pref-border: #374151;         /* cust-border / gray-700 */
+    --pref-border-strong: #4b5563;  /* gray-600 */
+    --pref-text: #fafafa;           /* cust-default / neutral-50 */
+    --pref-text-muted: #d4d4d4;     /* neutral-300 */
+    --pref-text-dim: #6b7280;       /* term-dim / gray-500 */
+    --pref-accent: #7aff8f;         /* term-accent */
+    --pref-warning-border: #a16207;
+    --pref-danger-border: #b91c1c;
+    --pref-radius: 2px;
+    --pref-font: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-html,
-body {
-  background: var(--pref-body);
-  color: var(--pref-text);
-  font-family: var(--pref-font);
-  font-size: 15px;
-  line-height: 1.5;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
+/* Scope globale della pagina preferenze: font mono + tipografia terminale.
+   Scoping su body.preferences_endpoint per non toccare altre pagine. */
 body.preferences_endpoint {
-  margin: 0;
-  max-width: none;
-  width: 100%;
-  padding: 2rem 2.5rem;
+    font-family: var(--pref-font);
+    font-feature-settings: "liga" 0, "calt" 0;
+    font-size: 14px;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
 }
 
-body.preferences_endpoint main {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-  width: 100%;
-  max-width: none;
+body.preferences_endpoint a {
+    color: var(--pref-text-muted);
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+body.preferences_endpoint a:hover {
+    color: var(--pref-accent);
+    border-bottom-color: var(--pref-accent);
 }
 
-h1 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: var(--pref-text);
-  border-bottom: 1px solid var(--pref-border);
-  padding-bottom: 0.75rem;
+/* H1 principale: `// preferences` in stile terminale */
+body.preferences_endpoint h1 {
+    font-family: var(--pref-font);
+    font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin: 0 0 1.25rem 0;
+    padding: 0 0 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px dashed var(--pref-border);
+    color: var(--pref-text);
+    text-transform: lowercase;
+}
+body.preferences_endpoint h1::before {
+    content: '//';
+    color: var(--pref-accent);
+    font-weight: 500;
 }
 
-h2,
-h3,
-legend {
-  color: var(--pref-text);
-  font-weight: 500;
+body.preferences_endpoint h2,
+body.preferences_endpoint h3,
+body.preferences_endpoint legend {
+    color: var(--pref-text);
+    font-family: var(--pref-font);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
 }
 
-a {
-  color: var(--pref-accent-hover);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Top-level tab buttons */
+/* ------- Top-level tab buttons: [ label ] ------- */
 .tab-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  border-bottom: 1px solid var(--pref-border);
-  margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    border-bottom: 1px dashed var(--pref-border);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+}
+body.preferences_endpoint .tab-button {
+    padding: 0.35rem 0.55rem;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: var(--pref-text-dim);
+    cursor: pointer;
+    font-family: var(--pref-font);
+    font-size: 0.78rem;
+    text-transform: lowercase;
+    letter-spacing: 0.08em;
+    transition: color 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    margin: 0;
+}
+body.preferences_endpoint .tab-button::before {
+    content: '[';
+    color: var(--pref-border);
+    margin-right: 0.45rem;
+    transition: color 0.15s ease;
+}
+body.preferences_endpoint .tab-button::after {
+    content: ']';
+    color: var(--pref-border);
+    margin-left: 0.45rem;
+    transition: color 0.15s ease;
+}
+body.preferences_endpoint .tab-button:hover {
+    color: var(--pref-accent);
+    text-decoration: none;
+    border: none;
+    border-bottom-color: transparent;
+    background: transparent;
+}
+body.preferences_endpoint .tab-button:hover::before,
+body.preferences_endpoint .tab-button:hover::after,
+body.preferences_endpoint .tab-button.active::before,
+body.preferences_endpoint .tab-button.active::after {
+    color: var(--pref-accent);
+}
+body.preferences_endpoint .tab-button.active {
+    color: var(--pref-accent);
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
-.tab-button {
-  padding: 0.65rem 1.25rem;
-  background: transparent;
-  border: 1px solid transparent;
-  border-bottom: none;
-  border-radius: var(--pref-radius) var(--pref-radius) 0 0;
-  color: var(--pref-text-muted);
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  font-size: 0.95rem;
-}
-
-.tab-button:hover {
-  background: var(--pref-surface-2);
-  color: var(--pref-text);
-  text-decoration: none;
-}
-
-.tab-button.active {
-  background: var(--pref-surface-2);
-  border-color: var(--pref-border);
-  color: var(--pref-text);
-  font-weight: 600;
-  margin-bottom: -1px;
-}
-
-/* Nested tabs (engines) */
+/* ------- Nested tabs (engines) ------- */
 .tabs > label {
-  background: var(--pref-surface-2);
-  border: 1px solid var(--pref-border);
-  color: var(--pref-text-muted);
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--pref-radius-sm) var(--pref-radius-sm) 0 0;
-  margin-right: 0.2rem;
-  transition: background 0.15s ease, color 0.15s ease;
+    background: transparent;
+    border: 1px dashed var(--pref-border);
+    color: var(--pref-text-dim);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--pref-radius);
+    margin: 0 0.25rem 0.35rem 0;
+    font-family: var(--pref-font);
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
 }
-
 .tabs > label:hover {
-  background: var(--pref-border);
-  color: var(--pref-text);
+    color: var(--pref-accent);
+    border-color: var(--pref-accent);
 }
-
 .tabs > input[type="radio"]:checked + label {
-  background: var(--pref-accent);
-  color: var(--pref-text);
-  border-color: var(--pref-accent);
+    color: var(--pref-accent);
+    border-color: var(--pref-accent);
+    border-style: solid;
 }
 
-/* Fieldsets / groups */
+/* ------- Fieldsets — flat con separatore dashed, no card ------- */
 fieldset {
-  background: var(--pref-surface-2);
-  border: 1px solid var(--pref-border);
-  border-radius: var(--pref-radius);
-  padding: 1rem 1.25rem;
-  margin-bottom: 1rem;
+    background: transparent;
+    border: none;
+    border-top: 1px dashed var(--pref-border);
+    border-radius: 0;
+    padding: 1rem 0 1.1rem 0;
+    margin: 0;
+}
+section[role="tabpanel"] > fieldset:first-of-type,
+section[role="tabpanel"] > p + fieldset:first-of-type {
+    border-top: none;
+    padding-top: 0.25rem;
 }
 
 fieldset legend {
-  padding: 0 0.5rem;
-  color: var(--pref-text);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    color: var(--pref-accent);
+}
+fieldset legend::before {
+    content: '[ ';
+    color: var(--pref-border);
+}
+fieldset legend::after {
+    content: ' ]';
+    color: var(--pref-border);
 }
 
 fieldset .description {
-  color: var(--pref-text-dim);
-  font-size: 0.85rem;
-  margin-top: 0.35rem;
+    color: var(--pref-text-dim);
+    font-size: 0.78rem;
+    margin-top: 0.4rem;
+    letter-spacing: 0.02em;
+}
+fieldset .value {
+    margin: 0.3rem 0;
 }
 
-/* Form controls */
+/* ------- Form controls ------- */
 input[type="text"],
 input[type="number"],
 input[type="search"],
 input[type="url"],
 select,
 textarea {
-  background: var(--pref-body);
-  color: var(--pref-text);
-  border: 1px solid var(--pref-border);
-  border-radius: var(--pref-radius-sm);
-  padding: 0.45rem 0.65rem;
-  font-family: inherit;
-  font-size: 0.9rem;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    background: var(--pref-body);
+    color: var(--pref-text);
+    border: 1px dashed var(--pref-border);
+    border-radius: var(--pref-radius);
+    padding: 0.45rem 0.65rem;
+    font-family: var(--pref-font);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    transition: border-color 0.15s ease, border-style 0.15s ease;
 }
-
 input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-  outline: none;
-  border-color: var(--pref-accent-hover);
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    outline: none;
+    border-color: var(--pref-accent);
+    border-style: solid;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: var(--pref-accent-hover);
-  width: 1rem;
-  height: 1rem;
-  cursor: pointer;
+    accent-color: var(--pref-accent);
+    width: 0.95rem;
+    height: 0.95rem;
+    cursor: pointer;
 }
 
-button,
-input[type="submit"],
-input[type="reset"] {
-  background: var(--pref-accent);
-  color: var(--pref-text);
-  border: 1px solid var(--pref-accent);
-  border-radius: var(--pref-radius);
-  padding: 0.55rem 1.15rem;
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
+/* ------- Buttons: `[ action ]` minimal ------- */
+body.preferences_endpoint button,
+body.preferences_endpoint input[type="submit"],
+body.preferences_endpoint input[type="reset"] {
+    background: transparent;
+    color: var(--pref-text-muted);
+    border: 1px dashed var(--pref-border);
+    border-radius: var(--pref-radius);
+    padding: 0.45rem 0.9rem;
+    font-family: var(--pref-font);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+}
+body.preferences_endpoint button:hover,
+body.preferences_endpoint input[type="submit"]:hover,
+body.preferences_endpoint input[type="reset"]:hover {
+    color: var(--pref-accent);
+    border-color: var(--pref-accent);
+    border-style: solid;
 }
 
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  background: var(--pref-accent-hover);
-  border-color: var(--pref-accent-hover);
+/* Back / Reset links renderizzati come <div class="preferences_back">...</div> */
+body.preferences_endpoint .preferences_back {
+    display: inline-block;
+    background: transparent;
+    border: 1px dashed var(--pref-border);
+    border-radius: var(--pref-radius);
+    padding: 0.45rem 0.9rem;
+    font-family: var(--pref-font);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+}
+body.preferences_endpoint .preferences_back a {
+    color: var(--pref-text-muted);
+    border-bottom: none;
+}
+body.preferences_endpoint .preferences_back:hover {
+    border-color: var(--pref-accent);
+    border-style: solid;
+}
+body.preferences_endpoint .preferences_back:hover a {
+    color: var(--pref-accent);
+    border-bottom: none;
 }
 
-input[type="reset"] {
-  background: transparent;
-  color: var(--pref-text-muted);
-  border-color: var(--pref-border-strong);
-}
-
-input[type="reset"]:hover {
-  background: var(--pref-surface-2);
-  color: var(--pref-text);
-  border-color: var(--pref-border-strong);
-}
-
-/* Reset defaults / Back — rendered server-side as <div><a>...</a></div>.
-   Make them look like secondary buttons. */
-.preferences_back {
-  display: inline-block;
-  background: transparent;
-  border: 1px solid var(--pref-border-strong);
-  border-radius: var(--pref-radius);
-  padding: 0.55rem 1.15rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.preferences_back a {
-  color: var(--pref-text-muted);
-  text-decoration: none;
-  display: inline-block;
-}
-
-.preferences_back:hover {
-  background: var(--pref-surface-2);
-  border-color: var(--pref-border-strong);
-}
-
-.preferences_back:hover a {
-  color: var(--pref-text);
-  text-decoration: none;
-}
-
-/* Tables (engines list, stats) */
+/* ------- Tables (engines, stats) ------- */
 table {
-  width: 100%;
-  max-width: 100%;
-  border-collapse: collapse;
-  margin: 0.75rem 0;
-  background: var(--pref-body);
-  border: 1px solid var(--pref-border);
-  border-radius: var(--pref-radius);
-  overflow: hidden;
-  table-layout: auto;
-  word-break: break-word;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 0.75rem 0;
+    background: transparent;
+    table-layout: auto;
+    word-break: break-word;
+    font-family: var(--pref-font);
 }
-
 .tabs,
 #tab-content-engines,
 section[role="tabpanel"] {
-  max-width: 100%;
-  overflow-x: auto;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 #toggle-all-engines-container {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-th,
-td {
-  padding: 0.55rem 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid var(--pref-border);
-  font-size: 0.88rem;
-  line-height: 1.4;
-  height: 2.5rem;
-  vertical-align: middle;
-  box-sizing: border-box;
+th, td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px dashed var(--pref-border);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    vertical-align: middle;
 }
-
 th {
-  background: var(--pref-surface-2);
-  color: var(--pref-text);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
+    background: transparent;
+    color: var(--pref-text-dim);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--pref-border);
 }
-
-tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.02);
-}
-
 tbody tr:hover {
-  background: rgba(22, 163, 74, 0.06);
+    background: rgba(122, 255, 143, 0.04);
 }
-
 tbody tr:last-child td {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 /* Reliability labels */
-td.success,
-.success {
-  color: #4ade80;
-}
+td.success, .success { color: #4ade80; }
+td.warning, .warning { color: #facc15; }
+td.danger,  .danger  { color: #f87171; }
 
-td.warning,
-.warning {
-  color: #facc15;
-}
-
-td.danger,
-.danger {
-  color: #f87171;
-}
-
-/* Bang chips */
+/* ------- Bang chips ------- */
 .bang {
-  display: inline-block;
-  background: var(--pref-surface-2);
-  border: 1px solid var(--pref-border);
-  color: var(--pref-text-muted);
-  padding: 0.1rem 0.5rem;
-  margin: 0.1rem 0.15rem;
-  border-radius: 2px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.78rem;
+    display: inline-block;
+    background: transparent;
+    border: 1px dashed var(--pref-border);
+    color: var(--pref-text-muted);
+    padding: 0.05rem 0.45rem;
+    margin: 0.1rem 0.15rem;
+    border-radius: 2px;
+    font-family: var(--pref-font);
+    font-size: 0.75rem;
 }
 
-/* Tooltip (engine info) — hidden by default, revealed on hover over the name */
-th.name {
-  position: relative;
-}
-
+/* ------- Tooltip (engine info) ------- */
+th.name { position: relative; }
 .engine-tooltip {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 30;
-  min-width: 260px;
-  max-width: 420px;
-  background: var(--pref-surface);
-  border: 1px solid var(--pref-border-strong);
-  border-radius: var(--pref-radius);
-  padding: 0.75rem 1rem;
-  color: var(--pref-text-muted);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-  font-size: 0.85rem;
-  white-space: normal;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 30;
+    min-width: 260px;
+    max-width: 420px;
+    background: var(--pref-body);
+    border: 1px solid var(--pref-border-strong);
+    border-radius: var(--pref-radius);
+    padding: 0.75rem 1rem;
+    color: var(--pref-text-muted);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+    font-size: 0.8rem;
+    white-space: normal;
+    font-family: var(--pref-font);
 }
-
 th.name:hover > .engine-tooltip,
-.engine-tooltip:hover {
-  display: block;
-}
+.engine-tooltip:hover { display: block; }
+.engine-tooltip p { margin: 0.25rem 0; }
+.engine-tooltip .right { float: right; color: var(--pref-text-dim); }
 
-.engine-tooltip p {
-  margin: 0.25rem 0;
-}
-
-.engine-tooltip .right {
-  float: right;
-  color: var(--pref-text-dim);
-}
-
-/* Dialogs / alerts */
+/* ------- Dialogs / alerts ------- */
 .dialog-error,
 .dialog-warning-block {
-  background: var(--pref-danger-bg);
-  border: 1px solid var(--pref-danger-border);
-  color: var(--pref-text);
-  border-radius: var(--pref-radius);
-  padding: 0.85rem 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.dialog-warning-block {
-  background: var(--pref-warning-bg);
-  border-color: var(--pref-warning-border);
-}
-
-.dialog-error .close {
-  float: right;
-  color: var(--pref-text);
-  font-weight: 700;
-  margin-left: 0.5rem;
-}
-
-/* Stacked bar chart (response times) */
-.stacked-bar-chart {
-  display: inline-block;
-  width: 80px;
-  height: 6px;
-  background: var(--pref-border);
-  border-radius: 2px;
-  overflow: hidden;
-  vertical-align: middle;
-  margin-left: 0.4rem;
-}
-
-.stacked-bar-chart .bar {
-  height: 100%;
-  display: inline-block;
-}
-
-.stacked-bar-chart-median {
-  background: var(--pref-accent-hover);
-}
-
-.stacked-bar-chart-rate80 {
-  background: #facc15;
-}
-
-.stacked-bar-chart-rate95 {
-  background: #f87171;
-}
-
-.stacked-bar-chart-value {
-  color: var(--pref-text-muted);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.8rem;
-}
-
-/* Footer (save / reset row) */
-form > div:last-child,
-.preferences-footer,
-#search_form > div.tabs + * {
-  margin-top: 1.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--pref-border);
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-/* Category / engine checkbox grid */
-.category {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: var(--pref-surface-2);
-  border: 1px solid var(--pref-border);
-  padding: 0.35rem 0.7rem;
-  border-radius: 2px;
-  margin: 0.15rem;
-  color: var(--pref-text-muted);
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.category:hover {
-  background: var(--pref-border);
-  color: var(--pref-text);
-}
-
-/* Small responsive tweaks */
-@media (max-width: 720px) {
-  body.preferences_endpoint {
-    padding: 1rem 0.75rem;
-  }
-  body.preferences_endpoint main {
-    padding: 0;
-  }
-  .tab-button {
-    padding: 0.5rem 0.85rem;
+    background: transparent;
+    border: 1px dashed var(--pref-danger-border);
+    color: var(--pref-text);
+    border-radius: var(--pref-radius);
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--pref-font);
     font-size: 0.85rem;
-  }
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
+}
+.dialog-warning-block {
+    border-color: var(--pref-warning-border);
+}
+.dialog-error .close {
+    float: right;
+    color: var(--pref-text);
+    font-weight: 700;
+    margin-left: 0.5rem;
+    border-bottom: none;
+}
+
+/* ------- Stacked bar chart (response times) ------- */
+.stacked-bar-chart {
+    display: inline-block;
+    width: 80px;
+    height: 6px;
+    background: var(--pref-border);
+    border-radius: 2px;
+    overflow: hidden;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+}
+.stacked-bar-chart .bar { height: 100%; display: inline-block; }
+.stacked-bar-chart-median { background: var(--pref-accent); }
+.stacked-bar-chart-rate80 { background: #facc15; }
+.stacked-bar-chart-rate95 { background: #f87171; }
+.stacked-bar-chart-value {
+    color: var(--pref-text-muted);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.78rem;
+    font-family: var(--pref-font);
+}
+
+/* ------- Footer (save / reset row) ------- */
+#search_form > div.flex.mt-4,
+.preferences-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px dashed var(--pref-border);
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* ------- Utility classes (cookies.html, answerers.html) ------- */
+body.preferences_endpoint .text-muted {
+    color: var(--pref-text-dim);
+    font-size: 0.82rem;
+}
+body.preferences_endpoint .small_font {
+    font-size: 0.75rem;
+    color: var(--pref-text-dim);
+    letter-spacing: 0.02em;
+}
+body.preferences_endpoint h4 {
+    font-family: var(--pref-font);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pref-accent);
+    margin: 1.25rem 0 0.5rem 0;
+}
+body.preferences_endpoint h4::before {
+    content: '// ';
+    color: var(--pref-border);
+}
+
+.selectable_url pre {
+    background: var(--pref-body);
+    border: 1px dashed var(--pref-border);
+    border-radius: var(--pref-radius);
+    padding: 0.55rem 0.75rem;
+    color: var(--pref-text-muted);
+    font-family: var(--pref-font);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin: 0.25rem 0;
+}
+
+/* pref-group rows (answerers) */
+tr.pref-group th {
+    background: transparent;
+    border-top: 1px dashed var(--pref-border);
+    color: var(--pref-accent);
+    font-style: normal;
+    letter-spacing: 0.08em;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+tr.pref-group th::before {
+    content: '// ';
+    color: var(--pref-border);
+}
+
+/* ------- Category / engine chips ------- */
+.category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: transparent;
+    border: 1px dashed var(--pref-border);
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--pref-radius);
+    margin: 0.15rem;
+    color: var(--pref-text-muted);
+    cursor: pointer;
+    font-family: var(--pref-font);
     font-size: 0.8rem;
-  }
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+}
+.category:hover {
+    color: var(--pref-accent);
+    border-color: var(--pref-accent);
+    border-style: solid;
+}
+
+/* ------- Responsive ------- */
+@media (max-width: 720px) {
+    body.preferences_endpoint .tab-button {
+        padding: 0.3rem 0.45rem;
+        font-size: 0.72rem;
+    }
+    table, thead, tbody, th, td, tr {
+        font-size: 0.78rem;
+    }
 }
