@@ -248,6 +248,9 @@ select:not([multiple]) {
     padding-right: 2.25rem !important;
     width: max-content !important;
     max-width: 100% !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
     cursor: pointer;
 }
 select::-ms-expand {
