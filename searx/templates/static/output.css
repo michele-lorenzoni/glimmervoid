@@ -762,14 +762,14 @@
     white-space: nowrap;
   }
   .term-nav-link:hover {
-    color: #7aff8f;
+    color: #22d3ee;
   }
   .term-nav-link .bracket {
     color: #374151;
     transition: color 0.15s ease;
   }
   .term-nav-link:hover .bracket {
-    color: #7aff8f;
+    color: #22d3ee;
   }
   .term-nav-link.active,
   .term-nav-link.active:hover {

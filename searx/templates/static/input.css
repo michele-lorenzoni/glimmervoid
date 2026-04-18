@@ -144,12 +144,12 @@
         transition: color 0.15s ease;
         white-space: nowrap;
     }
-    .term-nav-link:hover { color: #7aff8f; }
+    .term-nav-link:hover { color: #22d3ee; }
     .term-nav-link .bracket {
         color: #374151;
         transition: color 0.15s ease;
     }
-    .term-nav-link:hover .bracket { color: #7aff8f; }
+    .term-nav-link:hover .bracket { color: #22d3ee; }
 
     /* Pagina corrente: colore accent + brackets accent, non-interattivo. */
     .term-nav-link.active,
