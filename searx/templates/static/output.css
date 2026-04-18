@@ -771,6 +771,15 @@
   .term-nav-link:hover .bracket {
     color: #7aff8f;
   }
+  .term-nav-link.active,
+  .term-nav-link.active:hover {
+    color: #7aff8f;
+    cursor: default;
+  }
+  .term-nav-link.active .bracket,
+  .term-nav-link.active:hover .bracket {
+    color: #7aff8f;
+  }
   @media (max-width: 640px) {
     .term-nav-link {
       padding: 0.3rem 0.35rem;

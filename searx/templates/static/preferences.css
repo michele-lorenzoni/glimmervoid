@@ -30,15 +30,15 @@ body.preferences_endpoint {
     letter-spacing: 0.01em;
 }
 
-/* Anchor styling limitato al contenuto: la nav top (.term-nav-link) mantiene
-   lo stile definito in input.css senza underline dashed. */
-body.preferences_endpoint a:not(.term-nav-link) {
+/* Anchor styling limitato al contenuto: nav top (.term-nav-link) e i tab
+   principali (.tab-button) mantengono lo stile definito altrove. */
+body.preferences_endpoint a:not(.term-nav-link):not(.tab-button) {
     color: var(--pref-text-muted);
     text-decoration: none;
     border-bottom: 1px dashed transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
-body.preferences_endpoint a:not(.term-nav-link):hover {
+body.preferences_endpoint a:not(.term-nav-link):not(.tab-button):hover {
     color: var(--pref-accent);
     border-bottom-color: var(--pref-accent);
 }
@@ -80,9 +80,7 @@ body.preferences_endpoint legend {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem 0.5rem;
-    border-bottom: 1px dashed var(--pref-border);
     margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
 }
 body.preferences_endpoint .tab-button {
     padding: 0.35rem 0.55rem;
