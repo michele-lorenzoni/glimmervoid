@@ -134,7 +134,7 @@ body.preferences_endpoint .tab-button.active {
 /* ------- Nested tabs (engines) ------- */
 .tabs > label {
     background: transparent;
-    border: 1px dashed var(--pref-border);
+    border: 1px solid var(--pref-border);
     color: var(--pref-text-dim);
     padding: 0.35rem 0.75rem;
     border-radius: var(--pref-radius);
@@ -144,7 +144,7 @@ body.preferences_endpoint .tab-button.active {
     letter-spacing: 0.04em;
     text-transform: lowercase;
     cursor: pointer;
-    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 .tabs > label:hover {
     color: var(--pref-accent);
@@ -153,7 +153,6 @@ body.preferences_endpoint .tab-button.active {
 .tabs > input[type="radio"]:checked + label {
     color: var(--pref-accent);
     border-color: var(--pref-accent);
-    border-style: solid;
 }
 
 /* ------- Fieldsets — flat con separatore dashed, no card ------- */
@@ -206,13 +205,13 @@ select,
 textarea {
     background: var(--pref-body);
     color: var(--pref-text);
-    border: 1px dashed var(--pref-border);
+    border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
     padding: 0.45rem 0.65rem;
     font-family: var(--pref-font);
     font-size: 0.85rem;
     letter-spacing: 0.02em;
-    transition: border-color 0.15s ease, border-style 0.15s ease;
+    transition: border-color 0.15s ease;
 }
 input[type="text"]:focus,
 input[type="number"]:focus,
@@ -222,7 +221,6 @@ select:focus,
 textarea:focus {
     outline: none;
     border-color: var(--pref-accent);
-    border-style: solid;
 }
 
 input[type="checkbox"],
@@ -239,7 +237,7 @@ body.preferences_endpoint input[type="submit"],
 body.preferences_endpoint input[type="reset"] {
     background: transparent;
     color: var(--pref-text-muted);
-    border: 1px dashed var(--pref-border);
+    border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
     padding: 0.45rem 0.9rem;
     font-family: var(--pref-font);
@@ -247,21 +245,20 @@ body.preferences_endpoint input[type="reset"] {
     letter-spacing: 0.08em;
     text-transform: lowercase;
     cursor: pointer;
-    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 body.preferences_endpoint button:hover,
 body.preferences_endpoint input[type="submit"]:hover,
 body.preferences_endpoint input[type="reset"]:hover {
     color: var(--pref-accent);
     border-color: var(--pref-accent);
-    border-style: solid;
 }
 
 /* Back / Reset links renderizzati come <div class="preferences_back">...</div> */
 body.preferences_endpoint .preferences_back {
     display: inline-block;
     background: transparent;
-    border: 1px dashed var(--pref-border);
+    border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
     padding: 0.45rem 0.9rem;
     font-family: var(--pref-font);
@@ -269,7 +266,7 @@ body.preferences_endpoint .preferences_back {
     letter-spacing: 0.08em;
     text-transform: lowercase;
     cursor: pointer;
-    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 body.preferences_endpoint .preferences_back a {
     color: var(--pref-text-muted);
@@ -277,7 +274,6 @@ body.preferences_endpoint .preferences_back a {
 }
 body.preferences_endpoint .preferences_back:hover {
     border-color: var(--pref-accent);
-    border-style: solid;
 }
 body.preferences_endpoint .preferences_back:hover a {
     color: var(--pref-accent);
@@ -342,7 +338,7 @@ td.danger,  .danger  { color: #f87171; }
 .bang {
     display: inline-block;
     background: transparent;
-    border: 1px dashed var(--pref-border);
+    border: 1px solid var(--pref-border);
     color: var(--pref-text-muted);
     padding: 0.05rem 0.45rem;
     margin: 0.1rem 0.15rem;
@@ -380,7 +376,7 @@ th.name:hover > .engine-tooltip,
 .dialog-error,
 .dialog-warning-block {
     background: transparent;
-    border: 1px dashed var(--pref-danger-border);
+    border: 1px solid var(--pref-danger-border);
     color: var(--pref-text);
     border-radius: var(--pref-radius);
     padding: 0.8rem 1rem;
@@ -458,7 +454,7 @@ body.preferences_endpoint h4::before {
 
 .selectable_url pre {
     background: var(--pref-body);
-    border: 1px dashed var(--pref-border);
+    border: 1px solid var(--pref-border);
     border-radius: var(--pref-radius);
     padding: 0.55rem 0.75rem;
     color: var(--pref-text-muted);
@@ -489,7 +485,7 @@ tr.pref-group th::before {
     align-items: center;
     gap: 0.35rem;
     background: transparent;
-    border: 1px dashed var(--pref-border);
+    border: 1px solid var(--pref-border);
     padding: 0.3rem 0.65rem;
     border-radius: var(--pref-radius);
     margin: 0.15rem;
@@ -499,12 +495,11 @@ tr.pref-group th::before {
     font-size: 0.8rem;
     letter-spacing: 0.04em;
     text-transform: lowercase;
-    transition: color 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+    transition: color 0.15s ease, border-color 0.15s ease;
 }
 .category:hover {
     color: var(--pref-accent);
     border-color: var(--pref-accent);
-    border-style: solid;
 }
 
 /* ------- Responsive ------- */
