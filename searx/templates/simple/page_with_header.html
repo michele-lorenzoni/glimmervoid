@@ -1,2 +1,10 @@
 {%- set body_class = "page_with_header" -%}
-{%- extends "simple/base_preferences.html" -%}
+{%- extends "simple/base.html" -%}
+
+{# Aggiunge preferences.css dopo output.css per le pagine che estendono
+   questo wrapper (preferences.html). Nav, head e body restano quelli
+   di base.html — un solo posto dove modificarli. #}
+{% block stylesheets %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='preferences.css') }}" rel="stylesheet">
+{% endblock %}

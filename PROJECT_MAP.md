@@ -40,12 +40,12 @@ Main files:
 
 | File | Role |
 |---|---|
-| `base.html` | Shell: `<head>`, nav top bar (`prefs`, `donate`, `home`), favicon links, loads `active_article.js`. Static favicon at **lines 32–39**. |
-| `base_preferences.html` | Same as base for preferences pages. |
+| `base.html` | Shell: `<head>`, nav top bar (`prefs`, `donate`, `home`), favicon links, loads `active_article.js`, block `stylesheets` attorno a `output.css`. Favicon links a **linee 32–39**. **Unico punto in cui vive la nav.** |
+| `page_with_header.html` | Wrapper per la preferences page: estende `base.html`, aggiunge `preferences.css` via block `stylesheets`. |
 | `index.html` | Homepage: blinking terminal caret + shortcuts grid. |
 | `results.html` | Results page (`terminal-results` wrapper, counters via CSS `::before`, dynamic favicon from query). |
 | `search.html`, `simple_search.html`, `_search_bar.html` | Search form + terminal-prompt macro. |
-| `preferences.html` + `preferences/` | Preferences UI (upstream-style, minor tweaks). |
+| `preferences.html` + `preferences/` | Preferences UI (estende `page_with_header.html`). |
 | `macros.html` | `result_header` macro — favicon resolver for result domains (lines 22–29). |
 | `icons.html`, `_icons/` | Icon macro + 9 custom SVG icons (claude, codeberg, fish, github, vite, …). |
 | `result_templates/`, `categories.html`, `messages/` | Upstream partials. |

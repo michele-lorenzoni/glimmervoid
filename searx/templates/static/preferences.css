@@ -30,13 +30,15 @@ body.preferences_endpoint {
     letter-spacing: 0.01em;
 }
 
-body.preferences_endpoint a {
+/* Anchor styling limitato al contenuto: la nav top (.term-nav-link) mantiene
+   lo stile definito in input.css senza underline dashed. */
+body.preferences_endpoint a:not(.term-nav-link) {
     color: var(--pref-text-muted);
     text-decoration: none;
     border-bottom: 1px dashed transparent;
     transition: color 0.15s ease, border-color 0.15s ease;
 }
-body.preferences_endpoint a:hover {
+body.preferences_endpoint a:not(.term-nav-link):hover {
     color: var(--pref-accent);
     border-bottom-color: var(--pref-accent);
 }
