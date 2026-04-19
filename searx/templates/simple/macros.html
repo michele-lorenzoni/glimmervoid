@@ -54,6 +54,14 @@
 {%- endmacro -%}
 <!-- Draw result sub footer -->
 {%- macro result_sub_footer(result) -%}
+    {%- if result.engines %}
+        <div class="engines">
+            {%- for engine in result.engines -%}<span>{{ engine }}</span>{%- endfor -%}
+            {%- if cache_url -%}
+                {{- ' ' -}}{{ result_link(cache_url + result.url, _('cached'), "cache_link") }}
+            {%- endif -%}
+        </div>
+    {% endif -%}
 {%- endmacro -%}
 <!-- Draw result footer -->
 {%- macro result_footer(result) -%}
