@@ -193,7 +193,10 @@ html[data-palette="high-contrast"] {
         padding: 0.1rem 0.45rem;
         border-radius: 2px;
         border: 1px solid;
-        background-color: rgba(3, 7, 18, 0.55); /* cust-body alpha per leggibilità su sfondi chiari/thumb */
+        /* Alpha del body della palette attiva: su dark resta scuro semi-trasparente,
+           su light diventa cream semi-trasparente — così resta leggibile anche
+           sopra thumbnail colorati senza creare un rettangolo grigio sporco. */
+        background-color: color-mix(in srgb, var(--color-cust-body) 55%, transparent);
         line-height: 1.3;
     }
 
