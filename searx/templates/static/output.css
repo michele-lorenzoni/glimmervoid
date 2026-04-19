@@ -40,8 +40,8 @@
     --default-mono-font-family: var(--font-mono);
     --font-default: "Fira Sans", sans-serif;
     --font-fira: "Fira Sans", sans-serif;
-    --color-cust-body: #030712;
-    --color-cust-element: #111827;
+    --color-cust-body: #000000;
+    --color-cust-element: #0d0f14;
     --color-cust-border: #374151;
     --color-cust-categorie-border: #ffffff00;
     --color-cust-default: #fafafa;
@@ -71,6 +71,10 @@ html[data-palette="amber-crt"] {
     --color-neon-amber: #ff9500;  /* warn: orange */
     --color-neon-red:   #ff5050;  /* danger: soft red */
     --color-neon-blue:  #b8860b;  /* info: dim amber */
+    /* Sfondo nero puro con leggerissima tinta ambra sul surface */
+    --color-cust-body: #000000;
+    --color-cust-element: #14110a;
+    --color-cust-border: #3d2a0f;
 }
 
 html[data-palette="mono-green"] {
@@ -80,6 +84,10 @@ html[data-palette="mono-green"] {
     --color-neon-amber: #ffaa00;
     --color-neon-red:   #ff4444;
     --color-neon-blue:  #00aa22;
+    /* Sfondo nero puro con leggerissima tinta verde sul surface */
+    --color-cust-body: #000000;
+    --color-cust-element: #0a1a10;
+    --color-cust-border: #0e3d21;
 }
 
 html[data-palette="cyberpunk"] {
@@ -89,6 +97,10 @@ html[data-palette="cyberpunk"] {
     --color-neon-amber: #ffd700;  /* warn: gold */
     --color-neon-red:   #ff0040;  /* danger: hot red */
     --color-neon-blue:  #00bfff;  /* info: electric blue */
+    /* Sfondo nero con tinta viola profonda, vibe synth-wave */
+    --color-cust-body: #000000;
+    --color-cust-element: #140026;
+    --color-cust-border: #5a0080;
 }
 
 html[data-palette="high-contrast"] {

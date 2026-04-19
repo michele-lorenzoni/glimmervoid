@@ -14,13 +14,15 @@ Nel tab UI c'è un secondo fieldset "Palette" che gestisce la variante cromatica
 
 Le 6 `--color-neon-*` sono **slot funzionali**: il nome (`green`, `cyan`, `pink`, ecc.) identifica la FUNZIONE (attivo, hover, heading, warn, danger, info), il VALORE dipende dalla palette attiva.
 
-| Valore | Label | Concept |
-|---|---|---|
-| `neon` (default) | Neon | Palette originale: verde/ciano/rosa/ambra/rosso/blu su gray-950 |
-| `amber-crt` | Amber CRT | Terminale vintage ambra/arancio, mono-amber con rosso soft per danger |
-| `mono-green` | Mono green | Terminale classico verde fosforescente, con amber/rosso per warn/danger |
-| `cyberpunk` | Cyberpunk | Magenta/ciano/giallo ad alta saturazione, vibe synth-wave |
-| `high-contrast` | High contrast | **Accessibilità** — palette WCAG AAA-like su sfondo nero puro (#000), bordi bianchi, colori saturi (green/yellow/red). Override anche `--color-cust-*` per superfici (text bianco, border bianco) |
+Ogni palette override anche `--color-cust-body` / `--color-cust-element` / `--color-cust-border` per avere **contrasto ottimale in piena luce solare**: tutte su sfondo nero puro (`#000000`), con surface (element) leggermente tinta nell'hue della palette per dare gerarchia senza ridurre contrasto.
+
+| Valore | Label | Body | Concept |
+|---|---|---|---|
+| `neon` (default) | Neon | `#000000` | Verde/ciano/rosa/ambra/rosso/blu su nero — massima leggibilità |
+| `amber-crt` | Amber CRT | `#000000` + surface `#14110a` | Terminale vintage ambra/arancio, surface con tinta amber |
+| `mono-green` | Mono green | `#000000` + surface `#0a1a10` | Terminale classico verde fosforescente, surface verde scuro |
+| `cyberpunk` | Cyberpunk | `#000000` + surface `#140026` | Magenta/ciano/giallo synth-wave, surface viola scuro |
+| `high-contrast` | High contrast | `#000000` + bordi `#ffffff` | **Accessibilità WCAG AAA** — bordi bianchi, colori saturi |
 
 Le superfici palette-aware passano tutte da `--color-cust-*` (body/element/border/default/url/description/title). In `preferences.css`, le vars `--pref-*` sono alias che puntano a queste globali — niente hex duplicati.
 

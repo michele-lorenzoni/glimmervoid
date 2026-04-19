@@ -13,9 +13,9 @@
     --font-size-fluid-lg: clamp(1.5rem, 4vw, 3rem);
 
     /* TailwindCSS v4.2 Colors */
-    --color-cust-body: #030712; /* gray-950 */
-    --color-cust-element: #111827; /* gray-900 */
-    --color-cust-border: #374151; /* gray-700 */
+    --color-cust-body: #000000;    /* pure black — max contrasto in sole */
+    --color-cust-element: #0d0f14; /* gray-950-ish, appena distinto dal body */
+    --color-cust-border: #374151;  /* gray-700 */
     --color-cust-categorie-border: #ffffff00;
 
     --color-cust-element-favorite: #052e16;
@@ -58,6 +58,9 @@ html[data-palette="amber-crt"] {
     --color-neon-amber: #ff9500;
     --color-neon-red:   #ff5050;
     --color-neon-blue:  #b8860b;
+    --color-cust-body: #000000;
+    --color-cust-element: #14110a;
+    --color-cust-border: #3d2a0f;
 }
 
 html[data-palette="mono-green"] {
@@ -67,15 +70,21 @@ html[data-palette="mono-green"] {
     --color-neon-amber: #ffaa00;
     --color-neon-red:   #ff4444;
     --color-neon-blue:  #00aa22;
+    --color-cust-body: #000000;
+    --color-cust-element: #0a1a10;
+    --color-cust-border: #0e3d21;
 }
 
 html[data-palette="cyberpunk"] {
-    --color-neon-green: #39ff14;  /* active: electric lime */
-    --color-neon-cyan:  #00ffff;  /* hover: cyan */
-    --color-neon-pink:  #ff00ff;  /* heading: magenta */
-    --color-neon-amber: #ffd700;  /* warn: gold */
-    --color-neon-red:   #ff0040;  /* danger: hot red */
-    --color-neon-blue:  #00bfff;  /* info: electric blue */
+    --color-neon-green: #39ff14;
+    --color-neon-cyan:  #00ffff;
+    --color-neon-pink:  #ff00ff;
+    --color-neon-amber: #ffd700;
+    --color-neon-red:   #ff0040;
+    --color-neon-blue:  #00bfff;
+    --color-cust-body: #000000;
+    --color-cust-element: #140026;
+    --color-cust-border: #5a0080;
 }
 
 html[data-palette="high-contrast"] {
