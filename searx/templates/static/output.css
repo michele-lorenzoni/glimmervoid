@@ -480,9 +480,6 @@
   .text-cust-url {
     color: var(--color-cust-url);
   }
-  .text-gray-50 {
-    color: var(--color-gray-50);
-  }
   .text-gray-400 {
     color: var(--color-gray-400);
   }

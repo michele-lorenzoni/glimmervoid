@@ -50,7 +50,7 @@
             <link href="./../static/output.css" rel="stylesheet">
         {% endblock %}
     </head>
-    <body class="{{ endpoint }}_endpoint bg-cust-body text-gray-50 p-8 font-default font-normal text-cust-default">
+    <body class="{{ endpoint }}_endpoint bg-cust-body p-8 font-default font-normal text-cust-default">
         <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"
               class="{{ body_class }}">
             {% if errors %}
