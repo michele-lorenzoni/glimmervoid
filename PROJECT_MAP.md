@@ -71,7 +71,7 @@ Main files:
 All JSONs are alphabetically sorted by pre-commit hook (`scripts/sort_json.py`).
 
 ### `searx/templates/static/themes/simple/`
-- `input.css` — Tailwind v4 entry: `@import "tailwindcss"` + `@theme` block (colors `--color-cust-*`, fonts Fira Sans + Iosevka, fluid sizes via `clamp()`). **No tailwind.config.js.**
+- `input.css` — Tailwind v4 entry: `@import "tailwindcss"` + `@theme` block (colors `--color-cust-*` + `--color-cust-{dim,chip-border,placeholder}` palette-aware per grigi secondari, fonts Fira Sans + Iosevka, fluid sizes via `clamp()`). **No tailwind.config.js.**
 - `output.css` — compiled Tailwind (~21KB). Committed to repo, copied into Docker.
 - `preferences.css`, `highlight.css` — preferences + code highlight styling.
 - `img/favicon.{png,svg,svg.gz,svg.br}` — DiceBear identicon, static fallback. Pink `#d81b60`.

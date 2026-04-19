@@ -19,7 +19,7 @@ Ogni palette override anche `--color-cust-body` / `--color-cust-element` / `--co
 | Valore | Label | Body | Concept |
 |---|---|---|---|
 | `neon` (default) | Neon | `#000000` | Verde/ciano/rosa/ambra/rosso/blu su nero — massima leggibilità |
-| `light` | Light | `#fafafa` body, `#ffffff` surface | **Variante chiara**: colori neon -600/-700 (darker, saturi) su bianco. SVG data-URI di checkbox/chevron overridati con stroke verde scuro per rimanere visibili. |
+| `light` | Light (paper) | `#faf2e0` body, `#fffaec` surface | **Variante chiara calda "paper"**: sfondo crema + testo bruno + accenti -700 saturi (lime-olive, teal, rosa, ruggine, rosso, blu). Grigi secondari (`--color-cust-dim/chip-border/placeholder`) overridati in tonalità tan calde per evitare gray-cool dissonanti. SVG data-URI di checkbox/chevron con stroke `#4d7c0f` (olive). |
 | `amber-crt` | Amber CRT | `#000000` + surface `#14110a` | Terminale vintage ambra/arancio, surface con tinta amber |
 | `mono-green` | Mono green | `#000000` + surface `#0a1a10` | Terminale classico verde fosforescente, surface verde scuro |
 | `cyberpunk` | Cyberpunk | `#000000` + surface `#140026` | Magenta/ciano/giallo synth-wave, surface viola scuro |
@@ -38,15 +38,22 @@ Per aggiungere una palette:
 ## 1. Palette
 
 ### Superfici & testo
-| Token | Hex | Uso |
+Tutti i token sono palette-aware (override in `html[data-palette="…"]`). Gli hex sotto sono i default del tema `neon`.
+
+| Token | Hex (neon) | Uso |
 |---|---|---|
-| `--color-cust-body` / `--pref-body` | `#030712` | Background pagina (gray-950) |
-| `--color-cust-element` / `--pref-element` | `#111827` | Background di input / searchbar / bottoni / checkbox / card interattive (gray-900) |
+| `--color-cust-body` / `--pref-body` | `#000000` | Background pagina |
+| `--color-cust-element` / `--pref-element` | `#0d0f14` | Background di input / searchbar / bottoni / checkbox / card interattive |
 | `--color-cust-border` / `--pref-border` | `#374151` | Border default (gray-700) |
-| `--pref-border-strong` | `#4b5563` | Border emphasis, hover-border di input disabled (gray-600) |
 | `--color-cust-default` / `--pref-text` | `#fafafa` | Testo principale (neutral-50) |
-| `--pref-text-muted` | `#d4d4d4` | Testo secondario (neutral-300) |
-| `--pref-text-dim` / `term-dim` | `#6b7280` | Label dim, nav link idle (gray-500) |
+| `--color-cust-title` | `#fafafa` | Titoli risultati / heading forti |
+| `--color-cust-description` | `#e5e5e5` | Descrizioni risultati, testo corpo secondario |
+| `--color-cust-url` / `--pref-text-muted` | `#d4d4d4` | URL, breadcrumbs, button text idle |
+| `--color-cust-dim` / `--pref-text-dim` / `term-dim` | `#6b7280` | Label dim, nav link idle, chip secondaria (gray-500) |
+| `--color-cust-chip-border` | `#374151` | Border chip/engine/date, dashed rules decorativi (gray-700) |
+| `--color-cust-placeholder` / `--pref-border-strong` | `#4b5563` | Placeholder input, hover border checkbox, italic empty (gray-600) |
+
+> **Regola d'oro.** Nel CSS non scrivere hex tipo `#fafafa`, `#d4d4d4`, `#6b7280`, `#374151`, `#4b5563` per testi/bordi/placeholder: usa sempre le `--color-cust-*`. Questi hex sono cool-gray studiati per il dark; in palette light (cream) diventerebbero freddi e, peggio, quelli chiari (`#fafafa`/`#d4d4d4`) scomparirebbero. I neon `--color-neon-*` seguono già la palette: ok usarli via `var(...)`.
 
 ### Palette neon funzionale
 Il tema **non è monocromatico**: ogni colore neon indica una funzione precisa. Non scambiarli.

@@ -32,6 +32,13 @@
     --color-cust-title: #fafafa; /* neutral-50 */
     --color-cust-description: #e5e5e5; /* neutral-200 */
 
+    /* Grigi secondari palette-aware — subtitle, chip border, placeholder.
+       Override nelle palette chiare (light) per evitare freddo gray-cool
+       su sfondo cream. */
+    --color-cust-dim: #6b7280;         /* gray-500 — testo secondario (term-dim, label) */
+    --color-cust-chip-border: #374151; /* gray-700 — border chip, separatori, dashed rules */
+    --color-cust-placeholder: #4b5563; /* gray-600 — placeholder input, hover border, italic empty */
+
     /* Palette neon — funzionale, differenziata per uso (vedi STYLE_GUIDE.md).
        Essendo in @theme, queste vars diventano anche utility Tailwind
        (bg-neon-green, text-neon-cyan, ecc.). Per cambiare palette
@@ -88,33 +95,41 @@ html[data-palette="cyberpunk"] {
 }
 
 html[data-palette="light"] {
-    /* Variante chiara: colori scuri ma saturi su sfondo bianco. */
-    --color-neon-green: #16a34a;
-    --color-neon-cyan:  #0891b2;
-    --color-neon-pink:  #db2777;
-    --color-neon-amber: #d97706;
-    --color-neon-red:   #dc2626;
-    --color-neon-blue:  #2563eb;
-    --color-cust-body: #fafafa;
-    --color-cust-element: #ffffff;
-    --color-cust-border: #d4d4d4;
-    --color-cust-default: #0a0a0a;
-    --color-cust-url: #404040;
-    --color-cust-description: #171717;
-    --color-cust-title: #0a0a0a;
+    /* Variante chiara "paper": sfondo crema caldo con testo e bordi
+       in tonalità bruno-calde. Accenti -700 saturi per contrasto
+       AA/AAA sul cream. Evita whites/grays cool (neutral-50, gray-*)
+       che stonano sulla tinta paper. */
+    --color-neon-green: #4d7c0f;   /* lime-700 — verde oliva caldo */
+    --color-neon-cyan:  #0e7490;   /* cyan-700 — teal leggermente caldo */
+    --color-neon-pink:  #be185d;   /* pink-700 — rosa saturo */
+    --color-neon-amber: #b45309;   /* amber-700 — ruggine */
+    --color-neon-red:   #b91c1c;   /* red-700 — rosso caldo */
+    --color-neon-blue:  #1d4ed8;   /* blue-700 — kept for contrast con warm neutrals */
+
+    --color-cust-body: #faf2e0;        /* cream paper */
+    --color-cust-element: #fffaec;     /* off-white più caldo */
+    --color-cust-border: #d6c7a3;      /* beige caldo */
+    --color-cust-default: #2a1f12;     /* bruno scuro caldo */
+    --color-cust-url: #5c4a30;         /* bruno medio caldo */
+    --color-cust-description: #1f1708; /* bruno quasi nero */
+    --color-cust-title: #1a1308;       /* near-black caldo */
+
+    --color-cust-dim: #8a7552;         /* bruno muted — sostituisce gray-500 */
+    --color-cust-chip-border: #c7b68e; /* tan lighter — sostituisce gray-700 */
+    --color-cust-placeholder: #a8936a; /* bruno chiaro — sostituisce gray-600 */
 }
 
 html[data-palette="light"] input[type="checkbox"]:checked {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234d7c0f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
 }
 html[data-palette="light"] input[type="checkbox"].reversed-checkbox:not(:checked) {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234d7c0f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
 }
 html[data-palette="light"] input[type="checkbox"].reversed-checkbox:checked {
     background-image: none !important;
 }
 html[data-palette="light"] select:not([multiple]) {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234d7c0f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") !important;
 }
 
 html[data-palette="high-contrast"] {
@@ -204,7 +219,7 @@ html[data-palette="high-contrast"] {
         font-feature-settings: "liga" 0, "calt" 0;
     }
     .term-accent { color: var(--color-neon-green); }
-    .term-dim    { color: #6b7280; }
+    .term-dim    { color: var(--color-cust-dim); }
 
     .term-search {
         font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
@@ -217,7 +232,7 @@ html[data-palette="high-contrast"] {
     }
     .term-search #q::placeholder,
     .term-search input[type="text"]::placeholder {
-        color: #4b5563;
+        color: var(--color-cust-placeholder);
         font-style: normal;
     }
     .term-prompt {
@@ -234,7 +249,7 @@ html[data-palette="high-contrast"] {
 
     /* Nav link in testa alla pagina (prefs / donate): [ label ] */
     .term-nav-link {
-        color: #6b7280;
+        color: var(--color-cust-dim);
         padding: 0.4rem 0.6rem;
         text-transform: lowercase;
         cursor: pointer;
@@ -243,7 +258,7 @@ html[data-palette="high-contrast"] {
     }
     .term-nav-link:hover { color: var(--color-neon-cyan); }
     .term-nav-link .bracket {
-        color: #374151;
+        color: var(--color-cust-chip-border);
         transition: color 0.15s ease;
     }
     .term-nav-link:hover .bracket { color: var(--color-neon-cyan); }
@@ -295,7 +310,7 @@ input[type="radio"] {
 }
 input[type="checkbox"]:hover,
 input[type="radio"]:hover {
-    border-color: #4b5563 !important;
+    border-color: var(--color-cust-placeholder) !important;
 }
 input[type="checkbox"]:focus-visible,
 input[type="radio"]:focus-visible {

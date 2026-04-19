@@ -9,10 +9,10 @@
     --pref-body:         var(--color-cust-body);
     --pref-element:      var(--color-cust-element);
     --pref-border:       var(--color-cust-border);
-    --pref-border-strong: #4b5563;  /* gray-600 — intermedio, non palette-driven */
+    --pref-border-strong: var(--color-cust-placeholder);  /* border emphasis, palette-aware */
     --pref-text:         var(--color-cust-default);
     --pref-text-muted:   var(--color-cust-url);
-    --pref-text-dim:     #6b7280;
+    --pref-text-dim:     var(--color-cust-dim);
 
     /* Palette neon — alias locali che puntano alle vars globali
        definite nel @theme Tailwind (output.css :root). Cambiare

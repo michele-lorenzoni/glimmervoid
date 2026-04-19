@@ -37,22 +37,22 @@
             margin: 1rem 0 1.25rem 0;
             font-size: 11px;
             letter-spacing: 0.08em;
-            color: #6b7280;
+            color: var(--color-cust-dim);
         }
         .terminal-results .term-meta .slash { color: var(--color-neon-green); }
-        .terminal-results .term-meta .sep   { color: #374151; }
-        .terminal-results .term-meta .label { text-transform: uppercase; color: #9ca3af; }
+        .terminal-results .term-meta .sep   { color: var(--color-cust-chip-border); }
+        .terminal-results .term-meta .label { text-transform: uppercase; color: var(--color-cust-dim); }
         .terminal-results .term-meta .query {
             max-width: 32ch;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            color: #d4d4d4;
+            color: var(--color-cust-description);
         }
         .terminal-results .term-meta .rule  {
             flex: 1;
             min-width: 2rem;
-            border-top: 1px dashed #374151;
+            border-top: 1px dashed var(--color-cust-chip-border);
             height: 0;
         }
 
@@ -90,7 +90,7 @@
         }
         .terminal-results #urls .result h3 a,
         .terminal-results #urls .result h4 a {
-            color: #fafafa;
+            color: var(--color-cust-title);
             text-decoration: none;
         }
         .terminal-results #urls .result h3 a:hover,
@@ -116,7 +116,7 @@
         .terminal-results #urls .result .result_length,
         .terminal-results #urls .result .result_author,
         .terminal-results #urls .result .result_views {
-            color: #6b7280;
+            color: var(--color-cust-dim);
             font-size: 11px;
             letter-spacing: 0.02em;
             text-decoration: none;
@@ -132,7 +132,7 @@
             display: inline-block;
             margin: 0.1rem 0 0.1rem 0.55rem;
             padding: 0.05rem 0.4rem;
-            border: 1px solid #374151;
+            border: 1px solid var(--color-cust-chip-border);
             border-radius: 2px;
             font-size: 10px;
             letter-spacing: 0.05em;
@@ -148,12 +148,12 @@
             width: fit-content;
             margin: 0 0 0.35rem 0;
             padding: 0.05rem 0.4rem;
-            border: 1px solid #374151;
+            border: 1px solid var(--color-cust-chip-border);
             border-radius: 2px;
             font-size: 10px;
             letter-spacing: 0.05em;
             line-height: 1.4;
-            color: #6b7280;
+            color: var(--color-cust-dim);
         }
 
         /* Engines (sub-footer) */
@@ -162,7 +162,7 @@
             display: inline-block;
             margin-right: 0.5rem;
             padding: 0.05rem 0.4rem;
-            border: 1px solid #374151;
+            border: 1px solid var(--color-cust-chip-border);
             border-radius: 2px;
             font-size: 10px;
             letter-spacing: 0.05em;
@@ -173,7 +173,7 @@
         .terminal-results #urls .result .content,
         .terminal-results #urls .result p.content {
             display: block;
-            color: #d4d4d4;
+            color: var(--color-cust-description);
             margin-top: 0.45rem;
             line-height: 1.55;
             font-size: 13px;
@@ -183,7 +183,7 @@
             word-break: break-word;
         }
         .terminal-results #urls .result .content.empty_element {
-            color: #4b5563;
+            color: var(--color-cust-placeholder);
             font-style: italic;
         }
 
@@ -223,7 +223,7 @@
         .terminal-results #answers,
         .terminal-results .answer,
         .terminal-results .infobox {
-            border: 1px dashed #374151;
+            border: 1px dashed var(--color-cust-chip-border);
             border-radius: 2px;
             padding: 0.75rem 1rem;
             margin-bottom: 1rem;
@@ -232,7 +232,7 @@
 
         /* Pagination terminale */
         .terminal-results #pagination {
-            border-top: 1px dashed #374151;
+            border-top: 1px dashed var(--color-cust-chip-border);
             margin-top: 2rem;
             padding-top: 1.25rem;
             font-size: 13px;
@@ -253,7 +253,7 @@
         .terminal-results #pagination input[type="button"] {
             background: transparent;
             border: none;
-            color: #6b7280;
+            color: var(--color-cust-dim);
             cursor: pointer;
             padding: 0.3rem 0.5rem;
             font-family: inherit;
@@ -287,11 +287,11 @@
         /* Messaggi (no results / errors) */
         .terminal-results .dialog-error,
         .terminal-results #urls .no_results {
-            border: 1px dashed #b91c1c;
+            border: 1px dashed var(--color-neon-red);
             border-radius: 2px;
             padding: 1rem;
             background: transparent;
-            color: #fecaca;
+            color: var(--color-neon-red);
         }
 
         /* Responsive */
