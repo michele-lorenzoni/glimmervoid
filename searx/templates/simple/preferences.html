@@ -193,9 +193,13 @@
     {{- tab_header_button('maintab', 'cookies', _('Cookies'), active_tab) -}}
   </div>
 
+  {# Tutti i tab sono renderizzati SEMPRE: quelli non attivi hanno
+     l'attributo `hidden`. Senza questo, il form POST includerebbe
+     solo i campi del tab attivo e il backend resetterebbe i
+     settings (es. engines) dei tab non visibili al salvataggio. #}
+
   {# tab: general #}
-  {% if active_tab == 'general' %}
-  <section id="tab-content-general" role="tabpanel">
+  <section id="tab-content-general" role="tabpanel" {% if active_tab != 'general' %}hidden{% endif %}>
     {%- if 'categories' not in locked_preferences -%}
     <fieldset>
       <legend>{{- _('Default categories') -}}</legend>
@@ -218,11 +222,9 @@
     {%- include 'simple/preferences/tokens.html' -%}
     {{- plugin_preferences('general') -}}
   </section>
-  {% endif %}
 
   {# tab: ui #}
-  {% if active_tab == 'ui' %}
-  <section id="tab-content-ui" role="tabpanel">
+  <section id="tab-content-ui" role="tabpanel" {% if active_tab != 'ui' %}hidden{% endif %}>
     {%- if 'locale' not in locked_preferences -%}
     {%- include 'simple/preferences/ui_locale.html' -%}
     {%- endif -%}
@@ -240,11 +242,9 @@
     {%- include 'simple/preferences/urlformatting.html' -%}
     {{- plugin_preferences('ui') -}}
   </section>
-  {% endif %}
 
   {# tab: privacy #}
-  {% if active_tab == 'privacy' %}
-  <section id="tab-content-privacy" role="tabpanel">
+  <section id="tab-content-privacy" role="tabpanel" {% if active_tab != 'privacy' %}hidden{% endif %}>
     {%- if 'method' not in locked_preferences -%}
     {%- include 'simple/preferences/method.html' -%}
     {%- endif -%}
@@ -256,32 +256,25 @@
     {%- endif -%}
     {{- plugin_preferences('privacy') -}}
   </section>
-  {% endif %}
 
   {# tab: engines #}
-  {% if active_tab == 'engines' %}
-  <section id="tab-content-engines" role="tabpanel">
+  <section id="tab-content-engines" role="tabpanel" {% if active_tab != 'engines' %}hidden{% endif %}>
     <div class="tabs engines-tabs" role="tablist">
       {%- include 'simple/preferences/engines.html' -%}
     </div>
   </section>
-  {% endif %}
 
   {# tab: query #}
-  {% if active_tab == 'query' %}
-  <section id="tab-content-query" role="tabpanel">
+  <section id="tab-content-query" role="tabpanel" {% if active_tab != 'query' %}hidden{% endif %}>
     {%- if answer_storage -%}
     {%- include 'simple/preferences/answerers.html' -%}
     {%- endif -%}
   </section>
-  {% endif %}
 
   {# tab: cookies #}
-  {% if active_tab == 'cookies' %}
-  <section id="tab-content-cookies" role="tabpanel">
+  <section id="tab-content-cookies" role="tabpanel" {% if active_tab != 'cookies' %}hidden{% endif %}>
     {%- include 'simple/preferences/cookies.html' -%}
   </section>
-  {% endif %}
 
   {{- tabs_close() -}}
 
