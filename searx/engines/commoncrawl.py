@@ -34,35 +34,37 @@ timeout = 10.0
 
 
 def _build_match(query):
-    """Deduce matchType e url da inviare al CDX server.
+    """Deduce (url, matchType, filter) da inviare al CDX server.
 
-    CommonCrawl NON è un motore full-text: il CDX indicizza URL, non
-    contenuto. La query viene quindi interpretata come URL/dominio.
+    CommonCrawl NON è un motore full-text: il CDX indicizza URL,
+    non contenuto. Strategie:
 
     - URL completo (http/https)   -> matchType=exact
     - dominio nudo (contiene '.') -> matchType=domain
     - pattern con '*'             -> matchType=prefix
-    - parola singola              -> trattata come <word>.com
-                                     (matchType=domain)
+    - parola singola              -> scope .com (SURT prefix 'com,)')
+                                     + filter=url:.*word.* per trovare
+                                     tutti gli URL .com che contengono
+                                     la parola in host o path.
     """
     q = query.strip()
 
     if "*" in q:
-        return q, "prefix"
+        return q, "prefix", None
 
     if q.startswith("http://") or q.startswith("https://"):
         host = urlparse(q).netloc
-        return host or q, "exact"
+        return host or q, "exact", None
 
     if "." in q:
-        return q, "domain"
+        return q, "domain", None
 
-    # Parola singola: assume sia un nome di dominio senza TLD.
-    return f"{q}.com", "domain"
+    # Parola singola: scansione .com con filtro regex sul url.
+    return "com,)", "prefix", f"url:.*{q.lower()}.*"
 
 
 def request(query, params):
-    url_arg, match_type = _build_match(query)
+    url_arg, match_type, filter_str = _build_match(query)
 
     args = {
         "url": url_arg,
@@ -71,6 +73,8 @@ def request(query, params):
         "limit": page_size,
         "page": max(0, params["pageno"] - 1),
     }
+    if filter_str:
+        args["filter"] = filter_str
 
     params["url"] = f"{base_url}/{index_name}-index?{urlencode(args)}"
     params["headers"] = {"Accept": "application/x-ndjson"}
