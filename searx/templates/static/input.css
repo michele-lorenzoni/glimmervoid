@@ -87,6 +87,33 @@ html[data-palette="cyberpunk"] {
     --color-cust-border: #5a0080;
 }
 
+html[data-palette="light"] {
+    /* Variante chiara: colori scuri ma saturi su sfondo bianco. */
+    --color-neon-green: #16a34a;
+    --color-neon-cyan:  #0891b2;
+    --color-neon-pink:  #db2777;
+    --color-neon-amber: #d97706;
+    --color-neon-red:   #dc2626;
+    --color-neon-blue:  #2563eb;
+    --color-cust-body: #fafafa;
+    --color-cust-element: #ffffff;
+    --color-cust-border: #d4d4d4;
+    --color-cust-default: #0a0a0a;
+    --color-cust-url: #404040;
+    --color-cust-description: #171717;
+    --color-cust-title: #0a0a0a;
+}
+
+html[data-palette="light"] input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+}
+html[data-palette="light"] input[type="checkbox"].reversed-checkbox:not(:checked) {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+}
+html[data-palette="light"] select:not([multiple]) {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") !important;
+}
+
 html[data-palette="high-contrast"] {
     /* Palette accessibile — ratio WCAG AAA su sfondo nero puro */
     --color-neon-green: #00ff00;

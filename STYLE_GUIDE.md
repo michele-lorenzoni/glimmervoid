@@ -19,6 +19,7 @@ Ogni palette override anche `--color-cust-body` / `--color-cust-element` / `--co
 | Valore | Label | Body | Concept |
 |---|---|---|---|
 | `neon` (default) | Neon | `#000000` | Verde/ciano/rosa/ambra/rosso/blu su nero — massima leggibilità |
+| `light` | Light | `#fafafa` body, `#ffffff` surface | **Variante chiara**: colori neon -600/-700 (darker, saturi) su bianco. SVG data-URI di checkbox/chevron overridati con stroke verde scuro per rimanere visibili. |
 | `amber-crt` | Amber CRT | `#000000` + surface `#14110a` | Terminale vintage ambra/arancio, surface con tinta amber |
 | `mono-green` | Mono green | `#000000` + surface `#0a1a10` | Terminale classico verde fosforescente, surface verde scuro |
 | `cyberpunk` | Cyberpunk | `#000000` + surface `#140026` | Magenta/ciano/giallo synth-wave, surface viola scuro |

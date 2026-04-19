@@ -103,6 +103,35 @@ html[data-palette="cyberpunk"] {
     --color-cust-border: #5a0080;
 }
 
+html[data-palette="light"] {
+    /* Variante chiara: colori scuri ma saturi su sfondo bianco. */
+    --color-neon-green: #16a34a;  /* green-600 */
+    --color-neon-cyan:  #0891b2;  /* cyan-700 */
+    --color-neon-pink:  #db2777;  /* pink-600 */
+    --color-neon-amber: #d97706;  /* amber-600 */
+    --color-neon-red:   #dc2626;  /* red-600 */
+    --color-neon-blue:  #2563eb;  /* blue-600 */
+    --color-cust-body: #fafafa;
+    --color-cust-element: #ffffff;
+    --color-cust-border: #d4d4d4;
+    --color-cust-default: #0a0a0a;
+    --color-cust-url: #404040;
+    --color-cust-description: #171717;
+    --color-cust-title: #0a0a0a;
+}
+
+/* Palette light: override SVG data-URI checkbox/radio/select con stroke
+   verde scuro invece del bright #7aff8f (invisibile su sfondo bianco). */
+html[data-palette="light"] input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+}
+html[data-palette="light"] input[type="checkbox"].reversed-checkbox:not(:checked) {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+}
+html[data-palette="light"] select:not([multiple]) {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2316a34a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>") !important;
+}
+
 html[data-palette="high-contrast"] {
     /* Palette accessibile — ratio WCAG AAA su sfondo nero puro */
     --color-neon-green: #00ff00;
@@ -638,7 +667,7 @@ html[data-palette="high-contrast"] {
       }
     }
   }
-  .hover\:border-\[\var(--color-neon-green)\] {
+  .hover\:border-\[\#7aff8f\] {
     &:hover {
       @media (hover: hover) {
         border-color: var(--color-neon-green);
@@ -652,14 +681,14 @@ html[data-palette="high-contrast"] {
       }
     }
   }
-  .hover\:bg-\[\var(--color-neon-green)\]\/15 {
+  .hover\:bg-\[\#7aff8f\]\/15 {
     &:hover {
       @media (hover: hover) {
         background-color: color-mix(in oklab, var(--color-neon-green) 15%, transparent);
       }
     }
   }
-  .hover\:bg-\[\var(--color-neon-green)\]\/20 {
+  .hover\:bg-\[\#7aff8f\]\/20 {
     &:hover {
       @media (hover: hover) {
         background-color: color-mix(in oklab, var(--color-neon-green) 20%, transparent);
@@ -673,7 +702,7 @@ html[data-palette="high-contrast"] {
       }
     }
   }
-  .hover\:text-\[\var(--color-neon-green)\] {
+  .hover\:text-\[\#7aff8f\] {
     &:hover {
       @media (hover: hover) {
         color: var(--color-neon-green);
