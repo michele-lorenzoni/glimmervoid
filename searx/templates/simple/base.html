@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="endpoint" content="{{ endpoint }}">
+        <meta name="favicon-seed" content="{% block favicon_seed %}{{ endpoint|e }}{% endblock %}">
         <meta name="description"
               content="Glimmervoid — a privacy-respecting, open metasearch engine">
         <meta name="keywords"
@@ -21,6 +22,7 @@
             } catch (e) {}
         </script>
         <script src="/static/custom/active_article.js" type="text/javascript" defer></script>
+        <script src="/static/custom/dynamic_favicon.js" type="text/javascript" defer></script>
         <title>
             {% block title %}{% endblock %}
         {{ instance_name }}</title>

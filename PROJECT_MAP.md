@@ -40,10 +40,10 @@ Main files:
 
 | File | Role |
 |---|---|
-| `base.html` | Shell: `<head>`, nav top bar (`prefs`, `donate`, `home`), favicon links, loads `active_article.js`, block `stylesheets` attorno a `output.css`. Favicon links a **linee 32–39**. **Unico punto in cui vive la nav.** |
+| `base.html` | Shell: `<head>`, nav top bar (`prefs`, `donate`, `home`), favicon links, loads `active_article.js` + `dynamic_favicon.js`, block `stylesheets` attorno a `output.css`. Meta `favicon-seed` (block `favicon_seed`, default = `endpoint`). **Unico punto in cui vive la nav.** |
 | `page_with_header.html` | Wrapper per la preferences page: estende `base.html`, aggiunge `preferences.css` via block `stylesheets`. |
 | `index.html` | Homepage: blinking terminal caret + shortcuts grid. |
-| `results.html` | Results page (`terminal-results` wrapper, counters via CSS `::before`, dynamic favicon from query). |
+| `results.html` | Results page (`terminal-results` wrapper, counters via CSS `::before`). Override `favicon_seed` = `q or endpoint`. |
 | `search.html`, `simple_search.html`, `_search_bar.html` | Search form + terminal-prompt macro. |
 | `preferences.html` + `preferences/` | Preferences UI (estende `page_with_header.html`). |
 | `macros.html` | `result_header` macro — favicon resolver for result domains (lines 22–29). |
@@ -61,6 +61,7 @@ Main files:
 | File | Purpose |
 |---|---|
 | `active_article.js` | Keyboard nav for results: arrows / `j` / `k` / Enter. Adds `border-sky-800` on active result. |
+| `dynamic_favicon.js` | Legge `<meta name="favicon-seed">` e genera identicon 5×5 mirrored (FNV-1a → xorshift32, pink `#d81b60`). Caricato da `base.html`, seed default = `endpoint`. |
 | `urls_manager.js` | On load, fetches the 4 URL JSONs and stamps badges on matching `<article>` results. |
 | `favorite_urls.json` | ~1800 "preferiti" URLs (badge). |
 | `highlight_urls.json` | "visitati" URLs. |
@@ -108,7 +109,7 @@ All other engines come from the upstream image.
 
 ## Dynamic features worth remembering
 
-- **Per-query favicon** (`results.html` head block): client-side JS hashes query (FNV-1a) → xorshift32 → 5×5 mirrored DiceBear-style identicon SVG → `data:` URI replaces `<link rel="icon">`. Color fixed to brand `#d81b60`. Script runs only when `q` is set.
+- **Dynamic favicon** (`dynamic_favicon.js`, loaded by `base.html`): client-side JS hashes a seed (FNV-1a) → xorshift32 → 5×5 mirrored DiceBear-style identicon SVG → `data:` URI replaces `<link rel="icon">`. Color fixed to brand `#d81b60`. Seed letto da `<meta name="favicon-seed">`, popolato via block Jinja `favicon_seed`: default = `endpoint` (index / preferences / … → identicon stabile per pagina), `results.html` lo sovrascrive con `q or endpoint` per variare in base alla query.
 - **Result badges** via `urls_manager.js` — matches article `href` against the 4 JSON sets.
 - **Keyboard nav** via `active_article.js` — `↑/↓/j/k` move active result, `Enter` opens it.
 
