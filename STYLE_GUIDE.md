@@ -31,8 +31,6 @@ Per aggiungere una palette:
 2. Blocco `html[data-palette="my-palette"] { --color-neon-*: …; (opzionalmente --color-cust-*: …) }` in `input.css` E `output.css`
 3. Documentarla nella tabella qui sopra.
 
-### Inverted colors
-Toggle nel tab UI (partial `preferences/inverted.html`) che attiva `html[data-inverted="yes"]`. Persistenza in `localStorage['inverted']='yes'`; applicato come attributo prima del render da base.html (no FOUC). CSS: `filter: invert(1) hue-rotate(180deg)` sull'html (inverte brightness preservando l'hue), poi riapplicato su `img/video/iframe/svg[viewBox*="24"]` per riportarli nativamente. Indipendente dalla palette — possono coesistere.
 
 ---
 
