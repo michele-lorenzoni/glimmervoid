@@ -492,15 +492,18 @@ body.preferences_endpoint h4::before {
     margin: 0.25rem 0;
 }
 
-/* pref-group rows (answerers) */
+/* pref-group rows (answerers / engines) — altezza uniforme
+   allineata alla row più alta (quella 'without further
+   subgrouping' che ha il bang chip e label lungo). */
 tr.pref-group th {
     background: transparent;
     border-top: 1px dashed var(--pref-border);
     color: var(--neon-pink);
     font-style: normal;
     letter-spacing: 0.08em;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    height: 3.75rem;
 }
 tr.pref-group th::before {
     content: '// ';
