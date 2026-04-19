@@ -83,12 +83,12 @@ html[data-palette="mono-green"] {
 }
 
 html[data-palette="cyberpunk"] {
-    --color-neon-green: #ff00ff;  /* active: magenta */
+    --color-neon-green: #39ff14;  /* active: electric lime */
     --color-neon-cyan:  #00ffff;  /* hover: cyan */
-    --color-neon-pink:  #ffff00;  /* heading: yellow */
-    --color-neon-amber: #ff9500;  /* warn: orange */
+    --color-neon-pink:  #ff00ff;  /* heading: magenta */
+    --color-neon-amber: #ffd700;  /* warn: gold */
     --color-neon-red:   #ff0040;  /* danger: hot red */
-    --color-neon-blue:  #b347ff;  /* info: violet */
+    --color-neon-blue:  #00bfff;  /* info: electric blue */
 }
 
 html[data-palette="high-contrast"] {
