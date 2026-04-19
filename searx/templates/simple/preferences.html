@@ -138,9 +138,7 @@
 {%- if checker_result or errors -%}
 <td class="{{ label }} column-reliability" data-label="{{ _('Reliability') }}">{{- '' -}}
   <a href="{{ url_for('stats', engine=engine_name|e) }}">{{- '' -}}
-    <span>
-      {{- icon_big('alert', 'The engine is not reliabled') }} {{ r -}}
-    </span>{{- '' -}}
+    <span>{{- r -}}</span>{{- '' -}}
   </a>{{- '' -}}
   <div class="engine-tooltip" role="tooltip" id="{{engine_name}}_reliability">
     {%- if checker_result -%}
