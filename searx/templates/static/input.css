@@ -320,6 +320,19 @@ input[type="checkbox"].reversed-checkbox:checked {
     }
 }
 
+/* Inverted colors — toggle UI → html[data-inverted="yes"].
+   invert + hue-rotate(180deg) inverte brightness preservando l'hue,
+   poi riapplicato su media per riportarli nativamente. */
+html[data-inverted="yes"] {
+    filter: invert(1) hue-rotate(180deg);
+}
+html[data-inverted="yes"] img,
+html[data-inverted="yes"] video,
+html[data-inverted="yes"] iframe,
+html[data-inverted="yes"] svg[viewBox*="24"] {
+    filter: invert(1) hue-rotate(180deg);
+}
+
 /* ============================================================
    Select — chevron custom in stile Lucide (stessa famiglia della
    lente della searchbar: stroke var(--color-neon-green), width 2, linecap round).

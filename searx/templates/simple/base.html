@@ -14,10 +14,14 @@
         <meta name="robots" content="noarchive">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
-            // Early palette application — legge localStorage e setta data-palette
-            // sull'html prima del render per evitare FOUC al cambio di palette.
+            // Early palette + inverted application — legge localStorage e setta
+            // data-palette / data-inverted sull'html prima del render per evitare
+            // FOUC al cambio.
             try {
                 document.documentElement.dataset.palette = localStorage.getItem('palette') || 'neon';
+                if (localStorage.getItem('inverted') === 'yes') {
+                    document.documentElement.dataset.inverted = 'yes';
+                }
             } catch (e) {}
         </script>
         <script src="/static/custom/active_article.js" type="text/javascript" defer></script>

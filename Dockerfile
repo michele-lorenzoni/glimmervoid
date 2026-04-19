@@ -52,5 +52,6 @@ COPY	searx/templates/simple/preferences/engines.html	/usr/local/searxng/searx/te
 COPY	searx/templates/simple/preferences/method.html	/usr/local/searxng/searx/templates/simple/preferences/method.html
 COPY	searx/templates/simple/preferences/theme.html	/usr/local/searxng/searx/templates/simple/preferences/theme.html
 COPY	searx/templates/simple/preferences/palette.html	/usr/local/searxng/searx/templates/simple/preferences/palette.html
+COPY	searx/templates/simple/preferences/inverted.html	/usr/local/searxng/searx/templates/simple/preferences/inverted.html
 COPY	searx/templates/simple/messages/no_cookies.html	/usr/local/searxng/searx/templates/simple/messages/no_cookies.html
 USER	searxng
