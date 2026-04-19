@@ -289,6 +289,20 @@ input[type="radio"]:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+/* Reversed checkbox: upstream pattern dove HTML `checked` = DISABILITATO. */
+input[type="checkbox"].reversed-checkbox:not(:checked) {
+    border-color: var(--color-neon-green) !important;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237aff8f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 0.8rem 0.8rem !important;
+}
+input[type="checkbox"].reversed-checkbox:checked {
+    border-color: var(--color-cust-border) !important;
+    background-image: none !important;
+}
+
 @media (max-width: 480px) {
     input[type="checkbox"],
     input[type="radio"] {

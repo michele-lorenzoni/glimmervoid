@@ -93,3 +93,27 @@
   {{- tab_footer() -}}
 
 {%- endfor -%}
+
+<script>
+    // Enable all / Disable all — opera sui .reversed-checkbox della section
+    // corrente. HTML checked = engine disabilitato; quindi:
+    //   Enable all  → uncheck (engine rimosso da disabled_engines)
+    //   Disable all → check   (engine aggiunto a disabled_engines)
+    (function () {
+        function allBoxes(btn) {
+            var section = btn.closest('section');
+            if (!section) return [];
+            return section.querySelectorAll('input.reversed-checkbox');
+        }
+        document.querySelectorAll('.enable-all-engines').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                allBoxes(btn).forEach(function (cb) { cb.checked = false; });
+            });
+        });
+        document.querySelectorAll('.disable-all-engines').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                allBoxes(btn).forEach(function (cb) { cb.checked = true; });
+            });
+        });
+    })();
+</script>
