@@ -135,28 +135,24 @@ html[data-palette="high-contrast"] {
         line-height: 1.3;
     }
 
-    /* favorite — verde neon */
+    /* URL badges — text e border dallo stesso neon color per coerenza
+       visuale e per seguire la palette attiva (bright non più
+       accoppiato con un -800 fisso). */
     .url-badge-favorite {
-        color: var(--color-neon-green);           /* neon-green */
-        border-color: #166534;    /* green-800 */
+        color: var(--color-neon-green);
+        border-color: var(--color-neon-green);
     }
-
-    /* highlight — ambra neon */
     .url-badge-highlight {
-        color: var(--color-neon-amber);           /* neon-amber */
-        border-color: #92400e;    /* amber-800 */
+        color: var(--color-neon-amber);
+        border-color: var(--color-neon-amber);
     }
-
-    /* unwanted — rosso neon */
     .url-badge-unwanted {
-        color: var(--color-neon-red);           /* neon-red */
-        border-color: #991b1b;    /* red-800 */
+        color: var(--color-neon-red);
+        border-color: var(--color-neon-red);
     }
-
-    /* ignored — blu neon */
     .url-badge-ignored {
-        color: var(--color-neon-blue);           /* blue-400 */
-        border-color: #1e40af;    /* blue-800 */
+        color: var(--color-neon-blue);
+        border-color: var(--color-neon-blue);
     }
 
     /* ================================================================
@@ -223,9 +219,9 @@ html[data-palette="high-contrast"] {
     .term-nav-link.active:hover .bracket { color: var(--color-neon-green); }
 
     /* Result corrente durante la keyboard nav (active_article.js)
-       — bordo cyan (interactive) invece del vecchio sky-800. */
+       — box cyan (interactive) invece del vecchio sky-800. */
     .term-result-active {
-        border-top-color: var(--color-neon-cyan) !important;
+        border-color: var(--color-neon-cyan) !important;
     }
 
     @media (max-width: 640px) {

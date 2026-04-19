@@ -61,16 +61,18 @@ Sorgente di verità: `@theme` in `input.css` → `:root` in `output.css`. Tutti 
 In `preferences.css` esistono anche alias locali `--neon-*` → `var(--color-neon-*)` per continuità storica; usa indifferentemente i due nomi, il risultato è identico.
 
 ### URL badges (results page)
-Allineati alla palette neon:
-| Badge | Fill | Border |
-|---|---|---|
-| `.url-badge-favorite` (verde) | `#7aff8f` (neon-green) | `#166534` (green-800) |
-| `.url-badge-highlight` (ambra) | `#fbbf24` (neon-amber) | `#92400e` (amber-800) |
-| `.url-badge-unwanted` (rosso) | `#ef4444` (neon-red) | `#991b1b` (red-800) |
-| `.url-badge-ignored` (blu) | `#60a5fa` (blue-400) | `#1e40af` (blue-800) |
+Text e border dal medesimo neon color (no più accoppiamento bright/-800): coerenza visuale e tracciamento automatico delle palette.
+| Badge | Color |
+|---|---|
+| `.url-badge-favorite` | `var(--color-neon-green)` |
+| `.url-badge-highlight` | `var(--color-neon-amber)` |
+| `.url-badge-unwanted` | `var(--color-neon-red)` |
+| `.url-badge-ignored` | `var(--color-neon-blue)` |
 
-### Result attivo (keyboard nav)
-`.term-result-active` applicata da `active_article.js` sull'`<article>` correntemente selezionato con `↑/↓/j/k`: border-top cyan `#22d3ee` (stesso hover-color della palette, coerente col concetto di "interactive focus"). Sostituisce il vecchio `border-sky-800`.
+### Result card + result attivo (keyboard nav)
+Ogni `<article>` nei risultati è un card box completo (`border: 1px solid var(--color-cust-border)`, radius 2px, `margin-bottom` tra uno e l'altro) — coerente con le card delle tabelle/preferences. Il precedente `border-top` solo separatore è stato rimosso.
+
+`.term-result-active` applicata da `active_article.js` sull'`<article>` correntemente selezionato con `↑/↓/j/k`: l'intero bordo diventa cyan `var(--color-neon-cyan)` (hover-color della palette, "interactive focus").
 
 ---
 

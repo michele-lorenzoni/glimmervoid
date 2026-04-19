@@ -764,19 +764,19 @@ html[data-palette="high-contrast"] {
   }
   .url-badge-favorite {
     color: var(--color-neon-green);
-    border-color: #166534;
+    border-color: var(--color-neon-green);
   }
   .url-badge-highlight {
     color: var(--color-neon-amber);
-    border-color: #92400e;
+    border-color: var(--color-neon-amber);
   }
   .url-badge-unwanted {
     color: var(--color-neon-red);
-    border-color: #991b1b;
+    border-color: var(--color-neon-red);
   }
   .url-badge-ignored {
     color: var(--color-neon-blue);
-    border-color: #1e40af;
+    border-color: var(--color-neon-blue);
   }
   .term-font {
     font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
@@ -839,7 +839,7 @@ html[data-palette="high-contrast"] {
     color: var(--color-neon-green);
   }
   .term-result-active {
-    border-top-color: var(--color-neon-cyan) !important;
+    border-color: var(--color-neon-cyan) !important;
   }
   @media (max-width: 640px) {
     .term-nav-link {
