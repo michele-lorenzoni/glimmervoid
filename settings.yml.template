@@ -2693,7 +2693,7 @@ engines:
       results: JSON
     # Collezione CDX da interrogare. Aggiornare periodicamente
     # consultando https://index.commoncrawl.org/collinfo.json
-    index_name: CC-MAIN-2025-05
+    index_name: CC-MAIN-2026-12
 
   # - name: brave.goggles
   #   engine: brave

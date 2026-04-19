@@ -10,6 +10,7 @@ come URL, dominio o pattern (supporta wildcard '*').
 Docs: https://index.commoncrawl.org/
 """
 
+from datetime import datetime
 from json import loads
 from urllib.parse import urlencode, urlparse
 
@@ -19,9 +20,10 @@ safesearch = False
 language_support = False
 time_range_support = False
 
-# Collezione CDX da interrogare (es. CC-MAIN-2025-05).
+# Collezione CDX da interrogare (es. CC-MAIN-2026-12).
 # Override possibile da settings.yml con la chiave 'index_name'.
-index_name = "CC-MAIN-2025-05"
+# Aggiornare periodicamente tramite https://index.commoncrawl.org/collinfo.json
+index_name = "CC-MAIN-2026-12"
 base_url = "https://index.commoncrawl.org"
 
 # Numero di risultati per pagina.
@@ -91,26 +93,30 @@ def response(resp):
         mime = entry.get("mime", "")
         status = entry.get("status", "")
 
-        # Formatta timestamp CC (YYYYMMDDhhmmss) in ISO.
-        published = ""
-        if len(timestamp) >= 8:
-            published = f"{timestamp[0:4]}-{timestamp[4:6]}-{timestamp[6:8]}"
+        # Timestamp CC: YYYYMMDDhhmmss → datetime per publishedDate.
+        published_dt = None
+        if len(timestamp) >= 14:
+            try:
+                published_dt = datetime.strptime(timestamp[:14], "%Y%m%d%H%M%S")
+            except ValueError:
+                published_dt = None
 
         content_parts = []
         if status:
             content_parts.append(f"HTTP {status}")
         if mime:
             content_parts.append(mime)
-        if published:
-            content_parts.append(f"crawled {published}")
+        if published_dt:
+            content_parts.append(f"crawled {published_dt.strftime('%Y-%m-%d')}")
 
-        results.append(
-            {
-                "url": url,
-                "title": url,
-                "content": " · ".join(content_parts) or "CommonCrawl archive entry",
-                "publishedDate": published,
-            }
-        )
+        result_item = {
+            "url": url,
+            "title": url,
+            "content": " · ".join(content_parts) or "CommonCrawl archive entry",
+        }
+        if published_dt:
+            result_item["publishedDate"] = published_dt
+
+        results.append(result_item)
 
     return results
