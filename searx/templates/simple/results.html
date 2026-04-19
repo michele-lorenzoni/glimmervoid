@@ -200,10 +200,12 @@
             line-height: 1.4;
         }
 
-        /* Data posizionata PRIMA del titolo: chip su riga propria, senza
-           margine sinistro (non segue più il titolo inline). */
+        /* Data posizionata PRIMA del titolo: chip su riga propria sopra
+           l'h3 (block + fit-content così mantiene la width del contenuto
+           ma forza un a capo dopo). */
         .terminal-results #urls .result .published_date_top {
-            display: inline-block;
+            display: block;
+            width: fit-content;
             margin: 0 0 0.35rem 0;
             padding: 0.05rem 0.4rem;
             border: 1px solid #374151;
@@ -212,10 +214,6 @@
             letter-spacing: 0.05em;
             line-height: 1.4;
             color: #6b7280;
-        }
-        .terminal-results #urls .result .published_date_top::after {
-            content: "";
-            display: block;
         }
 
         /* Engines (sub-footer) */
