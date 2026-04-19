@@ -3,10 +3,12 @@
 CommonCrawl URL source.
 
 Interroga il CDX Index Server di CommonCrawl per restituire le URL
-crawlate che corrispondono al pattern/dominio indicato dalla query.
-Non è un motore di ricerca full-text sui CONTENUTI: il CDX indicizza
-URL. Con un filter regex possiamo però trovare URL che contengono
-una certa stringa in host/path.
+crawlate che corrispondono alla query.
+
+ATTENZIONE: il CDX è un indice di URL, non di contenuti. Non c'è
+full-text search sulle pagine. La query viene interpretata come
+URL/dominio/pattern e — per parole nude — come regex filter
+sull'URL su scope globale.
 
 Docs: https://index.commoncrawl.org/
 """
@@ -15,8 +17,6 @@ from datetime import datetime
 from json import loads
 from urllib.parse import urlencode, urlparse
 
-from searx.network import get as http_get
-
 categories = ["general", "web"]
 paging = True
 safesearch = False
@@ -24,90 +24,64 @@ language_support = False
 time_range_support = False
 
 # Collezione CDX da interrogare (es. CC-MAIN-2026-12).
-# Override possibile da settings.yml con la chiave 'index_name'.
+# Override da settings.yml con la chiave 'index_name'.
 # Aggiornare periodicamente tramite https://index.commoncrawl.org/collinfo.json
 index_name = "CC-MAIN-2026-12"
 base_url = "https://index.commoncrawl.org"
 
-# Numero di risultati per pagina (per scope TLD).
-page_size = 10
-
-# Timeout di default (override possibile da settings.yml).
+page_size = 20
 timeout = 15.0
 
-# Per le query "parola singola" CDX richiede uno scope URL/SURT.
-# Iteriamo su questi TLD + filter regex per coprire un bacino
-# ragionevole. Override da settings.yml con `word_scope_tlds`.
-word_scope_tlds = ["com", "org", "net", "io", "dev", "co"]
 
+def _build_match(query):
+    """Ritorna (url, matchType, filter).
 
-def _classify_query(query):
-    """Ritorna un tipo tra: 'prefix' | 'exact' | 'domain' | 'word'.
-
-    Accompagnato da valori utili a costruire le richieste CDX.
-
-    - 'prefix' : query con '*' → un solo request, matchType=prefix.
-    - 'exact'  : query URL http(s) → un solo request, matchType=exact.
-    - 'domain' : query con '.' → un solo request, matchType=domain.
-    - 'word'   : parola singola → N request (uno per TLD) con
-                 matchType=prefix + filter=url:.*word.*
+    - URL completo (http/https)   -> matchType=exact
+    - dominio nudo (contiene '.') -> matchType=domain
+    - pattern con '*'             -> matchType=prefix
+    - parola nuda                 -> matchType=prefix con scope '*'
+                                     + filter=url:.*word.* (scan globale,
+                                     lento ma TLD-agnostico)
     """
     q = query.strip()
 
     if "*" in q:
-        return "prefix", q, None
+        return q, "prefix", None
 
     if q.startswith("http://") or q.startswith("https://"):
         host = urlparse(q).netloc
-        return "exact", (host or q), None
+        return host or q, "exact", None
 
     if "." in q:
-        return "domain", q, None
+        return q, "domain", None
 
-    return "word", q.lower(), None
+    # Parola nuda: scope più ampio possibile. '*' chiede al CDX di
+    # fare un prefix match "globale"; il filter fa il lavoro vero.
+    return "*", "prefix", f"url:.*{q.lower()}.*"
 
 
-def _cdx_url(url_arg, match_type, filter_str, page):
+def request(query, params):
+    url_arg, match_type, filter_str = _build_match(query)
+
     args = {
         "url": url_arg,
         "output": "json",
         "matchType": match_type,
         "limit": page_size,
-        "page": max(0, page),
+        "page": max(0, params["pageno"] - 1),
     }
     if filter_str:
         args["filter"] = filter_str
-    return f"{base_url}/{index_name}-index?{urlencode(args)}"
 
-
-def request(query, params):
-    qtype, value, _ = _classify_query(query)
-    page = max(0, params["pageno"] - 1)
-
-    if qtype == "word":
-        # La singola request qui è solo un placeholder: usa il primo TLD.
-        # Il resto dei TLD viene interrogato in response() via http_get.
-        first_tld = word_scope_tlds[0]
-        url = _cdx_url(f"{first_tld},)", "prefix", f"url:.*{value}.*", page)
-    elif qtype == "prefix":
-        url = _cdx_url(value, "prefix", None, page)
-    elif qtype == "exact":
-        url = _cdx_url(value, "exact", None, page)
-    else:  # domain
-        url = _cdx_url(value, "domain", None, page)
-
-    params["url"] = url
+    params["url"] = f"{base_url}/{index_name}-index?{urlencode(args)}"
     params["headers"] = {"Accept": "application/x-ndjson"}
-    # Stash metadata per riusare in response()
-    params["_cc_qtype"] = qtype
-    params["_cc_value"] = value
-    params["_cc_page"] = page
     return params
 
 
-def _parse_cdx_lines(text):
-    items = []
-    for line in text.splitlines():
+def response(resp):
+    results = []
+
+    for line in resp.text.splitlines():
         line = line.strip()
         if not line:
             continue
@@ -147,40 +121,6 @@ def _parse_cdx_lines(text):
         if published_dt:
             result_item["publishedDate"] = published_dt
 
-        items.append(result_item)
-    return items
+        results.append(result_item)
 
-
-def response(resp):
-    # Parse della prima risposta (primo TLD o query non-word).
-    results = _parse_cdx_lines(resp.text)
-
-    # Per le query "word", interroga gli altri TLD in sequenza.
-    qtype = getattr(resp, "search_params", {}).get("_cc_qtype")
-    if qtype is None:
-        # Compat: params non propagato come attributo su alcune versioni
-        # di SearXNG. In quel caso la richiesta primaria basta.
-        return results
-
-    if qtype == "word":
-        value = resp.search_params["_cc_value"]
-        page = resp.search_params["_cc_page"]
-        for tld in word_scope_tlds[1:]:
-            extra_url = _cdx_url(f"{tld},)", "prefix", f"url:.*{value}.*", page)
-            try:
-                extra_resp = http_get(extra_url, timeout=timeout, headers={"Accept": "application/x-ndjson"})
-                if extra_resp.status_code == 200:
-                    results.extend(_parse_cdx_lines(extra_resp.text))
-            except Exception:
-                # Non interrompere per fallimenti su un singolo TLD.
-                continue
-
-    # Dedup per url mantenendo il primo
-    seen = set()
-    deduped = []
-    for r in results:
-        if r["url"] in seen:
-            continue
-        seen.add(r["url"])
-        deduped.append(r)
-    return deduped
+    return results
