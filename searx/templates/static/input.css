@@ -3,6 +3,14 @@
 @import url("https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5/500.css");
 @import "tailwindcss";
 
+/* Tailwind v4 source discovery: templates Jinja vivono in ../simple/**,
+   fuori dal working dir di default (static/). Senza questi @source il
+   build CLI trova solo le classi citate in static/, e output.css si
+   riduce a ~500 righe con le utility più usate mancanti (icone giganti,
+   layout rotto, ecc.). */
+@source "../simple/**/*.html";
+@source "../../engines/**/*.py";
+
 @theme {
     --font-default: "Fira Sans", sans-serif;
     --font-fira: "Fira Sans", sans-serif;
