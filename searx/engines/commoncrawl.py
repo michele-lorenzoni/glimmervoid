@@ -36,10 +36,14 @@ timeout = 10.0
 def _build_match(query):
     """Deduce matchType e url da inviare al CDX server.
 
-    - URL completo (http/https)  -> matchType=exact
+    CommonCrawl NON è un motore full-text: il CDX indicizza URL, non
+    contenuto. La query viene quindi interpretata come URL/dominio.
+
+    - URL completo (http/https)   -> matchType=exact
     - dominio nudo (contiene '.') -> matchType=domain
-    - parola singola              -> matchType=domain, trattata come dominio .com
     - pattern con '*'             -> matchType=prefix
+    - parola singola              -> trattata come <word>.com
+                                     (matchType=domain)
     """
     q = query.strip()
 
@@ -53,7 +57,8 @@ def _build_match(query):
     if "." in q:
         return q, "domain"
 
-    return q, "domain"
+    # Parola singola: assume sia un nome di dominio senza TLD.
+    return f"{q}.com", "domain"
 
 
 def request(query, params):
