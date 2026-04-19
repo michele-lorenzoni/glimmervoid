@@ -30,7 +30,8 @@
             "Bash(curl -s \"https://raw.githubusercontent.com/searxng/searxng/master/searx/templates/simple/result_templates/default.html\")",
             "Bash(curl -s \"https://raw.githubusercontent.com/searxng/searxng/master/searx/webapp.py\")",
             "Bash(git rm *)",
-            "Bash(curl *)"
+            "Bash(curl *)",
+            "Bash(grep -n 'hover.*\\\\[.*neon\\\\|hover.*\\\\[\\\\\\\\#7aff8f\\\\|hover.*\\\\[\\\\\\\\#22d3ee' C:/Users/Sviluppo/Documents/projects/glimmervoid/searx/templates/static/output.css)"
         ]
     }
 }
