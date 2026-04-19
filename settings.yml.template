@@ -2680,20 +2680,21 @@ engines:
     categories: [general, web]
     brave_category: search
 
-  - name: commoncrawl
-    engine: commoncrawl
-    shortcut: ccr
-    categories: [general, web]
-    paging: true
-    disabled: true
-    about:
-      website: https://commoncrawl.org/
-      use_official_api: true
-      require_api_key: false
-      results: JSON
-    # Collezione CDX da interrogare. Aggiornare periodicamente
-    # consultando https://index.commoncrawl.org/collinfo.json
-    index_name: CC-MAIN-2026-12
+  # Engine commoncrawl DISABILITATO: il CDX di CommonCrawl non
+  # supporta full-text / scansioni regex sull'indice. Richiede scope
+  # URL/host/dominio specifico — non adatto a ricerche generaliste.
+  # - name: commoncrawl
+  #   engine: commoncrawl
+  #   shortcut: ccr
+  #   categories: [general, web]
+  #   paging: true
+  #   disabled: true
+  #   about:
+  #     website: https://commoncrawl.org/
+  #     use_official_api: true
+  #     require_api_key: false
+  #     results: JSON
+  #   index_name: CC-MAIN-2026-12
 
   # - name: brave.goggles
   #   engine: brave

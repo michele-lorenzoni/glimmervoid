@@ -1,18 +1,19 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 """
-CommonCrawl URL source.
+CommonCrawl URL source — DISABILITATO.
 
-Interroga il CDX Index Server di CommonCrawl per restituire le URL
-crawlate che corrispondono alla query.
+Il CDX Server di CommonCrawl è un indice di URL, non un motore
+full-text: non può scansionare l'intero indice per trovare URL che
+contengono una stringa. Richiede sempre uno scope URL/host/dominio
+specifico. Per un uso generalista non è adatto.
 
-ATTENZIONE: il CDX è un indice di URL, non di contenuti. Non c'è
-full-text search sulle pagine. La query viene interpretata come
-URL/dominio/pattern e — per parole nude — come regex filter
-sull'URL su scope globale.
-
-Docs: https://index.commoncrawl.org/
+Tutto il codice è commentato di sotto. Per riattivarlo:
+1. togliere il blocco string letterale `\"\"\"...\"\"\"` qui sotto
+2. riattivare l'entry in settings.yml.template
+3. riattivare la COPY nel Dockerfile
 """
 
+_DISABLED = """
 from datetime import datetime
 from json import loads
 from urllib.parse import urlencode, urlparse
@@ -23,9 +24,6 @@ safesearch = False
 language_support = False
 time_range_support = False
 
-# Collezione CDX da interrogare (es. CC-MAIN-2026-12).
-# Override da settings.yml con la chiave 'index_name'.
-# Aggiornare periodicamente tramite https://index.commoncrawl.org/collinfo.json
 index_name = "CC-MAIN-2026-12"
 base_url = "https://index.commoncrawl.org"
 
@@ -34,25 +32,6 @@ timeout = 15.0
 
 
 def _build_match(query):
-    """Ritorna (url, matchType, filter).
-
-    Il CDX Server è un INDICE SHARDED di URL: ogni request RICHIEDE
-    uno scope URL/SURT che identifichi una slice dell'indice. Non si
-    può fare un "full-index scan" — url=* viene rifiutato. Il
-    parametro filter=url:REGEX funziona solo DENTRO lo scope.
-
-    - URL completo (http/https)   -> matchType=exact
-    - dominio nudo (contiene '.') -> matchType=domain
-    - pattern con '*'             -> matchType=prefix
-    - parola nuda                 -> scope = TLD .com (SURT 'com,)')
-                                     + filter=url:.*word.* → tutti
-                                     gli URL .com contenenti la parola
-                                     in host o path. Limitato al TLD
-                                     .com per costruzione dell'API.
-
-    Per cercare altri TLD, specifica la query come dominio nudo
-    (es. "hello.org") o URL pieno.
-    """
     q = query.strip()
 
     if "*" in q:
@@ -65,11 +44,6 @@ def _build_match(query):
     if "." in q:
         return q, "domain", None
 
-    # Parola nuda: scope .com + regex filter sull'URL (unica slice
-    # che CDX accetta come singolo scope "ampio"; vedi docstring).
-    # SURT prefix "com," (senza `)`) matcha tutto ciò che sta sotto
-    # .com — "com,)" invece matcherebbe solo un dominio che si
-    # chiama letteralmente "com" (nulla).
     return "com,", "prefix", f"url:.*{q.lower()}.*"
 
 
@@ -137,3 +111,4 @@ def response(resp):
         results.append(result_item)
 
     return results
+"""
