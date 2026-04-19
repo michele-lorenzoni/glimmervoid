@@ -200,6 +200,24 @@
             line-height: 1.4;
         }
 
+        /* Data posizionata PRIMA del titolo: chip su riga propria, senza
+           margine sinistro (non segue più il titolo inline). */
+        .terminal-results #urls .result .published_date_top {
+            display: inline-block;
+            margin: 0 0 0.35rem 0;
+            padding: 0.05rem 0.4rem;
+            border: 1px solid #374151;
+            border-radius: 2px;
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            line-height: 1.4;
+            color: #6b7280;
+        }
+        .terminal-results #urls .result .published_date_top::after {
+            content: "";
+            display: block;
+        }
+
         /* Engines (sub-footer) */
         .terminal-results #urls .result .engines { margin-top: 0.55rem; }
         .terminal-results #urls .result .engines span {

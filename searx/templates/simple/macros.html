@@ -33,12 +33,11 @@
             {%- endfor %}
         </div>
         {{- result_close_link() -}}
+        {%- if result.publishedDate %}<time class="published_date published_date_top" datetime="{{ result.pubdate }}">{{ result.publishedDate }}</time>{% endif -%}
         <h3 class="text-base text-cust-title hover:underline">{{ result_link(result.url, result.title|safe) }}</h3>
     {%- endmacro -%}
     <!-- Draw result sub header -->
     {%- macro result_sub_header(result) -%}
-        {%- if result.publishedDate %}<time class="published_date" datetime="{{ result.pubdate }}">{{ result.publishedDate }}</time>
-    {% endif -%}
     <!-- Length is displayed inside the thumbnail if there's any, so don't display it here a second time -->
     {%- if result.length and not result.thumbnail %}
         <div class="result_length">{{ _("Length") }}: {{ result.length }}</div>
