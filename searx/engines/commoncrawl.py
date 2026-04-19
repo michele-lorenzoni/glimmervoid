@@ -67,7 +67,10 @@ def _build_match(query):
 
     # Parola nuda: scope .com + regex filter sull'URL (unica slice
     # che CDX accetta come singolo scope "ampio"; vedi docstring).
-    return "com,)", "prefix", f"url:.*{q.lower()}.*"
+    # SURT prefix "com," (senza `)`) matcha tutto ciò che sta sotto
+    # .com — "com,)" invece matcherebbe solo un dominio che si
+    # chiama letteralmente "com" (nulla).
+    return "com,", "prefix", f"url:.*{q.lower()}.*"
 
 
 def request(query, params):
