@@ -36,12 +36,18 @@ timeout = 15.0
 def _build_match(query):
     """Ritorna (url, matchType, filter).
 
+    Il CDX Server è un INDICE DI URL, non un motore full-text:
+    richiede sempre un URL/pattern valido come scope, non accetta
+    richieste tipo "trovami tutte le URL che contengono X".
+
     - URL completo (http/https)   -> matchType=exact
     - dominio nudo (contiene '.') -> matchType=domain
     - pattern con '*'             -> matchType=prefix
-    - parola nuda                 -> matchType=prefix con scope '*'
-                                     + filter=url:.*word.* (scan globale,
-                                     lento ma TLD-agnostico)
+    - parola nuda                 -> assumiamo sia un dominio .com
+                                     (matchType=domain). Se l'utente
+                                     voleva cercare un altro TLD,
+                                     deve specificarlo esplicitamente
+                                     (es. "hello.org").
     """
     q = query.strip()
 
@@ -55,9 +61,8 @@ def _build_match(query):
     if "." in q:
         return q, "domain", None
 
-    # Parola nuda: scope più ampio possibile. '*' chiede al CDX di
-    # fare un prefix match "globale"; il filter fa il lavoro vero.
-    return "*", "prefix", f"url:.*{q.lower()}.*"
+    # Parola nuda: fallback minimale su <word>.com
+    return f"{q.lower()}.com", "domain", None
 
 
 def request(query, params):
