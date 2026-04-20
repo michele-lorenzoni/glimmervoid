@@ -47,7 +47,7 @@ Main files:
 | `search.html`, `simple_search.html`, `_search_bar.html` | Search form + terminal-prompt macro. |
 | `preferences.html` + `preferences/` | Preferences UI (estende `page_with_header.html`). |
 | `macros.html` | `result_header` macro — favicon resolver for result domains (lines 22–29). |
-| `icons.html`, `_icons/` | Icon macro + 9 custom SVG icons (claude, codeberg, fish, github, vite, …). |
+| `icons.html`, `_icons/` | Icon macro + 10 custom SVG icons (claude, codeberg, fish, github, hackthebox, …). |
 | `result_templates/`, `categories.html`, `messages/` | Upstream partials. |
 
 ### Terminal CSS system
