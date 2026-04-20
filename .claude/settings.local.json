@@ -35,7 +35,8 @@
             "Bash(git *)",
             "Bash(npx --version)",
             "Bash(npx @tailwindcss/cli -i input.css -o output.css)",
-            "Bash(grep -E \"rounded|border-cust-border|w-5|h-5|p-2\\\\\\\\.5\" output.css)"
+            "Bash(grep -E \"rounded|border-cust-border|w-5|h-5|p-2\\\\\\\\.5\" output.css)",
+            "WebFetch(domain:simpleicons.org)"
         ]
     }
 }
