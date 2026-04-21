@@ -8,7 +8,9 @@ See `STYLE_GUIDE.md` for the visual conventions: neon palette (green=active, cya
 
 ## Styling
 
-- **Border radius must always be `2px`.** Applies to every CSS rule in the repo (regular radii, `--pref-radius*` tokens, pill/chip shapes, buttons, inputs, cards, tooltips, dialogs). Do not use other radius values, do not use `999px` for pills, do not use `0` to "flatten" — always `2px`.
+- **Allowed shapes: rectangles with `border-radius: 2px`, and circles.** Nothing else — no pills (`999px` on non-square rectangles), no `0` to "flatten", no intermediate radii.
+  - `2px` radius applies to every squared element in the repo: `--pref-radius*` tokens, buttons, inputs, cards, tooltips, dialogs, chips, tab pills, checkboxes.
+  - Circles are fine via `border-radius: 50%` / `999px` on square elements or SVG `<circle>`. Use when circular geometry is intrinsic to the element (avatars, dots, circular icons/buttons).
 
 ## Git
 

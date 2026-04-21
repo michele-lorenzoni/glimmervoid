@@ -89,7 +89,10 @@ Ogni `<article>` nei risultati è un card box completo (`border: 1px solid var(-
 
 ## 2. Border & radius
 
-- **`border-radius: 2px` sempre**, ovunque. No `0`, no `999px`, no pill-shape. `--pref-radius = 2px`, `--radius-xs = 0.125rem`. Vale per card, button, input, checkbox, chip, tooltip, tab pill, dialog.
+**Forme concesse**: rettangoli con `border-radius: 2px` e **cerchi**. Nient'altro — niente pill (`999px` su rettangolo non quadrato), niente `0` per "appiattire", niente radius intermedi.
+
+- **`border-radius: 2px` sempre** per tutto ciò che è squadrato. Vale per card, button, input, checkbox, chip, tooltip, tab pill, dialog. `--pref-radius = 2px`, `--radius-xs = 0.125rem`.
+- **Cerchi**: ammessi, via `border-radius: 50%` / `999px` su elementi quadrati o SVG `<circle>`. Usali quando la geometria circolare è intrinseca all'elemento (avatar, dot indicator, icona/pulsante circolare).
 - **Dashed vs solid:**
   - `dashed` = *rule / separatore orizzontale*. Es: `h1` bottom, fieldset top, footer top, `td` bottom (riga tabella), `.tab-buttons` bottom, underline hover su anchor di contenuto.
   - `solid` = *contenitore / elemento interattivo*. Es: input, select, textarea, checkbox, radio, button, `.preferences_back`, `.bang`, `.category`, `.tabs > label`, dialog, `.selectable_url pre`, `.engine-tooltip`, table header.
@@ -173,7 +176,7 @@ Pseudo-elementi `::before '[' ::after ']'` per le brackets. Idle = dim, hover = 
 - 1rem × 1rem box, radius 2px.
 - `appearance: none`, bg `#111827`, border `#374151`.
 - `:checked`: border verde + checkmark SVG Lucide al centro (`::after`).
-- Radio: `:checked::after` quadrato verde 8px (radius 2px — non cerchio, coerenza col repo).
+- Radio: `:checked::after` quadrato verde 8px (radius 2px — scelta di design, coerenza con gli altri input).
 - `.checkbox-onoff` (toggle upstream) attualmente viene ristilizzato come checkbox standard.
 
 ### Dialog / alert
