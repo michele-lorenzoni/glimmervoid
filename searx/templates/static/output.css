@@ -395,6 +395,9 @@
   .rounded-\[2px\] {
     border-radius: 2px;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-xs {
     border-radius: var(--radius-xs);
   }
@@ -552,6 +555,13 @@
       }
     }
   }
+  .hover\:border-\[\#60a5fa\] {
+    &:hover {
+      @media (hover: hover) {
+        border-color: #60a5fa;
+      }
+    }
+  }
   .hover\:border-neutral-400 {
     &:hover {
       @media (hover: hover) {
@@ -585,6 +595,11 @@
       @media (hover: hover) {
         text-decoration-line: underline;
       }
+    }
+  }
+  .sm\:mt-8 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 8);
     }
   }
   .sm\:mt-10 {
