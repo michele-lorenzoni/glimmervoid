@@ -53,6 +53,9 @@
         .term-tile:hover .term-label {
             color: var(--color-neon-green);
         }
+        .term-tile.is-link:hover .term-label {
+            color: var(--color-neon-blue);
+        }
 
         @media (max-width: 640px) {
             body.index_endpoint { padding: 1rem; }
@@ -61,16 +64,19 @@
     </style>
 {% endblock %}
 
-{% set shortcuts = [
+{% set brand_shortcuts = [
     ('github',   'https://github.com/',          'github'),
     ('orcid',    'https://orcid.org/',           'orcid'),
     ('claude',   'https://claude.ai/',           'claude'),
     ('codeberg', 'https://codeberg.org/',        'codeberg'),
     ('gitlab',   'https://about.gitlab.com/',    'gitlab'),
     ('lpi',      'https://www.lpi.org/',         'lpi'),
-    ('globe',    'https://github.com/dharmx/walls/tree/main', 'walls'),
     ('elsevier', 'https://www.elsevier.com/',    'elsevier'),
     ('hackthebox', 'https://www.hackthebox.com/', 'hackthebox')
+] %}
+
+{% set link_shortcuts = [
+    ('globe', 'https://github.com/dharmx/walls/tree/main', 'walls')
 ] %}
 
 {% block content %}
@@ -94,9 +100,29 @@
         </div>
 
         <div class="flex flex-row flex-wrap w-full justify-center gap-x-3 gap-y-4 sm:gap-x-4 sm:gap-y-5">
-            {% for key, url, label in shortcuts %}
+            {% for key, url, label in brand_shortcuts %}
                 <a class="term-tile cursor-default flex-none flex flex-col items-center" href="{{ url }}">
                     <div class="cursor-pointer w-10 h-10 p-2.5 flex items-center justify-center bg-cust-element border border-cust-border rounded-[2px] transition-all duration-150 ease-out hover:border-[#7aff8f]">
+                        <div class="w-5 h-5 term-icon">
+                            {% include 'simple/_icons/' ~ key ~ '.html' %}
+                        </div>
+                    </div>
+                    <span class="term-label term-dim text-[10px] mt-1.5 tracking-widest uppercase">{{ label }}</span>
+                </a>
+            {% endfor %}
+        </div>
+
+        {# Link shortcuts — seconda sezione con accent blu per distinguerle dalle brand. #}
+        <div class="mt-6 mb-3 sm:mt-8 sm:mb-4 flex items-center gap-3 text-[11px] sm:text-xs">
+            <span class="term-accent">//</span>
+            <span class="term-dim tracking-widest uppercase">links</span>
+            <span class="term-rule"></span>
+        </div>
+
+        <div class="flex flex-row flex-wrap w-full justify-center gap-x-3 gap-y-4 sm:gap-x-4 sm:gap-y-5">
+            {% for key, url, label in link_shortcuts %}
+                <a class="term-tile is-link cursor-default flex-none flex flex-col items-center" href="{{ url }}">
+                    <div class="cursor-pointer w-10 h-10 p-2.5 flex items-center justify-center bg-cust-element border border-cust-border rounded-[2px] transition-all duration-150 ease-out hover:border-[#60a5fa]">
                         <div class="w-5 h-5 term-icon">
                             {% include 'simple/_icons/' ~ key ~ '.html' %}
                         </div>
