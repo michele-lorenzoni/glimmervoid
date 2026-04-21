@@ -24,11 +24,6 @@ COPY	searx/templates/static/output.css	/usr/local/searxng/searx/static/output.cs
 COPY	searx/templates/static/preferences.css	/usr/local/searxng/searx/static/preferences.css
 COPY	searx/templates/static/themes/simple/highlight.css	/usr/local/searxng/searx/static/themes/simple/highlight.css
 COPY	searx/templates/static/themes/simple/sxng-core.min.js	/usr/local/searxng/searx/static/themes/simple/sxng-core.min.js
-COPY	searx/templates/static/themes/simple/img/favicon.png	/usr/local/searxng/searx/static/themes/simple/img/favicon.png
-COPY	searx/templates/static/themes/simple/img/favicon.svg	/usr/local/searxng/searx/static/themes/simple/img/favicon.svg
-COPY	searx/templates/static/themes/simple/img/favicon.svg.gz	/usr/local/searxng/searx/static/themes/simple/img/favicon.svg.gz
-COPY	searx/templates/static/themes/simple/img/favicon.svg.br	/usr/local/searxng/searx/static/themes/simple/img/favicon.svg.br
-COPY	searx/templates/simple/searxng-wordmark.min.svg	/usr/local/searxng/searx/templates/simple/searxng-wordmark.min.svg
 COPY	searx/templates/simple/categories.html	/usr/local/searxng/searx/templates/simple/categories.html
 COPY	searx/templates/simple/page_with_header.html	/usr/local/searxng/searx/templates/simple/page_with_header.html
 COPY	searx/templates/simple/preferences.html	/usr/local/searxng/searx/templates/simple/preferences.html
@@ -42,9 +37,6 @@ COPY	searx/templates/simple/base.html	/usr/local/searxng/searx/templates/simple/
 COPY	searx/templates/simple/macros.html	/usr/local/searxng/searx/templates/simple/macros.html
 COPY	searx/templates/simple/search.html	/usr/local/searxng/searx/templates/simple/search.html
 COPY	searx/templates/simple/result_templates/videos.html	/usr/local/searxng/searx/templates/simple/result_templates/videos.html
-COPY	searx/engines/brave_api.py	/usr/local/searxng/searx/engines/brave_api.py
-# Engine commoncrawl disabilitato — vedi searx/engines/commoncrawl.py
-# COPY	searx/engines/commoncrawl.py	/usr/local/searxng/searx/engines/commoncrawl.py
 COPY	searx/templates/simple/preferences/footer.html	/usr/local/searxng/searx/templates/simple/preferences/footer.html
 COPY	searx/templates/simple/preferences/cookies.html	/usr/local/searxng/searx/templates/simple/preferences/cookies.html
 COPY	searx/templates/simple/preferences/answerers.html	/usr/local/searxng/searx/templates/simple/preferences/answerers.html
