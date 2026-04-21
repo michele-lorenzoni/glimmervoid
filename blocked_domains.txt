@@ -1571,6 +1571,7 @@ foxyutils.com
 fpds.gov
 fpo.xxx
 fr.bing.com
+fr.linkedin.com
 fr.wiktionary.org
 fractal.ai
 fractalaudio.com
