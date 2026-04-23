@@ -2832,6 +2832,7 @@ mergify.app
 merkabamusic.com
 merkabaonline.com
 mermaid-mind.vercel.app
+mermaidcanvas.app
 mermaidflow.app
 metaclippingpath.com
 metacritic.com
