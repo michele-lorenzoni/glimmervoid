@@ -18,7 +18,7 @@
 <fieldset>{{- '' -}}
   <legend id="pref_palette_contrast">{{- _('Contrasto palette') -}}</legend>{{- '' -}}
   <div class="value">{{- '' -}}
-    <input type="range" min="-2" max="2" step="1" value="0"
+    <input type="range" min="-3" max="3" step="1" value="0"
            id="palette-contrast"
            aria-labelledby="pref_palette_contrast"
            data-contrast-slider>{{- '' -}}
@@ -47,7 +47,7 @@
         // ----- contrast slider -----
         function readLevel() {
             var v = parseInt(localStorage.getItem('palette-contrast') || '0', 10);
-            if (isNaN(v) || v < -2 || v > 2) v = 0;
+            if (isNaN(v) || v < -3 || v > 3) v = 0;
             return v;
         }
         function fmt(v) { return v > 0 ? '+' + v : String(v); }
