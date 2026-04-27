@@ -1776,6 +1776,7 @@ genabel.org
 generatefakename.com
 generateit.net
 generator.email
+generatorfonts.com
 generor.com
 genfavicon.com
 genreadme.cloud
