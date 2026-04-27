@@ -49,6 +49,58 @@
         {% block stylesheets %}
             <link href="./../static/output.css" rel="stylesheet">
         {% endblock %}
+        <script>
+            // Contrasto palette — mescola gli accenti --color-neon-* e i testi
+            // --color-cust-{default,url,title,description,dim,placeholder}
+            // verso bianco/nero (alza contrasto) o verso --color-cust-body (riduce).
+            // Definito qui DOPO le stylesheet perché richiede getComputedStyle
+            // sulle var risolte; l'inline-script qui in <head> blocca il render
+            // finché lo stylesheet è caricato → niente FOUC.
+            (function () {
+                var VARS = [
+                    '--color-neon-green', '--color-neon-cyan', '--color-neon-pink',
+                    '--color-neon-amber', '--color-neon-red', '--color-neon-blue',
+                    '--color-cust-default', '--color-cust-url', '--color-cust-title',
+                    '--color-cust-description', '--color-cust-dim', '--color-cust-placeholder'
+                ];
+                function bodyLuminance() {
+                    var s = getComputedStyle(document.documentElement)
+                        .getPropertyValue('--color-cust-body').trim();
+                    var r, g, b, m;
+                    if ((m = /^#([a-f0-9]{6})$/i.exec(s))) {
+                        var n = parseInt(m[1], 16);
+                        r = (n >> 16) & 255; g = (n >> 8) & 255; b = n & 255;
+                    } else if ((m = /rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i.exec(s))) {
+                        r = +m[1]; g = +m[2]; b = +m[3];
+                    } else { return 0; }
+                    return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+                }
+                window.__applyPaletteContrast = function (level) {
+                    VARS.forEach(function (v) {
+                        document.documentElement.style.removeProperty(v);
+                    });
+                    if (!level) return;
+                    var amount = Math.abs(level) * 20; // 1→20%, 2→40%
+                    var anchor = level > 0
+                        ? (bodyLuminance() < 0.5 ? '#ffffff' : '#000000')
+                        : 'var(--color-cust-body)';
+                    VARS.forEach(function (v) {
+                        var orig = getComputedStyle(document.documentElement)
+                            .getPropertyValue(v).trim();
+                        if (!orig) return;
+                        document.documentElement.style.setProperty(
+                            v,
+                            'color-mix(in srgb, ' + orig + ' ' + (100 - amount) + '%, ' + anchor + ' ' + amount + '%)'
+                        );
+                    });
+                };
+                try {
+                    var lvl = parseInt(localStorage.getItem('palette-contrast') || '0', 10);
+                    if (isNaN(lvl) || lvl < -2 || lvl > 2) lvl = 0;
+                    window.__applyPaletteContrast(lvl);
+                } catch (e) {}
+            })();
+        </script>
     </head>
     <body class="{{ endpoint }}_endpoint bg-cust-body p-8 font-default font-normal text-cust-default">
         <main id="main_{{ self._TemplateReference__context.name|replace(' simple/', '') |replace(".html", "" ) }}"
