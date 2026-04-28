@@ -4500,6 +4500,7 @@ test-ipv6.com
 testfile.org
 texascreative.com
 texascss.net
+text-symbols.com
 text.is
 text2mm.com
 textcompare.io
