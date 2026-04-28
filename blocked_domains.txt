@@ -1545,6 +1545,7 @@ fontgenerator.name
 fontget.com
 fontjedi.com
 fontke.com
+fontly.io
 fontmeme.com
 fonts.net.cn
 fonts101.com
