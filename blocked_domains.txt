@@ -1454,6 +1454,7 @@ file-examples.com
 file.io
 file.kiwi
 filedropshare.com
+filehelper.com
 fileinfo.com
 fileion.com
 filepastebin.com
