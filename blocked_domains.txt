@@ -779,6 +779,7 @@ colorcombos.com
 colordesigner.io
 colorfactory.co
 colorhunt.co
+coloried.com
 colorinvert.org
 colorkit.co
 colorlib.com
@@ -2186,6 +2187,7 @@ icecreamapps.com
 icedit.net
 icoconverter.com
 icofont.com
+icolorpalette.com
 icomoon.io
 icon-icons.com
 icon.com
