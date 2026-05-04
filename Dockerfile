@@ -1,6 +1,7 @@
 
 FROM	searxng/searxng:latest
 EXPOSE	8080
+ARG	OUTGOING_PROXIES=""
 COPY	settings.yml.template	/tmp/settings.yml.template
 COPY	blocked_domains.txt	/tmp/blocked_domains.txt
 USER	root
@@ -8,11 +9,13 @@ RUN	set -e \
 	&& echo "[INFO] Inizio generazione settings.yml" \
 	&& > /tmp/domains_formatted.txt \
 	&& while IFS= read -r domain || [ -n "$domain" ]; do     domain=$(echo "$domain" | sed 's/#.*$//' | xargs);     if [ -n "$domain" ]; then     echo "      - ${domain}" >> /tmp/domains_formatted.txt;     fi;     done < /tmp/blocked_domains.txt \
-	&& sed '/{{BLOCKED_DOMAINS}}/r /tmp/domains_formatted.txt' /tmp/settings.yml.template |     sed '/{{BLOCKED_DOMAINS}}/d' > /etc/searxng/settings.yml \
+	&& > /tmp/proxies_formatted.txt \
+	&& if [ -n "$OUTGOING_PROXIES" ]; then     echo "  proxies:" >> /tmp/proxies_formatted.txt;     echo "    all://:" >> /tmp/proxies_formatted.txt;     OLD_IFS="$IFS"; IFS=',';     for proxy in $OUTGOING_PROXIES; do     proxy=$(echo "$proxy" | xargs);     if [ -n "$proxy" ]; then     echo "      - ${proxy}" >> /tmp/proxies_formatted.txt;     fi;     done;     IFS="$OLD_IFS";     echo "[INFO] Outgoing proxies configurati:";     cat /tmp/proxies_formatted.txt;     else     echo "[INFO] Nessun outgoing proxy configurato (OUTGOING_PROXIES vuoto)";     fi \
+	&& sed '/{{BLOCKED_DOMAINS}}/r /tmp/domains_formatted.txt' /tmp/settings.yml.template |     sed '/{{BLOCKED_DOMAINS}}/d' |     sed '/{{OUTGOING_PROXIES}}/r /tmp/proxies_formatted.txt' |     sed '/{{OUTGOING_PROXIES}}/d' > /etc/searxng/settings.yml \
 	&& echo "[INFO] File settings.yml generato con successo!" \
 	&& if [ ! -s /etc/searxng/settings.yml ]; then     echo "[ERROR] settings.yml è vuoto!";     exit 1;     fi \
 	&& chown searxng:searxng /etc/searxng/settings.yml \
-	&& rm -f /tmp/settings.yml.template /tmp/blocked_domains.txt /tmp/domains_formatted.txt
+	&& rm -f /tmp/settings.yml.template /tmp/blocked_domains.txt /tmp/domains_formatted.txt /tmp/proxies_formatted.txt
 RUN	mkdir -p /usr/local/searxng/searx/static/custom \
 	&& chown searxng:searxng /usr/local/searxng/searx/static/custom
 RUN	mkdir -p /usr/local/searxng/searx/static/fonts \

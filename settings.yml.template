@@ -197,6 +197,10 @@ outgoing:
   pool_maxsize: 20
   # See https://www.python-httpx.org/http2/
   enable_http2: true
+  # Outgoing proxies — espansi a build-time dal Dockerfile leggendo la build-arg
+  # OUTGOING_PROXIES (lista comma-separated di URL tipo http://user:pass@host:port).
+  # Se la build-arg è vuota la riga viene semplicemente rimossa e niente proxy.
+{{OUTGOING_PROXIES}}
   # uncomment below section if you want to use a custom server certificate
   # see https://www.python-httpx.org/advanced/#changing-the-verification-defaults
   # and https://www.python-httpx.org/compatibility/#ssl-configuration
