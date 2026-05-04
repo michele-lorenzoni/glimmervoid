@@ -15,3 +15,10 @@ See `STYLE_GUIDE.md` for the visual conventions: neon palette (green=active, cya
 ## Git
 
 - **Do not append `Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>` (or any Claude `Co-Authored-By` trailer) to commit messages.** Commit messages must end with the subject/body only, no Claude attribution trailer.
+
+## Deployment
+
+- **The project is deployed on Render.** There is no `render.yaml` in the repo: service config (env vars, build settings) lives only in the Render dashboard.
+- Dockerfile build-args (e.g. `OUTGOING_PROXIES`) are injected by Render from the service's **Environment Variables**. To change/disable one, edit it in the Render dashboard → tab Environment → save (triggers automatic rebuild + redeploy).
+- `settings.yml` is generated **at build-time** inside the image by the Dockerfile. Runtime changes to its content require a **rebuild**, not just a container restart.
+- Default assumption when the user mentions "variables" or "config" of the project: they live on Render, not in local files.
