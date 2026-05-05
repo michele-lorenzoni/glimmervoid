@@ -4,7 +4,11 @@ See `PROJECT_MAP.md` in the repo root for a structural map of the codebase (layo
 
 See `STYLE_GUIDE.md` for the visual conventions: neon palette (green=active, cyan=hover, pink=headings, amber=warn, red=danger), dashed vs solid borders, Lucide icon family, component patterns (nav, tabs, buttons, inputs, checkbox/radio), responsive rules, and CSS architecture. Always check it before adding UI so new elements match the existing language.
 
+See `IDEAS.md` per le idee, possibili migliorie e tradeoff non ancora implementati. Non è una roadmap né un committment: è il taccuino dove vivono i ragionamenti su evoluzioni future del progetto.
+
 **Keep `STYLE_GUIDE.md` in sync.** Whenever you introduce, remove, or change a visual convention — new palette color, new component pattern, new responsive breakpoint, new icon family, new responsive rule, changes to border/radius/spacing, new CSS layer architecture — update the relevant section of `STYLE_GUIDE.md` in the same commit. Drift between code and guide defeats the purpose of having one. If a change is a one-off tweak that doesn't generalize, it can stay local; if it sets a new convention someone else should follow, it goes in the guide.
+
+**Keep `IDEAS.md` aggiornato.** Ogni volta che in conversazione emerge una nuova idea, un'analisi di tradeoff o una possibile direzione di sviluppo non banale (anche senza richiesta esplicita dell'utente), aggiungerla a `IDEAS.md` nello stesso commit del lavoro che l'ha generata. Quando una voce viene completata si rimuove (la storia vive nei commit). Non duplicare voci esistenti — preferire arricchirle.
 
 ## Styling
 
