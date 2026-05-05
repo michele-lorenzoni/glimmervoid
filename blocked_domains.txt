@@ -3400,6 +3400,7 @@ pastebin.freeswitch.org
 pastebin.jonasscholz.de
 pastebin.me
 pastebin.pl
+pastebox.io
 pastedownload.com
 pastefy.app
 pasteit.sh
