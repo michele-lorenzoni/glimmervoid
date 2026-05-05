@@ -20,6 +20,22 @@ See `IDEAS.md` per le idee, possibili migliorie e tradeoff non ancora implementa
 
 - **Do not append `Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>` (or any Claude `Co-Authored-By` trailer) to commit messages.** Commit messages must end with the subject/body only, no Claude attribution trailer.
 
+## Source markers
+
+Ogni asserzione fattuale sul progetto, su SearXNG o su comportamento esterno va preceduta da **uno dei tre marker**, a inizio bullet/frase, in modo che la fonte sia individuabile a colpo d'occhio:
+
+- 🧠 **memoria di training**, non verificato — è un'ipotesi, va trattata come tale
+- 🌐 **web** — WebFetch fatto in questa sessione, includere il link a supporto
+- 📂 **repo locale** — file letto in questa sessione, citare `path:linea`
+
+Regole:
+
+- I marker vanno **a inizio frase o bullet**, mai a metà — devono saltare all'occhio durante lo scroll.
+- Per paragrafi che mescolano più fatti, **spezzare in bullet** così che ogni asserzione abbia il suo marker.
+- Asserzione mista (training + verifica successiva) → marker in sequenza (es. 🧠→📂) per mostrare il flusso.
+- Frasi discorsive (consigli, opinioni, domande, riassunti del lavoro fatto) **non** si marcano — i marker sono solo per asserzioni fattuali, altrimenti diventano rumore.
+- L'assenza di marker su un'asserzione fattuale = errore, l'utente può contestare immediatamente.
+
 ## SearXNG reference
 
 - **Qualsiasi informazione su SearXNG (engine, `settings.yml`, plugin, network, comportamento upstream) va recuperata dalla doc ufficiale o dal codice sorgente upstream, non dalla memoria di training.** La memoria di training su SearXNG ha già prodotto hallucination su nomi di key e blocchi YAML inesistenti — non è autorevole.
