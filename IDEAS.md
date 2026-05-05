@@ -4,8 +4,9 @@ Scratchpad personale per cose da valutare/sperimentare. Non è una roadmap, non 
 
 ## IP ban / blocchi sui motori
 
-- **Capire perché `OUTGOING_PROXIES` non viene usata.** Possibili cause: variabile vuota su Render, proxy non raggiungibili, sintassi del valore non valida. Step zero prima di toccare il meccanismo.
-- **Passare da `outgoing.proxies` globale a `outgoing.networks` per-engine.** Definire un network "proxied" e assegnarlo solo ai motori che bannano (Google, Bing, ecc.); gli altri (DuckDuckGo, Wikipedia, …) restano diretti. Riduce costo proxy e latenza media. Richiede modifica `settings.yml.template` + piccolo refactor della build-arg nel `Dockerfile`.
+> Stato attuale: la build-arg `OUTGOING_PROXIES` è dichiarata e funzionante ma **intenzionalmente vuota** sull'env di Render — non c'è un servizio di proxy attivo. Il meccanismo è dormiente, non rotto.
+
+- **Passare da `outgoing.proxies` globale a `outgoing.networks` per-engine.** Definire un network "proxied" e assegnarlo solo ai motori che bannano (Google, Bing, ecc.); gli altri (DuckDuckGo, Wikipedia, …) restano diretti. Riduce costo proxy e latenza media. Richiede modifica `settings.yml.template` + piccolo refactor della build-arg nel `Dockerfile`. Va fatto **insieme** alla scelta di un servizio proxy concreto, altrimenti è prematuro.
 - **Tor su un network dedicato** (`using_tor_proxy: true`) per engine secondari. Sconsigliato per Google/Bing: gli exit node Tor sono quasi sempre già in blocklist, quindi "Tor on" spesso peggiora invece di migliorare. Sensato solo per engine minori.
 - **Toggle Tor da UI senza redeploy.** SearXNG legge `settings.yml` solo all'avvio: un vero toggle a livello di config richiede restart container. Tre strade per ottenere comunque l'effetto "bottone":
   1. *Doppio engine* — dichiarare ogni motore due volte (`google` + `google-tor`, ecc.) con `network: default` vs `network: tor`. L'utente li attiva/disattiva dalla pagina **preferences** già esistente. Zero codice, ma toggle per-engine, non un singolo bottone. Persistito via cookie.
