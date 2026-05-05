@@ -3399,6 +3399,7 @@ pastebin.es
 pastebin.freeswitch.org
 pastebin.jonasscholz.de
 pastebin.me
+pastebin.mozilla.org
 pastebin.pl
 pastebox.io
 pastedownload.com
