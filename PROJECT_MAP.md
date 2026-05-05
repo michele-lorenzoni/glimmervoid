@@ -15,9 +15,6 @@ glimmervoid/
 ├── scripts/                     # sort_json.py, sort_txt.py, extract_palette.py
 ├── showcase/                    # screenshots (index/results, desktop/mobile)
 └── searx/
-    ├── engines/                 # custom engines only
-    │   ├── brave_api.py
-    │   └── commoncrawl.py
     └── templates/
         ├── simple/              # Jinja2 templates (override upstream)
         └── static/
@@ -31,7 +28,6 @@ glimmervoid/
   1. Format `blocked_domains.txt` → YAML list and inject into `/etc/searxng/settings.yml` via `{{BLOCKED_DOMAINS}}` placeholder.
   2. Copy `searx/templates/simple/*` → upstream template dir.
   3. Copy `searx/templates/static/{custom,themes/simple}` → upstream static dir.
-  4. Copy `searx/engines/*.py` → upstream engines dir.
 - Exposes port 8080.
 
 ## Templates (`searx/templates/simple/`)
@@ -85,10 +81,7 @@ npx @tailwindcss/cli -i input.css -o output.css
 
 ## Custom engines
 
-- `searx/engines/brave_api.py` — Brave Search API.
-- `searx/engines/commoncrawl.py` — Common Crawl.
-
-All other engines come from the upstream image.
+None — all engines come from the upstream image.
 
 ## Scripts
 
