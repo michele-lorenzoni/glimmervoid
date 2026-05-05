@@ -20,6 +20,14 @@ See `IDEAS.md` per le idee, possibili migliorie e tradeoff non ancora implementa
 
 - **Do not append `Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>` (or any Claude `Co-Authored-By` trailer) to commit messages.** Commit messages must end with the subject/body only, no Claude attribution trailer.
 
+## SearXNG reference
+
+- **Qualsiasi informazione su SearXNG (engine, `settings.yml`, plugin, network, comportamento upstream) va recuperata dalla doc ufficiale o dal codice sorgente upstream, non dalla memoria di training.** La memoria di training su SearXNG ha già prodotto hallucination su nomi di key e blocchi YAML inesistenti — non è autorevole.
+  - Doc ufficiale: <https://docs.searxng.org/>
+  - Sorgente upstream: <https://github.com/searxng/searxng> (il container parte da `searxng/searxng:latest`)
+- **Particolarmente critico per `settings.yml.template`**: prima di proporre una nuova key, un nuovo blocco o un refactor della config, verificare la sintassi nella doc o nel `settings.yml` di default upstream e citare la fonte (link) nella risposta/commit.
+- La memoria di training si usa **solo come ultima spiaggia**, ed esplicitando che l'asserzione non è verificata.
+
 ## Deployment
 
 - **The project is deployed on Render.** There is no `render.yaml` in the repo: service config (env vars, build settings) lives only in the Render dashboard.
