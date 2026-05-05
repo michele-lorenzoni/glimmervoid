@@ -3401,6 +3401,7 @@ pastebin.jonasscholz.de
 pastebin.me
 pastebin.mozilla.org
 pastebin.pl
+pastebin.ubuntu.com
 pastebox.io
 pastedownload.com
 pastefy.app
