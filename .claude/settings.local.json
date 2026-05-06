@@ -39,7 +39,11 @@
             "WebFetch(domain:simpleicons.org)",
             "WebFetch(domain:docs.searxng.org)",
             "WebFetch(domain:www.hetzner.com)",
-            "WebFetch(domain:docs.hetzner.com)"
+            "WebFetch(domain:docs.hetzner.com)",
+            "Bash(gh api *)",
+            "WebFetch(domain:static.etherpad.org)",
+            "WebFetch(domain:www.npmjs.com)",
+            "WebFetch(domain:registry.npmjs.org)"
         ]
     }
 }
