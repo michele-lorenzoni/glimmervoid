@@ -16,7 +16,16 @@ Scratchpad personale per cose da valutare/sperimentare. Non è una roadmap, non 
   Prerequisito comune a tutte: serve un demone **Tor in ascolto** raggiungibile da SearXNG (default SOCKS5 `127.0.0.1:9050`). Su Render = un container un processo, quindi va aggiunto al `Dockerfile` (installare `tor`, lanciarlo via supervisord/entrypoint script), oppure tenuto in un service Render separato, oppure su un VPS esterno.
 - **Volume atteso e modello tariffario.** Una ricerca SearXNG ban-routed = ~1–3 MB (3–5 engine ban-sensible × 200–700 KB di response, di più per verticali immagini/video). Uso moderato (~150 ricerche/giorno) → 6–15 GB/mese; uso intenso → ≥30 GB/mese. Conseguenza: il **pay-per-GB è la scelta sbagliata** a questi volumi (Bright Data ~€8/GB → €240+/mese in scenario heavy; anche IPRoyal ~$2/GB pesa). La banda **deve** essere flat-rate. *Stime e prezzi indicativi, da verificare al momento della scelta.*
 - **VPS come SOCKS5 (raccomandato per uso personale).** VPS economico (Hetzner / Contabo / OVH-Kimsufi sui €4–5/mese) con banda inclusa generosa, configurato come proxy SOCKS5 (`dante`, `3proxy`, tunnel SSH). Costo fisso prevedibile, banda non un problema. Limite: un solo IP — quando viene bannato si cambia server. Si combina col pattern per-engine sopra (`proxies:` solo su Google/Bing/etc.) per ridurre l'esposizione del singolo IP.
-  - Hetzner: il **piano d'ingresso della linea Cost Optimized** basta abbondantemente — servono <100 MB RAM, CPU trascurabile, ~20 TB di traffico EU inclusi. Prezzo d'ingresso verificato sulla pagina Hetzner: **€4.49/mese** (esclusi eventuali oneri IPv4 dedicato, da confermare sul checkout). ARM va bene: `dante`/`3proxy` hanno binari nativi. Datacenter EU (Falkenstein/Norimberga/Helsinki).
+  - Hetzner Cost Optimized — listino verificato (excl. VAT):
+
+    | Plan | CPU | RAM | SSD | €/mese |
+    |---|---|---|---|---|
+    | **CX23** | 2× Intel/AMD | 4 GB | 40 GB | **€4.49** |
+    | CAX11 | 2× ARM Ampere | 4 GB | 40 GB | €4.99 |
+    | CX33 | 4× Intel/AMD | 8 GB | 80 GB | €6.99 |
+    | CAX21 | 4× ARM | 8 GB | 80 GB | €8.49 |
+
+    **Raccomandazione: CX23** (€4.49 excl. VAT, ~€5.48 IT con IVA 22%, + ~€0.50/mo IPv4 dedicato). Stesse specifiche di CAX11 ma €0.50 meno e x86 (zero rischio di edge case con tooling). Per SOCKS5 servono <100 MB RAM e CPU trascurabile, quindi è ampiamente sovradimensionato. Datacenter EU (Falkenstein/Norimberga/Helsinki).
   - **Caveat blocklist**: gli IP cloud Hetzner sono comunque marchiati come "datacenter" e potrebbero essere già bannati dagli stessi engine che bannano Render — meno aggressivamente, ma non risolto a priori. Test obbligatorio prima di impegnarsi: `curl --socks5 ...` verso l'engine target dal VPS appena montato. Se anche Hetzner viene rifiutato, l'unica via è static residential / ISP proxies (vedi voce successiva) o IP residenziale proprio (self-hosting).
 - **Static residential / ISP proxies flat-rate** (es. Webshare): N IP residenziali fissi a costo fisso anziché a GB. Più IP del singolo VPS, niente sorprese in bolletta. Buon compromesso se il VPS singolo viene bannato troppo spesso.
 - **Self-hosting su IP residenziale.** Mini-server a casa via DDNS: banda dell'abbonamento internet, IP residenziale "buono" agli occhi degli engine. Operativamente più lavoro (uptime, NAT, dynamic DNS) ma zero costi ricorrenti.
