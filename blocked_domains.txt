@@ -1745,6 +1745,7 @@ g-tools.nl
 g-vloeren.nl
 g.co
 g0dam.github.io
+g2.com
 g4dgetify.myshopify.com
 gaana.com
 gadget-rumours.com
