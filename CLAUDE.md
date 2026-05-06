@@ -35,6 +35,7 @@ Regole:
 - Asserzione mista (training + verifica successiva) → marker in sequenza (es. 🧠→📂) per mostrare il flusso.
 - Frasi discorsive (consigli, opinioni, domande, riassunti del lavoro fatto) **non** si marcano — i marker sono solo per asserzioni fattuali, altrimenti diventano rumore.
 - L'assenza di marker su un'asserzione fattuale = errore, l'utente può contestare immediatamente.
+- **Caveat 🌐**: WebFetch su pagine **JS-rendered** (SPA, listini con tabelle dinamiche, dashboard) può restituire contenuto generato dal modello dietro il tool, non estratto realmente. Considerare 🌐 affidabile solo se il fatto è citato verbatim dal testo statico della pagina (doc, articoli, markdown, README). Se la response WebFetch sembra "troppo pulita" su una pagina che in realtà è SPA, downgrade ad 🧠 e verifica con l'utente.
 
 ## SearXNG reference
 
