@@ -8,7 +8,7 @@ See `IDEAS.md` per le idee, possibili migliorie e tradeoff non ancora implementa
 
 **Keep `STYLE_GUIDE.md` in sync.** Whenever you introduce, remove, or change a visual convention — new palette color, new component pattern, new responsive breakpoint, new icon family, new responsive rule, changes to border/radius/spacing, new CSS layer architecture — update the relevant section of `STYLE_GUIDE.md` in the same commit. Drift between code and guide defeats the purpose of having one. If a change is a one-off tweak that doesn't generalize, it can stay local; if it sets a new convention someone else should follow, it goes in the guide.
 
-**Keep `IDEAS.md` aggiornato.** Ogni volta che in conversazione emerge una nuova idea, un'analisi di tradeoff o una possibile direzione di sviluppo non banale (anche senza richiesta esplicita dell'utente), aggiungerla a `IDEAS.md` nello stesso commit del lavoro che l'ha generata. Quando una voce viene completata si rimuove (la storia vive nei commit). Non duplicare voci esistenti — preferire arricchirle.
+**Keep `IDEAS.md` aggiornato — azione automatica, no permission-asking.** Ogni volta che in conversazione emerge una nuova idea, un'analisi di tradeoff o una possibile direzione di sviluppo non banale, aggiungerla a `IDEAS.md` **direttamente, senza chiedere conferma**. Niente "vuoi che aggiorni IDEAS.md?" alla fine dei messaggi: l'utente ha già dato l'ok permanente. Vale anche per gli auto-commit/push (vedi `feedback_auto_push.md`). Quando una voce viene completata si rimuove (la storia vive nei commit). Non duplicare voci esistenti — preferire arricchirle.
 
 ## Styling
 

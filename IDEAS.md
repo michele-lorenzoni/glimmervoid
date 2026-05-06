@@ -26,6 +26,43 @@ Scratchpad personale per cose da valutare/sperimentare. Non è una roadmap, non 
 
 - I precedenti `brave_api.py` e `commoncrawl.py` sono stati rimossi perché non funzionavano. Reintrodurre solo se c'è una ragione concreta e una versione che funziona davvero.
 
+## Architettura ricerca: allowlist + cache + API a pagamento
+
+Cambio di paradigma rispetto al meta-search "su tutto il web": restringere la ricerca a una lista curata di domini affidabili. Risolve l'IP-ban *by design* (l'API a pagamento non banna per IP) e abbatte i costi tramite cache.
+
+**Componenti:**
+
+1. **Engine custom SearXNG** che chiama un'API di ricerca:
+   - 🧠 Google Programmable Search Engine (CSE) — nasce per restringere a un set di domini, configurato server-side via dashboard Google. ~$5/1000 query oltre il free tier 100/giorno.
+   - 🧠 Brave Search API — supporta operator `site:`, $3–9/1000 query.
+   - *Prezzi da verificare al momento della scelta.*
+2. **`allowed_domains.txt`** — gestito col pattern già consolidato di `blocked_domains.txt`: file di testo iniettato a build-time dal `Dockerfile` in `settings.yml` (o letto direttamente dall'engine custom).
+3. **Cache aggressiva** delle response API:
+   - Chiave: `(query_normalizzata, lingua, page)`.
+   - TTL configurabile (es. default 7 giorni per evergreen, 1 giorno per query con keyword "news/oggi/ora").
+   - Cache hit = zero spesa API.
+4. **Pulsante "force refresh"** in UI sulla results page per saltare la cache su richiesta esplicita.
+
+**Pro:**
+- Risolve IP-ban *by design*.
+- Costi API contenuti grazie alla cache.
+- Risultati più puliti: niente junk SEO.
+
+**Tradeoff onesti:**
+- **Perdita di serendipità**: SearXNG nasce per scoprire fuori dai sentieri noti; l'allowlist taglia questa feature alla radice. Scelta filosofica, non solo tecnica.
+- Manutenzione `allowed_domains.txt`: deve crescere col tempo o ricerche rare tornano vuote.
+- Cache invalidation non banale: TTL lunghi → risultati obsoleti; troppo corti → cache inutile.
+- 📂 Storage cache: il container Render ha disco effimero. Servono Redis (Render add-on) o volume persistente — costo o config aggiuntiva.
+
+**Vincolo verificato:**
+- 🌐 Il SearXNG `Hostnames` plugin **non** supporta nativamente una mode `keep_only`/allowlist ([dev/plugins/hostnames.html](https://docs.searxng.org/dev/plugins/hostnames.html)): solo `replace`, `remove`, `high_priority`, `low_priority`. Quindi l'allowlist richiede engine custom o filtro lato API (es. CSE configurato già allowlist-only nella dashboard Google).
+
+**Sequenza di rollout consigliata:**
+1. Decidere fra Google CSE (allowlist server-side, più qualità) e Brave API (operator `site:`, più semplice da prototipare).
+2. PoC dell'engine custom con cache **in-memory** (dict) per validare flusso end-to-end.
+3. Solo se PoC funziona: aggiungere persistenza cache (Redis su Render) e pulsante force-refresh in template.
+4. Promuovere a engine "primario" solo se la qualità dei risultati è soddisfacente — altrimenti tenere come engine accessorio attivabile via cookie.
+
 ## Tuning outgoing
 
 - Rivalutare i parametri in `settings.yml.template` `outgoing:` (linee ~185-200): `request_timeout`, `pool_connections`, `pool_maxsize`, `useragent_suffix`, `enable_http2`. I default attuali sono ragionevoli ma vanno tarati se cambia hosting o si introducono proxy lenti.
