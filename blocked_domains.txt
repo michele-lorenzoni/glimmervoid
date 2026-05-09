@@ -1491,6 +1491,7 @@ file-examples.com
 file.io
 file.kiwi
 filedropshare.com
+fileformat.info
 filehelper.com
 fileinfo.com
 fileion.com
