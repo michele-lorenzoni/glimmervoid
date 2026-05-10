@@ -1119,6 +1119,7 @@ dfs.com
 dfviewer.com
 dhgate.com
 dhiwise.com
+diagrams.app
 dicetower.com
 dictionary.com
 diffchecker.com
