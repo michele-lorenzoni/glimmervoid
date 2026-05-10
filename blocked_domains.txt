@@ -3338,6 +3338,7 @@ onlinecompilers.com
 onlineconverter.com
 onlinedevtools.dev
 onlineexifviewer.com
+onlinefontsgenerator.com
 onlinegames.io
 onlinegdb.com
 onlinehtmleditor.dev
