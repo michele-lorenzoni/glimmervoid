@@ -4678,6 +4678,7 @@ textrepeater.com
 textshine.com
 textstudio.com
 texttooldb.com
+texttosvg.app
 texttrick.com
 texture-packs.com
 textures.world
