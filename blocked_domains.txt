@@ -4225,6 +4225,7 @@ securityonline.info
 see-tool.com
 seeklogo.com
 sefsd.org
+segmentfault.com
 sekurak.pl
 seletti.it
 selfhostedemailserver.com
