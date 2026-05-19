@@ -3492,6 +3492,7 @@ password-depot.de
 passwords-generator.org
 passwordsgenerator.com
 paste-bin.org
+paste.red
 pastebin.calculate-linux.org
 pastebin.co
 pastebin.com
