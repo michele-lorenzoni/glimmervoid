@@ -1016,6 +1016,7 @@ cvedetails.com
 cveroulette.com
 cwe-missions.org
 cwe.org
+cwecorp.com
 cweonline.org
 cyberchef.in
 cyberchef.org
