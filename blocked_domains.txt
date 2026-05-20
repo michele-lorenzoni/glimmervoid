@@ -1020,6 +1020,7 @@ cve.icu
 cvecorp.com
 cvedetails.com
 cveroulette.com
+cvs.com
 cwe-missions.org
 cwe.org
 cwecorp.com
