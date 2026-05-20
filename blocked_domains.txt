@@ -1021,6 +1021,7 @@ cvecorp.com
 cvedetails.com
 cveroulette.com
 cvs.com
+cvss-navigator.com
 cwe-missions.org
 cwe.org
 cwecorp.com
