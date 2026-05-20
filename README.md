@@ -1,5 +1,7 @@
 # Glimmervoid
 
+**English** | [Italiano](README.it.md)
+
 Customized [SearXNG](https://github.com/searxng/searxng) fork with a terminal-style UI: monospace (Iosevka), neon palette, keyboard-driven results, dynamic per-page identicon favicon, badge overlay for favorite/visited/unwanted/ignored URLs.
 
 The Python/Flask core comes from the upstream `searxng/searxng:latest` Docker image — **this repo only ships overrides** (Jinja templates, custom JS, compiled Tailwind CSS, `settings.yml.template`, blocked-domains list).
