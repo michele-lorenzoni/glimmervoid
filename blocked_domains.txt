@@ -1014,6 +1014,7 @@ cve.icu
 cvecorp.com
 cvedetails.com
 cveroulette.com
+cwe-missions.org
 cyberchef.in
 cyberchef.org
 cyberghostvpn.com
