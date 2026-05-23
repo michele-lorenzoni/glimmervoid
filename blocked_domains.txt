@@ -1558,6 +1558,7 @@ fileion.com
 filepastebin.com
 filerepo.com
 files.fm
+files.tips
 filesamples.com
 filetransfer.uvm.edu
 filetypes.it
