@@ -2919,6 +2919,7 @@ mail.tm
 mailanon.cc
 mailinator.com
 mailsac.com
+mailtester.ninja
 mailvare.com
 mailwave.dev
 mainfacts.com
