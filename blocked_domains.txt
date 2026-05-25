@@ -1956,6 +1956,7 @@ getpronounce.com
 getsamplefiles.com
 getshared.com
 gettextbooks.com
+gettyimages.ca
 gettyimages.com
 gettyimages.in
 gettyimages.it
