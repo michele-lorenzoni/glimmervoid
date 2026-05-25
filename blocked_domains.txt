@@ -2259,6 +2259,7 @@ htmlbeautifier.org
 htmlcolorcodes.com
 htmlcolors.com
 htmlcsscleaner.com
+htmltable.com
 htmlwasher.com
 httpstatus.io
 htw-berlin.de
