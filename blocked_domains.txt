@@ -194,6 +194,7 @@ amazon.de
 amazon.fr
 amazon.in
 amazon.nl
+amazon.sa
 amenpics.com
 americanenglishsounds.net
 amtrak.com
