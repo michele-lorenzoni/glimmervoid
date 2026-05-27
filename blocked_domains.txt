@@ -3760,6 +3760,7 @@ pkms.edu.hk
 pkms.org.sg
 pl.wiktionary.org
 placehold.jp
+placeholder.guru
 placeholderimage.dev
 placeholderimage.org
 placeholdit.com
