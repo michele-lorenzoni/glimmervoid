@@ -5100,6 +5100,7 @@ txcss.net
 typecast.ai
 typedojo.com
 typefaceapp.com
+typetex.app
 typing-speed.net
 typingbird.com
 typingmind.com
