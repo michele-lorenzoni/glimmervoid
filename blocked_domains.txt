@@ -389,6 +389,7 @@ base64.online
 base64decode.net
 base64decode.org
 base64decode.tools
+base64encode.net
 baseball-reference.com
 basecamp.com
 bash.ogulcanaydogan.com
