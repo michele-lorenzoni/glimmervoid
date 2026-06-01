@@ -1716,6 +1716,7 @@ fontz.net
 fontzone.net
 food-e-commerces.vercel.app
 foodandwine.com
+foodbazaar.com
 foodebasket.com.pk
 foodfusion.com
 foodies.pk
