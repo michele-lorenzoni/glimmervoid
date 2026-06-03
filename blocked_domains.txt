@@ -762,6 +762,7 @@ classpop.com
 classtools.net
 claude.online
 claude.talkai.info
+claude5.ai
 claudemilano.com
 claudemusic.com
 clean.email
