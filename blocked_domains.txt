@@ -2859,6 +2859,7 @@ linguee.nl
 linkcheck.org
 linkz.ai
 linuxcommandlibrary.com
+linuxconcept.com
 linuxconfig.org
 linuxg.net
 linuxhint.com
