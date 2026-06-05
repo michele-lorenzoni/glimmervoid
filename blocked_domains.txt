@@ -1611,6 +1611,7 @@ file-extensions.org
 file.io
 file.kiwi
 file.tips
+filedesc.com
 filedropshare.com
 fileformat.info
 filehelper.com
