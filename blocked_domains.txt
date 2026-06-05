@@ -1610,6 +1610,7 @@ file-examples.com
 file-extensions.org
 file.io
 file.kiwi
+file.tips
 filedropshare.com
 fileformat.info
 filehelper.com
