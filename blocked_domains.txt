@@ -812,6 +812,7 @@ cn.linux-console.net
 cn.linux-terminal.com
 cn.wordpress.org
 cn.wordpress.org
+cnbc.com
 cnblogs.com
 cnvmp3.com
 cocce.it
