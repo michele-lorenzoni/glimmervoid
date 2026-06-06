@@ -5702,6 +5702,7 @@ z-library.life
 z-library.ltd
 z-library.sk
 z-libraryurl.github.io
+zacks.com
 zalgo.org
 zanvis.com
 zarla.com
