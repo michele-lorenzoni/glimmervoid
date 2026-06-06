@@ -422,6 +422,7 @@ bazaarsm.com
 bbt-benatti.it
 bcrypt-generator.com
 bcrypt.online
+bcryptgenerator.com
 bcrypthash-generate.vercel.app
 bdo.com
 beanstalk.farm
