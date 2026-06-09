@@ -1630,6 +1630,7 @@ fig.io
 fiio.com
 file-converter.org
 file-examples.com
+file-extension.org
 file-extensions.org
 file.io
 file.kiwi
