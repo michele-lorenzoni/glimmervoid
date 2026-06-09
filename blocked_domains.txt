@@ -2051,6 +2051,7 @@ ggservice.com
 gh-stats-gen.vercel.app
 ghostwriter-ai.com
 ghostwritersandco.com
+giants.com
 gidd.io
 giddyup.io
 giddyupcoffeehouse.com
