@@ -1,13 +1,25 @@
 # Glimmervoid — style guide
 
-Tema **`terminal`**: background scuro, font monospace, palette neon differenziata per funzione. È l'unico tema del progetto, impostato come default e hardcoded — non c'è un selettore di tema nella preferences. Questa guida raccoglie le decisioni prese nel repo — consultala prima di aggiungere UI per mantenere coerenza.
+Due temi selezionabili dal tab UI della preferences:
+
+- **`terminal`** (default): background scuro, font monospace Iosevka, palette neon, decorazioni `>` / `[ ]` / `//` / caret lampeggiante.
+- **`pro`**: stesso layout/markup, ma font sans serif (Fira Sans), palette di default slate-blue, tutte le decorazioni terminali nascoste (caret, prompt, brackets, accent `//`, term-rule). Pensato per chi vuole un'estetica sobria/professionale. Ortogonale alle palette — entrambi i temi rispettano la palette scelta dall'utente.
+
+Questa guida raccoglie le decisioni prese nel repo — consultala prima di aggiungere UI per mantenere coerenza.
 
 > **Mantenere aggiornata.** Ogni modifica allo stile che introduce, cambia o rimuove una convenzione (nuovo colore in palette, nuovo pattern componente, cambio di border/radius/spacing, nuovo breakpoint responsive, nuova regola sulle icone o sull'architettura CSS) va riflessa in questa guida **nello stesso commit**. Tweak una tantum che non generalizzano restano locali; tutto ciò che qualcun altro deve seguire va qui.
 
 ### Theme naming
-- La `<html>` ha sempre classe `theme-terminal` (hardcoded in `base.html`). Oggi è l'unico tema; altri arriveranno.
+- La `<html>` ha sempre classe `theme-terminal` (hardcoded in `base.html`) per compatibilità storica con regole CSS.
+- L'attributo `html[data-theme="…"]` è il selettore reale del tema attivo. Valori: `terminal` (default), `pro`. Persistenza in `localStorage['theme']`. Early script in `base.html` lo applica prima del render (no FOUC), specchiando il pattern delle palette.
 - Il valore di `simple_style` in `settings.yml.template` è lasciato a `auto` solo per compatibilità con upstream: il nostro CSS non ne dipende.
-- Il selettore "Theme" nel tab UI della preferences è presente (override locale in `preferences/theme.html`) ma mostra solo l'opzione "Terminal" — resta visibile per quando aggiungeremo nuovi temi.
+- Selettore "Theme" in `preferences/theme.html`: due opzioni hardcoded (Terminal / Professional). Stesso pattern di `palette.html`.
+
+### Aggiungere un nuovo tema
+1. Aggiungere `<option value="my-theme">My theme</option>` in `preferences/theme.html`.
+2. Blocco `html[data-theme="my-theme"] { … }` in `input.css` (sezione vars PRIMA dei blocchi palette così la palette utente vince; override strutturali dopo `@theme`).
+3. Rebuild `output.css` (`npx @tailwindcss/cli -i input.css -o output.css --minify`).
+4. Documentarlo qui sopra.
 
 ### Palette
 Nel tab UI c'è un secondo fieldset "Palette" che gestisce la variante cromatica. La scelta è salvata in `localStorage['palette']` ed esposta come `html[data-palette="…"]`. Un inline script in `base.html` legge localStorage al boot e imposta l'attributo prima del render (no FOUC).
