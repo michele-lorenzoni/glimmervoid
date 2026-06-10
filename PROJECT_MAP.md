@@ -90,6 +90,8 @@ None — all engines come from the upstream image.
 | `scripts/sort_json.py` | Pre-commit: sort JSON arrays/keys. |
 | `scripts/sort_txt.py` | Pre-commit: sort `blocked_domains.txt`. |
 | `scripts/extract_palette.py` | Utility to pull hex colors from Atlassian palette screenshots. |
+| `scripts/selfhost/auto-update.ps1` | Selfhost: polls `origin/main`, rebuilds image + restarts container if HEAD moved. Logs to `<repo>/auto-update.log`. |
+| `scripts/selfhost/register-task.ps1` | Selfhost: registers `auto-update.ps1` as a Windows Scheduled Task (every 2 min). Run once as Administrator. |
 
 ## Conventions (reminders)
 
