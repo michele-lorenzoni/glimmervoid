@@ -54,10 +54,21 @@ function Invoke-Rebuild {
     param([string]$TargetCommit)
 
     Write-Log "Building image '$ImageTag' (commit=$TargetCommit)."
-    docker build `
-        --label "glimmervoid.commit=$TargetCommit" `
-        -t $ImageTag $RepoRoot 2>&1 | ForEach-Object { Write-Log $_ "BUILD" }
-    if ($LASTEXITCODE -ne 0) { throw "docker build failed (exit $LASTEXITCODE)" }
+    # BuildKit writes progress to stderr. With EAP=Stop those lines would
+    # abort the pipeline on the first stderr write, so relax it locally.
+    $prevEap = $ErrorActionPreference
+    $ErrorActionPreference = "Continue"
+    try {
+        & docker build `
+            --label "glimmervoid.commit=$TargetCommit" `
+            -t $ImageTag $RepoRoot 2>&1 | ForEach-Object {
+                Write-Log ([string]$_) "BUILD"
+            }
+        $buildExit = $LASTEXITCODE
+    } finally {
+        $ErrorActionPreference = $prevEap
+    }
+    if ($buildExit -ne 0) { throw "docker build failed (exit $buildExit)" }
 
     $existing = docker ps -a --filter "name=^/$ContainerName$" --format "{{.ID}}"
     if ($existing) {
