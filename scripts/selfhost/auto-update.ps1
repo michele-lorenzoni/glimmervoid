@@ -38,9 +38,16 @@ function Get-DeployedCommit {
     param([string]$Container)
     $id = docker ps -a --filter "name=^/$Container$" --format "{{.ID}}" 2>$null
     if (-not $id) { return $null }
-    $sha = docker inspect --format '{{ index .Config.Labels "glimmervoid.commit" }}' $Container 2>$null
-    if ($LASTEXITCODE -ne 0 -or -not $sha) { return "unknown" }
-    return $sha.Trim()
+    $raw = docker inspect $Container 2>$null
+    if ($LASTEXITCODE -ne 0 -or -not $raw) { return "unknown" }
+    try {
+        $info = $raw | ConvertFrom-Json
+        $sha = $info[0].Config.Labels.'glimmervoid.commit'
+        if (-not $sha) { return "unknown" }
+        return $sha.Trim()
+    } catch {
+        return "unknown"
+    }
 }
 
 function Invoke-Rebuild {
