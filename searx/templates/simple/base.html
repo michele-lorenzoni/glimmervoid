@@ -15,11 +15,10 @@
         <meta name="robots" content="noarchive">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
-            // Early palette+theme application — legge localStorage e setta
-            // data-palette/data-theme sull'html prima del render (no FOUC).
+            // Early palette application — legge localStorage e setta data-palette
+            // sull'html prima del render per evitare FOUC al cambio di palette.
             try {
                 document.documentElement.dataset.palette = localStorage.getItem('palette') || 'neon';
-                document.documentElement.dataset.theme = localStorage.getItem('theme') || 'terminal';
             } catch (e) {}
         </script>
         <script src="/static/custom/active_article.js" type="text/javascript" defer></script>

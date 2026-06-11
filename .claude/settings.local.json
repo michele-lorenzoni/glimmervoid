@@ -47,8 +47,7 @@
             "WebFetch(domain:help.supernotes.app)",
             "WebFetch(domain:www.google.com)",
             "Bash(npx @tailwindcss/cli -i ./searx/static/themes/simple/src/cust.css -o ./searx/static/themes/simple/css/output.css --minify)",
-            "Bash(npx @tailwindcss/cli -i ./searx/templates/static/input.css -o ./searx/templates/static/output.css --minify)",
-            "PowerShell(Get-ScheduledTask *)"
+            "Bash(npx @tailwindcss/cli -i ./searx/templates/static/input.css -o ./searx/templates/static/output.css --minify)"
         ]
     }
 }

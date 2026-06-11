@@ -1,27 +1,11 @@
 <fieldset>{{- '' -}}
   <legend id="pref_theme">{{- _('Theme') -}}</legend>{{- '' -}}
   <div class="value">{{- '' -}}
-    <select id="theme-select" aria-labelledby="pref_theme" data-theme-selector>{{- '' -}}
-      <option value="terminal">Terminal</option>{{- '' -}}
-      <option value="pro">Professional</option>{{- '' -}}
+    <select name='simple_style' aria-labelledby="pref_theme">{{- '' -}}
+      <option value="auto" selected="selected">Terminal</option>{{- '' -}}
     </select>{{- '' -}}
   </div>{{- '' -}}
   <div class="description">
-    {{- _('Aspetto generale dell\'interfaccia — salvato in localStorage, non richiede reload.') -}}
+    {{- _('Visual theme — altre opzioni arriveranno in futuro.') -}}
   </div>{{- '' -}}
 </fieldset>{{- '' -}}
-
-<script>
-    (function () {
-        var sel = document.querySelector('[data-theme-selector]');
-        if (!sel) return;
-        var saved = localStorage.getItem('theme') || 'terminal';
-        if (!sel.querySelector('option[value="' + saved + '"]')) saved = 'terminal';
-        sel.value = saved;
-        document.documentElement.dataset.theme = saved;
-        sel.addEventListener('change', function () {
-            localStorage.setItem('theme', sel.value);
-            document.documentElement.dataset.theme = sel.value;
-        });
-    })();
-</script>
