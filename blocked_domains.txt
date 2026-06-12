@@ -538,6 +538,7 @@ blog.back4app.com
 blog.chickabug.com
 blog.geekinstitute.org
 blog.lapa.ninja
+blog.miniasp.com
 blog.wenhaofree.com
 bloggif.com
 bluecatnetworks.com
