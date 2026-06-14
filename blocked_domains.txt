@@ -510,6 +510,7 @@ bitbrowser.net
 bitmoji.com
 bitstudio.ai
 bitwetp.com
+bitwise.srl
 bk.com
 blackbird.ai
 blackbird.xyz
