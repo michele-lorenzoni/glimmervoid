@@ -47,7 +47,22 @@ Regole:
 
 ## Deployment
 
-- **The project is deployed on Render.** There is no `render.yaml` in the repo: service config (env vars, build settings) lives only in the Render dashboard.
+The project runs in two parallel deployments — both pull from `main`, so a push to `main` updates both.
+
+### Render (public)
+
+- **Deployed on Render.** There is no `render.yaml` in the repo: service config (env vars, build settings) lives only in the Render dashboard.
 - Dockerfile build-args (e.g. `OUTGOING_PROXIES`) are injected by Render from the service's **Environment Variables**. To change/disable one, edit it in the Render dashboard → tab Environment → save (triggers automatic rebuild + redeploy).
-- `settings.yml` is generated **at build-time** inside the image by the Dockerfile. Runtime changes to its content require a **rebuild**, not just a container restart.
-- Default assumption when the user mentions "variables" or "config" of the project: they live on Render, not in local files.
+- Default assumption when the user mentions "variables" or "config" of the **public** instance: they live on Render, not in local files.
+
+### Self-hosted Docker (local)
+
+- A local Docker container also runs the project. A scheduled task polls `main` every 2 minutes and rebuilds the container when the remote HEAD moves or the running image was built from a different commit (drift detection via the `glimmervoid.commit` image label).
+- Scripts in `scripts/selfhost/`:
+  - `auto-update.ps1` — the poll/rebuild loop. Default container name `glimmervoid`, port `8080`. Logs to `<repo>/auto-update.log`.
+  - `register-task.ps1` — one-shot installer that registers the auto-update as a Windows Scheduled Task.
+- **Consequence:** after a push to `main`, the user does NOT need to run `docker build` manually for the local container — the scheduled task handles it within ~2 minutes. Don't suggest manual rebuild commands unless the user says the task is disabled or they need an immediate rebuild (in which case run `auto-update.ps1 -Force`).
+
+### Shared
+
+- `settings.yml` is generated **at build-time** inside the image by the Dockerfile. Runtime changes to its content require a **rebuild** (on either deployment), not just a container restart.
