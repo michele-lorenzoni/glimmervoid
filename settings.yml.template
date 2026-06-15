@@ -436,6 +436,7 @@ engines:
 
   - name: annas archive
     engine: annas_archive
+    base_url: https://annas-archive.org
     disabled: true
     shortcut: aa
     timeout: 5
@@ -505,11 +506,6 @@ engines:
   - name: arxiv
     engine: arxiv
     shortcut: arx
-
-  - name: ask
-    engine: ask
-    shortcut: ask
-    disabled: true
 
   # - name: azure
   #   engine: azure
@@ -1451,21 +1447,6 @@ engines:
       results: JSON
 
   # https://docs.searxng.org/dev/engines/online/mullvad_leta.html
-  - name: mullvadleta
-    engine: mullvad_leta
-    disabled: true
-    leta_engine: google
-    categories: [general, web]
-    shortcut: ml
-
-  - name: mullvadleta brave
-    engine: mullvad_leta
-    network: mullvadleta
-    disabled: true
-    leta_engine: brave
-    categories: [general, web]
-    shortcut: mlb
-
   - name: odysee
     engine: odysee
     shortcut: od
@@ -1675,10 +1656,6 @@ engines:
       # - https://pixiv.ducks.party
       # image proxy of https://pixiv.perennialte.ch
       # - https://pximg.perennialte.ch
-
-  - name: podcastindex
-    engine: podcastindex
-    shortcut: podcast
 
   # Required dependency: psychopg2
   #  - name: postgresql
@@ -2536,13 +2513,6 @@ engines:
     disabled: true
     inactive: true
 
-  - name: livespace
-    engine: livespace
-    shortcut: ls
-    categories: videos
-    disabled: true
-    timeout: 5.0
-
   - name: wordnik
     engine: wordnik
     shortcut: wnik
@@ -2565,7 +2535,6 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
-      language: de
 
   - name: seekr news
     engine: seekr
@@ -2639,7 +2608,6 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
-      language: fr
 
   - name: wttr.in
     engine: wttr
