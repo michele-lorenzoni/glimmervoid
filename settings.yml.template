@@ -1267,10 +1267,9 @@ engines:
   - name: z-library
     engine: zlibrary
     shortcut: zlib
+    base_url: https://1lib.sk
     timeout: 7.0
     disabled: true
-    # https://github.com/searxng/searxng/issues/3610
-    inactive: true
 
   - name: library of congress
     engine: loc
