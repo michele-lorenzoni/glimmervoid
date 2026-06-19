@@ -1529,6 +1529,7 @@ erosland.it
 es-la.bentley.com
 es.linkedin.com
 es.linux-console.net
+es.medical.canon
 esajee.com
 escapers.jp
 esecuredata.com
