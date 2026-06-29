@@ -49,7 +49,10 @@
             "Bash(npx @tailwindcss/cli -i ./searx/static/themes/simple/src/cust.css -o ./searx/static/themes/simple/css/output.css --minify)",
             "Bash(npx @tailwindcss/cli -i ./searx/templates/static/input.css -o ./searx/templates/static/output.css --minify)",
             "Bash(docker start *)",
-            "PowerShell(netsh int *)"
+            "PowerShell(netsh int *)",
+            "Bash(pwsh -NoProfile -File scripts/selfhost/auto-update.ps1 -Force)",
+            "Bash(echo \"preferences: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/preferences\\)\")",
+            "Bash(echo \"yt js: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/static/custom/youtube_rewrite.js\\)\")"
         ]
     }
 }
