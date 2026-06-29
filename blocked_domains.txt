@@ -4567,6 +4567,7 @@ searx.thegpm.org
 searx.tiekoetter.com
 searxng.site
 searxng.tmiland.com
+sec.equifax.cl
 secoda.co
 secondlife.com
 securecloudservicesinc.com
