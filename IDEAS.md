@@ -80,7 +80,11 @@ Cambio di paradigma rispetto al meta-search "su tutto il web": restringere la ri
 
 ## UI / UX
 
-_(vuoto)_
+- **Rewrite link YouTube → michael.team** (implementato, opt-in): preferenza client-side `yt-rewrite` (localStorage) nel tab "User interface" + `youtube_rewrite.js` su `results.html`. Riscrive gli `<a>` dei risultati che iniziano con `https://www.youtube.com/watch` in `https://michael.team/yt/?yt=<link grezzo>`. Estensioni possibili:
+  - **Coprire le altre forme di URL YouTube**: `youtu.be/<id>`, `m.youtube.com/watch`, `www.youtube.com/shorts/<id>`, `/embed/<id>`. Ora copre solo `www.youtube.com/watch` (richiesta esplicita). Andrebbe normalizzato a un singolo watch-URL prima del wrap.
+  - **Encoding del parametro**: ora il link è passato **grezzo** (scelta utente). Se michael.team perde gli `&param` extra (`list`, `t`, …), valutare `encodeURIComponent` o un toggle "encode" nella stessa preferenza.
+  - **Riscrivere anche il testo visibile** dell'URL (`url_wrapper`): ora resta `youtube.com` mentre il click va a michael.team — trasparente ma potenzialmente sorprendente. Valutare un badge/indicatore "via michael.team".
+  - **Generalizzare a un rewrite-engine configurabile** (coppie pattern→template in JSON), invece di hardcodare YouTube: stesso meccanismo per altri redirector (Nitter, Invidious, Libreddit, …).
 
 ## Static / build
 

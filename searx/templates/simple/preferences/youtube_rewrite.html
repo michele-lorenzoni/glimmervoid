@@ -1,0 +1,29 @@
+<fieldset>{{- '' -}}
+  <legend id="pref_yt_rewrite">{{- _('Riscrivi link YouTube') -}}</legend>{{- '' -}}
+  <div class="value">{{- '' -}}
+    {# Nessun `name`: preferenza client-side pura (localStorage), non va nel POST. #}
+    <input type="checkbox"
+           id="yt-rewrite"
+           aria-labelledby="pref_yt_rewrite"
+           class="checkbox-onoff"
+           data-yt-rewrite>{{- '' -}}
+  </div>{{- '' -}}
+  <div class="description">
+    {{- _('Converte i link dei risultati che iniziano con https://www.youtube.com/watch in https://michael.team/yt/?yt=… — salvato in localStorage, attivo sui prossimi risultati.') -}}
+  </div>{{- '' -}}
+</fieldset>{{- '' -}}
+
+<script>
+    (function () {
+        var box = document.querySelector('[data-yt-rewrite]');
+        if (!box) return;
+        try {
+            box.checked = localStorage.getItem('yt-rewrite') === '1';
+        } catch (e) {}
+        box.addEventListener('change', function () {
+            try {
+                localStorage.setItem('yt-rewrite', box.checked ? '1' : '0');
+            } catch (e) {}
+        });
+    })();
+</script>
