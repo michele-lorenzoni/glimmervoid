@@ -52,7 +52,17 @@
             "PowerShell(netsh int *)",
             "Bash(pwsh -NoProfile -File scripts/selfhost/auto-update.ps1 -Force)",
             "Bash(echo \"preferences: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/preferences\\)\")",
-            "Bash(echo \"yt js: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/static/custom/youtube_rewrite.js\\)\")"
+            "Bash(echo \"yt js: $\\(curl -s -o /dev/null -w '%{http_code}' http://localhost:8080/static/custom/youtube_rewrite.js\\)\")",
+            "PowerShell(Get-ScheduledTask *)",
+            "PowerShell(docker ps *)",
+            "PowerShell($log = \"C:\\\\Users\\\\Sviluppo\\\\Documents\\\\projects\\\\glimmervoid\\\\auto-update.log\"; if \\(Test-Path $log\\) { \"EXISTS - last write: $\\(\\(Get-Item $log\\).LastWriteTime\\)\"; \"--- last 15 lines ---\"; Get-Content $log -Tail 15 } else { \"NO LOG FILE - auto-update has never run\" })",
+            "PowerShell(docker inspect glimmervoid *)",
+            "PowerShell($t = Get-ScheduledTask -TaskName \"Glimmervoid AutoUpdate\" -ErrorAction SilentlyContinue; if \\($t\\) { \"FOUND: state=$\\($t.State\\)\"; Get-ScheduledTaskInfo -TaskName \"Glimmervoid AutoUpdate\" | Format-List LastRunTime, LastTaskResult, NextRunTime } else { \"NOT REGISTERED\" })",
+            "PowerShell(git *)",
+            "PowerShell($id = [System.Security.Principal.WindowsIdentity]::GetCurrent\\(\\); $p = New-Object System.Security.Principal.WindowsPrincipal\\($id\\); \"user=$\\($id.Name\\)\"; \"elevated=$\\($p.IsInRole\\([System.Security.Principal.WindowsBuiltInRole]::Administrator\\)\\)\")",
+            "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Sviluppo\\\\Documents\\\\projects\\\\glimmervoid\\\\scripts\\\\selfhost\\\\register-task.ps1\" 2>&1)",
+            "PowerShell($t = Get-ScheduledTask -TaskName \"Glimmervoid AutoUpdate\" -ErrorAction SilentlyContinue; if \\($t\\) { \"TASK: state=$\\($t.State\\)\"; Get-ScheduledTaskInfo -TaskName \"Glimmervoid AutoUpdate\" | Format-List LastRunTime, NextRunTime } else { \"STILL NOT REGISTERED\" })",
+            "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Sviluppo\\\\Documents\\\\projects\\\\glimmervoid\\\\scripts\\\\selfhost\\\\auto-update.ps1\" 2>&1)"
         ]
     }
 }
