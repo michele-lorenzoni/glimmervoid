@@ -1401,6 +1401,7 @@ dummyfilegenerator.com
 dummyimage.com
 dummyimage.web.app
 dummyimg.in
+dummytextgenerator.nl
 dump-it.com
 dumpor.io
 duplichecker.com
