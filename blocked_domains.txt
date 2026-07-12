@@ -2982,6 +2982,7 @@ lettercount.com
 lettericon.com
 levam.net
 level44.net
+libgen.vc
 librarygenesis.my
 librarygenesis.net
 librarything.fr
