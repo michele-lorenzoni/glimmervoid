@@ -5,6 +5,7 @@
     font-weight: 400;
     src: url("fonts/iosevka-latin-400-normal.woff2") format("woff2");
 }
+
 @font-face {
     font-family: "Iosevka";
     font-style: normal;
@@ -12,6 +13,7 @@
     font-weight: 500;
     src: url("fonts/iosevka-latin-500-normal.woff2") format("woff2");
 }
+
 @import "tailwindcss";
 
 /* Tailwind v4 source discovery: templates Jinja vivono in ../simple/**,
