@@ -1300,6 +1300,7 @@ diagrams.app
 dicetower.com
 dicom.store
 dictionary.com
+diezminutos.es
 diffchecker.com
 diffnow.com
 digilibraries.com
