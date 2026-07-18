@@ -1,0 +1,2 @@
+# Prefissi-URL bloccati (host+path). Letti a build-time dal plugin searx/plugins/url_prefix_remover.py. Match scheme/www-insensitive, rispetta i confini di path (/pl-pl non matcha /pl-plaza). Una voce per riga, commenti con #.
+https://www.nvidia.com/pl-pl/

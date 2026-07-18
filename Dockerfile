@@ -49,4 +49,6 @@ COPY	searx/templates/simple/preferences/theme.html	/usr/local/searxng/searx/temp
 COPY	searx/templates/simple/preferences/palette.html	/usr/local/searxng/searx/templates/simple/preferences/palette.html
 COPY	searx/templates/simple/preferences/youtube_rewrite.html	/usr/local/searxng/searx/templates/simple/preferences/youtube_rewrite.html
 COPY	searx/templates/simple/messages/no_cookies.html	/usr/local/searxng/searx/templates/simple/messages/no_cookies.html
+COPY	searx/plugins/url_prefix_remover.py	/usr/local/searxng/searx/plugins/url_prefix_remover.py
+COPY	blocked_url_prefixes.txt	/usr/local/searxng/searx/plugins/blocked_url_prefixes.txt
 USER	searxng

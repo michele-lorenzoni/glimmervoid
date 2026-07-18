@@ -265,6 +265,12 @@ plugins:
   searx.plugins.tracker_url_remover.SXNGPlugin:
     active: true
 
+  # Glimmervoid: nasconde i risultati il cui URL inizia con un prefisso bloccato
+  # (host+path). Complementare a blocked_domains (che filtra solo l'hostname).
+  # Lista in blocked_url_prefixes.txt, copiata nell'immagine dal Dockerfile.
+  searx.plugins.url_prefix_remover.SXNGPlugin:
+    active: true
+
 
 # Configuration of the "Hostnames plugin":
 #

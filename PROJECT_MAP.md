@@ -11,7 +11,8 @@ glimmervoid/
 ├── package.json                 # Tailwind v4.1 (CLI, no tailwind.config.js)
 ├── requirements.txt             # pre-commit tooling only (djlint, jsbeautifier, …)
 ├── settings.yml.template        # instance config w/ {{BLOCKED_DOMAINS}} placeholder
-├── blocked_domains.txt          # auto-sorted, injected into settings.yml on build
+├── blocked_domains.txt          # auto-sorted, injected into settings.yml on build (hostname filter)
+├── blocked_url_prefixes.txt     # auto-sorted, host+path prefixes hidden by custom plugin
 ├── scripts/                     # sort_json.py, sort_txt.py, extract_palette.py
 ├── showcase/                    # screenshots (index/results, desktop/mobile)
 └── searx/
@@ -82,6 +83,10 @@ npx @tailwindcss/cli -i input.css -o output.css
 ## Custom engines
 
 None — all engines come from the upstream image.
+
+## Custom plugins
+
+- `searx/plugins/url_prefix_remover.py` — server-side `SXNGPlugin`. Hides any result whose URL **starts with** a prefix listed in `blocked_url_prefixes.txt` (host+path, scheme/`www.`-insensitive, path-boundary aware — `/pl-pl` won't match `/pl-plaza`). Complements `blocked_domains.txt`, which the upstream `hostnames` plugin matches on hostname (`netloc`) only and so can't express a path. Registered in `settings.yml.template` under `plugins:` (`active: true`); the Dockerfile copies both the module and the list into `/usr/local/searxng/searx/plugins/`. List read once at startup → rebuild to apply (same as `blocked_domains`).
 
 ## Scripts
 

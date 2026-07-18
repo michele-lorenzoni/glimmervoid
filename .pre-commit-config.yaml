@@ -5,7 +5,7 @@ repos:
         name: Sort text file alphabetically
         entry: python scripts/sort_txt.py
         language: system
-        files: blocked_domains\.txt$
+        files: (blocked_domains|blocked_url_prefixes)\.txt$
         pass_filenames: true
 
       - id: sort-json-files
