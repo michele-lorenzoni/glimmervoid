@@ -1893,6 +1893,7 @@ fpo.xxx
 fr.bing.com
 fr.linkedin.com
 fr.mappy.com
+fr.shopping.rakuten.com
 fr.wiktionary.org
 fractal.ai
 fractalaudio.com
@@ -3011,6 +3012,7 @@ leksikon-yu-mitologije.net
 lemon8-app.com
 lenadesign.org
 leonardo.ai
+leparisien.fr
 lequipe.fr
 lernajs.cn
 letsenhance.io
