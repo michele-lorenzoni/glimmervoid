@@ -4510,6 +4510,7 @@ repeato.app
 repocloud.io
 repolaunch.com
 researchmethod.net
+researchmethodsandstats.pressbooks.tru.ca
 resizehood.com
 resizeimage.io
 resizenow.com
