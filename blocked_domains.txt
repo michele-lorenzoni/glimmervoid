@@ -1227,6 +1227,7 @@ dbohome.com
 ddpoc.com
 de.bing.com
 de.book-info.com
+de.langenscheidt.com
 de.pornhub.org
 de.wikipedia.org
 de.wordpress.org
