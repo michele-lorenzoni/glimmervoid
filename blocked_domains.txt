@@ -1313,6 +1313,7 @@ dhiwise.com
 diagrams.app
 dicetower.com
 dicom.store
+dict.cc
 dictionary.com
 diezminutos.es
 diffchecker.com
