@@ -1897,6 +1897,7 @@ foxyutils.com
 fpds.gov
 fpo.xxx
 fr.bing.com
+fr.excel-translator.de
 fr.linkedin.com
 fr.mappy.com
 fr.shopping.rakuten.com
