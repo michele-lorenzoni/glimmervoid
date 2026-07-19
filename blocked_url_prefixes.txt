@@ -1,3 +1,4 @@
+excel.cloud.microsoft/de-de/
 google.com/?hl=ar-AE/
 images.google.ae/?hl=ar/
 incrypted.com/pl/
