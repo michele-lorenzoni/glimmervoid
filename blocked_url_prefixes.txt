@@ -2,6 +2,7 @@ excel.cloud.microsoft/de-de/
 google.com/?hl=ar-AE/
 ibm.com/br-pt/
 ibm.com/de-de/
+ibm.com/docs/fr/
 images.google.ae/?hl=ar/
 incrypted.com/pl/
 jak.jp/se/
