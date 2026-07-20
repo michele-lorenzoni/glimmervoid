@@ -3,6 +3,7 @@ google.com/?hl=ar-AE/
 ibm.com/br-pt/
 ibm.com/de-de/
 ibm.com/docs/fr/
+ibm.com/docs/pl/
 images.google.ae/?hl=ar/
 incrypted.com/pl/
 jak.jp/se/
