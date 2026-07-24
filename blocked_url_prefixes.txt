@@ -1,6 +1,7 @@
 billetterie.rcstrasbourgalsace.fr/fr/
 datacamp.com/de/
 excel.cloud.microsoft/de-de/
+flyeralarm.com/de/
 google.com/?hl=ar-AE/
 ibm.com/br-pt/
 ibm.com/de-de/
