@@ -19,3 +19,4 @@ nvidia.com/pl-pl/
 provenexpert.com/de-de/
 support.microsoft.com/fr-FR/
 support.microsoft.com/ja-JP/
+support.microsoft.com/zh-tw/
