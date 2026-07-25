@@ -1957,6 +1957,7 @@ frame.io
 frameratetest.com
 framesfashion.com
 framesports.ai
+france3-regions.franceinfo.fr
 frankenphp.dev
 franoi.com
 free-barcode-generator.net
