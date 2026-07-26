@@ -22,6 +22,7 @@ nvidia.com/pl-pl/
 provenexpert.com/de-de/
 rapidtables.org/ar/
 solitaireparadise.com/nl/
+support.microsoft.com/de-de/
 support.microsoft.com/fr-FR/
 support.microsoft.com/fr-fr/
 support.microsoft.com/ja-JP/
