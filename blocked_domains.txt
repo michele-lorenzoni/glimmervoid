@@ -4649,6 +4649,7 @@ resizer.ai
 restack.io
 restaurantguru.com
 restaurantguru.it
+restaurantobserver.com
 restaurantsashimi.com
 restclient.net
 restream.io
