@@ -22,6 +22,7 @@ provenexpert.com/de-de/
 rapidtables.org/ar/
 solitaireparadise.com/nl/
 support.microsoft.com/fr-FR/
+support.microsoft.com/fr-fr/
 support.microsoft.com/ja-JP/
 support.microsoft.com/ru-RU/
 support.microsoft.com/zh-tw/
