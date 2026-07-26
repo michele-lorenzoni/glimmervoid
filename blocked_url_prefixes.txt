@@ -15,6 +15,7 @@ jak.jp/se/
 jetbrains.com/de-de/
 jetbrains.com/ja-jp/
 jetbrains.com/ko-kr/
+meteoblue.com/sk/
 microsoft.com/de-de/
 migaku.com/es/
 nvidia.com/pl-pl/
