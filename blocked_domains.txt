@@ -5378,6 +5378,7 @@ template.net
 templated.co
 templated.io
 tempm.com
+tempmail.chat
 tempmail.co
 tempmail.email
 tempmail.im
