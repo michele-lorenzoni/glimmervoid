@@ -30,3 +30,4 @@ support.microsoft.com/ja-JP/
 support.microsoft.com/ru-RU/
 support.microsoft.com/zh-tw/
 triumph-adler.com/ta-de-ch/
+wizzair.com/de-DE/
