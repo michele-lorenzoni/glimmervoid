@@ -34,6 +34,7 @@ support.microsoft.com/ja-JP/
 support.microsoft.com/ru-RU/
 support.microsoft.com/zh-tw/
 swissmedical.net/de/
+temp-mail.id/de/
 triumph-adler.com/ta-de-ch/
 wizzair.com/de-DE/
 wizzair.com/nb-NO/
