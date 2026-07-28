@@ -19,6 +19,7 @@ jobscout24.ch/de/
 meteoblue.com/sk/
 microsoft.com/de-de/
 migaku.com/es/
+nvidia.com/ja-jp/
 nvidia.com/pl-pl/
 provenexpert.com/de-de/
 rapidtables.org/ar/
