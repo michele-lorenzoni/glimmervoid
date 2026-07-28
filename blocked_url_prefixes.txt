@@ -36,6 +36,7 @@ support.microsoft.com/zh-tw/
 swissmedical.net/de/
 temp-mail.id/de/
 triumph-adler.com/ta-de-ch/
+wikiwand.com/zh-hans/
 wizzair.com/de-DE/
 wizzair.com/nb-NO/
 wizzair.com/sv-SE/
