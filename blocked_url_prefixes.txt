@@ -4,6 +4,7 @@ claude.com/de/
 datacamp.com/de/
 excel.cloud.microsoft/de-de/
 flyeralarm.com/de/
+galaxus.ch/de/
 google.com/?hl=ar-AE/
 ibm.com/br-pt/
 ibm.com/de-de/
