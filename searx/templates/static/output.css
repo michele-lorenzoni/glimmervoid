@@ -14,13 +14,6 @@
   font-weight: 500;
   src: url("fonts/iosevka-latin-500-normal.woff2") format("woff2");
 }
-@font-face {
-  font-family: "Ubuntu";
-  font-style: normal;
-  font-display: swap;
-  font-weight: normal;
-  src: url("fonts/ubuntu-regular.ttf") format("truetype");
-}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
