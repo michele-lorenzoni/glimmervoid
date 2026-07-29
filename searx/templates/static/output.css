@@ -45,8 +45,6 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --font-default: "Fira Sans", sans-serif;
-    --font-fira: "Fira Sans", sans-serif;
     --color-cust-body: #000000;
     --color-cust-element: #0d0f14;
     --color-cust-border: #374151;
@@ -448,12 +446,6 @@
   }
   .text-left {
     text-align: left;
-  }
-  .font-default {
-    font-family: var(--font-default);
-  }
-  .font-fira {
-    font-family: var(--font-fira);
   }
   .text-base {
     font-size: var(--text-base);
