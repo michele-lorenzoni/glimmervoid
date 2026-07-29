@@ -805,7 +805,7 @@ html[data-palette="high-contrast"] {
     border-color: var(--color-neon-blue);
   }
   .term-font {
-    font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    font-family: "Ubuntu", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
     font-feature-settings: "liga" 0, "calt" 0;
   }
   .term-accent {
@@ -815,7 +815,7 @@ html[data-palette="high-contrast"] {
     color: var(--color-cust-dim);
   }
   .term-search {
-    font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+    font-family: "Ubuntu", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
     font-feature-settings: "liga" 0, "calt" 0;
   }
   .term-search #q, .term-search input[type="text"] {

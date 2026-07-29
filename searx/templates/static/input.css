@@ -239,14 +239,14 @@ html[data-palette="high-contrast"] {
        inline in templates) so they live in one place.
        ================================================================ */
     .term-font {
-        font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+        font-family: "Ubuntu", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
         font-feature-settings: "liga" 0, "calt" 0;
     }
     .term-accent { color: var(--color-neon-green); }
     .term-dim    { color: var(--color-cust-dim); }
 
     .term-search {
-        font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+        font-family: "Ubuntu", ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
         font-feature-settings: "liga" 0, "calt" 0;
     }
     .term-search #q,
