@@ -788,6 +788,7 @@ cb01.pizza
 cb01uno.uno
 cb2.com
 ccompiler.online
+cdiscount.com
 cdkm.com
 cdn.font-store.ir
 cdpath.com
