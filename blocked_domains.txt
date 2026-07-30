@@ -439,6 +439,7 @@ banemah.com
 bang.com
 bankier.pl
 banners.com
+barcode-maker.com
 barcodeplanet.com
 base64-decode-encode.net
 base64-image.de
