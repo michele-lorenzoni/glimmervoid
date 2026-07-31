@@ -2441,6 +2441,7 @@ guvi.in
 gwaa.net
 haax.fr
 habr.com
+hacapks.me
 hachetteboardgames.com
 hackingloops.com
 hackshells.org
