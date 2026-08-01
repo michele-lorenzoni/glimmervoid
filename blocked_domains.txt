@@ -1865,6 +1865,7 @@ fileformat.info
 filehelper.com
 fileinfo.co
 fileinfo.com
+fileinfo.it
 fileion.com
 filepastebin.com
 filerepo.com
