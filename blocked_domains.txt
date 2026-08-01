@@ -1307,6 +1307,7 @@ de.langenscheidt.com
 de.m.wiktionary.org
 de.pornhub.org
 de.wikipedia.org
+de.wiktionary.org
 de.wordpress.org
 deadspin.com
 debidawn.com
