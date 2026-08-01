@@ -466,6 +466,7 @@ battleon.com
 bazaar.in
 bazaarapp.com
 bazaarsm.com
+bazinga.tools
 bbs.pcbeta.com
 bbs.pku.edu.cn
 bbs.scol.com.cn
