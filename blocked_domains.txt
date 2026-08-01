@@ -1862,6 +1862,7 @@ file.tips
 filedesc.com
 filedropshare.com
 fileformat.info
+filegi.com
 filehelper.com
 fileinfo.co
 fileinfo.com
