@@ -1289,6 +1289,7 @@ dbo-aka.org
 dbo.cbl.umces.edu
 dboglobal.to
 dbohome.com
+ddevtools.com
 ddpoc.com
 de.bing.com
 de.book-info.com
