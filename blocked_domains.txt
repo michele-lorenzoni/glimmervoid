@@ -3254,6 +3254,7 @@ lettercount.com
 lettericon.com
 levam.net
 level44.net
+lex.dk
 libgen.org
 libgen.vc
 librarygenesis.my

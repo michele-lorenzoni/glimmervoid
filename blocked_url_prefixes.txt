@@ -31,6 +31,7 @@ rapidtables.org/ar/
 sagradafamilia.org/es/
 sensorstechforum.com/fr/
 solitaireparadise.com/nl/
+source.android.com/docs/core/tests/debug/systrace?hl=zh-cn
 store-static-modular.gog-statics.com/zh/
 support.google.com/accounts/?hl=ar
 support.google.com/googleplay/answer/2521798?hl=pt-BR
