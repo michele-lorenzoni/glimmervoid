@@ -1380,6 +1380,7 @@ devbeaver.com
 devconnected.com
 devdocs.coko.app
 devdonut.com
+developer.android.google.cn
 developerdrive.com
 developers.google.cn
 developertoolkits.com
