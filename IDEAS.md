@@ -86,6 +86,12 @@ Cambio di paradigma rispetto al meta-search "su tutto il web": restringere la ri
   - **Riscrivere anche il testo visibile** dell'URL (`url_wrapper`): ora resta `youtube.com` mentre il click va a michael.team — trasparente ma potenzialmente sorprendente. Valutare un badge/indicatore "via michael.team".
   - **Generalizzare a un rewrite-engine configurabile** (coppie pattern→template in JSON), invece di hardcodare YouTube: stesso meccanismo per altri redirector (Nitter, Invidious, Libreddit, …).
 
+## Filtri risultati (`url_prefix_remover`)
+
+- **Matching case-insensitive opzionale.** Oggi path e parametri di query si confrontano case-sensitive, per cui la lista deve portare righe duplicate per coprire le grafie (`support.microsoft.com/fr-FR/` **e** `.../fr-fr/`). Alternative: (a) lowercase su entrambi i lati — semplice, ma i path di alcuni siti sono legittimamente case-sensitive e si rischiano falsi positivi; (b) un suffisso per-riga tipo `… #i` che attiva l'insensitività solo dove serve — più preciso, ma introduce sintassi nel file. Da valutare solo se le righe duplicate diventano tante.
+- **Linter pre-commit per `blocked_url_prefixes.txt`.** Il hook attuale (`scripts/sort_txt.py`) ordina e basta: non ha intercettato né il duplicato `wikiwand.com/zh-hans/` né le righe `google.com/?hl=ar-AE/` — dove lo slash finale finisce *dentro* il valore del parametro e la voce, prima del supporto query, degradava a blocco dell'intero dominio. Un check che (1) deduplica, (2) segnala voci che normalizzano al solo host (blocco di dominio intero: probabilmente va in `blocked_domains.txt`), (3) segnala slash finali dopo la query, costerebbe poco e chiuderebbe la classe di bug.
+- **Sintassi di eccezione (allowlist).** Non esiste modo di dire "blocca `example.com/de/` tranne `example.com/de/docs/`". Servirebbe un prefisso `!` sulle righe di eccezione, valutate prima dei blocchi. Nessun caso d'uso concreto finora — annotato per non riscoprirlo.
+
 ## Static / build
 
 _(vuoto)_
