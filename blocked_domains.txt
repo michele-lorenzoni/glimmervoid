@@ -247,6 +247,7 @@ android-docs.cn
 androidauthority.com
 androidexperto.com
 androidmetro.com
+androidperformance.com
 androidphoria.com
 androidride.com
 andyroid.net
