@@ -1,6 +1,7 @@
 billetterie.rcstrasbourgalsace.fr/fr/
 bindingofisaacrebirth.wiki.gg/wiki/Binding_of_Isaac:_Rebirth_Wiki/de/
 claude.com/de/
+commonvoice.mozilla.org/ja
 commonvoice.mozilla.org/zh-CN
 datacamp.com/de/
 diplomatie.gouv.fr/fr/
