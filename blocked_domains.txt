@@ -3428,6 +3428,7 @@ lutris-pharma.com
 lutris.com
 lutris.org
 luxa.org
+luxtable.it
 lvcdn.net
 lvmonorail.com
 lvmpd.com
