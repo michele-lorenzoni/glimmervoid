@@ -2435,6 +2435,7 @@ gooeysoftware.com
 google.com.ai
 google.cz
 google.nl
+google.pl
 goplaycosmetics.com
 goserv-ksa.com
 goservice.it
