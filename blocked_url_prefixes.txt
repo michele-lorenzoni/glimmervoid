@@ -22,6 +22,7 @@ jetbrains.com/de-de/
 jetbrains.com/ja-jp/
 jetbrains.com/ko-kr/
 jobscout24.ch/de/
+meta.com/fr/
 meteoblue.com/sk/
 metool.online/zh/
 microsoft.com/de-de/
