@@ -3294,6 +3294,7 @@ libgen.vc
 librarygenesis.my
 librarygenesis.net
 librarything.fr
+libreriamo.it
 libreselfhosted.com
 libris.nl
 libs.garden
