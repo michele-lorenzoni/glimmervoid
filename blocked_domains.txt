@@ -5889,6 +5889,7 @@ transfermarkt.com
 transfermarkt.us
 transfermyfile.com
 translate.com
+translate.google.ch
 translate.google.de
 translate.one
 transrealbooks.com
