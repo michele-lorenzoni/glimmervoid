@@ -1181,6 +1181,7 @@ crontab.cronhub.io
 crontab.io
 cropimage.com
 crosscards.com
+crownpaints.com
 crt.sh
 crucerosonline.cl
 cruip.com
