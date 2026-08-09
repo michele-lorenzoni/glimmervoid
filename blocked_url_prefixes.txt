@@ -34,6 +34,7 @@ migaku.com/es/
 moviewiser.com/fr/
 nvidia.com/ja-jp/
 nvidia.com/pl-pl/
+openai.com/es-ES/
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-419
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-DO
 pornann.com/sr/
