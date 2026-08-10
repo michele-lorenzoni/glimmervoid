@@ -4051,6 +4051,7 @@ nvidia.pl
 nvimcolors.com
 nypost.com
 nyrr.org
+nyt-wordle-app.vercel.app
 nytcrosswordanswers.org
 oakcitycoatings.com
 oasisneonsigns.co.uk
