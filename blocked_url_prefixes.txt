@@ -35,6 +35,7 @@ moviewiser.com/fr/
 nvidia.com/ja-jp/
 nvidia.com/pl-pl/
 openai.com/es-ES/
+openai.com/nl-NL/
 photopea.com/l/es_es/
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-419
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-DO
