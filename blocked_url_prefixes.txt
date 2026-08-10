@@ -64,6 +64,7 @@ support.microsoft.com/ru-RU/
 support.microsoft.com/zh-tw/
 swissmedical.net/de/
 temp-mail.id/de/
+tips.clip-studio.com/es-es/
 triumph-adler.com/ta-de-ch/
 unity.com/de
 wien-ticket.at/de/
