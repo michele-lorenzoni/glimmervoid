@@ -51,6 +51,7 @@ sagradafamilia.org/es/
 sensorstechforum.com/fr/
 solitaireparadise.com/nl/
 source.android.com/docs/core/tests/debug/systrace?hl=zh-cn
+startpage.com/de/
 store-static-modular.gog-statics.com/zh/
 store.unity.com/index.php/de/
 support.google.com/accounts/?hl=ar
