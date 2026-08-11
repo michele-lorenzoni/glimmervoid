@@ -33,6 +33,7 @@ metool.online/zh/
 microsoft.com/de-de/
 migaku.com/es/
 moviewiser.com/fr/
+nafeza.gov.eg/ar/
 nvidia.com/ja-jp/
 nvidia.com/pl-pl/
 openai.com/es-ES/
