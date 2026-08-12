@@ -1,3 +1,4 @@
+999.md/ro/
 adobe.com/be_fr/
 answers.microsoft.com/ja-jp/
 billetterie.rcstrasbourgalsace.fr/fr/
@@ -9,6 +10,7 @@ cloud.google.com/free?hl=de
 commonvoice.mozilla.org/ja
 commonvoice.mozilla.org/zh-CN
 datacamp.com/de/
+datero.md/ro/
 diplomatie.gouv.fr/fr/
 eu.forums.blizzard.com/ru/
 excel.cloud.microsoft/de-de/
