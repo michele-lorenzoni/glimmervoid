@@ -2750,6 +2750,7 @@ icalculate.app
 icanvas.com
 icecreamapps.com
 icedit.net
+icloud.com
 icoconverter.com
 icofont.com
 icolorpalette.com
