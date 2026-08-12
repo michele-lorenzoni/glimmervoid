@@ -5,6 +5,7 @@ bindingofisaacrebirth.wiki.gg/wiki/Binding_of_Isaac:_Rebirth_Wiki/de/
 blog.whatsapp.com/whats-app-web?lang=ar
 chatgpt.com/fr-FR/
 claude.com/de/
+cloud.google.com/free?hl=de
 commonvoice.mozilla.org/ja
 commonvoice.mozilla.org/zh-CN
 datacamp.com/de/
