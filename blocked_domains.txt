@@ -1070,6 +1070,7 @@ competitors.app
 compileronline.com
 component.gallery
 computerbase.de
+computerbild.de
 computerhope.com
 computerzaak.nl
 comuni-italiani.it
