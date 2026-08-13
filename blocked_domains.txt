@@ -1042,6 +1042,7 @@ colormemine.com
 colormind.io
 colormix.app
 colorpaletted.com
+colorpalettegenerator.org
 colorpalettes.net
 colorpickerfromimage.com
 colorpouch.com
