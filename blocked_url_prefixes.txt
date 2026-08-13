@@ -12,6 +12,7 @@ commonvoice.mozilla.org/zh-CN
 datacamp.com/de/
 datero.md/ro/
 diplomatie.gouv.fr/fr/
+elektro-material.ch/de/
 eu.forums.blizzard.com/ru/
 excel.cloud.microsoft/de-de/
 figma.com/de-de/
