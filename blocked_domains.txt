@@ -3370,6 +3370,7 @@ lifetime.life
 lifetimemovieclub.com
 lightly-dev.com
 lightningmaps.org
+lightningtracker.app
 lightroom.adobe.com
 lightworkersnet.com
 lightxeditor.com
