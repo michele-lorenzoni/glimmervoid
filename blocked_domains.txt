@@ -3566,6 +3566,7 @@ manuscriptreport.com
 many.xxx
 manypixels.co
 manytools.org
+map.blitzortung.org
 mapcoordinates.net
 mapify.so
 mapsdirections.info
