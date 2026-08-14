@@ -81,6 +81,7 @@ temp-mail.id/de/
 tips.clip-studio.com/es-es/
 triumph-adler.com/ta-de-ch/
 unity.com/de
+vuetifyjs.com/zh-Hans/
 wien-ticket.at/de/
 wikiwand.com/zh-hans/
 wizzair.com/de-DE/
