@@ -499,6 +499,7 @@ bazaarapp.com
 bazaarsm.com
 bazinga.tools
 bbs.pcbeta.com
+bbs.pinggu.org
 bbs.pku.edu.cn
 bbs.scol.com.cn
 bbt-benatti.it
