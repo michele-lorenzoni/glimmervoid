@@ -61,6 +61,7 @@ source.android.com/docs/core/tests/debug/systrace?hl=zh-cn
 startpage.com/de/
 store-static-modular.gog-statics.com/zh/
 store.google.com/ch/category/phones?hl=de
+store.google.com/ch/product/pixel_10?hl=de
 store.google.com/de/
 store.unity.com/index.php/de/
 support.google.com/accounts/?hl=ar
