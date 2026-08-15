@@ -2049,6 +2049,7 @@ fontgenerator.name
 fontgeneratorguru.com
 fontgeneratoronline.org
 fontget.com
+fontiko.com
 fontjedi.com
 fontke.com
 fontlot.com
