@@ -2061,6 +2061,7 @@ fontke.com
 fontlot.com
 fontly.io
 fontmeme.com
+fonts.do
 fonts.net.cn
 fonts101.com
 fonts2u.com
