@@ -2076,6 +2076,7 @@ fontsempire.com
 fontserver.ir
 fontsforyou.com
 fontsgeek.com
+fontsgenerator.io
 fontsgoogle.com
 fontshmonts.com
 fontshop.com
