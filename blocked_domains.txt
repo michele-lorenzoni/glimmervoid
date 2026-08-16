@@ -4544,6 +4544,7 @@ pixelcut.ai
 pixelera.art
 pixelframe.design
 pixellab.ai
+pixelly.gumroad.com
 pixelly.shop
 pixelly.space
 pixelmator.com
