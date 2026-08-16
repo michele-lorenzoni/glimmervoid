@@ -2063,6 +2063,7 @@ fontlot.com
 fontly.io
 fontmeme.com
 fontmirror.com
+fontpicks.com
 fonts.do
 fonts.net.cn
 fonts101.com
