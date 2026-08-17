@@ -79,6 +79,7 @@ support.microsoft.com/fr-FR/
 support.microsoft.com/fr-fr/
 support.microsoft.com/ja-JP/
 support.microsoft.com/ru-RU/
+support.microsoft.com/zh-cn/
 support.microsoft.com/zh-tw/
 swissmedical.net/de/
 temp-mail.id/de/
