@@ -4556,6 +4556,7 @@ pixelcut.ai
 pixelera.art
 pixelframe.design
 pixellab.ai
+pixellize.io
 pixelly.co
 pixelly.gumroad.com
 pixelly.shop
