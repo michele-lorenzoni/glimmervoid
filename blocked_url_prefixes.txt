@@ -21,6 +21,7 @@ flyeralarm.com/de/
 galaxus.ch/de/
 google.com/?hl=ar-AE
 google.com/intl/de/
+google.com/intl/id/
 google.com/intl/ko/
 google.com/intl/pt-BR/
 help.figma.com/hc/de/
