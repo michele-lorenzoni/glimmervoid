@@ -5187,6 +5187,7 @@ salla.com
 samm.dsca.mil
 sample-files.com
 sample-videos.com
+sample.cat
 samplefile.com
 sampleimages.com
 sampleshots.com
