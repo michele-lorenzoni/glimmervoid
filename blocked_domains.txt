@@ -5200,6 +5200,7 @@ sample-videos.com
 sample.cat
 samplefile.com
 sampleimages.com
+samples.landr.com
 sampleshots.com
 sampletestfile.com
 sandbergwallpaper.com
