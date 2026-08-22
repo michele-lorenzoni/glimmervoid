@@ -3133,6 +3133,7 @@ jeetbhalu.hashnode.dev
 jeetintyagi.hashnode.dev
 jeffgordy.com
 jekyll-buildr.vercel.app
+jekyll-themes.com
 jekyllthemes.org
 jennifermaker.com
 jennymovies.com
