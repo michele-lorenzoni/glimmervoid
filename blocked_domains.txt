@@ -2949,6 +2949,7 @@ imagy.app
 imail.edu.vn
 img.hospital
 img2go.com
+imgacademy.com
 imgcandy.com
 imggen.ai
 imgmodify.com
