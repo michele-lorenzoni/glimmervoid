@@ -3134,6 +3134,7 @@ jeetintyagi.hashnode.dev
 jeffgordy.com
 jekyll-buildr.vercel.app
 jekyll-themes.com
+jekyll.one
 jekyllthemes.org
 jennifermaker.com
 jennymovies.com
