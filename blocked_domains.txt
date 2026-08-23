@@ -1396,6 +1396,7 @@ definicion.edu.lat
 defkey.com
 degezondheidswinkel.be
 deja-designs.com
+delftstack.com
 delim.co
 deltastaffing.ca
 dely.jp
