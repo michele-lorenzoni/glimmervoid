@@ -5441,6 +5441,7 @@ simplemindmap.com
 simplepixelart.com
 simpleregex.org
 simplesvgeditor.com
+simplicity.com
 simplified.com
 simplifycpp.org
 simplycodes.com
