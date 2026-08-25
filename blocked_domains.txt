@@ -2099,6 +2099,7 @@ fontly.io
 fontmeme.com
 fontmirror.com
 fontpicks.com
+fonts.adobe.com
 fonts.do
 fonts.net.cn
 fonts101.com
