@@ -3467,6 +3467,7 @@ lidl.es
 lidl.fr
 lifetime.life
 lifetimemovieclub.com
+light.com.br
 lightly-dev.com
 lightningmaps.org
 lightningtracker.app
