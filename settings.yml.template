@@ -63,7 +63,11 @@ search:
     # For error "Access denied" and "HTTP error [402, 403]"
     SearxEngineAccessDenied: 86400
     # For error "CAPTCHA"
-    SearxEngineCaptcha: 86400
+    # Glimmervoid: 600 invece del default upstream 86400. Una challenge
+    # occasionale di Google spegneva la ricerca per 24h, perche' e' l'unico
+    # engine general che risponde in modo affidabile. Rialzare se si osserva
+    # escalation lato engine per via dei retry piu' frequenti.
+    SearxEngineCaptcha: 600
     # For error "Too many request" and "HTTP error 429"
     SearxEngineTooManyRequests: 3600
     # Cloudflare CAPTCHA
@@ -568,10 +572,10 @@ engines:
     shortcut: bil
     disabled: true
 
+  # Glimmervoid: attivo di default — copre le sospensioni di google.
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: true
 
   - name: bing images
     engine: bing_images
@@ -1757,12 +1761,12 @@ engines:
     shortcut: qki
     disabled: true
 
+  # Glimmervoid: attivo di default — copre le sospensioni di google.
   - name: qwant
     qwant_categ: web
     engine: qwant
     shortcut: qw
     categories: [general, web]
-    disabled: true
     additional_tests:
       rosebud: *test_rosebud
 
