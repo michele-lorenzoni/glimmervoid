@@ -62,7 +62,8 @@
             "PowerShell($id = [System.Security.Principal.WindowsIdentity]::GetCurrent\\(\\); $p = New-Object System.Security.Principal.WindowsPrincipal\\($id\\); \"user=$\\($id.Name\\)\"; \"elevated=$\\($p.IsInRole\\([System.Security.Principal.WindowsBuiltInRole]::Administrator\\)\\)\")",
             "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Sviluppo\\\\Documents\\\\projects\\\\glimmervoid\\\\scripts\\\\selfhost\\\\register-task.ps1\" 2>&1)",
             "PowerShell($t = Get-ScheduledTask -TaskName \"Glimmervoid AutoUpdate\" -ErrorAction SilentlyContinue; if \\($t\\) { \"TASK: state=$\\($t.State\\)\"; Get-ScheduledTaskInfo -TaskName \"Glimmervoid AutoUpdate\" | Format-List LastRunTime, NextRunTime } else { \"STILL NOT REGISTERED\" })",
-            "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Sviluppo\\\\Documents\\\\projects\\\\glimmervoid\\\\scripts\\\\selfhost\\\\auto-update.ps1\" 2>&1)"
+            "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Sviluppo\\\\Documents\\\\projects\\\\glimmervoid\\\\scripts\\\\selfhost\\\\auto-update.ps1\" 2>&1)",
+            "Bash(grep -oiE '\\(error|captcha|timeout|unexpected|no results|suspended\\)[^<]{0,80}' gv1.html)"
         ]
     }
 }
