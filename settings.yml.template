@@ -188,7 +188,14 @@ valkey:
 #
 outgoing:
   # default timeout in seconds, can be override by engine
-  request_timeout: 3.0
+  # Glimmervoid: 6.0 invece del default upstream 3.0. Misurato dall'host:
+  # bing risponde in 2.36s in condizioni buone (TTFB 2.27s), quindi con 3.0 di
+  # budget bastava un po' di jitter per tagliare la richiesta a meta'. Il
+  # sintomo erano TimeoutException su bing/google/brave/mojeek/qwant, scambiabili
+  # per ban ma in realta' solo richieste troncate. Costo: la latenza peggiore di
+  # una ricerca nuova sale a ~6s quando un engine impalla (SearXNG aspetta il
+  # piu' lento); le ripetizioni restano sotto il secondo grazie a result_cache.
+  request_timeout: 6.0
   # the maximum timeout in seconds
   # max_request_timeout: 10.0
   # suffix of searxng_useragent, could contain information like an email address
