@@ -169,6 +169,17 @@ Pseudo-elementi `::before '[' ::after ']'` per le brackets. Idle = dim, hover = 
 - Hover: bordo + testo cyan, bg `rgba(34, 211, 238, 0.08)`.
 - Active state on "current page" link (non sui submit) = verde.
 
+### Bottoni inline nella barra meta (variante ridotta)
+Per i controlli che vivono dentro `.term-meta` (barra `// results · query · page`) il bottone standard da 2.5rem sfonderebbe la riga. Variante ammessa, stessa grammatica ma dimensioni da chip:
+
+- `padding: 0.05rem 0.4rem`, `font-size: 10px`, `line-height: 1.4`, **niente `min-height`**.
+- Border solid `--color-cust-chip-border` (non `--pref-border`: qui il vicinato sono le chip), radius 2px, bg `transparent`, testo `--color-cust-dim`, lowercase, `letter-spacing: 0.08em`.
+- Hover invariato rispetto ai bottoni normali: testo + bordo cyan, bg `rgba(34, 211, 238, 0.08)`.
+
+Prima applicazione: `rescan` in `results.html`. Accanto vive `.cache-chip`, chip informativa con la stessa geometria ma senza stati hover.
+
+> **Nota sui colori di stato.** Una chip che segnala "risultato servito da cache" resta `--color-cust-dim`, **non** amber: l'amber è riservato ai warning veri (vedi palette funzionale). Servire da cache è comportamento nominale, non un'anomalia.
+
 ### Input / select / textarea
 - Bg `--pref-element`, border solid, radius 2px.
 - Focus: border cyan.

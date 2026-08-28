@@ -90,6 +90,12 @@ None — all engines come from the upstream image.
   - **Query-string constraints.** A list entry may carry a query string, for sites that put the language in a parameter instead of the path: `support.google.com/youtube/answer/7174035?hl=ru` blocks only the Russian variant, while the same line without `?hl=ru` blocks the page in every language. Semantics: all listed parameters must be present on the result URL (AND); extra parameters on the result are allowed; a repeated parameter matches if any of its values does; a bare name (`?hl`, no `=`) means "present with any value"; `?q=` means "present and empty". Names/values are compared **case-sensitively**, like the path — hence the list carries both `support.microsoft.com/fr-FR/` and `.../fr-fr/`. Percent-encoding and `+` are decoded on both sides before comparing. Entries **without** a query string ignore the result's query entirely (unchanged behaviour), and the result query is parsed lazily so they cost nothing.
   - **Gotcha:** a trailing `/` after the query (`google.com/?hl=ar-AE/`) lands *inside the parameter value*, not the path — the entry then matches nothing. Before the query support existed, such lines silently normalised to the bare host and blocked the **whole domain**.
 
+- `searx/plugins/result_cache.py` — server-side cache of search results (default TTL 7 days), built on the upstream `ExpireCacheSQLite`. On a cache hit `pre_search()` returns `False`, which skips the whole scraping round; `post_search()` runs regardless of that `False` and re-injects the stored results. Re-injected results pass through `on_result` again, so the blocklists still apply to them.
+  - **Poisoning guard.** An entry is written only when the response has at least `MIN_RESULTS` (default 5) results. The guard is deliberately *not* "no engine failed": on a real instance some engines fail on every single search (duckduckgo, startpage), so `unresponsive_engines` is never empty and nothing would ever be cached. There is **no negative caching** — a degraded response leaves no entry, so the next identical search really retries.
+  - **Off unless opted in.** Inert unless `GLIMMERVOID_RESULT_CACHE` is set: no database file is created. Render does not set it (a 7-day result cache on a public instance is a de-facto query log); `scripts/selfhost/auto-update.ps1` sets it for the local container. Tuning via `GLIMMERVOID_RESULT_CACHE_{TTL,MIN_RESULTS,DB}`.
+  - **Must stay last** in the `plugins:` block of `settings.yml.template`: it closes the result container to read results in display order, so a plugin registered after it could no longer add results.
+  - **Storage.** `/var/cache/searxng/result_cache.db` (dir created by the Dockerfile). The auto-update script mounts the `glimmervoid-cache` volume there, otherwise the cache would be wiped on every rebuild since the container is recreated. Cache keys are hashed via `ExpireCache.secret_hash`, so the file holds no plaintext queries; values are plain pickle.
+
 ## Scripts
 
 | Script | Purpose |
@@ -97,7 +103,7 @@ None — all engines come from the upstream image.
 | `scripts/sort_json.py` | Pre-commit: sort JSON arrays/keys. |
 | `scripts/sort_txt.py` | Pre-commit: sort `blocked_domains.txt`. |
 | `scripts/extract_palette.py` | Utility to pull hex colors from Atlassian palette screenshots. |
-| `scripts/selfhost/auto-update.ps1` | Selfhost: polls `origin/main`, rebuilds image + restarts container if HEAD moved. Logs to `<repo>/auto-update.log`. |
+| `scripts/selfhost/auto-update.ps1` | Selfhost: polls `origin/main`, rebuilds image + restarts container if HEAD moved. Logs to `<repo>/auto-update.log`. Starts the container with `GLIMMERVOID_RESULT_CACHE=1` and the `glimmervoid-cache` volume; `-NoResultCache` opts out, `-CacheVolume` renames it. |
 | `scripts/selfhost/register-task.ps1` | Selfhost: registers `auto-update.ps1` as a Windows Scheduled Task (every 2 min). Run once as Administrator. |
 
 ## Conventions (reminders)

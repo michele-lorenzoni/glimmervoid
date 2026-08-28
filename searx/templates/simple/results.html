@@ -56,6 +56,41 @@
             height: 0;
         }
 
+        /* Cache dei risultati: chip informativa + bottone "rescan".
+           La chip usa il grigio dim, non l'amber: servire una risposta da
+           cache e' comportamento normale, non un warning. Il bottone segue le
+           convenzioni bottoni (bordo solido, radius 2px, lowercase, hover
+           cyan) in versione inline, ridotta all'altezza della barra meta. */
+        .terminal-results .term-meta .cache-chip {
+            padding: 0.05rem 0.4rem;
+            border: 1px solid var(--color-cust-chip-border);
+            border-radius: 2px;
+            font-size: 10px;
+            letter-spacing: 0.05em;
+            line-height: 1.4;
+            color: var(--color-cust-dim);
+        }
+        .terminal-results .term-meta .cache-refresh { margin: 0; display: inline-flex; }
+        .terminal-results .term-meta .cache-refresh button {
+            padding: 0.05rem 0.4rem;
+            border: 1px solid var(--color-cust-chip-border);
+            border-radius: 2px;
+            background: transparent;
+            color: var(--color-cust-dim);
+            font-family: inherit;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+            line-height: 1.4;
+            text-transform: lowercase;
+            cursor: pointer;
+            transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+        }
+        .terminal-results .term-meta .cache-refresh button:hover {
+            color: var(--color-neon-cyan);
+            border-color: var(--color-neon-cyan);
+            background: rgba(34, 211, 238, 0.08);
+        }
+
         /* Card per ogni risultato: box completo coerente con le altre
            card del tema (preferences, tabelle mobile). */
         .terminal-results #urls { counter-reset: result-idx; }
@@ -326,6 +361,34 @@
             <span class="sep">·</span><span>page {{ '%02d'|format(pageno) }}</span>
             {% if number_of_results and number_of_results|int > 0 %}
                 <span class="sep">·</span><span>{{ '{:,}'.format(number_of_results|int).replace(',', ' ') }} matches</span>
+            {% endif %}
+            {# Stato della cache risultati. `g.glimmervoid_cache` viene popolato
+               dal plugin result_cache ed esiste solo quando il plugin e' attivo
+               (env GLIMMERVOID_RESULT_CACHE): sull'istanza pubblica questo
+               blocco non produce nulla. #}
+            {% set gv_cache = g.get('glimmervoid_cache') %}
+            {% if gv_cache and q %}
+                {% if gv_cache.state == 'hit' %}
+                    <span class="sep">·</span>
+                    <span class="cache-chip"
+                          title="{{ _('Results served from cache, no engines were queried') }}">cached {{ gv_cache.age_label }}</span>
+                {% endif %}
+                <span class="sep">·</span>
+                <form method="{{ method or 'POST' }}"
+                      action="{{ url_for("search") }}"
+                      class="cache-refresh">
+                    <input type="hidden" name="q" value="{{ q|e }}">
+                    {% for category in selected_categories %}<input type="hidden" name="category_{{ category }}" value="1">{% endfor %}
+                    <input type="hidden" name="pageno" value="{{ pageno }}">
+                    <input type="hidden" name="language" value="{{ current_language }}">
+                    <input type="hidden" name="time_range" value="{{ time_range }}">
+                    <input type="hidden" name="safesearch" value="{{ safesearch }}">
+                    <input type="hidden" name="theme" value="{{ theme }}">
+                    {% if timeout_limit %}<input type="hidden" name="timeout_limit" value="{{ timeout_limit|e }}">{% endif %}
+                    <input type="hidden" name="no_cache" value="1">
+                    <button type="submit"
+                            title="{{ _('Query the engines again and refresh the cached entry') }}">rescan</button>
+                </form>
             {% endif %}
             <span class="rule"></span>
         </div>

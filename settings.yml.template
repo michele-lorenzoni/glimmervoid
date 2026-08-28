@@ -278,6 +278,19 @@ plugins:
   searx.plugins.url_prefix_remover.SXNGPlugin:
     active: true
 
+  # Glimmervoid: cache dei risultati (default 7 giorni). Su una cache hit salta
+  # del tutto lo scraping. Inerte finche' non si imposta la env var
+  # GLIMMERVOID_RESULT_CACHE=1: sull'istanza pubblica non e' impostata, quindi
+  # li' non viene creato nessun database.
+  #
+  # DEVE RESTARE L'ULTIMO della lista. I plugin girano nell'ordine di questo
+  # blocco e result_cache chiude il result container per leggere i risultati in
+  # ordine di visualizzazione: un plugin registrato dopo di lui non riuscirebbe
+  # piu' ad aggiungere risultati. Inoltre, su cache hit il suo pre_search
+  # ritorna False, che interrompe la catena dei pre_search successivi.
+  searx.plugins.result_cache.SXNGPlugin:
+    active: true
+
 
 # Configuration of the "Hostnames plugin":
 #

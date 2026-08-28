@@ -65,7 +65,7 @@ Cambio di paradigma rispetto al meta-search "su tutto il web": restringere la ri
    - 🧠 Brave Search API — supporta operator `site:`, $3–9/1000 query.
    - *Prezzi da verificare al momento della scelta.*
 2. **`allowed_domains.txt`** — gestito col pattern già consolidato di `blocked_domains.txt`: file di testo iniettato a build-time dal `Dockerfile` in `settings.yml` (o letto direttamente dall'engine custom).
-3. **Cache aggressiva** delle response API:
+3. **Cache aggressiva** delle response API — ⚠️ **parzialmente già risolto**: `searx/plugins/result_cache.py` implementa la cache dei *risultati di ricerca* (chiave hashata, TTL 7gg, guardia sui risultati poveri, bottone `rescan`, persistenza su volume). Se si arriva a un engine ad API, la cache di quell'engine può riusare lo stesso plugin invece di reimplementarne una: quel che manca è solo la chiave per-engine e un TTL differenziato. Restano da progettare i punti sotto:
    - Chiave: `(query_normalizzata, lingua, page)`.
    - TTL configurabile (es. default 7 giorni per evergreen, 1 giorno per query con keyword "news/oggi/ora").
    - Cache hit = zero spesa API.

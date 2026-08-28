@@ -50,5 +50,12 @@ COPY	searx/templates/simple/preferences/palette.html	/usr/local/searxng/searx/te
 COPY	searx/templates/simple/preferences/youtube_rewrite.html	/usr/local/searxng/searx/templates/simple/preferences/youtube_rewrite.html
 COPY	searx/templates/simple/messages/no_cookies.html	/usr/local/searxng/searx/templates/simple/messages/no_cookies.html
 COPY	searx/plugins/url_prefix_remover.py	/usr/local/searxng/searx/plugins/url_prefix_remover.py
+COPY	searx/plugins/result_cache.py	/usr/local/searxng/searx/plugins/result_cache.py
 COPY	blocked_url_prefixes.txt	/usr/local/searxng/searx/plugins/blocked_url_prefixes.txt
+# Directory del database della cache risultati. Montarci sopra un volume Docker
+# fa sopravvivere la cache ai rebuild; senza volume si perde a ogni update,
+# perche' l'auto-update ricrea il container. Il plugin ricade su /tmp se questa
+# directory non e' scrivibile.
+RUN	mkdir -p /var/cache/searxng \
+	&& chown searxng:searxng /var/cache/searxng
 USER	searxng

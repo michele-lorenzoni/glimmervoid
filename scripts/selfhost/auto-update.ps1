@@ -7,6 +7,12 @@
 #   .\auto-update.ps1 -Port 9090         # override port
 #   .\auto-update.ps1 -ContainerName foo # override container name
 #   .\auto-update.ps1 -Force             # rebuild even if commits match
+#   .\auto-update.ps1 -NoResultCache     # start without the result cache
+#   .\auto-update.ps1 -CacheVolume vol   # override the cache volume name
+#
+# The result cache (plugin searx/plugins/result_cache.py) is enabled here and
+# only here: it is driven by GLIMMERVOID_RESULT_CACHE, which the public Render
+# deployment does not set, so no query database is ever written there.
 #
 # Exit codes: 0 = no-op or success, 1 = failure (logged).
 
@@ -16,6 +22,8 @@ param(
     [int]   $Port          = 8080,
     [string]$Branch        = "main",
     [string]$LogFile       = "",
+    [string]$CacheVolume   = "glimmervoid-cache",
+    [switch]$NoResultCache,
     [switch]$Force
 )
 
@@ -77,13 +85,30 @@ function Invoke-Rebuild {
         docker rm   $ContainerName | Out-Null
     }
 
+    # Cache dei risultati: attiva solo sul selfhost (l'istanza pubblica su
+    # Render non imposta la env var, quindi li' il plugin resta inerte). Il
+    # volume serve a far sopravvivere il database ai rebuild: senza, ogni
+    # aggiornamento ricrea il container e la cache riparte da zero.
+    $runArgs = @(
+        "-d",
+        "-p", "${Port}:8080",
+        "--name", $ContainerName,
+        "--restart", "unless-stopped",
+        "--label", "glimmervoid.commit=$TargetCommit"
+    )
+    if (-not $NoResultCache) {
+        $runArgs += @(
+            "-e", "GLIMMERVOID_RESULT_CACHE=1",
+            "-v", "${CacheVolume}:/var/cache/searxng"
+        )
+        Write-Log "Result cache enabled (volume '$CacheVolume')."
+    } else {
+        Write-Log "Result cache disabled (-NoResultCache)."
+    }
+    $runArgs += $ImageTag
+
     Write-Log "Starting new container on port $Port."
-    docker run -d `
-        -p "${Port}:8080" `
-        --name $ContainerName `
-        --restart unless-stopped `
-        --label "glimmervoid.commit=$TargetCommit" `
-        $ImageTag | Out-Null
+    docker run @runArgs | Out-Null
     if ($LASTEXITCODE -ne 0) { throw "docker run failed (exit $LASTEXITCODE)" }
 
     Write-Log "Update completed successfully (now at $TargetCommit)."
