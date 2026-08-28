@@ -55,6 +55,7 @@ openai.com/nl-NL/
 photopea.com/l/es_es/
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-419
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-DO
+play.google.com/store/apps/details?id=com.stardesk&hl=ar
 pornann.com/sr/
 print.com/de/
 print24.com/de
