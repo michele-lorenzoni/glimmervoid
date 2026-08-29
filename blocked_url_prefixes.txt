@@ -39,6 +39,7 @@ jetbrains.com/ja-jp/
 jetbrains.com/ko-kr/
 jobscout24.ch/de/
 lidl.es/s/es-ES/
+m.apkpure.com/ar/
 mediamarkt.ch/de/
 meta.com/fr/
 meteoblue.com/sk/
