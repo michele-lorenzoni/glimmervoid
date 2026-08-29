@@ -3473,6 +3473,7 @@ libs.garden
 libsyn.com
 lidl.es
 lidl.fr
+lidl.pl
 lifetime.life
 lifetimemovieclub.com
 light.com.br
