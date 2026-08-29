@@ -34,6 +34,8 @@ ibm.com/docs/fr/
 ibm.com/docs/pl/
 images.google.ae/?hl=ar
 incrypted.com/pl/
+inkscape.org/de/
+inkscape.org/es/
 jak.jp/se/
 jetbrains.com/de-de/
 jetbrains.com/ja-jp/
