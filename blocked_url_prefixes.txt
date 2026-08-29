@@ -52,6 +52,7 @@ nvidia.com/pl-pl/
 onlinealarmkur.com/hu/
 openai.com/es-ES/
 openai.com/nl-NL/
+openrice.com/zh/
 photopea.com/l/es_es/
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-419
 play.google.com/store/apps/details?id=com.openai.chatgpt&hl=es-DO
