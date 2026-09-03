@@ -73,6 +73,7 @@ sc.com/ke/
 sensorstechforum.com/fr/
 solitaireparadise.com/nl/
 source.android.com/docs/core/tests/debug/systrace?hl=zh-cn
+sparkasse-re.de/de/
 startpage.com/de/
 store-static-modular.gog-statics.com/zh/
 store.google.com/ch/category/phones?hl=de
