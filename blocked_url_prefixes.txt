@@ -88,6 +88,7 @@ support.google.com/chrome/answer/95346?hl=fr&co=GENIE.Platform%3DDesktop
 support.google.com/docs/answer/3093343?hl=es-419
 support.google.com/docs/answer/3093343?hl=ja
 support.google.com/googleplay/answer/2521798?hl=pt-BR
+support.google.com/youtube/?hl=pt
 support.google.com/youtube/answer/174084?hl=ja
 support.google.com/youtube/answer/57407?hl=ko
 support.google.com/youtube/answer/7174035?hl=ru
