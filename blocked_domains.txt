@@ -5799,6 +5799,7 @@ svg-to-png.net
 svgai.org
 svgbackgrounds.com
 svgcolor.com
+svgcreator.com
 svgeditor.com
 svgeditor.pro
 svgeditoronline.com
