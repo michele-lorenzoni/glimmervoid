@@ -5806,6 +5806,7 @@ svgomg.net
 svgrepo.com
 svgstack.com
 svgtopng.com
+svgtowebp.joshwp.com
 svgtrace.com
 svgtweak.com
 svgvisualize.com
