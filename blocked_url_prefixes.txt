@@ -98,6 +98,7 @@ support.microsoft.com/de-de/
 support.microsoft.com/fr-FR/
 support.microsoft.com/fr-fr/
 support.microsoft.com/ja-JP/
+support.microsoft.com/ja-jp/
 support.microsoft.com/ru-RU/
 support.microsoft.com/zh-cn/
 support.microsoft.com/zh-tw/
