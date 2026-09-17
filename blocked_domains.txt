@@ -4657,6 +4657,7 @@ photoscissors.com
 photowall.com
 php.cn
 php.com
+php.now
 php.org
 phpagency.com
 phpaspshell.com
