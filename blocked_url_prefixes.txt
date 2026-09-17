@@ -92,6 +92,7 @@ support.google.com/docs/answer/3093343?hl=ja
 support.google.com/googleplay/answer/2521798?hl=pt-BR
 support.google.com/mail/answer/8494?hl=pl
 support.google.com/maps/answer/18539?hl=de
+support.google.com/maps/answer/2839911?hl=tr
 support.google.com/youtube/?hl=pt
 support.google.com/youtube/?hl=ru
 support.google.com/youtube/answer/1646861?hl=ja
