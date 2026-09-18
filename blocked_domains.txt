@@ -1418,6 +1418,7 @@ decodebase64.io
 decoderdecryptor.com
 decopy.ai
 deeditor.com
+deefont.com
 deep-image.ai
 deepai.org
 deeper.com
