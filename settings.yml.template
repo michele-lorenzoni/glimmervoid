@@ -1917,20 +1917,20 @@ engines:
     shortcut: sogou
     disabled: true
 
-  - name: sogou images
-    engine: sogou_images
-    shortcut: sogoui
-    disabled: true
+  # - name: sogou images
+  #   engine: sogou_images
+  #   shortcut: sogoui
+  #   disabled: true
 
-  - name: sogou videos
-    engine: sogou_videos
-    shortcut: sogouv
-    disabled: true
+  # - name: sogou videos
+  #   engine: sogou_videos
+  #   shortcut: sogouv
+  #   disabled: true
 
-  - name: sogou wechat
-    engine: sogou_wechat
-    shortcut: sogouw
-    disabled: true
+  # - name: sogou wechat
+  #   engine: sogou_wechat
+  #   shortcut: sogouw
+  #   disabled: true
 
   - name: soundcloud
     engine: soundcloud
@@ -2582,7 +2582,7 @@ engines:
   #   categories: images
   #   seekr_category: images
   #   disabled: true
-  
+
   # - name: seekr videos
   #   engine: seekr
   #   network: seekr news
