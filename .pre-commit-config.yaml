@@ -12,5 +12,5 @@ repos:
         name: Sort JSON files alphabetically
         entry: python3 scripts/sort_json.py
         language: system
-        files: \.json$
+        files: ^searx/templates/static/custom/.*\.json$
         pass_filenames: true
