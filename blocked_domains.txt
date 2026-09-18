@@ -244,6 +244,7 @@ amazon.co.jp
 amazon.co.za
 amazon.com
 amazon.de
+amazon.es
 amazon.fr
 amazon.in
 amazon.nl
