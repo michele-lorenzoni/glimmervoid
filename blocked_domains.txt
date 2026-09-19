@@ -5891,6 +5891,7 @@ svgeditoronline.com
 svgmaker.io
 svgomg.net
 svgrepo.com
+svgsilh.com
 svgstack.com
 svgtopng.com
 svgtowebp.joshwp.com
