@@ -40,6 +40,7 @@ images.google.ae/?hl=ar
 incrypted.com/pl/
 inkscape.org/de/
 inkscape.org/es/
+ipaddress.my/ar
 ipv4.google.com/?hl=de
 jak.jp/se/
 jetbrains.com/de-de/

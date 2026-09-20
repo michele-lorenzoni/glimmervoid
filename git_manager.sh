@@ -30,7 +30,7 @@ for file in "${files[@]}"; do
         break
     fi
 
-    if [[ "$file" =~ "blocked_urls_prefixes" ]]; then
+    if [[ "$file" =~ "blocked_url_prefixes" ]]; then
         git commit -m "update: update blocked_urls_prefixes file"
         break
     fi
