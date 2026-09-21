@@ -2462,6 +2462,7 @@ generatefakename.com
 generateit.net
 generaterandomly.com
 generator.email
+generator.mosa.com
 generatorfonts.com
 generor.com
 genfavicon.com
