@@ -2228,6 +2228,7 @@ forum.elster.de
 forum.hunting-shop.cz
 forum.index.hu
 forum.pravda.com.ua
+forum.szafa.pl
 forums.commentcamarche.net
 forums.moto-station.com
 forums.warframe.com
