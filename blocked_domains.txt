@@ -3585,6 +3585,7 @@ libreselfhosted.com
 libris.nl
 libs.garden
 libsyn.com
+lidl.de
 lidl.es
 lidl.fr
 lidl.pl
