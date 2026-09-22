@@ -105,6 +105,7 @@ support.google.com/youtube/?hl=pt
 support.google.com/youtube/?hl=ro
 support.google.com/youtube/?hl=ru
 support.google.com/youtube/?hl=vi
+support.google.com/youtube/answer/13401025?hl=zh-Hant
 support.google.com/youtube/answer/1646861?hl=ja
 support.google.com/youtube/answer/174084?hl=ja
 support.google.com/youtube/answer/3227660?hl=fr
