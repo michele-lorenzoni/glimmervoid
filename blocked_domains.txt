@@ -2111,6 +2111,7 @@ flowrun.io
 flufi.me
 flutlab.io
 flutter.com
+flutter.salon
 flutterassets.com
 flutterbeads.com
 flutterbricks.com
