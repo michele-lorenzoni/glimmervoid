@@ -5959,6 +5959,7 @@ svgtopng.com
 svgtowebp.joshwp.com
 svgtrace.com
 svgtweak.com
+svgviewer.dev
 svgvisualize.com
 sviluppatoremigliore.com
 swandolphin.com
