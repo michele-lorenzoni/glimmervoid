@@ -34,6 +34,7 @@ help.openai.com/zh-hans-cn/
 hqpornsearch.com/de/
 ibm.com/br-pt/
 ibm.com/de-de/
+ibm.com/docs/es/
 ibm.com/docs/fr/
 ibm.com/docs/pl/
 images.google.ae/?hl=ar
