@@ -5994,6 +5994,7 @@ svg-cropper.com
 svg-editor.com
 svg-to-png.net
 svgai.org
+svgator.com
 svgbackgrounds.com
 svgcolor.com
 svgcreator.com
