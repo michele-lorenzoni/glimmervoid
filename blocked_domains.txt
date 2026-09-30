@@ -1452,6 +1452,7 @@ de.wordpress.org
 deadspin.com
 debidawn.com
 debugcn.com
+debugpoint.com
 decodebase64.com
 decodebase64.io
 decoderdecryptor.com
