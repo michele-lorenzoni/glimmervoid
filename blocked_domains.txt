@@ -6049,6 +6049,7 @@ svgomg.net
 svgrepo.com
 svgsilh.com
 svgstack.com
+svgto3d.com
 svgtopng.com
 svgtowebp.joshwp.com
 svgtrace.com
