@@ -3636,6 +3636,7 @@ librarie.net
 librarygenesis.my
 librarygenesis.net
 librarything.fr
+librent.dev
 libreriamo.it
 libreselfhosted.com
 libris.nl
