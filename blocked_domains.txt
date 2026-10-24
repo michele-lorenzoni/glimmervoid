@@ -2146,6 +2146,7 @@ flemingssteakhouse.com
 fleshed.com
 flexclip.com
 flexitoolkit.com
+flightq.app
 flipperfile.com
 flixier.com
 flixtor.info
@@ -3400,6 +3401,7 @@ jpeg.to
 jpg.to
 jpn.mizuno.com
 jpsoft.com
+jrailpass.com
 jser.com
 json-buddy.com
 json-pretty.com
