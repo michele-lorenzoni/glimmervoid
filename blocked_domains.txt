@@ -2906,6 +2906,7 @@ hex-rgb.com
 hex-to-rgb.com
 hexcalculator.org
 hexcolor.co
+hexmos.com
 hextorgb.io
 heygen.com
 heyreach.io
