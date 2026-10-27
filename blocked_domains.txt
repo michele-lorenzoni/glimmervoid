@@ -3159,6 +3159,7 @@ imageresizer.work
 imageresizeren.netlify.app
 imageresizerhub.com
 images.google.es
+imagesmaller.com
 imagetocartoon.com
 imagetotext.cc
 imagetotext.info
