@@ -81,6 +81,7 @@
 8font.com
 8gwifi.org
 9k9k.com
+9minecraft.net
 9mod.com
 9mza.net
 9to5mac.com
