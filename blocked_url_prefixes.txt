@@ -131,6 +131,7 @@ temp-mail.id/de/
 tips.clip-studio.com/es-es/
 translate.google.com/?hl=ar
 translate.google.com/intl/ko/
+translate.google.com/intl/si/
 triumph-adler.com/ta-de-ch/
 unity.com/de
 voxelgroup.net/fr/
