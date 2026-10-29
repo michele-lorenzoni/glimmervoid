@@ -488,6 +488,7 @@ avvocatoandreani.it
 awesome-github-readme-profile.netlify.app
 awesome-loaders.netlify.app
 awesomegithub.web.app
+awesomeopensource.com
 axeetech.com
 axenov.dev
 ayoa.com
