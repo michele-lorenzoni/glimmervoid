@@ -5879,6 +5879,7 @@ simplemind.eu
 simplemindmap.com
 simplepixelart.com
 simpleregex.org
+simplesize.app
 simplesketchpad.com
 simplesvgeditor.com
 simplicity.com
