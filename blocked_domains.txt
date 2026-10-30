@@ -3201,6 +3201,7 @@ imggen.ai
 imgmodify.com
 imgocr.com
 imgonline.tools
+imgsmaller.com
 imgtocolor.com
 imgtools.co
 imgtotext.org
