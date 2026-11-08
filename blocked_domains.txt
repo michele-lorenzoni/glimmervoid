@@ -655,6 +655,7 @@ bilibili.com
 biligames.com
 billig-tanken.de
 binarycodeconverter.com
+binarydecimal.com
 bindingofisaac.com
 bindingofisaac.miraheze.org
 bingehomepagequiz.com
