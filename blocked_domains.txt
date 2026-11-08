@@ -496,6 +496,7 @@ awesomeopensource.com
 axeetech.com
 axenov.dev
 ayoa.com
+ayus.group
 azconversion.com
 azfonts.net
 azgames.io
@@ -4693,6 +4694,7 @@ onlineocr.net
 onlineocr.org
 onlineora.hu
 onlineornot.com
+onlinephotosoft.com
 onlinephp.io
 onlinepngtools.com
 onlinesmsreceiver.com
@@ -6916,6 +6918,7 @@ v-note.org
 v1sports.com
 v2.nat32.com
 vaizle.com
+valolo.fr
 valossa.com
 valuecom.com
 valuedate.io
@@ -7292,8 +7295,6 @@ wutools.com
 wux.nl
 wwugoodword.com
 www-y2mate.com
-www.ayus.group
-www.valolo.fr
 www2.criticalmass.com
 www2.jobvite.com
 www3.cde.ca.gov
