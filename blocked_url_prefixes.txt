@@ -135,6 +135,7 @@ translate.google.com/intl/ko/
 translate.google.com/intl/si/
 triumph-adler.com/ta-de-ch/
 unity.com/de
+v4.rxresu.me/zh
 voxelgroup.net/fr/
 vuetifyjs.com/zh-Hans/
 wien-ticket.at/de/
