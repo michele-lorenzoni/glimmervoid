@@ -7499,6 +7499,7 @@ zones.sk
 zoominfo.com
 zosognug.sy
 zoviz.com
+zrce.eu
 zsh-prompt-generator.site
 zynga.com
 zywvvd.com
