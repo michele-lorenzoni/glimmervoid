@@ -886,6 +886,7 @@ calculatorhub.app
 calculatorlib.com
 calculatorplustools.com
 calculators.org
+calculover.com
 caldavsynchronizer.org
 calendar-365.com
 calendar.best
