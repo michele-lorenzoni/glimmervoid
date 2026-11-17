@@ -883,6 +883,7 @@ calculator.io
 calculator.net
 calculatorfree.net
 calculatorhub.app
+calculatorlib.com
 calculatorplustools.com
 calculators.org
 caldavsynchronizer.org
