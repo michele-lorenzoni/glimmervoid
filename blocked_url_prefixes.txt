@@ -26,6 +26,7 @@ figma.com/de-de/
 flexikon.doccheck.com/de/
 flyeralarm.com/de/
 galaxus.ch/de/
+go/
 google.com/?hl=ar-AE
 google.com/intl/de/
 google.com/intl/id/
