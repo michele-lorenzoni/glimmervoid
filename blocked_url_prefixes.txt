@@ -12,6 +12,7 @@ bluewin.ch/de
 bluewin.ch/fr
 bwin.es/es
 chatgpt.com/fr-FR/
+classroom.google.com/?hl=ru
 claude.com/de/
 cloud.google.com/free?hl=de
 commonvoice.mozilla.org/ja
