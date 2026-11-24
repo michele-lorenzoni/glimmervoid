@@ -4776,6 +4776,7 @@ openalgorithms.vercel.app
 openart.ai
 openbadgeforge.com
 openbadges.me
+opencadstudio.com
 opencharacter.org
 openclawapi.org
 openculture.com
