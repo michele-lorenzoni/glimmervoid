@@ -136,6 +136,7 @@ translate.google.com/?hl=ar
 translate.google.com/intl/ko/
 translate.google.com/intl/si/
 triumph-adler.com/ta-de-ch/
+typst.dev/docs/chinese/
 unity.com/de
 v4.rxresu.me/zh
 voxelgroup.net/fr/
