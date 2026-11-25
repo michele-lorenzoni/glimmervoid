@@ -1195,6 +1195,7 @@ colormemine.com
 colormind.io
 colormix.app
 colorpaletted.com
+colorpalettegenerator.io
 colorpalettegenerator.org
 colorpalettes.net
 colorpickerfromimage.com
