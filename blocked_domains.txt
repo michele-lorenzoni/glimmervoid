@@ -1202,6 +1202,7 @@ colorpouch.com
 colors.codes
 colors.dopely.top
 colorsafe.co
+colorscheme.dev
 colorschemelab.com
 colorschemepro.com
 colorschemer.com
