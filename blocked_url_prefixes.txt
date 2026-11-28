@@ -83,6 +83,7 @@ print.com/de/
 print24.com/de
 printworld.com/de/
 provenexpert.com/de-de/
+qt.io/zh-cn/
 rapidtables.org/ar/
 sagradafamilia.org/es/
 sc.com/ke/
