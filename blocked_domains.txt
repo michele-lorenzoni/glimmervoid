@@ -918,6 +918,7 @@ canarymail.io
 cancercalc.com
 cannonkeys.com
 canva.com
+canva.live
 canvaspaint.org
 caparra.ai
 capcut.com
